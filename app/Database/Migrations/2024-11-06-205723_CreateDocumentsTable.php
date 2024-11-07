@@ -37,6 +37,11 @@ class CreateDocumentsTable extends Migration
             'authors' => [
                 'type' => 'TEXT',
             ],
+            'publication_year' => [ // Nuevo campo
+                'type'       => 'INT',
+                'constraint' => 4,
+                'null'      => false,
+            ],
             'summary' => [
                 'type' => 'TEXT',
                 'null' => true,

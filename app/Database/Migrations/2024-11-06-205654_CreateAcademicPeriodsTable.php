@@ -20,10 +20,12 @@ class CreateAcademicPeriodsTable extends Migration
                 'constraint' => '50',
             ],
             'start_date' => [
-                'type' => 'DATE',
+                'type'       => 'VARCHAR', // Cambiado de DATE a VARCHAR
+                'constraint' => '50',      // Agregado constraint
             ],
             'end_date' => [
-                'type' => 'DATE',
+                'type'       => 'VARCHAR', // Cambiado de DATE a VARCHAR
+                'constraint' => '50',      // Agregado constraint
             ],
             'created_at' => [
                 'type' => 'TIMESTAMP',
