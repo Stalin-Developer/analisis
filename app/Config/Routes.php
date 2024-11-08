@@ -9,6 +9,17 @@ use CodeIgniter\Router\RouteCollection;
 
 
 
+
+
+// Rutas públicas (no requieren autenticación)
+$routes->get('/', 'Publico::index');
+$routes->get('publico', 'Publico::index');
+$routes->get('publico/view/(:num)', 'Publico::view/$1');
+
+
+
+
+
 // Rutas de autenticación
 $routes->match(['GET', 'POST'], 'login', 'Auth::login');
 $routes->get('logout', 'Auth::logout');
@@ -38,6 +49,8 @@ $routes->group('', ['filter' => 'auth'], function($routes) {
     $routes->post('documents/update/(:num)', 'Documents::update/$1');
     $routes->get('documents/delete/(:num)', 'Documents::delete/$1');
     $routes->get('documents/download/(:num)', 'Documents::download/$1');
+
+
 
 
 });

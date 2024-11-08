@@ -1,37 +1,26 @@
-<?= $this->extend('layouts/admin_layout') ?>
+<?= $this->extend('layouts/public_layout') ?>
+
+/**
+Link de la pagina:
+http://localhost/analisis/public/
+*/
+
 
 <?= $this->section('title') ?>
-Documentos
+Repositorio de Documentos
 <?= $this->endSection() ?>
 
 <?= $this->section('page_title') ?>
-Gestión de Documentos
-<?= $this->endSection() ?>
-
-<?= $this->section('breadcrumb') ?>
-<li class="breadcrumb-item"><a href="<?= base_url('dashboard') ?>">Home</a></li>
-<li class="breadcrumb-item active">Documentos</li>
+Repositorio de Documentos
 <?= $this->endSection() ?>
 
 <?= $this->section('content') ?>
 <div class="card">
     <div class="card-header">
-        <h3 class="card-title">Lista de Documentos</h3>
-        <div class="card-tools">
-            <a href="<?= base_url('documents/new') ?>" class="btn btn-primary btn-sm">
-                <i class="fas fa-plus"></i> Nuevo Documento
-            </a>
-        </div>
+        <h3 class="card-title">Filtros de Búsqueda</h3>
     </div>
-
-
-
-
-
-
-    <!-- Agregar esta sección de filtros -->
     <div class="card-body">
-        <form action="<?= base_url('documents') ?>" method="get">
+        <form action="<?= base_url('publico') ?>" method="get">
             <div class="row">
                 <div class="col-md-3">
                     <div class="form-group">
@@ -91,80 +80,67 @@ Gestión de Documentos
                     <button type="submit" class="btn btn-primary">
                         <i class="fas fa-search"></i> Buscar
                     </button>
-                    <a href="<?= base_url('documents') ?>" class="btn btn-secondary">
+                    <a href="<?= base_url('publico') ?>" class="btn btn-secondary">
                         <i class="fas fa-undo"></i> Limpiar Filtros
                     </a>
                 </div>
             </div>
         </form>
     </div>
+</div>
 
-
-
-
-
-
-
-
-
+<div class="card">
     <div class="card-body">
-        <?php if (session()->getFlashdata('message')): ?>
-            <div class="alert alert-success">
-                <?= session()->getFlashdata('message') ?>
-            </div>
-        <?php endif; ?>
-
         <?php if (session()->getFlashdata('error')): ?>
             <div class="alert alert-danger">
                 <?= session()->getFlashdata('error') ?>
             </div>
         <?php endif; ?>
 
-        <table class="table table-bordered table-striped">
-            <thead>
-                <tr>
-                    <th>ID</th>
-                    <th>Título</th>
-                    <th>Autores</th>
-                    <th>Año</th>
-                    <th>Categoría</th>
-                    <th>Carrera</th>
-                    <th>Periodo</th>
-                    <th>Acciones</th>
-                </tr>
-            </thead>
-            <tbody>
-                <?php foreach ($documents as $doc): ?>
-                <tr>
-                    <td><?= $doc['id'] ?></td>
-                    <td><?= $doc['title'] ?></td>
-                    <td><?= $doc['authors'] ?></td>
-                    <td><?= $doc['publication_year'] ?></td>
-                    <td><?= $doc['category_name'] ?></td>
-                    <td><?= $doc['career_name'] ?></td>
-                    <td><?= $doc['period_name'] ?></td>
-                    <td>
-                        <div class="btn-group">
-                            <a href="<?= base_url('documents/download/' . $doc['id']) ?>" 
-                               class="btn btn-sm btn-info" title="Descargar">
-                                <i class="fas fa-download"></i>
-                            </a>
-                            <a href="<?= base_url('documents/edit/' . $doc['id']) ?>" 
-                               class="btn btn-sm btn-warning" title="Editar">
-                                <i class="fas fa-edit"></i>
-                            </a>
-                            <a href="<?= base_url('documents/delete/' . $doc['id']) ?>" 
-                               class="btn btn-sm btn-danger" 
-                               onclick="return confirm('¿Está seguro de eliminar este documento?')"
-                               title="Eliminar">
-                                <i class="fas fa-trash"></i>
-                            </a>
-                        </div>
-                    </td>
-                </tr>
-                <?php endforeach; ?>
-            </tbody>
-        </table>
+        <?php if (empty($documents)): ?>
+            <div class="alert alert-info">
+                No se encontraron documentos con los criterios seleccionados.
+            </div>
+        <?php else: ?>
+            <div class="table-responsive">
+                <table class="table table-bordered table-striped">
+                    <thead>
+                        <tr>
+                            <th>Título</th>
+                            <th>Autores</th>
+                            <th>Año</th>
+                            <th>Categoría</th>
+                            <th>Carrera</th>
+                            <th>Periodo</th>
+                            <th>Acción</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php foreach ($documents as $doc): ?>
+                            <tr>
+                                <td><?= $doc['title'] ?></td>
+                                <td><?= $doc['authors'] ?></td>
+                                <td><?= $doc['publication_year'] ?></td>
+                                <td><?= $doc['category_name'] ?></td>
+                                <td><?= $doc['career_name'] ?></td>
+                                <td><?= $doc['period_name'] ?></td>
+                                <td>
+                                    <a href="<?= base_url('publico/view/' . $doc['id']) ?>" 
+                                       class="btn btn-info btn-sm">
+                                        <i class="fas fa-eye"></i> Ver Detalles
+                                    </a>
+                                </td>
+                            </tr>
+                        <?php endforeach; ?>
+                    </tbody>
+                </table>
+            </div>
+            
+            <!-- Paginación -->
+            <div class="mt-3">
+                <?= $pager->links() ?>
+            </div>
+        <?php endif; ?>
     </div>
 </div>
 <?= $this->endSection() ?>
@@ -183,6 +159,10 @@ $(function () {
     $('.table').DataTable({
         "responsive": true,
         "autoWidth": false,
+        "pageLength": 10,
+        "language": {
+            "url": "//cdn.datatables.net/plug-ins/1.10.24/i18n/Spanish.json"
+        }
     });
 });
 </script>
