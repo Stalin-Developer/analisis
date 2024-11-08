@@ -173,3 +173,341 @@ INFO - 2024-11-08 06:47:56 --> Session: Class initialized using 'CodeIgniter\Ses
 INFO - 2024-11-08 06:47:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2024-11-08 06:48:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2024-11-08 06:48:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2024-11-08 08:33:27 --> Método login llamado
+INFO - 2024-11-08 08:33:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-08 08:33:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2024-11-08 08:33:35 --> Método login llamado
+DEBUG - 2024-11-08 08:33:35 --> Método POST detectado
+DEBUG - 2024-11-08 08:33:35 --> Datos recibidos - Username: admin
+INFO - 2024-11-08 08:33:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2024-11-08 08:33:35 --> Login exitoso, redirigiendo...
+INFO - 2024-11-08 08:33:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-08 08:33:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-08 08:33:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-08 08:33:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-08 08:33:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-08 08:35:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-08 08:35:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-08 08:39:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-08 08:39:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-08 09:05:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-08 09:05:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-08 09:05:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-08 09:05:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-08 09:06:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-08 09:06:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-08 09:06:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-08 09:06:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-08 09:07:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-08 09:07:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-08 09:08:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-08 09:08:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-08 09:08:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-08 09:10:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-08 09:10:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-08 09:10:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-08 09:20:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-08 09:20:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-08 09:20:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-08 09:20:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-08 09:20:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-08 09:20:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-08 09:21:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-08 09:21:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-08 09:27:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-08 09:56:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-08 09:56:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-08 09:56:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-08 09:58:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-08 09:58:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-08 09:58:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-08 10:03:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-08 10:03:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-08 10:03:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-08 10:11:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-08 10:11:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-08 10:11:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-11-08 10:11:28 --> Exception: The PHP GD extension is required, but is not installed.
+[Method: POST, Route: reports/generate]
+in VENDORPATH\dompdf\dompdf\lib\Cpdf.php on line 5835.
+ 1 VENDORPATH\dompdf\dompdf\src\Adapter\CPDF.php(668): Dompdf\Cpdf->addPngFromFile('C:\\Users\\leone\\AppData\\Local\\Temp\\ca_275E.tmp', 222.64, 709.250558588713, 150.0, 83.62369337979094)
+ 2 VENDORPATH\dompdf\dompdf\src\Renderer\Image.php(63): Dompdf\Adapter\CPDF->image('C:\\Users\\leone\\AppData\\Local\\Temp\\ca_275E.tmp', 222.64, 49.01574803149606, 150.0, 83.62369337979094, 'normal')
+ 3 VENDORPATH\dompdf\dompdf\src\Renderer.php(305): Dompdf\Renderer\Image->render(Object(Dompdf\FrameDecorator\Image))
+ 4 VENDORPATH\dompdf\dompdf\src\Renderer.php(140): Dompdf\Renderer->_render_frame('image', Object(Dompdf\FrameDecorator\Image))
+ 5 VENDORPATH\dompdf\dompdf\src\Renderer.php(207): Dompdf\Renderer->render(Object(Dompdf\FrameDecorator\Image))
+ 6 VENDORPATH\dompdf\dompdf\src\Renderer.php(207): Dompdf\Renderer->render(Object(Dompdf\FrameDecorator\Block))
+ 7 VENDORPATH\dompdf\dompdf\src\FrameReflower\Page.php(149): Dompdf\Renderer->render(Object(Dompdf\FrameDecorator\Block))
+ 8 VENDORPATH\dompdf\dompdf\src\FrameDecorator\AbstractFrameDecorator.php(905): Dompdf\FrameReflower\Page->reflow(null)
+ 9 VENDORPATH\dompdf\dompdf\src\Dompdf.php(808): Dompdf\FrameDecorator\AbstractFrameDecorator->reflow()
+10 APPPATH\Controllers\Reports.php(124): Dompdf\Dompdf->render()
+11 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Reports->generate()
+12 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Reports))
+13 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+16 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-11-08 10:11:32 --> ErrorException: Allowed memory size of 536870912 bytes exhausted (tried to allocate 260050944 bytes)
+【Previous Exception】
+Exception
+The PHP GD extension is required, but is not installed.
+#0 C:\xampp\htdocs\analisis\vendor\dompdf\dompdf\src\Adapter\CPDF.php(668): Dompdf\Cpdf->addPngFromFile('C:\\Users\\leone\\...', 222.64, 709.25055858871, 150.0, 83.623693379791)
+#1 C:\xampp\htdocs\analisis\vendor\dompdf\dompdf\src\Renderer\Image.php(63): Dompdf\Adapter\CPDF->image('C:\\Users\\leone\\...', 222.64, 49.015748031496, 150.0, 83.623693379791, 'normal')
+#2 C:\xampp\htdocs\analisis\vendor\dompdf\dompdf\src\Renderer.php(305): Dompdf\Renderer\Image->render(Object(Dompdf\FrameDecorator\Image))
+#3 C:\xampp\htdocs\analisis\vendor\dompdf\dompdf\src\Renderer.php(140): Dompdf\Renderer->_render_frame('image', Object(Dompdf\FrameDecorator\Image))
+#4 C:\xampp\htdocs\analisis\vendor\dompdf\dompdf\src\Renderer.php(207): Dompdf\Renderer->render(Object(Dompdf\FrameDecorator\Image))
+#5 C:\xampp\htdocs\analisis\vendor\dompdf\dompdf\src\Renderer.php(207): Dompdf\Renderer->render(Object(Dompdf\FrameDecorator\Block))
+#6 C:\xampp\htdocs\analisis\vendor\dompdf\dompdf\src\FrameReflower\Page.php(149): Dompdf\Renderer->render(Object(Dompdf\FrameDecorator\Block))
+#7 C:\xampp\htdocs\analisis\vendor\dompdf\dompdf\src\FrameDecorator\AbstractFrameDecorator.php(905): Dompdf\FrameReflower\Page->reflow(NULL)
+#8 C:\xampp\htdocs\analisis\vendor\dompdf\dompdf\src\Dompdf.php(808): Dompdf\FrameDecorator\AbstractFrameDecorator->reflow()
+#9 C:\xampp\htdocs\analisis\app\Controllers\Reports.php(124): Dompdf\Dompdf->render()
+#10 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Reports->generate()
+#11 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Reports))
+#12 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#14 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#15 C:\xampp\htdocs\analisis\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#16 {main}
+[Method: POST, Route: reports/generate]
+in APPPATH\Views\errors\html\error_exception.php on line 132.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+INFO - 2024-11-08 10:15:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-08 10:15:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-08 10:15:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-11-08 10:15:58 --> Exception: The PHP GD extension is required, but is not installed.
+[Method: POST, Route: reports/generate]
+in VENDORPATH\dompdf\dompdf\lib\Cpdf.php on line 5835.
+ 1 VENDORPATH\dompdf\dompdf\src\Adapter\CPDF.php(668): Dompdf\Cpdf->addPngFromFile('C:\\Users\\leone\\AppData\\Local\\Temp\\ca_45C1.tmp', 222.64, 709.250558588713, 150.0, 83.62369337979094)
+ 2 VENDORPATH\dompdf\dompdf\src\Renderer\Image.php(63): Dompdf\Adapter\CPDF->image('C:\\Users\\leone\\AppData\\Local\\Temp\\ca_45C1.tmp', 222.64, 49.01574803149606, 150.0, 83.62369337979094, 'normal')
+ 3 VENDORPATH\dompdf\dompdf\src\Renderer.php(305): Dompdf\Renderer\Image->render(Object(Dompdf\FrameDecorator\Image))
+ 4 VENDORPATH\dompdf\dompdf\src\Renderer.php(140): Dompdf\Renderer->_render_frame('image', Object(Dompdf\FrameDecorator\Image))
+ 5 VENDORPATH\dompdf\dompdf\src\Renderer.php(207): Dompdf\Renderer->render(Object(Dompdf\FrameDecorator\Image))
+ 6 VENDORPATH\dompdf\dompdf\src\Renderer.php(207): Dompdf\Renderer->render(Object(Dompdf\FrameDecorator\Block))
+ 7 VENDORPATH\dompdf\dompdf\src\FrameReflower\Page.php(149): Dompdf\Renderer->render(Object(Dompdf\FrameDecorator\Block))
+ 8 VENDORPATH\dompdf\dompdf\src\FrameDecorator\AbstractFrameDecorator.php(905): Dompdf\FrameReflower\Page->reflow(null)
+ 9 VENDORPATH\dompdf\dompdf\src\Dompdf.php(808): Dompdf\FrameDecorator\AbstractFrameDecorator->reflow()
+10 APPPATH\Controllers\Reports.php(124): Dompdf\Dompdf->render()
+11 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Reports->generate()
+12 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Reports))
+13 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+16 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-11-08 10:16:02 --> ErrorException: Allowed memory size of 536870912 bytes exhausted (tried to allocate 260050944 bytes)
+【Previous Exception】
+Exception
+The PHP GD extension is required, but is not installed.
+#0 C:\xampp\htdocs\analisis\vendor\dompdf\dompdf\src\Adapter\CPDF.php(668): Dompdf\Cpdf->addPngFromFile('C:\\Users\\leone\\...', 222.64, 709.25055858871, 150.0, 83.623693379791)
+#1 C:\xampp\htdocs\analisis\vendor\dompdf\dompdf\src\Renderer\Image.php(63): Dompdf\Adapter\CPDF->image('C:\\Users\\leone\\...', 222.64, 49.015748031496, 150.0, 83.623693379791, 'normal')
+#2 C:\xampp\htdocs\analisis\vendor\dompdf\dompdf\src\Renderer.php(305): Dompdf\Renderer\Image->render(Object(Dompdf\FrameDecorator\Image))
+#3 C:\xampp\htdocs\analisis\vendor\dompdf\dompdf\src\Renderer.php(140): Dompdf\Renderer->_render_frame('image', Object(Dompdf\FrameDecorator\Image))
+#4 C:\xampp\htdocs\analisis\vendor\dompdf\dompdf\src\Renderer.php(207): Dompdf\Renderer->render(Object(Dompdf\FrameDecorator\Image))
+#5 C:\xampp\htdocs\analisis\vendor\dompdf\dompdf\src\Renderer.php(207): Dompdf\Renderer->render(Object(Dompdf\FrameDecorator\Block))
+#6 C:\xampp\htdocs\analisis\vendor\dompdf\dompdf\src\FrameReflower\Page.php(149): Dompdf\Renderer->render(Object(Dompdf\FrameDecorator\Block))
+#7 C:\xampp\htdocs\analisis\vendor\dompdf\dompdf\src\FrameDecorator\AbstractFrameDecorator.php(905): Dompdf\FrameReflower\Page->reflow(NULL)
+#8 C:\xampp\htdocs\analisis\vendor\dompdf\dompdf\src\Dompdf.php(808): Dompdf\FrameDecorator\AbstractFrameDecorator->reflow()
+#9 C:\xampp\htdocs\analisis\app\Controllers\Reports.php(124): Dompdf\Dompdf->render()
+#10 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Reports->generate()
+#11 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Reports))
+#12 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#13 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#14 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#15 C:\xampp\htdocs\analisis\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#16 {main}
+[Method: POST, Route: reports/generate]
+in APPPATH\Views\errors\html\error_exception.php on line 132.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+INFO - 2024-11-08 10:17:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-08 10:17:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-08 10:17:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-08 10:25:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-08 10:25:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-08 10:25:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-08 10:26:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-08 10:26:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-08 10:26:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-08 10:26:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-08 10:26:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-08 10:28:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-08 10:28:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-08 10:28:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-08 10:32:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-08 10:32:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-08 10:32:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-08 10:33:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-08 10:33:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-08 10:33:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-08 19:55:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2024-11-08 19:55:58 --> Método login llamado
+INFO - 2024-11-08 19:55:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-08 19:55:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2024-11-08 19:56:07 --> Método login llamado
+DEBUG - 2024-11-08 19:56:07 --> Método POST detectado
+DEBUG - 2024-11-08 19:56:07 --> Datos recibidos - Username: admin
+INFO - 2024-11-08 19:56:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2024-11-08 19:56:07 --> Login exitoso, redirigiendo...
+INFO - 2024-11-08 19:56:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-08 19:56:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-08 19:56:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-08 19:56:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-08 19:56:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-08 19:57:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-08 20:01:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-08 20:02:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-08 20:02:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-08 20:06:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-08 20:06:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-08 20:07:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-08 20:08:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-08 20:08:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-08 20:08:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-08 20:12:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-11-08 20:12:33 --> TypeError: Dompdf\Cpdf::getFontHeight(): Argument #1 ($size) must be of type float, array given, called in C:\xampp\htdocs\analisis\vendor\dompdf\dompdf\src\Adapter\CPDF.php on line 753
+[Method: POST, Route: reports/generate]
+in VENDORPATH\dompdf\dompdf\lib\Cpdf.php on line 4747.
+ 1 VENDORPATH\dompdf\dompdf\src\Adapter\CPDF.php(753): Dompdf\Cpdf->getFontHeight([...])
+ 2 VENDORPATH\dompdf\dompdf\src\Adapter\CPDF.php(919): Dompdf\Adapter\CPDF->text(490, 750, '1', 10, [...], [...], 0.0, 0.0, 0.0)
+ 3 VENDORPATH\dompdf\dompdf\src\Adapter\CPDF.php(951): Dompdf\Adapter\CPDF->Dompdf\Adapter\{closure}(1, 1, Object(Dompdf\Adapter\CPDF), Object(Dompdf\FontMetrics))
+ 4 VENDORPATH\dompdf\dompdf\src\Adapter\CPDF.php(913): Dompdf\Adapter\CPDF->processPageScript(Object(Closure))
+ 5 VENDORPATH\dompdf\dompdf\src\PhpEvaluator.php(52) : eval()'d code(4): Dompdf\Adapter\CPDF->page_text(490, 750, '{PAGE_NUM}', 10, [...])
+ 6 VENDORPATH\dompdf\dompdf\src\PhpEvaluator.php(52): eval()
+ 7 VENDORPATH\dompdf\dompdf\src\PhpEvaluator.php(60): Dompdf\PhpEvaluator->evaluate('
+        if (isset($pdf)) {
+            $font = $fontMetrics->getFont("Arial", "bold");
+            $pdf->page_text(490, 750, "{PAGE_NUM}", 10, array(0,0,0));
+        }
+    ')
+ 8 VENDORPATH\dompdf\dompdf\src\Renderer.php(305): Dompdf\PhpEvaluator->render(Object(Dompdf\FrameDecorator\NullFrameDecorator))
+ 9 VENDORPATH\dompdf\dompdf\src\Renderer.php(151): Dompdf\Renderer->_render_frame('php', Object(Dompdf\FrameDecorator\NullFrameDecorator))
+10 VENDORPATH\dompdf\dompdf\src\Renderer.php(207): Dompdf\Renderer->render(Object(Dompdf\FrameDecorator\NullFrameDecorator))
+11 VENDORPATH\dompdf\dompdf\src\Renderer.php(207): Dompdf\Renderer->render(Object(Dompdf\FrameDecorator\Block))
+12 VENDORPATH\dompdf\dompdf\src\FrameReflower\Page.php(149): Dompdf\Renderer->render(Object(Dompdf\FrameDecorator\Block))
+13 VENDORPATH\dompdf\dompdf\src\FrameDecorator\AbstractFrameDecorator.php(905): Dompdf\FrameReflower\Page->reflow(null)
+14 VENDORPATH\dompdf\dompdf\src\Dompdf.php(808): Dompdf\FrameDecorator\AbstractFrameDecorator->reflow()
+15 APPPATH\Controllers\Reports.php(125): Dompdf\Dompdf->render()
+16 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Reports->generate()
+17 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Reports))
+18 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+19 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+20 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+21 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-11-08 20:12:48 --> ErrorException: Allowed memory size of 1073741824 bytes exhausted (tried to allocate 522194944 bytes)
+【Previous Exception】
+TypeError
+Dompdf\Cpdf::getFontHeight(): Argument #1 ($size) must be of type float, array given, called in C:\xampp\htdocs\analisis\vendor\dompdf\dompdf\src\Adapter\CPDF.php on line 753
+#0 C:\xampp\htdocs\analisis\vendor\dompdf\dompdf\src\Adapter\CPDF.php(753): Dompdf\Cpdf->getFontHeight(Array)
+#1 C:\xampp\htdocs\analisis\vendor\dompdf\dompdf\src\Adapter\CPDF.php(919): Dompdf\Adapter\CPDF->text(490, 750, '1', 10, Array, Array, 0.0, 0.0, 0.0)
+#2 C:\xampp\htdocs\analisis\vendor\dompdf\dompdf\src\Adapter\CPDF.php(951): Dompdf\Adapter\CPDF->Dompdf\Adapter\{closure}(1, 1, Object(Dompdf\Adapter\CPDF), Object(Dompdf\FontMetrics))
+#3 C:\xampp\htdocs\analisis\vendor\dompdf\dompdf\src\Adapter\CPDF.php(913): Dompdf\Adapter\CPDF->processPageScript(Object(Closure))
+#4 C:\xampp\htdocs\analisis\vendor\dompdf\dompdf\src\PhpEvaluator.php(52) : eval()'d code(4): Dompdf\Adapter\CPDF->page_text(490, 750, '{PAGE_NUM}', 10, Array)
+#5 C:\xampp\htdocs\analisis\vendor\dompdf\dompdf\src\PhpEvaluator.php(52): eval()
+#6 C:\xampp\htdocs\analisis\vendor\dompdf\dompdf\src\PhpEvaluator.php(60): Dompdf\PhpEvaluator->evaluate('\n        if (is...')
+#7 C:\xampp\htdocs\analisis\vendor\dompdf\dompdf\src\Renderer.php(305): Dompdf\PhpEvaluator->render(Object(Dompdf\FrameDecorator\NullFrameDecorator))
+#8 C:\xampp\htdocs\analisis\vendor\dompdf\dompdf\src\Renderer.php(151): Dompdf\Renderer->_render_frame('php', Object(Dompdf\FrameDecorator\NullFrameDecorator))
+#9 C:\xampp\htdocs\analisis\vendor\dompdf\dompdf\src\Renderer.php(207): Dompdf\Renderer->render(Object(Dompdf\FrameDecorator\NullFrameDecorator))
+#10 C:\xampp\htdocs\analisis\vendor\dompdf\dompdf\src\Renderer.php(207): Dompdf\Renderer->render(Object(Dompdf\FrameDecorator\Block))
+#11 C:\xampp\htdocs\analisis\vendor\dompdf\dompdf\src\FrameReflower\Page.php(149): Dompdf\Renderer->render(Object(Dompdf\FrameDecorator\Block))
+#12 C:\xampp\htdocs\analisis\vendor\dompdf\dompdf\src\FrameDecorator\AbstractFrameDecorator.php(905): Dompdf\FrameReflower\Page->reflow(NULL)
+#13 C:\xampp\htdocs\analisis\vendor\dompdf\dompdf\src\Dompdf.php(808): Dompdf\FrameDecorator\AbstractFrameDecorator->reflow()
+#14 C:\xampp\htdocs\analisis\app\Controllers\Reports.php(125): Dompdf\Dompdf->render()
+#15 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Reports->generate()
+#16 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Reports))
+#17 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#18 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#19 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#20 C:\xampp\htdocs\analisis\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#21 {main}
+[Method: POST, Route: reports/generate]
+in APPPATH\Views\errors\html\error_exception.php on line 132.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+INFO - 2024-11-08 20:13:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-08 20:14:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-08 20:14:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-08 20:16:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-11-08 20:16:29 --> ArgumentCountError: Too few arguments to function Dompdf\Adapter\CPDF::page_text(), 4 passed in C:\xampp\htdocs\analisis\vendor\dompdf\dompdf\src\PhpEvaluator.php(52) : eval()'d code on line 4 and at least 5 expected
+[Method: POST, Route: reports/generate]
+in VENDORPATH\dompdf\dompdf\src\Adapter\CPDF.php on line 911.
+ 1 VENDORPATH\dompdf\dompdf\src\PhpEvaluator.php(52) : eval()'d code(4): Dompdf\Adapter\CPDF->page_text('{PAGE_NUM}', null, 10, [...])
+ 2 VENDORPATH\dompdf\dompdf\src\PhpEvaluator.php(52): eval()
+ 3 VENDORPATH\dompdf\dompdf\src\PhpEvaluator.php(60): Dompdf\PhpEvaluator->evaluate('
+        if (isset($pdf)) {
+            $font = $fontMetrics->getFont("Arial");
+            $pdf->page_text("{PAGE_NUM}", $font, 10, array(0,0,0));
+        }
+    ')
+ 4 VENDORPATH\dompdf\dompdf\src\Renderer.php(305): Dompdf\PhpEvaluator->render(Object(Dompdf\FrameDecorator\NullFrameDecorator))
+ 5 VENDORPATH\dompdf\dompdf\src\Renderer.php(151): Dompdf\Renderer->_render_frame('php', Object(Dompdf\FrameDecorator\NullFrameDecorator))
+ 6 VENDORPATH\dompdf\dompdf\src\Renderer.php(207): Dompdf\Renderer->render(Object(Dompdf\FrameDecorator\NullFrameDecorator))
+ 7 VENDORPATH\dompdf\dompdf\src\Renderer.php(207): Dompdf\Renderer->render(Object(Dompdf\FrameDecorator\Block))
+ 8 VENDORPATH\dompdf\dompdf\src\FrameReflower\Page.php(149): Dompdf\Renderer->render(Object(Dompdf\FrameDecorator\Block))
+ 9 VENDORPATH\dompdf\dompdf\src\FrameDecorator\AbstractFrameDecorator.php(905): Dompdf\FrameReflower\Page->reflow(null)
+10 VENDORPATH\dompdf\dompdf\src\Dompdf.php(808): Dompdf\FrameDecorator\AbstractFrameDecorator->reflow()
+11 APPPATH\Controllers\Reports.php(125): Dompdf\Dompdf->render()
+12 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Reports->generate()
+13 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Reports))
+14 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+15 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+16 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+17 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2024-11-08 20:16:42 --> ErrorException: Allowed memory size of 1073741824 bytes exhausted (tried to allocate 515903488 bytes)
+【Previous Exception】
+ArgumentCountError
+Too few arguments to function Dompdf\Adapter\CPDF::page_text(), 4 passed in C:\xampp\htdocs\analisis\vendor\dompdf\dompdf\src\PhpEvaluator.php(52) : eval()'d code on line 4 and at least 5 expected
+#0 C:\xampp\htdocs\analisis\vendor\dompdf\dompdf\src\PhpEvaluator.php(52) : eval()'d code(4): Dompdf\Adapter\CPDF->page_text('{PAGE_NUM}', NULL, 10, Array)
+#1 C:\xampp\htdocs\analisis\vendor\dompdf\dompdf\src\PhpEvaluator.php(52): eval()
+#2 C:\xampp\htdocs\analisis\vendor\dompdf\dompdf\src\PhpEvaluator.php(60): Dompdf\PhpEvaluator->evaluate('\n        if (is...')
+#3 C:\xampp\htdocs\analisis\vendor\dompdf\dompdf\src\Renderer.php(305): Dompdf\PhpEvaluator->render(Object(Dompdf\FrameDecorator\NullFrameDecorator))
+#4 C:\xampp\htdocs\analisis\vendor\dompdf\dompdf\src\Renderer.php(151): Dompdf\Renderer->_render_frame('php', Object(Dompdf\FrameDecorator\NullFrameDecorator))
+#5 C:\xampp\htdocs\analisis\vendor\dompdf\dompdf\src\Renderer.php(207): Dompdf\Renderer->render(Object(Dompdf\FrameDecorator\NullFrameDecorator))
+#6 C:\xampp\htdocs\analisis\vendor\dompdf\dompdf\src\Renderer.php(207): Dompdf\Renderer->render(Object(Dompdf\FrameDecorator\Block))
+#7 C:\xampp\htdocs\analisis\vendor\dompdf\dompdf\src\FrameReflower\Page.php(149): Dompdf\Renderer->render(Object(Dompdf\FrameDecorator\Block))
+#8 C:\xampp\htdocs\analisis\vendor\dompdf\dompdf\src\FrameDecorator\AbstractFrameDecorator.php(905): Dompdf\FrameReflower\Page->reflow(NULL)
+#9 C:\xampp\htdocs\analisis\vendor\dompdf\dompdf\src\Dompdf.php(808): Dompdf\FrameDecorator\AbstractFrameDecorator->reflow()
+#10 C:\xampp\htdocs\analisis\app\Controllers\Reports.php(125): Dompdf\Dompdf->render()
+#11 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\Reports->generate()
+#12 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Reports))
+#13 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#14 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#15 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#16 C:\xampp\htdocs\analisis\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#17 {main}
+[Method: POST, Route: reports/generate]
+in APPPATH\Views\errors\html\error_exception.php on line 132.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+INFO - 2024-11-08 20:17:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-08 20:23:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-08 20:24:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-08 20:24:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-08 20:25:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-08 20:25:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-08 20:27:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-08 20:27:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-08 20:28:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-08 20:28:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-08 20:29:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-08 20:29:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-08 20:30:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-08 20:33:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-08 20:34:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-08 20:34:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-08 20:34:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-08 20:36:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-08 20:36:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-08 20:36:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-08 20:40:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-08 20:40:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-08 20:40:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-08 20:40:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-08 20:40:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-08 20:40:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-08 20:40:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-08 15:47:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-08 16:10:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-08 16:10:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-08 16:11:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-08 16:11:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-08 16:12:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-08 16:12:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-08 16:12:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-08 16:12:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-08 16:12:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-08 16:12:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

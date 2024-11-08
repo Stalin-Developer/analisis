@@ -53,4 +53,9 @@ $routes->group('', ['filter' => 'auth'], function($routes) {
 
 
 
+    // Rutas de reportes
+    $routes->get('reports', 'Reports::index');
+    $routes->post('reports/generate', 'Reports::generate');
+
+
 });
