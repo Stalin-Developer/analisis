@@ -19,17 +19,94 @@ Dashboard
 <li class="breadcrumb-item active">Dashboard</li>
 <?= $this->endSection() ?>
 
+
+
+
+
+
 <?= $this->section('content') ?>
-<div class="row">
-    <div class="col-lg-12">
-        <div class="card">
-            <div class="card-body">
-                <h5 class="card-title">Bienvenido</h5>
-                <p class="card-text">
-                    Sistema de Administración de Documentos del Departamento de Investigación
-                </p>
+
+
+<!-- Importación del CSS específico del dashboard -->
+<link rel="stylesheet" href="<?= base_url('css/dashboard.css') ?>">
+
+
+
+<!-- Main content -->
+<section class="content">
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <!-- Primera fila de cuadros -->
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <a href="#" class="small-box dashboard-box">
+                    <div class="inner">
+                        <h3>I + D + i</h3>
+                    </div>
+                </a>
             </div>
+
+
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <a href="#" class="small-box dashboard-box">
+                    <div class="inner">
+                        <h3>PIS</h3>
+                    </div>
+                </a>
+            </div>
+
+
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <a href="#" class="small-box dashboard-box">
+                    <div class="inner">
+                        <h3>TDT</h3>
+                    </div>
+                </a>
+            </div>
+
+
+        </div>
+
+
+
+
+
+        <div class="row justify-content-center">
+            <!-- Segunda fila de cuadros -->
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <a href="#" class="small-box dashboard-box">
+                    <div class="inner">
+                        <h3>Producción Científica y Técnica</h3>
+                    </div>
+                </a>
+            </div>
+
+
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <a href="#" class="small-box dashboard-box">
+                    <div class="inner">
+                        <h3>Innovación y Capacidad de Absorción</h3>
+                    </div>
+                </a>
+            </div>
+
+
+            <div class="col-lg-3 col-md-4 col-sm-6">
+                <a href="#" class="small-box dashboard-box">
+                    <div class="inner">
+                        <h3>Galería</h3>
+                    </div>
+                </a>
+            </div>
+
+
+
         </div>
     </div>
-</div>
+</section>
+
+
+
+
+
+
 <?= $this->endSection() ?>
