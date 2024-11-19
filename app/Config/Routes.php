@@ -52,6 +52,16 @@ $routes->group('', ['filter' => 'auth'], function($routes) {
 
 
 
+    // Rutas para Trabajos de Titulación
+    $routes->get('trabajos-titulacion', 'TrabajosTitulacion::index');
+    $routes->get('trabajos-titulacion/new', 'TrabajosTitulacion::new');
+    $routes->post('trabajos-titulacion/create', 'TrabajosTitulacion::create');
+    $routes->get('trabajos-titulacion/edit/(:num)', 'TrabajosTitulacion::edit/$1');
+    $routes->post('trabajos-titulacion/update/(:num)', 'TrabajosTitulacion::update/$1');
+    $routes->get('trabajos-titulacion/delete/(:num)', 'TrabajosTitulacion::delete/$1');
+    $routes->get('trabajos-titulacion/download/(:num)', 'TrabajosTitulacion::download/$1');
+    $routes->get('trabajos-titulacion/download-poster/(:num)', 'TrabajosTitulacion::downloadPoster/$1');
+    
 
     // Rutas de reportes
     $routes->get('reports', 'Reports::index');
