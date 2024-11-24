@@ -333,4 +333,144 @@ class TrabajosTitulacion extends BaseController
     //     return redirect()->to('/trabajos-titulacion')
     //         ->with('error', 'No se pudo descargar el póster');
     // }
+
+
+
+
+    //Funcion para extraer el texto de la primera pagina del tdt.
+    public function extractText()
+    {
+        if ($this->request->getMethod() === 'POST') {
+            $file = $this->request->getFile('pdf_file');
+            
+            if ($file->isValid() && !$file->hasMoved()) {
+                try {
+                    // Mover el archivo a una ubicación temporal
+                    $file->move(WRITEPATH . 'temp', $file->getName());
+                    $path = WRITEPATH . 'temp/' . $file->getName();
+
+                    // Usar PDFParser
+                    $parser = new \Smalot\PdfParser\Parser();
+                    $pdf = $parser->parseFile($path);
+                    
+                    // Extraer texto de la primera página
+                    $text = $pdf->getPages()[0]->getText();
+
+                    // Limpiar el texto extraído
+                    $cleanedText = $this->cleanExtractedText($text);
+
+                    //Llamamos a la funcion processWithQwen, para recibir la respuesta del modelo y despues enviarlo a la vista.
+                    $qwenResponse = $this->processWithQwen($cleanedText);
+
+                    // Recortamos la respuesta
+                    //$respuestaRecortada = $this->recortarTexto($qwenResponse);
+
+                    // Eliminar archivo temporal
+                    unlink($path);
+
+                    return $this->response->setJSON([
+                        'success' => true,
+                        'text' => $cleanedText,
+                        'prompts_responses' => $qwenResponse
+                        //'respuestaRecortada' => $respuestaRecortada,
+                        //'carreras' => $this->careerModel->findAll()  // Enviamos las carreras
+                    ]);
+                } catch (\Exception $e) {
+                    return $this->response->setJSON([
+                        'success' => false,
+                        'error' => $e->getMessage()
+                    ]);
+                }
+            }
+        }
+        
+        return $this->response->setJSON([
+            'success' => false,
+            'error' => 'Archivo inválido'
+        ]);
+    }
+
+
+
+    //Funcion para limpiar el texto extraido de la primera pagina.
+    private function cleanExtractedText($text) {    
+        // Eliminar el número "1" si está al inicio
+        $text = preg_replace('/^1\s*/', '', $text);
+    
+        // Reemplazar múltiples saltos de línea con dos
+        $text = preg_replace('/\n\s*\n/', "\n\n", $text);
+    
+        return $text;
+    }
+
+
+
+
+
+
+    private function processWithQwen($cleanedText)
+    {
+        $token = "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";
+        
+        $ch = curl_init();
+
+        curl_setopt($ch, CURLOPT_URL, "https://api-inference.huggingface.co/models/Qwen/Qwen2.5-72B-Instruct");
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
+        curl_setopt($ch, CURLOPT_POST, 1);
+        
+        curl_setopt($ch, CURLOPT_HTTPHEADER, [
+            "Authorization: Bearer " . $token,
+            "Content-Type: application/json"
+        ]);
+
+
+        // Lista de prompts
+        $prompts = [
+            "Dame el título de este texto: $cleanedText responde de esta manera: Título_Solicitado: (el título solicitado)",
+            "Dame el autor de este texto: $cleanedText responde de esta manera: Autor_Solicitado: (el autor solicitado. Si es más de un autor, separarlos por coma, no incluir el asesor)",
+            "Esta es una lista de carreras: 1. Desarrollo de Software, 2. Diseño Gráfico, 3. Desarrollo y Análisis de Software - Modalidad Virtual, 4. Atención Integral a Adultos Mayores, 5. Administración, 6. Marketing Digital y Comercio Electrónico, 7. Redes y Telecomunicaciones. Encuentra con qué carrera de la lista de carreras se relaciona el siguiente texto: $cleanedText responde de esta manera: Número_Opción: (limítate a responder solo un número de la lista)"
+        ];
+
+        $responses = []; // Array para guardar las respuestas
+
+
+
+        foreach ($prompts as $prompt) {
+            // Cambia las opciones específicas de cada solicitud
+            curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode([
+                "inputs" => $prompt,
+                "parameters" => [
+                    "max_tokens" => 5000,
+                    "temperature" => 0.1
+                ]
+            ]));
+    
+            // Ejecuta la solicitud
+            $response = curl_exec($ch);
+            $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+    
+            if ($httpCode !== 200) {
+                $responses[] = ['success' => false, 'error' => 'Error en la API: ' . $response];
+            } else {
+                $responses[] = ['success' => true, 'data' => json_decode($response, true)];
+            }
+        }
+
+
+
+        curl_close($ch); // Cierra la sesión una vez que terminas de enviar todos los prompts
+
+        return $responses; // Retorna todas las respuestas
+
+    }
+
+
+
+
+
+
+
+
+
+
 }

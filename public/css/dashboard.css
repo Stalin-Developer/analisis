@@ -4,7 +4,7 @@
     margin-bottom: 50px;
     max-height: 130px;
     min-height: 130px;
-    background-color: #0056b3;
+    background-color: #0039a2;
     color: rgb(189, 189, 189);
     text-decoration: none;
     display: flex; /* Cambiado de block a flex */
@@ -36,7 +36,7 @@
 .dashboard-box:hover {
     transform: scale(1.05);
     box-shadow: 0 0 15px rgba(0,0,0,0.2);
-    background-color: #007bff;
+    background-color: #004ddb;
     color: white;
     text-decoration: none;
 }

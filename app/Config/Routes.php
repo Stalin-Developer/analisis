@@ -61,6 +61,7 @@ $routes->group('', ['filter' => 'auth'], function($routes) {
     $routes->get('trabajos-titulacion/delete/(:num)', 'TrabajosTitulacion::delete/$1');
     $routes->get('trabajos-titulacion/download/(:num)', 'TrabajosTitulacion::download/$1');
     $routes->get('trabajos-titulacion/download-poster/(:num)', 'TrabajosTitulacion::downloadPoster/$1');
+    $routes->post('trabajos-titulacion/extract-text', 'TrabajosTitulacion::extractText');
     
 
     // Rutas de reportes
