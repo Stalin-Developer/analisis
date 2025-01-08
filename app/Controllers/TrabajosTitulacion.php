@@ -356,24 +356,94 @@ class TrabajosTitulacion extends BaseController
                     // Extraer texto de la primera página
                     $text = $pdf->getPages()[0]->getText();
 
-                    // Limpiar el texto extraído
-                    $cleanedText = $this->cleanExtractedText($text);
+                    
+                    //Llamamos a la funcion processWithLlama, para recibir la respuesta del modelo y despues enviarlo a la vista.
+                    $analysis = $this->processWithLlama($text);
 
-                    //Llamamos a la funcion processWithQwen, para recibir la respuesta del modelo y despues enviarlo a la vista.
-                    $qwenResponse = $this->processWithQwen($cleanedText);
+                    
 
-                    // Recortamos la respuesta
-                    //$respuestaRecortada = $this->recortarTexto($qwenResponse);
+
+                    //Vamos a buscar y extraer el Resumen.
+                    // Buscar el resumen entre las páginas 2 y 12
+                    $abstract = '';
+                    $totalPages = count($pdf->getPages());
+                    //Si el documento tiene menos de 12 paginas, devolvera el total de paginas del documento.
+                    $maxPage = min(12, $totalPages); 
+
+                    // Iterar por pares de páginas hasta la página 12 o el máximo disponible
+                    for ($i = 1; $i < min($maxPage - 1, 11); $i++) { // Empezamos desde la página 2 (índice 1)
+                        // Obtener el texto de dos páginas consecutivas
+                        $currentPageText = $pdf->getPages()[$i]->getText();
+                        $nextPageText = $pdf->getPages()[$i + 1]->getText();
+                        
+                        // Combinar el texto de ambas páginas
+                        $combinedText = $currentPageText . "\n" . $nextPageText;                        
+                        
+                        // Buscar las palabras clave y resumen
+                        if (preg_match('/resumen\s*(.*?)\s*(palabras claves:|palabras clave:|palabra claves:|palabra clave:)/si', $combinedText, $matches)) {
+                            //Se alamacenara el texto que se encuentra entre "Palabras Clave" y "Resumen".
+                            $abstract = trim($matches[1]);
+                            
+                            break;
+                        }
+
+
+                    }
+
+
+
+
+                    if ($abstract == ''){
+                        //Continuar iterando para los casos en donde el autor no puso "Palabras clave:"
+                        for ($i = 1; $i < min($maxPage - 1, 11); $i++) { // Empezamos desde la página 2 (índice 1)
+                            // Obtener el texto de dos páginas consecutivas
+                            $currentPageText = $pdf->getPages()[$i]->getText();
+                            $nextPageText = $pdf->getPages()[$i + 1]->getText();
+                            
+                            // Combinar el texto de ambas páginas
+                            $combinedText = $currentPageText . "\n" . $nextPageText;
+                            
+                            
+                            
+                            //Si no hay "Palabras clave:", buscar con otras posibles palabras que podrian estar al final del resumen.
+                            if (preg_match('/^\s*resumen\s*$\s*(.*?)\s*(SUMMARY|ABSTRACT|Tabla de Contenido|CAPÍTULO I|Introducción)/smi', $combinedText, $matches)) {
+                                //Se alamacenara el texto que se encuentra entre "Palabras Clave" y "Resumen".
+                                $abstract = trim($matches[1]);
+
+                                break;
+                            }
+
+
+                        }
+                    }
+
+                    
+
+                    //Hacemos que llama haga un resumen incluso mas pequeno, de alrededor de 60 palabras.
+                    if ($abstract == ''){
+                        $resume= "Resumen no encontrado";
+                    }else{
+                        $resume = $this->resumeWithLlama($abstract);
+                    }
+                    
+
 
                     // Eliminar archivo temporal
                     unlink($path);
 
+
+
+                    //Llamamos a la funcion que compara strings para hacer la comparacion con las carreras de la base de datos.
+                    $idCarrera= $this->compararCarreras($analysis);
+
+
+
+
                     return $this->response->setJSON([
-                        'success' => true,
-                        'text' => $cleanedText,
-                        'prompts_responses' => $qwenResponse
-                        //'respuestaRecortada' => $respuestaRecortada,
-                        //'carreras' => $this->careerModel->findAll()  // Enviamos las carreras
+                        'success' => true,                       
+                        'analysis' => $analysis,
+                        'resume' => $resume,
+                        'idCarrera' => $idCarrera
                     ]);
                 } catch (\Exception $e) {
                     return $this->response->setJSON([
@@ -392,77 +462,204 @@ class TrabajosTitulacion extends BaseController
 
 
 
-    //Funcion para limpiar el texto extraido de la primera pagina.
-    private function cleanExtractedText($text) {    
-        // Eliminar el número "1" si está al inicio
-        $text = preg_replace('/^1\s*/', '', $text);
-    
-        // Reemplazar múltiples saltos de línea con dos
-        $text = preg_replace('/\n\s*\n/', "\n\n", $text);
-    
-        return $text;
-    }
 
 
 
 
-
-
-    private function processWithQwen($cleanedText)
+    private function processWithLlama($text)
     {
-        $token = "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";
-        
-        $ch = curl_init();
-
-        curl_setopt($ch, CURLOPT_URL, "https://api-inference.huggingface.co/models/Qwen/Qwen2.5-72B-Instruct");
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-        curl_setopt($ch, CURLOPT_POST, 1);
-        
-        curl_setopt($ch, CURLOPT_HTTPHEADER, [
-            "Authorization: Bearer " . $token,
-            "Content-Type: application/json"
-        ]);
+        $apiUrl = "https://api-inference.huggingface.co/models/meta-llama/Meta-Llama-3-8B-Instruct/v1/chat/completions";
+        $apiKey = "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";
 
 
-        // Lista de prompts
-        $prompts = [
-            "Dame el título de este texto: $cleanedText responde de esta manera: Título_Solicitado: (el título solicitado)",
-            "Dame el autor de este texto: $cleanedText responde de esta manera: Autor_Solicitado: (el autor solicitado. Si es más de un autor, separarlos por coma, no incluir el asesor)",
-            "Esta es una lista de carreras: 1. Desarrollo de Software, 2. Diseño Gráfico, 3. Desarrollo y Análisis de Software - Modalidad Virtual, 4. Atención Integral a Adultos Mayores, 5. Administración, 6. Marketing Digital y Comercio Electrónico, 7. Redes y Telecomunicaciones. Encuentra con qué carrera de la lista de carreras se relaciona el siguiente texto: $cleanedText responde de esta manera: Número_Opción: (limítate a responder solo un número de la lista)"
-        ];
+        try {
+            $ch = curl_init($apiUrl);
+            
+            $payload = [
+                'model' => 'meta-llama/Meta-Llama-3-8B-Instruct',
+                'messages' => [
+                    [
+                        'role' => 'user',
+                        'content' => "Identifique estos campos (título, línea de investigación, autor o autores, carrera, año de publicación, mes de publicación) en el siguiente texto:\n" . $text
+                    ]
+                ],
+                'temperature' => 0.5,
+                'max_tokens' => 2048,
+                'top_p' => 0.7,
+                'stream' => false
+            ];
 
-        $responses = []; // Array para guardar las respuestas
-
-
-
-        foreach ($prompts as $prompt) {
-            // Cambia las opciones específicas de cada solicitud
-            curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode([
-                "inputs" => $prompt,
-                "parameters" => [
-                    "max_tokens" => 5000,
-                    "temperature" => 0.1
+            curl_setopt_array($ch, [
+                CURLOPT_RETURNTRANSFER => true,
+                CURLOPT_POST => true,
+                CURLOPT_POSTFIELDS => json_encode($payload),
+                CURLOPT_HTTPHEADER => [
+                    'Authorization: Bearer ' . $apiKey,
+                    'Content-Type: application/json'
                 ]
-            ]));
-    
-            // Ejecuta la solicitud
+            ]);
+
             $response = curl_exec($ch);
-            $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
-    
-            if ($httpCode !== 200) {
-                $responses[] = ['success' => false, 'error' => 'Error en la API: ' . $response];
-            } else {
-                $responses[] = ['success' => true, 'data' => json_decode($response, true)];
+            $http_code = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+
+            
+            if (curl_errno($ch)) {
+                throw new \Exception(curl_error($ch));
             }
+
+            curl_close($ch);
+
+            if ($http_code === 200) {
+                $result = json_decode($response, true);
+                return $result['choices'][0]['message']['content'] ?? '';
+            } else {
+                throw new \Exception('Error from API: ' . $response);
+            }
+
+
+        } catch (\Exception $e) {
+            //log_message('error', 'Exception: ' . $e->getMessage());
+            throw $e;
         }
 
 
 
-        curl_close($ch); // Cierra la sesión una vez que terminas de enviar todos los prompts
-
-        return $responses; // Retorna todas las respuestas
 
     }
+
+
+
+
+
+
+
+
+    private function resumeWithLlama($abstract)
+    {
+        $apiUrl = "https://api-inference.huggingface.co/models/meta-llama/Meta-Llama-3-8B-Instruct/v1/chat/completions";
+        $apiKey = "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";
+
+
+        try {
+            $ch = curl_init($apiUrl);
+            
+            $payload = [
+                'model' => 'meta-llama/Meta-Llama-3-8B-Instruct',
+                'messages' => [
+                    [
+                        'role' => 'user',
+                        'content' => "Resumir el siguiente texto a uno de alrededor de 60 palabras. Solo responder con el resumen solicitado:\n" . $abstract
+                    ]
+                ],
+                'temperature' => 0.5,
+                'max_tokens' => 2048,
+                'top_p' => 0.7,
+                'stream' => false
+            ];
+
+            curl_setopt_array($ch, [
+                CURLOPT_RETURNTRANSFER => true,
+                CURLOPT_POST => true,
+                CURLOPT_POSTFIELDS => json_encode($payload),
+                CURLOPT_HTTPHEADER => [
+                    'Authorization: Bearer ' . $apiKey,
+                    'Content-Type: application/json'
+                ]
+            ]);
+
+            $response = curl_exec($ch);
+            $http_code = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+
+            
+            if (curl_errno($ch)) {
+                throw new \Exception(curl_error($ch));
+            }
+
+            curl_close($ch);
+
+            if ($http_code === 200) {
+                $result = json_decode($response, true);
+                return $result['choices'][0]['message']['content'] ?? '';
+            } else {
+                throw new \Exception('Error from API: ' . $response);
+            }
+
+
+        } catch (\Exception $e) {
+            //log_message('error', 'Exception: ' . $e->getMessage());
+            throw $e;
+        }
+
+
+
+
+    }
+
+
+
+
+
+
+
+
+
+    //Funcion para comparar carreras.
+    private function compararCarreras($analysis)
+    {
+        if (preg_match('/\d+\.\s*(?:\*\*)?[Cc]arrera(?:\*\*)?[:*]\s*(.*?)(?=\n|$)/', $analysis, $matches)) {
+            $carreraExtraida = trim($matches[1]);
+            
+            // Obtener todas las carreras de la base de datos
+            $careers = $this->careerModel->findAll();
+            
+            // Crear array con carreras en minúsculas
+            $carrerasMinusculas = array_map(function($career) {
+                return strtolower($career['name']);
+            }, $careers);
+            
+            // Convertir carrera extraída a minúsculas
+            $carreraExtraidaMinusculas = strtolower($carreraExtraida);
+            
+            // Variables para guardar la mejor coincidencia
+            $mejorPosicion = 0;
+            $mejorPorcentaje = 0;
+            
+            // Comparar con cada carrera
+            foreach($carrerasMinusculas as $index => $carrera) {
+                $porcentajeActual = 0;
+                similar_text($carreraExtraidaMinusculas, $carrera, $porcentajeActual);
+                
+                if($index === 0) {
+                    $mejorPosicion = $index;
+                    $mejorPorcentaje = $porcentajeActual;
+                } else if($porcentajeActual > $mejorPorcentaje) {
+                    $mejorPosicion = $index;
+                    $mejorPorcentaje = $porcentajeActual;
+                }
+            }
+            
+            // Registrar en el log los resultados
+            // log_message('debug', 'Comparación de carreras: ' . 
+            //     'Carrera extraída: "' . $carreraExtraidaMinusculas . '" | ' .
+            //     'Mejor coincidencia: "' . $carrerasMinusculas[$mejorPosicion] . '" | ' .
+            //     'Posicion en el array: "' . $mejorPosicion . '" | ' .
+            //     'Porcentaje de similitud: ' . $mejorPorcentaje . '%');
+
+                
+            
+            // Retornar el ID de la carrera con mejor coincidencia si supera el 40%
+            return $mejorPorcentaje > 40 ? $mejorPosicion+1 : 0;
+        }
+        
+        return 0;
+
+
+    }
+
+
+
+
+
 
 
 

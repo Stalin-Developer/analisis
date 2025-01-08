@@ -6,6 +6,12 @@ http://localhost/analisis/public/
 */
 
 
+/**
+Link de un ejemplo:
+https://repositorio.itc.edu.co/handle/20.500.14329/479
+*/
+
+
 <?= $this->section('title') ?>
 Repositorio de Documentos
 <?= $this->endSection() ?>

@@ -59,7 +59,7 @@ Nuevo Trabajo de Titulación
             <div class="form-group">
                 <label for="linea_investigacion">Línea de Investigación</label>
                 <input type="text" class="form-control" id="linea_investigacion" name="linea_investigacion" 
-                       value="<?= old('linea_investigacion') ?>">
+                       value="<?= old('linea_investigacion') ?>" required>
             </div>
 
             <div class="form-group">
@@ -221,41 +221,19 @@ Nuevo Trabajo de Titulación
                         
                         //Si hubo exito al llamar al modelo.
                         if (response.success) {
-                            if (response.prompts_responses) {
-                                // Procesar las respuestas
-                                const respuestas = procesarRespuestas(response.prompts_responses);
-                                
-                                // Crear contenido para mostrar en el modal
-                                let content = "Información extraída:\n\n";
-                                content += `Título1: ${respuestas.titulo}\n\n`;
-                                content += `Autores2: ${respuestas.autores}\n\n`;
-                                content += `Carrera3: ${respuestas.carrera}`;
+                            if (response.analysis) {
 
-                                // $('#extractedText').text(content);
-                                // $('#textModal').modal('show');
+                                rellenarCampos(response.analysis, response.resume, response.idCarrera);
+
+                                let content = `${response.analysis}\n\n`;
+                                content += `${response.resume}\n\n`;
+
+                                $('#extractedText').text(content);
+                                //$('#textModal').modal('show');
 
                             } else {
                                 $('#extractedText').text('No se pudo procesar el texto');
                                 $('#textModal').modal('show');
-                            }
-
-
-                            //Vamos a utilizar el texto extraido.
-                            if(response.text){
-                                let contenido = response.text; //Texto de la primera pagina.
-
-                                const linea_investigacion = buscarLineaInvestigacion(contenido);
-                                const anio = buscarAnio(contenido);
-                                const mes = buscarMes(contenido);
-
-                                contenido += `\n\nLínea de investigacion4: ${linea_investigacion}`;
-                                contenido += `\n\nAño5: ${anio}`;
-                                contenido += `\n\nMes6: ${mes}`;
-
-                                $('#extractedText').text(contenido);
-                                $('#textModal').modal('show');
-
-                                console.log("El código dentro de response.text se ejecuta.");
                             }
                             
                         } else {
@@ -273,145 +251,150 @@ Nuevo Trabajo de Titulación
 
 
 
+        //Rellenamos los campos.
+        function rellenarCampos(analysis, resume, idCarrera){
+            //Rellenamos el titulo.
+            // Expresión regular para el título que maneja ambos formatos
+            const tituloPattern = /[Tt]ítulo[*:\s]+(.*?)(?=\n|$)/;
+
+            // Intentar extraer el título
+            const tituloMatch = analysis.match(tituloPattern);
+            if (tituloMatch) { //Si se encontro el titulo.
+                const titulo = tituloMatch[1].trim();
+                $('#titulo').val(titulo);
+            }
 
 
 
-        // Función para procesar cada tipo de respuesta
-        function procesarRespuestas(responses) {
-            const respuestas = {
-                titulo: 'No extraído',
-                autores: 'No extraído',
-                carrera: 'No extraído'
-            };
+            // Extracción de la línea de investigación
+            const lineaPattern = /[Ll]ínea\s+de\s+[Ii]nvestigación[*:\s]+(.*?)(?=\n|$)/;
+            const lineaMatch = analysis.match(lineaPattern);
+            if (lineaMatch) {
+                const linea = lineaMatch[1].trim();
 
-            // Procesar respuesta del título
-            if (responses[0]?.success && responses[0]?.data) { //Se valida la respuesta del primer mensaje.
-                const tituloExtraido = (responses[0].data[0].generated_text).match(/\(el título solicitado\).*?Título_Solicitado:\s*(.+)$/s);
-
-                if (tituloExtraido && tituloExtraido[1]) { //El if valida que el tituloExtraido no sea null y que no este vacio.
-                    // Limpiar el título de espacios extra
-                    respuestas.titulo = tituloExtraido[1].trim();
-                    
-                    // Insertar en el campo del formulario
-                    $('#titulo').val(respuestas.titulo);
+                // Verificar si la línea empieza con "No"
+                if (!linea.startsWith('No')) {
+                    $('#linea_investigacion').val(linea);
                 }
-
-
-                //respuestas.titulo = responses[0].data[0].generated_text; //Aqui le modifica al titulo, ya dejaria de decir no extraido.
-                //console.log('Respuesta título:', respuestas.titulo);
-            }
-
-            
-            // Procesar respuesta de autores
-            if (responses[1]?.success && responses[1]?.data) {
-                const autoresExtraidos = (responses[1].data[0].generated_text).match(/no incluir el asesor\).*?Autor_Solicitado:\s*(.+)$/s);
-
-                if (autoresExtraidos && autoresExtraidos[1]) {
-                    respuestas.autores = autoresExtraidos[1].trim();
-                    $('#autores').val(respuestas.autores);
-                }
-
-
-                // respuestas.autores = responses[1].data[0].generated_text;
-                // console.log('Respuesta autores:', respuestas.autores);
-            }
-            
-            // Procesar respuesta de carrera
-            if (responses[2]?.success && responses[2]?.data) {
-                const numeroCarrera = (responses[2].data[0].generated_text).match(/número de la lista\)\s*([1-7])/);
-                if (numeroCarrera && numeroCarrera[1]) {
-                    respuestas.carrera = numeroCarrera[1].trim();
-                    // Seleccionar la carrera en el select
-                    $('#career_id').val(respuestas.carrera);
-                }
-
-                // respuestas.carrera = responses[2].data[0].generated_text;
-                // console.log('Respuesta carrera:', respuestas.carrera);
-            }
-
-            return respuestas;
-        }
+            } 
 
 
 
 
-
-
-
-
-        // Función para extraer el título y actualizar el formulario
-        function buscarLineaInvestigacion(texto) {
-            // Extraer línea de investigación
-            const lineaMatch = texto.match(/[Ll]ínea\s+de\s+[Ii]nvestigación:\s*(.*?)(?=\n|$)/);
-            let linea = '';
-            if (lineaMatch && lineaMatch[1]) {
-                linea = lineaMatch[1].trim();
-                $('#linea_investigacion').val(linea);
-            } else{
-                linea= "No encontrado";
-                $('#linea_investigacion').val(linea);
-            }
-
-            return linea;
-        }
-
-
-
-
-        // Función para extraer el anio y actualizar el formulario
-        function buscarAnio(texto) {
-            // Expresión regular para encontrar el año en formato YYYY en la última línea
-            const anioMatch = texto.match(/\b(20\d{2})\s*$/);
-            let anio = '';
-            if (anioMatch && anioMatch[1]) {
-                anio = anioMatch[1].trim();
-                $('#year').val(anio);
-            } else{
-                anio= "No encontrado";
-            }
-
-            return anio;
-        }
-
-
-
-
-
-        // Función para extraer el anio y actualizar el formulario
-        function buscarMes(texto) {
-            // Expresión regular para encontrar el mes en la última línea
-            const mesMatch = texto.match(/\b([Ee]nero|[Ff]ebrero|[Mm]arzo|[Aa]bril|[Mm]ayo|[Jj]unio|[Jj]ulio|[Aa]gosto|[Ss]eptiembre|[Oo]ctubre|[Nn]oviembre|[Dd]iciembre)\b/);
-            let mes = '';
-            if (mesMatch && mesMatch[1]) {
-                // Convertir primera letra a mayúscula y el resto a minúscula
-                mes = mesMatch[1].charAt(0).toUpperCase() + mesMatch[1].slice(1).toLowerCase();
+            // Extracción de autores
+            const autoresPattern = /[Aa]utor(?:es)?(?:\so\sautores)?[*:\s]+(.*?)(?=\n|$)/;
+            const autoresMatch = analysis.match(autoresPattern);
+            if (autoresMatch) {
+                let autores = autoresMatch[1].trim();
                 
-                // Obtener el id del mes y seleccionarlo en el select
-                const mesSelect = document.getElementById('mes_id');
-                Array.from(mesSelect.options).forEach(option => {
-                    if (option.text === mes) {
-                        mesSelect.value = option.value;
-
-                        // Determinar el periodo académico
-                        const periodoSelect = document.getElementById('academic_period_id');
-                        const idMes = parseInt(option.value); // Convertir value (o id) a número
-                        
-                        if (idMes >= 4 && idMes <= 9) {
-                            periodoSelect.value = 1; // Primer periodo académico
-                        } else {
-                            periodoSelect.value = 2; // Segundo periodo académico
-                        }
-                    }
+                // Convertir separación con "y" a coma
+                autores = autores.replace(/\sy\s/g, ', ');
+                
+                // Dividir por comas para analizar cada autor
+                let listaAutores = autores.split(',').map(autor => autor.trim());
+                
+                // Filtrar autores que parezcan ser asesores (que empiecen con títulos académicos)
+                listaAutores = listaAutores.filter(autor => {
+                    return !autor.match(/^(Msc\.|PhD\.|Ing\.)/i);
                 });
-            } else{
-                mes= "No encontrado";
+                
+                // Volver a unir los autores con comas
+                const autoresFinales = listaAutores.join(', ');
+                
+                console.log('Autores encontrados:', autoresFinales);
+                $('#autores').val(autoresFinales);
             }
 
-            return mes;
+
+
+
+
+            //Seleccionamos la carrera.
+            if(idCarrera != 0){ //Cero es cuando la carrera que nos envia el modelo no coincide con ninguna carrera de la base de datos.
+                // Seleccionar la carrera en el select
+                $('#career_id').val(idCarrera);
+            }
+
+
+
+
+
+            //Extraccion del anio.
+            const anioPattern = /[Aa]ño\s+de\s+[Pp]ublicación[*:\s]+(\d{4})\.?/;
+            const anioMatch = analysis.match(anioPattern);
+
+            if (anioMatch) {
+                const anio = anioMatch[1]; // Esto dará solo los 4 dígitos del año
+                $('#year').val(anio);
+            }
+
+
+
+
+            //Extraccion del mes de publicacion.
+            // Variable para almacenar la opción encontrada (declarada fuera del if)
+            let opcionEncontrada = null;
+
+            const mesPattern = /[Mm]es\s+de\s+[Pp]ublicación[*:\s]+(\w+)/;
+            const mesMatch = analysis.match(mesPattern);
+            if (mesMatch) {
+                const mesExtraido = mesMatch[1].trim(); // Captura solo la primera palabra
+                
+                // Obtener todas las opciones del select, excluyendo la primera (Seleccione un mes)
+                const opciones = Array.from($('#mes_id option')).slice(1);
+                
+                // Convertir el mes extraído a formato título (primera letra mayúscula, resto minúsculas)
+                const mesFormateado = mesExtraido.charAt(0).toUpperCase() + mesExtraido.slice(1).toLowerCase();
+                
+                // Buscar coincidencia en las opciones
+                opcionEncontrada = opciones.find(opcion => 
+                    opcion.text.trim() === mesFormateado
+                );
+                
+                // Si se encuentra una coincidencia, seleccionar ese mes
+                if (opcionEncontrada) {
+                    $('#mes_id').val(opcionEncontrada.value);
+                }
+            }
+
+
+
+
+
+                      
+            // Determinar el periodo académico basado en el mes seleccionado
+            if (opcionEncontrada) {
+                const mesId = parseInt(opcionEncontrada.value);
+                
+                // Arrays con los IDs de los meses para cada periodo
+                const primerPeriodo = [4, 5, 6, 7, 8, 9]; // abril a septiembre
+                const segundoPeriodo = [10, 11, 12, 1, 2, 3]; // octubre a marzo
+                
+                if (primerPeriodo.includes(mesId)) {
+                    $('#academic_period_id').val(1); // ID del primer periodo
+                } else if (segundoPeriodo.includes(mesId)) {
+                    $('#academic_period_id').val(2); // ID del segundo periodo
+                }
+            }
+
+
+
+
+
+
+            //Insertar el resumen.
+            $('#resumen').val(resume);
+
+
+
+
+
+
+
         }
 
 
-
+        
 
 
 

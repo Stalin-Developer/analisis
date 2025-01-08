@@ -1,0 +1,242 @@
+INFO - 2025-01-08 12:24:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-08 12:24:24 --> Método login llamado
+INFO - 2025-01-08 12:24:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-08 12:24:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-08 12:24:26 --> Método login llamado
+DEBUG - 2025-01-08 12:24:26 --> Método POST detectado
+DEBUG - 2025-01-08 12:24:26 --> Datos recibidos - Username: admin
+INFO - 2025-01-08 12:24:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-08 12:24:26 --> Login exitoso, redirigiendo...
+INFO - 2025-01-08 12:24:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-08 12:24:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-08 12:24:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-08 12:24:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-08 12:24:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-08 12:24:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-08 12:35:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-08 12:35:12 --> Comparación de carreras: Carrera extraída: "tecnólogo superior en desarrollo de software" | Mejor coincidencia: "desarrollo de software" | Posicion en el array: "0" | Porcentaje de similitud: 65.671641791045%
+INFO - 2025-01-08 12:36:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-08 12:36:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-08 12:36:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-08 12:36:41 --> Comparación de carreras: Carrera extraída: "tecnólogo superior en desarrollo de software" | Mejor coincidencia: "desarrollo de software" | Posicion en el array: "0" | Porcentaje de similitud: 65.671641791045%
+INFO - 2025-01-08 12:37:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-08 12:37:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-08 12:37:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-08 12:37:12 --> Comparación de carreras: Carrera extraída: "ibarra-ecuador" | Mejor coincidencia: "redes y telecomunicaciones" | Posicion en el array: "6" | Porcentaje de similitud: 30%
+INFO - 2025-01-08 12:37:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-08 12:37:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-08 12:37:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-08 12:37:28 --> Comparación de carreras: Carrera extraída: "tecnólogo superior en desarrollo de software" | Mejor coincidencia: "desarrollo de software" | Posicion en el array: "0" | Porcentaje de similitud: 65.671641791045%
+INFO - 2025-01-08 12:37:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-08 12:37:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-08 12:37:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-08 12:37:51 --> Comparación de carreras: Carrera extraída: "carrera de atención integral al adulto mayor" | Mejor coincidencia: "atención integral a adultos mayores" | Posicion en el array: "3" | Porcentaje de similitud: 81.481481481481%
+INFO - 2025-01-08 12:39:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-08 12:39:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-08 12:39:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-08 12:39:43 --> Comparación de carreras: Carrera extraída: "instituto superior tecnológico ibarra (tecnología en atención integral a adultos mayores)" | Mejor coincidencia: "atención integral a adultos mayores" | Posicion en el array: "3" | Porcentaje de similitud: 56.25%
+INFO - 2025-01-08 12:39:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-08 12:39:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-08 12:39:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-08 12:39:59 --> Comparación de carreras: Carrera extraída: "instituto superior tecnológico ibarra" | Mejor coincidencia: "marketing digital y comercio electrónico" | Posicion en el array: "5" | Porcentaje de similitud: 35.443037974684%
+INFO - 2025-01-08 12:40:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-08 12:40:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-08 12:40:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-08 12:40:19 --> Comparación de carreras: Carrera extraída: "diseñador gráfico con equivalentes a tecnología superior" | Mejor coincidencia: "diseño gráfico" | Posicion en el array: "1" | Porcentaje de similitud: 42.666666666667%
+INFO - 2025-01-08 12:40:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-08 12:40:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-08 12:40:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-08 12:40:38 --> Comparación de carreras: Carrera extraída: "diseño gráfico (instituto superior tecnológico ibarra)" | Mejor coincidencia: "diseño gráfico" | Posicion en el array: "1" | Porcentaje de similitud: 43.835616438356%
+INFO - 2025-01-08 12:40:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-08 12:40:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-08 12:40:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-08 12:40:58 --> Comparación de carreras: Carrera extraída: "carrera de diseño gráfico." | Mejor coincidencia: "diseño gráfico" | Posicion en el array: "1" | Porcentaje de similitud: 72.727272727273%
+INFO - 2025-01-08 12:41:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-08 12:41:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-08 12:41:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-08 12:41:24 --> Comparación de carreras: Carrera extraída: "o proyecto de desarrollo tecnológico)" | Mejor coincidencia: "desarrollo de software" | Posicion en el array: "0" | Porcentaje de similitud: 43.333333333333%
+INFO - 2025-01-08 12:41:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-08 12:41:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-08 12:41:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-08 12:41:44 --> Comparación de carreras: Carrera extraída: "tecnólogo superior en redes y telecomunicaciones" | Mejor coincidencia: "redes y telecomunicaciones" | Posicion en el array: "6" | Porcentaje de similitud: 69.333333333333%
+INFO - 2025-01-08 12:41:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-08 12:41:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-08 12:41:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-08 12:42:00 --> Comparación de carreras: Carrera extraída: "tecnología en redes y telecomunicaciones" | Mejor coincidencia: "redes y telecomunicaciones" | Posicion en el array: "6" | Porcentaje de similitud: 77.611940298507%
+INFO - 2025-01-08 12:59:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-08 12:59:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-08 12:59:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-08 12:59:53 --> Comparación de carreras: Carrera extraída: "tecnólogo superior en desarrollo de software" | Mejor coincidencia: "desarrollo de software" | Posicion en el array: "0" | Porcentaje de similitud: 65.671641791045%
+INFO - 2025-01-08 13:00:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-08 13:00:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-08 13:00:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-08 13:00:35 --> Comparación de carreras: Carrera extraída: "tecnólogo superior en desarrollo de software" | Mejor coincidencia: "desarrollo de software" | Posicion en el array: "0" | Porcentaje de similitud: 65.671641791045%
+INFO - 2025-01-08 13:00:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-08 13:00:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-08 13:00:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-08 13:00:45 --> Comparación de carreras: Carrera extraída: "ibarra-ecuador" | Mejor coincidencia: "redes y telecomunicaciones" | Posicion en el array: "6" | Porcentaje de similitud: 30%
+INFO - 2025-01-08 13:01:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-08 13:01:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-08 13:01:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-08 13:01:13 --> Comparación de carreras: Carrera extraída: "carrera de atención integral al adulto mayor" | Mejor coincidencia: "atención integral a adultos mayores" | Posicion en el array: "3" | Porcentaje de similitud: 81.481481481481%
+INFO - 2025-01-08 13:01:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-08 13:01:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-08 13:01:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-08 13:01:22 --> Comparación de carreras: Carrera extraída: "instituto superior tecnológico ibarra (tecnología en atención integral a adultos mayores)" | Mejor coincidencia: "atención integral a adultos mayores" | Posicion en el array: "3" | Porcentaje de similitud: 56.25%
+INFO - 2025-01-08 13:01:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-08 13:01:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-08 13:01:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-08 13:01:32 --> Comparación de carreras: Carrera extraída: "instituto superior tecnológico ibarra" | Mejor coincidencia: "marketing digital y comercio electrónico" | Posicion en el array: "5" | Porcentaje de similitud: 35.443037974684%
+INFO - 2025-01-08 13:01:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-08 13:01:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-08 13:01:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-08 13:01:45 --> Comparación de carreras: Carrera extraída: "diseñador gráfico con equivalentes a tecnología superior" | Mejor coincidencia: "diseño gráfico" | Posicion en el array: "1" | Porcentaje de similitud: 42.666666666667%
+INFO - 2025-01-08 13:01:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-08 13:01:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-08 13:01:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-08 13:01:55 --> Comparación de carreras: Carrera extraída: "diseño gráfico (instituto superior tecnológico ibarra)" | Mejor coincidencia: "diseño gráfico" | Posicion en el array: "1" | Porcentaje de similitud: 43.835616438356%
+INFO - 2025-01-08 13:01:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-08 13:01:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-08 13:02:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-08 13:02:03 --> Comparación de carreras: Carrera extraída: "carrera de diseño gráfico." | Mejor coincidencia: "diseño gráfico" | Posicion en el array: "1" | Porcentaje de similitud: 72.727272727273%
+INFO - 2025-01-08 13:02:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-08 13:02:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-08 13:02:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-08 13:02:19 --> Comparación de carreras: Carrera extraída: "o proyecto de desarrollo tecnológico)" | Mejor coincidencia: "desarrollo de software" | Posicion en el array: "0" | Porcentaje de similitud: 43.333333333333%
+INFO - 2025-01-08 13:02:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-08 13:02:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-08 13:02:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-08 13:02:40 --> Comparación de carreras: Carrera extraída: "tecnología en redes y telecomunicaciones" | Mejor coincidencia: "redes y telecomunicaciones" | Posicion en el array: "6" | Porcentaje de similitud: 77.611940298507%
+INFO - 2025-01-08 13:59:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-08 13:59:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-08 14:00:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-08 14:00:15 --> Comparación de carreras: Carrera extraída: "tecnólogo superior en desarrollo de software" | Mejor coincidencia: "desarrollo de software" | Posicion en el array: "0" | Porcentaje de similitud: 65.671641791045%
+INFO - 2025-01-08 14:01:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-08 14:01:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-08 14:02:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-08 14:02:07 --> Comparación de carreras: Carrera extraída: "tecnólogo superior en desarrollo de software" | Mejor coincidencia: "desarrollo de software" | Posicion en el array: "0" | Porcentaje de similitud: 65.671641791045%
+INFO - 2025-01-08 14:02:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-08 14:02:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-08 14:02:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-08 14:02:39 --> Comparación de carreras: Carrera extraída: "ibarra-ecuador" | Mejor coincidencia: "redes y telecomunicaciones" | Posicion en el array: "6" | Porcentaje de similitud: 30%
+INFO - 2025-01-08 14:02:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-08 14:02:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-08 14:02:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-08 14:02:59 --> Comparación de carreras: Carrera extraída: "carrera de atención integral al adulto mayor" | Mejor coincidencia: "atención integral a adultos mayores" | Posicion en el array: "3" | Porcentaje de similitud: 81.481481481481%
+INFO - 2025-01-08 14:03:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-08 14:03:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-08 14:03:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-08 14:03:26 --> Comparación de carreras: Carrera extraída: "instituto superior tecnológico ibarra" | Mejor coincidencia: "marketing digital y comercio electrónico" | Posicion en el array: "5" | Porcentaje de similitud: 35.443037974684%
+INFO - 2025-01-08 14:03:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-08 14:03:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-08 14:03:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-08 14:03:43 --> Comparación de carreras: Carrera extraída: "instituto superior tecnológico ibarra" | Mejor coincidencia: "marketing digital y comercio electrónico" | Posicion en el array: "5" | Porcentaje de similitud: 35.443037974684%
+INFO - 2025-01-08 14:03:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-08 14:03:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-08 14:04:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-08 14:04:09 --> Comparación de carreras: Carrera extraída: "diseñador gráfico con equivalentes a tecnología superior" | Mejor coincidencia: "diseño gráfico" | Posicion en el array: "1" | Porcentaje de similitud: 42.666666666667%
+INFO - 2025-01-08 14:04:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-08 14:04:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-08 14:04:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-08 14:04:23 --> Comparación de carreras: Carrera extraída: "carrera de diseño gráfico." | Mejor coincidencia: "diseño gráfico" | Posicion en el array: "1" | Porcentaje de similitud: 72.727272727273%
+INFO - 2025-01-08 14:04:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-08 14:04:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-08 14:04:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-08 14:04:53 --> Comparación de carreras: Carrera extraída: "o proyecto de desarrollo tecnológico)" | Mejor coincidencia: "desarrollo de software" | Posicion en el array: "0" | Porcentaje de similitud: 43.333333333333%
+INFO - 2025-01-08 14:05:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-08 14:05:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-08 14:05:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-08 14:05:17 --> Comparación de carreras: Carrera extraída: "tecnología en redes y telecomunicaciones" | Mejor coincidencia: "redes y telecomunicaciones" | Posicion en el array: "6" | Porcentaje de similitud: 77.611940298507%
+INFO - 2025-01-08 14:11:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-08 14:11:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-08 14:12:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-08 14:12:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-08 14:12:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-08 14:12:52 --> Comparación de carreras: Carrera extraída: "tecnólogo superior en desarrollo de software" | Mejor coincidencia: "desarrollo de software" | Posicion en el array: "0" | Porcentaje de similitud: 65.671641791045%
+INFO - 2025-01-08 14:13:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-08 14:13:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-08 14:13:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-08 14:13:45 --> Comparación de carreras: Carrera extraída: "tecnólogo superior en desarrollo de software" | Mejor coincidencia: "desarrollo de software" | Posicion en el array: "0" | Porcentaje de similitud: 65.671641791045%
+INFO - 2025-01-08 14:14:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-08 14:14:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-08 14:14:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-08 14:14:31 --> Comparación de carreras: Carrera extraída: "ibarra-ecuador" | Mejor coincidencia: "redes y telecomunicaciones" | Posicion en el array: "6" | Porcentaje de similitud: 30%
+INFO - 2025-01-08 14:18:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-08 14:18:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-08 14:18:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-08 14:18:19 --> Comparación de carreras: Carrera extraída: "carrera de atención integral al adulto mayor" | Mejor coincidencia: "atención integral a adultos mayores" | Posicion en el array: "3" | Porcentaje de similitud: 81.481481481481%
+INFO - 2025-01-08 14:18:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-08 14:18:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-08 14:18:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-08 14:18:47 --> Comparación de carreras: Carrera extraída: "instituto superior tecnológico ibarra" | Mejor coincidencia: "marketing digital y comercio electrónico" | Posicion en el array: "5" | Porcentaje de similitud: 35.443037974684%
+INFO - 2025-01-08 14:19:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-08 14:19:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-08 14:19:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-08 14:19:36 --> Comparación de carreras: Carrera extraída: "instituto superior tecnológico ibarra" | Mejor coincidencia: "marketing digital y comercio electrónico" | Posicion en el array: "5" | Porcentaje de similitud: 35.443037974684%
+INFO - 2025-01-08 14:19:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-08 14:19:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-08 14:20:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-08 14:20:07 --> Comparación de carreras: Carrera extraída: "diseñador gráfico con equivalentes a tecnología superior" | Mejor coincidencia: "diseño gráfico" | Posicion en el array: "1" | Porcentaje de similitud: 42.666666666667%
+INFO - 2025-01-08 14:20:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-08 14:20:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-08 14:20:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-08 14:20:47 --> Comparación de carreras: Carrera extraída: "diseño gráfico" | Mejor coincidencia: "diseño gráfico" | Posicion en el array: "1" | Porcentaje de similitud: 100%
+INFO - 2025-01-08 14:21:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-08 14:21:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-08 14:21:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-08 14:21:34 --> Comparación de carreras: Carrera extraída: "carrera de diseño gráfico." | Mejor coincidencia: "diseño gráfico" | Posicion en el array: "1" | Porcentaje de similitud: 72.727272727273%
+INFO - 2025-01-08 14:22:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-08 14:22:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-08 14:22:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-08 14:22:10 --> Comparación de carreras: Carrera extraída: "o proyecto de desarrollo tecnológico)" | Mejor coincidencia: "desarrollo de software" | Posicion en el array: "0" | Porcentaje de similitud: 43.333333333333%
+INFO - 2025-01-08 14:22:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-08 14:22:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-08 14:22:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-08 14:22:50 --> Comparación de carreras: Carrera extraída: "o proyecto de desarrollo tecnológico)" | Mejor coincidencia: "desarrollo de software" | Posicion en el array: "0" | Porcentaje de similitud: 43.333333333333%
+INFO - 2025-01-08 14:39:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-08 14:39:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-08 14:39:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-08 14:39:49 --> Comparación de carreras: Carrera extraída: "redes y telecomunicaciones" | Mejor coincidencia: "redes y telecomunicaciones" | Posicion en el array: "6" | Porcentaje de similitud: 100%
+INFO - 2025-01-08 14:41:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-08 14:41:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-08 14:41:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-08 14:41:27 --> Comparación de carreras: Carrera extraída: "tecnólogo superior en redes y telecomunicaciones" | Mejor coincidencia: "redes y telecomunicaciones" | Posicion en el array: "6" | Porcentaje de similitud: 69.333333333333%
+INFO - 2025-01-08 14:41:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-08 14:41:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-08 14:41:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-08 14:42:00 --> Comparación de carreras: Carrera extraída: "tecnología en redes y telecomunicaciones" | Mejor coincidencia: "redes y telecomunicaciones" | Posicion en el array: "6" | Porcentaje de similitud: 77.611940298507%
+INFO - 2025-01-08 14:42:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-08 14:42:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-08 14:42:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-08 14:42:34 --> Comparación de carreras: Carrera extraída: "carrera de diseño gráfico." | Mejor coincidencia: "diseño gráfico" | Posicion en el array: "1" | Porcentaje de similitud: 72.727272727273%
+INFO - 2025-01-08 14:42:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-08 14:42:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-08 14:43:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-08 14:43:04 --> Comparación de carreras: Carrera extraída: "instituto superior tecnológico ibarra" | Mejor coincidencia: "marketing digital y comercio electrónico" | Posicion en el array: "5" | Porcentaje de similitud: 35.443037974684%
+INFO - 2025-01-08 14:43:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-08 14:43:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-08 14:43:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-08 14:43:37 --> Comparación de carreras: Carrera extraída: "tecnólogo superior en desarrollo de software" | Mejor coincidencia: "desarrollo de software" | Posicion en el array: "0" | Porcentaje de similitud: 65.671641791045%
+INFO - 2025-01-08 14:44:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-08 14:44:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-08 18:38:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-08 18:38:57 --> Método login llamado
+INFO - 2025-01-08 18:38:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-08 18:38:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-08 18:38:59 --> Método login llamado
+DEBUG - 2025-01-08 18:38:59 --> Método POST detectado
+DEBUG - 2025-01-08 18:38:59 --> Datos recibidos - Username: admin
+INFO - 2025-01-08 18:38:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-08 18:38:59 --> Login exitoso, redirigiendo...
+INFO - 2025-01-08 18:38:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-08 18:39:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-08 18:39:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-08 18:39:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-08 18:39:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-08 18:39:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-08 18:39:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-08 18:40:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-08 18:40:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-08 18:40:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-08 18:40:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-08 18:40:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
