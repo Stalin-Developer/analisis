@@ -65,6 +65,11 @@ $routes->group('', ['filter' => 'auth'], function($routes) {
     
 
     // Rutas de reportes
+    //TDT
+    $routes->get('reports_tdt', 'ReportesTDT::index');
+    $routes->post('reports_tdt/generate', 'ReportesTDT::generate');
+
+    $routes->get('show_reports', 'Reports::showReports');
     $routes->get('reports', 'Reports::index');
     $routes->post('reports/generate', 'Reports::generate');
 

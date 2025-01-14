@@ -32,7 +32,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a href="<?= base_url('reports') ?>" class="nav-link">
+                    <a href="<?= base_url('show_reports') ?>" class="nav-link">
                         <i class="nav-icon fas fa-chart-bar"></i>
                         <p>Reportes</p>
                     </a>

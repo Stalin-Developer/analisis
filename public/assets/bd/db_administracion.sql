@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 19, 2024 at 05:48 AM
+-- Generation Time: Jan 14, 2025 at 01:50 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -61,7 +61,12 @@ CREATE TABLE `careers` (
 
 INSERT INTO `careers` (`id`, `name`, `created_at`) VALUES
 (1, 'Desarrollo de Software', '2024-11-06 09:17:45'),
-(2, 'Diseño Gráfico', '2024-11-06 09:17:45');
+(2, 'Diseño Gráfico', '2024-11-06 09:17:45'),
+(3, 'Desarrollo y Análisis de Software - Modalidad Virtual', '2024-11-21 00:06:34'),
+(4, 'Atención Integral a Adultos Mayores', '2024-11-21 00:06:34'),
+(5, 'Administración', '2024-11-21 00:06:34'),
+(6, 'Marketing Digital y Comercio Electrónico', '2024-11-21 00:06:34'),
+(7, 'Redes y Telecomunicaciones', '2024-11-21 00:06:34');
 
 -- --------------------------------------------------------
 
@@ -183,7 +188,6 @@ CREATE TABLE `trabajos_de_titulacion` (
   `autores` varchar(255) NOT NULL,
   `resumen` text NOT NULL,
   `documento_path` varchar(255) NOT NULL,
-  `poster_path` varchar(255) DEFAULT NULL,
   `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
   `updated_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   `career_id` int(11) NOT NULL,
@@ -196,8 +200,10 @@ CREATE TABLE `trabajos_de_titulacion` (
 -- Dumping data for table `trabajos_de_titulacion`
 --
 
-INSERT INTO `trabajos_de_titulacion` (`id`, `titulo`, `linea_investigacion`, `autores`, `resumen`, `documento_path`, `poster_path`, `created_at`, `updated_at`, `career_id`, `academic_period_id`, `mes_id`, `year_id`) VALUES
-(2, 'Desarrollo de una Aplicación Web para la Presentación de Proyectos Arquitectónicos de la Empresa Arq. Ramiro Pantoja: Implementación de Laravel en la Creación de un Portafolio Web Dinámico y Actualizable', 'Desarrollo de Software', 'Calderón Pasquel Isaac Mateo', 'El propósito fundamental de este trabajo de titulación es la creación de un Portafolio Web destinado a la Empresa Arq. Ramiro Pantoja.', 'uploads/trabajos_titulacion/2024/11/1731985902_a910921452e9ef88c65e.pdf', NULL, '2024-11-19 03:11:43', '2024-11-19 03:33:06', 1, 1, 7, 1);
+INSERT INTO `trabajos_de_titulacion` (`id`, `titulo`, `linea_investigacion`, `autores`, `resumen`, `documento_path`, `created_at`, `updated_at`, `career_id`, `academic_period_id`, `mes_id`, `year_id`) VALUES
+(5, 'Desarrollo e implementación de un sistema de Control de Asistencia Laboral en la empresa W==F=BER', 'Desarrollo de Software', 'Cacuango Pabón Diego Alexander', 'W==F=BER, una empresa de internet en Ecuador, enfrentaba problemas en la gestión de asistencias debido a la falta de un sistema automatizado. Se desarrolló un sistema de control de asistencias con C# y SQL Server para mejorar la gestión del tiempo laboral. El sistema mejoró la precisión del registro de asistencias y la eficiencia laboral, optimizando la asignación de tareas y el seguimiento del personal.', 'uploads/trabajos_titulacion/2025/01/1736814136_2115bcc3fa6010aaa35f.pdf', '2025-01-14 00:22:16', '2025-01-14 00:22:16', 1, 1, 7, 1),
+(6, 'Desarrollo de un Sistema para Gestionar el Programa de Participación Estudiantil Extracurricular PPE en la Unidad Educativa Fiscomisional Inocencio Jácome', 'Desarrollo de software', 'Brandon Steeven Almachi Villagómez, Marco Said Bonilla Yépez', 'La Unidad Educativa Fiscomisional Inocencio Jácome en Ecuador enfrenta desafíos al gestionar el Programa de Participación Estudiantil (PPE) debido a la falta de una plataforma centralizada. Se propone implementar un Sistema de Gestión de Relaciones con Clientes (CRM) adaptado para mejorar la coordinación, comunicación y eficiencia. El objetivo es implementar un sistema que cumpla con la normativa educativa y mejore la gestión del PPE.', 'uploads/trabajos_titulacion/2025/01/1736814168_dcd740afc7c6b3728e47.pdf', '2025-01-14 00:22:48', '2025-01-14 00:22:48', 1, 1, 7, 1),
+(7, 'Desarrollo del sistema de control de nivel de agua y PH para reservorios y fumigación de cultivos (Finca Floricola Fragrances of Roses)', 'Innovación tecnológica y negocios', 'Lucero Pujota Kevin Joel', 'El sistema de control del nivel de agua y monitoreo del pH aborda la falta de mediciones precisas en la fumigación agrícola, lo que puede llevar a un uso ineficiente de productos químicos y contaminación ambiental. La medición precisa es esencial para adaptar las prácticas de fumigación y garantizar la eficacia de los tratamientos fitosanitarios, especialmente en regiones con acceso limitado a agua de calidad.', 'uploads/trabajos_titulacion/2025/01/1736814193_6d1d6b8bf9f6f47a7434.pdf', '2025-01-14 00:23:13', '2025-01-14 00:23:13', 1, 1, 7, 1);
 
 -- --------------------------------------------------------
 
@@ -241,7 +247,8 @@ CREATE TABLE `year` (
 
 INSERT INTO `year` (`id`, `anio`, `created_at`, `updated_at`) VALUES
 (1, 2024, '2024-11-18 21:20:01', '2024-11-18 21:20:01'),
-(2, 2025, '2024-11-19 03:32:33', '2024-11-19 03:32:33');
+(2, 2025, '2024-11-19 03:32:33', '2024-11-19 03:32:33'),
+(3, 2023, '2025-01-14 00:25:14', '2025-01-14 00:25:14');
 
 --
 -- Indexes for dumped tables
@@ -323,7 +330,7 @@ ALTER TABLE `academic_periods`
 -- AUTO_INCREMENT for table `careers`
 --
 ALTER TABLE `careers`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `categories`
@@ -353,7 +360,7 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT for table `trabajos_de_titulacion`
 --
 ALTER TABLE `trabajos_de_titulacion`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `users`
@@ -365,7 +372,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `year`
 --
 ALTER TABLE `year`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- Constraints for dumped tables

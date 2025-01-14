@@ -69,6 +69,20 @@ class Reports extends BaseController
     }
 
 
+
+
+
+    public function showReports()
+    {
+        return view('reports/showReports');
+    }
+
+
+
+
+
+
+
     private function getYearsList()
     {
         $years = $this->documentModel->select('DISTINCT(publication_year) as year')

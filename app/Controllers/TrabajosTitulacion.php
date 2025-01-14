@@ -86,7 +86,7 @@ class TrabajosTitulacion extends BaseController
         if ($this->request->getMethod() === 'POST') {
             // Obtener los archivos
             $documento = $this->request->getFile('documento_path');
-            $poster = $this->request->getFile('poster_path');
+            
 
             // Validar que sean PDFs válidos
             if ($documento->isValid() && !$documento->hasMoved() && 
@@ -294,9 +294,7 @@ class TrabajosTitulacion extends BaseController
             if (file_exists($trabajo['documento_path'])) {
                 unlink($trabajo['documento_path']);
             }
-            if (file_exists($trabajo['poster_path'])) {
-                unlink($trabajo['poster_path']);
-            }
+            
             
             // Eliminar registro de la base de datos
             if ($this->trabajoModel->delete($id)) {
