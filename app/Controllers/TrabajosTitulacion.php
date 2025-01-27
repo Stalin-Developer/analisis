@@ -37,7 +37,9 @@ class TrabajosTitulacion extends BaseController
             ->join('careers', 'careers.id = trabajos_de_titulacion.career_id')
             ->join('academic_periods', 'academic_periods.id = trabajos_de_titulacion.academic_period_id')
             ->join('year', 'year.id = trabajos_de_titulacion.year_id')
-            ->join('meses', 'meses.id = trabajos_de_titulacion.mes_id');
+            ->join('meses', 'meses.id = trabajos_de_titulacion.mes_id')
+            ->orderBy('trabajos_de_titulacion.created_at', 'DESC')  // Ordenar por fecha de creación descendente
+            ->limit(100);  // Opcional: limitar a 100 registros
 
         // Aplicar filtros si existen
         //Los filtros siguen formando parte del query.

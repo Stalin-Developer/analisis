@@ -1,0 +1,11 @@
+INFO - 2025-01-24 21:57:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-24 21:57:49 --> Método login llamado
+INFO - 2025-01-24 21:57:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-24 21:57:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-24 21:57:51 --> Método login llamado
+DEBUG - 2025-01-24 21:57:51 --> Método POST detectado
+DEBUG - 2025-01-24 21:57:51 --> Datos recibidos - Username: admin
+INFO - 2025-01-24 21:57:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-24 21:57:51 --> Login exitoso, redirigiendo...
+INFO - 2025-01-24 21:57:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-24 21:57:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

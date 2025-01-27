@@ -62,6 +62,24 @@ $routes->group('', ['filter' => 'auth'], function($routes) {
     $routes->get('trabajos-titulacion/download/(:num)', 'TrabajosTitulacion::download/$1');
     $routes->get('trabajos-titulacion/download-poster/(:num)', 'TrabajosTitulacion::downloadPoster/$1');
     $routes->post('trabajos-titulacion/extract-text', 'TrabajosTitulacion::extractText');
+
+
+
+    //Rutas para Proyectos Integradores de saberes.
+    $routes->get('pis', 'PISController::index');
+    $routes->get('pis/new', 'PISController::new');
+    $routes->post('pis/create', 'PISController::create');
+    $routes->get('pis/edit/(:num)', 'PISController::edit/$1');
+    $routes->post('pis/update/(:num)', 'PISController::update/$1');
+    $routes->get('pis/delete/(:num)', 'PISController::delete/$1');
+    $routes->get('pis/download/(:num)', 'PISController::download/$1');
+    $routes->get('pis/download-poster/(:num)', 'PISController::downloadPoster/$1');
+    $routes->get('pis/get-campos-especificos/(:num)', 'PISController::getCamposEspecificos/$1');
+    $routes->get('pis/get-campos-detallados/(:num)', 'PISController::getCamposDetallados/$1');
+
+
+
+
     
 
     // Rutas de reportes

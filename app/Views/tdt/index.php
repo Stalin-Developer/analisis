@@ -169,6 +169,8 @@ $(function () {
     $('.table').DataTable({
         "responsive": true,
         "autoWidth": false,
+        "order": [], // Deshabilita el ordenamiento inicial de DataTables
+
     });
 });
 </script>

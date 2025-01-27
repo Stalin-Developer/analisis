@@ -1,0 +1,81 @@
+INFO - 2025-01-26 11:55:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-26 11:55:27 --> Método login llamado
+INFO - 2025-01-26 11:55:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-26 11:55:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-26 17:09:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-26 17:09:59 --> Método login llamado
+INFO - 2025-01-26 17:09:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-26 17:09:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-26 17:10:06 --> Método login llamado
+DEBUG - 2025-01-26 17:10:06 --> Método POST detectado
+DEBUG - 2025-01-26 17:10:06 --> Datos recibidos - Username: admin
+INFO - 2025-01-26 17:10:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-26 17:10:06 --> Login exitoso, redirigiendo...
+INFO - 2025-01-26 17:10:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-26 17:10:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-26 17:11:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-26 17:11:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-26 17:11:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-26 17:11:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-26 17:11:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-26 17:11:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-26 17:11:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-26 17:11:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-26 17:12:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-26 17:12:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-26 17:12:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-26 17:12:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-26 17:17:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-26 17:17:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-26 17:18:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-26 17:18:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-26 17:18:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-26 17:18:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-26 17:18:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-26 17:18:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-26 17:19:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-26 17:19:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-26 17:20:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-26 17:20:22 --> [PIS] Iniciando método create()
+DEBUG - 2025-01-26 17:20:22 --> [PIS] Datos del POST: {"csrf_token_name":"447bc0f7ed33c965de3bba0b4332f360","nombre":"Tienda Zapatos","codigo":"100117","tipo":"Investigaci\u00f3n","objetivo":"asddf","programa_id":"1","estado":"Finalizado","linea_investigacion_carrera_id":"15","facultad_entidad_area":"af","coordinador_director":"fadf","fecha_inicio":"2025-01-01","fecha_fin_planificado":"2025-01-02","fecha_fin_real":"2025-01-03","correo_coordinador":"bismuto7@gmail.com","telefono_coordinador":"0983104196","campo_amplio_id":"12","campo_especifico_id":"26","campo_detallado_id":"88","alcance_territorial":"Cantonal","investigadores_acreditados":"Si","impacto_social":"sfsdfsf","impacto_cientifico":"asdasd","impacto_economico":"asdasd","impacto_politico":"adsasd","impacto_ambiental":"asdasd","otro_impacto":"adsasd","fuente_financiamiento":"Fondos Concursables Nacionales","descripcion_actividad":"asdads","parametro_cumplimiento":"Gasto Interno Bruto en I + D + I","cooperacion":"Nacional","red":"Nacional","resultados_verificables":"Parciales","anio":"2025","presupuesto_planificado":"455","presupuesto_ejecutado":"455","tipo_participante":"Docente","horas":"44","publicaciones_id":"1"}
+DEBUG - 2025-01-26 17:20:22 --> [PIS] Archivos recibidos: {"proyecto":{},"poster":{}}
+DEBUG - 2025-01-26 17:20:22 --> [PIS] Validación exitosa
+DEBUG - 2025-01-26 17:20:22 --> [PIS] Datos preparados para insertar: {"csrf_token_name":"447bc0f7ed33c965de3bba0b4332f360","nombre":"Tienda Zapatos","codigo":"100117","tipo":"Investigaci\u00f3n","objetivo":"asddf","programa_id":"1","estado":"Finalizado","linea_investigacion_carrera_id":"15","facultad_entidad_area":"af","coordinador_director":"fadf","fecha_inicio":"2025-01-01","fecha_fin_planificado":"2025-01-02","fecha_fin_real":"2025-01-03","correo_coordinador":"bismuto7@gmail.com","telefono_coordinador":"0983104196","campo_amplio_id":"12","campo_especifico_id":"26","campo_detallado_id":"88","alcance_territorial":"Cantonal","investigadores_acreditados":"Si","impacto_social":"sfsdfsf","impacto_cientifico":"asdasd","impacto_economico":"asdasd","impacto_politico":"adsasd","impacto_ambiental":"asdasd","otro_impacto":"adsasd","fuente_financiamiento":"Fondos Concursables Nacionales","descripcion_actividad":"asdads","parametro_cumplimiento":"Gasto Interno Bruto en I + D + I","cooperacion":"Nacional","red":"Nacional","resultados_verificables":"Parciales","anio":"2025","presupuesto_planificado":"455","presupuesto_ejecutado":"455","tipo_participante":"Docente","horas":"44","publicaciones_id":"1"}
+DEBUG - 2025-01-26 17:20:22 --> [PIS] Registro insertado exitosamente con ID: 4
+INFO - 2025-01-26 17:20:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-26 17:20:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-26 19:13:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-26 19:13:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-26 19:13:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-26 19:13:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-26 19:14:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-26 19:14:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-26 19:20:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-26 19:20:31 --> [PIS] Iniciando método create()
+DEBUG - 2025-01-26 19:20:31 --> [PIS] Datos del POST: {"csrf_token_name":"447bc0f7ed33c965de3bba0b4332f360","nombre":"Tienda Zapatos","codigo":"100117","tipo":"Vinculaci\u00f3n","objetivo":"asdf","programa_id":"","estado":"Finalizado","linea_investigacion_carrera_id":"","facultad_entidad_area":"adsf","coordinador_director":"adsf","fecha_inicio":"2025-01-01","fecha_fin_planificado":"2025-01-02","fecha_fin_real":"","correo_coordinador":"bismuto7@gmail.com","telefono_coordinador":"0983104196","campo_amplio_id":"","campo_especifico_id":"","campo_detallado_id":"","alcance_territorial":"Internacional","investigadores_acreditados":"Si","impacto_social":"","impacto_cientifico":"","impacto_economico":"","impacto_politico":"","impacto_ambiental":"","otro_impacto":"","fuente_financiamiento":"Fondos Concursables Interno IES","descripcion_actividad":"adsf","parametro_cumplimiento":"Gasto Externo","cooperacion":"Internacional","red":"Internacional","resultados_verificables":"Parciales","anio":"2025","presupuesto_planificado":"555","presupuesto_ejecutado":"455","tipo_participante":"Docente","horas":"25","publicaciones_id":"1"}
+DEBUG - 2025-01-26 19:20:31 --> [PIS] Archivos recibidos: {"proyecto":{},"poster":{}}
+DEBUG - 2025-01-26 19:20:31 --> [PIS] Validación exitosa
+DEBUG - 2025-01-26 19:20:31 --> [PIS] Datos preparados para insertar: {"csrf_token_name":"447bc0f7ed33c965de3bba0b4332f360","nombre":"Tienda Zapatos","codigo":"100117","tipo":"Vinculaci\u00f3n","objetivo":"asdf","programa_id":"","estado":"Finalizado","linea_investigacion_carrera_id":"","facultad_entidad_area":"adsf","coordinador_director":"adsf","fecha_inicio":"2025-01-01","fecha_fin_planificado":"2025-01-02","fecha_fin_real":"","correo_coordinador":"bismuto7@gmail.com","telefono_coordinador":"0983104196","campo_amplio_id":"","campo_especifico_id":"","campo_detallado_id":"","alcance_territorial":"Internacional","investigadores_acreditados":"Si","impacto_social":"","impacto_cientifico":"","impacto_economico":"","impacto_politico":"","impacto_ambiental":"","otro_impacto":"","fuente_financiamiento":"Fondos Concursables Interno IES","descripcion_actividad":"adsf","parametro_cumplimiento":"Gasto Externo","cooperacion":"Internacional","red":"Internacional","resultados_verificables":"Parciales","anio":"2025","presupuesto_planificado":"555","presupuesto_ejecutado":"455","tipo_participante":"Docente","horas":"25","publicaciones_id":"1"}
+DEBUG - 2025-01-26 19:20:31 --> [PIS] Registro insertado exitosamente con ID: 5
+INFO - 2025-01-26 19:20:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-26 19:20:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-26 19:25:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-26 19:25:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-26 19:42:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-26 19:42:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-26 19:42:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-26 19:42:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-26 19:42:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-26 19:42:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-26 19:45:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-26 19:45:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-26 19:45:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-26 19:45:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-26 19:55:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-26 19:55:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-26 19:56:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-26 19:56:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-26 19:56:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-26 19:56:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-26 20:06:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-26 20:06:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
