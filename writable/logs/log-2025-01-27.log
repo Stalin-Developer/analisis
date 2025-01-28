@@ -67,3 +67,982 @@ INFO - 2025-01-27 02:36:12 --> Session: Class initialized using 'CodeIgniter\Ses
 INFO - 2025-01-27 02:38:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2025-01-27 02:38:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2025-01-27 02:38:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 11:13:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-27 11:13:32 --> Método login llamado
+INFO - 2025-01-27 11:13:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 11:13:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-27 11:13:34 --> Método login llamado
+DEBUG - 2025-01-27 11:13:34 --> Método POST detectado
+DEBUG - 2025-01-27 11:13:34 --> Datos recibidos - Username: admin
+INFO - 2025-01-27 11:13:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-27 11:13:35 --> Login exitoso, redirigiendo...
+INFO - 2025-01-27 11:13:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 11:13:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 11:14:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 11:14:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 11:38:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 11:38:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 11:38:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 11:38:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 11:44:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 11:44:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 11:44:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-27 11:44:08 --> SQL Query: 
+DEBUG - 2025-01-27 11:44:08 --> No se encontraron proyectos
+INFO - 2025-01-27 11:44:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 11:55:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 11:55:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 11:55:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-27 11:55:27 --> SQL Query que se va a ejecutar: SELECT `proyectos_integradores_saberes`.*, `programas`.`nombre_programa`, `lineas_investigacion_carreras`.`nombre_linea`, `campo_amplio`.`nombre_amplio`, `campo_especifico`.`nombre_especifico`, `campo_detallado`.`nombre_detallado`, `produccion_cientifica_tecnica`.`nombre` as `nombre_publicacion`
+FROM `proyectos_integradores_saberes`
+LEFT JOIN `programas` ON `programas`.`id` = `proyectos_integradores_saberes`.`programa_id`
+LEFT JOIN `lineas_investigacion_carreras` ON `lineas_investigacion_carreras`.`id` = `proyectos_integradores_saberes`.`linea_investigacion_carrera_id`
+LEFT JOIN `campo_amplio` ON `campo_amplio`.`id` = `proyectos_integradores_saberes`.`campo_amplio_id`
+LEFT JOIN `campo_especifico` ON `campo_especifico`.`id` = `proyectos_integradores_saberes`.`campo_especifico_id`
+LEFT JOIN `campo_detallado` ON `campo_detallado`.`id` = `proyectos_integradores_saberes`.`campo_detallado_id`
+LEFT JOIN `produccion_cientifica_tecnica` ON `produccion_cientifica_tecnica`.`id` = `proyectos_integradores_saberes`.`publicaciones_id`
+DEBUG - 2025-01-27 11:55:27 --> Número de proyectos encontrados: 1
+DEBUG - 2025-01-27 11:55:27 --> Primer proyecto encontrado: Array
+(
+    [id] => 4
+    [nombre] => Tienda Zapatos
+    [codigo] => 100117
+    [tipo] => Investigación
+    [objetivo] => Crear una aplicacion web para una tienda de zapatos.
+    [programa_id] => 1
+    [estado] => En Cierre
+    [linea_investigacion_carrera_id] => 13
+    [facultad_entidad_area] => Software
+    [fecha_inicio] => 2025-01-01
+    [coordinador_director] => Morales
+    [fecha_fin_planificado] => 2025-01-01
+    [correo_coordinador] => bismuto7@gmail.com
+    [fecha_fin_real] => 2025-01-02
+    [telefono_coordinador] => 983104196
+    [campo_amplio_id] => 9
+    [campo_especifico_id] => 19
+    [campo_detallado_id] => 62
+    [alcance_territorial] => Institucional
+    [investigadores_acreditados] => Si
+    [impacto_social] => trabajo rapido
+    [impacto_cientifico] => aporte a la sociedad
+    [impacto_economico] => gratis
+    [impacto_politico] => buena nota
+    [impacto_ambiental] => no usa cuaderno
+    [otro_impacto] => aprendizaje
+    [fuente_financiamiento] => Fondos Concursables Interno IES
+    [descripcion_actividad] => poner en practica lo aprendido.
+    [parametro_cumplimiento] => Gasto Externo
+    [cooperacion] => Nacional
+    [red] => Nacional
+    [resultados_verificables] => Totales
+    [anio] => 2025
+    [presupuesto_planificado] => 455.00
+    [presupuesto_ejecutado] => 455.00
+    [tipo_participante] => Estudiante
+    [horas] => 60
+    [publicaciones_id] => 2
+    [proyecto_path] => 
+    [poster_path] => 
+    [created_at] => 2025-01-27 02:38:00
+    [updated_at] => 2025-01-27 02:38:00
+)
+
+DEBUG - 2025-01-27 11:55:27 --> IDs de relaciones del primer proyecto:  programa_id: 1 linea_investigacion_id: 13 campo_amplio_id: 9 campo_especifico_id: 19 campo_detallado_id: 62 publicaciones_id: 2
+INFO - 2025-01-27 11:55:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 12:29:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 12:29:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 12:29:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-27 12:29:31 --> SQL Query que se va a ejecutar: SELECT `proyectos_integradores_saberes`.*, `programas`.`nombre_programa`, `lineas_investigacion_carreras`.`nombre_linea`, `campo_amplio`.`nombre_amplio`, `campo_especifico`.`nombre_especifico`, `campo_detallado`.`nombre_detallado`, `produccion_cientifica_tecnica`.`nombre` as `nombre_publicacion`
+FROM `proyectos_integradores_saberes`
+LEFT JOIN `programas` ON `programas`.`id` = `proyectos_integradores_saberes`.`programa_id`
+LEFT JOIN `lineas_investigacion_carreras` ON `lineas_investigacion_carreras`.`id` = `proyectos_integradores_saberes`.`linea_investigacion_carrera_id`
+LEFT JOIN `campo_amplio` ON `campo_amplio`.`id` = `proyectos_integradores_saberes`.`campo_amplio_id`
+LEFT JOIN `campo_especifico` ON `campo_especifico`.`id` = `proyectos_integradores_saberes`.`campo_especifico_id`
+LEFT JOIN `campo_detallado` ON `campo_detallado`.`id` = `proyectos_integradores_saberes`.`campo_detallado_id`
+LEFT JOIN `produccion_cientifica_tecnica` ON `produccion_cientifica_tecnica`.`id` = `proyectos_integradores_saberes`.`publicaciones_id`
+DEBUG - 2025-01-27 12:29:31 --> Número de proyectos encontrados: 1
+DEBUG - 2025-01-27 12:29:31 --> Primer proyecto encontrado: Array
+(
+    [id] => 4
+    [nombre] => Tienda Zapatos
+    [codigo] => 100117
+    [tipo] => Investigación
+    [objetivo] => Crear una aplicacion web para una tienda de zapatos.
+    [programa_id] => 1
+    [estado] => En Cierre
+    [linea_investigacion_carrera_id] => 13
+    [facultad_entidad_area] => Software
+    [fecha_inicio] => 2025-01-01
+    [coordinador_director] => Morales
+    [fecha_fin_planificado] => 2025-01-01
+    [correo_coordinador] => bismuto7@gmail.com
+    [fecha_fin_real] => 2025-01-02
+    [telefono_coordinador] => 983104196
+    [campo_amplio_id] => 9
+    [campo_especifico_id] => 19
+    [campo_detallado_id] => 62
+    [alcance_territorial] => Institucional
+    [investigadores_acreditados] => Si
+    [impacto_social] => trabajo rapido
+    [impacto_cientifico] => aporte a la sociedad
+    [impacto_economico] => gratis
+    [impacto_politico] => buena nota
+    [impacto_ambiental] => no usa cuaderno
+    [otro_impacto] => aprendizaje
+    [fuente_financiamiento] => Fondos Concursables Interno IES
+    [descripcion_actividad] => poner en practica lo aprendido.
+    [parametro_cumplimiento] => Gasto Externo
+    [cooperacion] => Nacional
+    [red] => Nacional
+    [resultados_verificables] => Totales
+    [anio] => 2025
+    [presupuesto_planificado] => 455.00
+    [presupuesto_ejecutado] => 455.00
+    [tipo_participante] => Estudiante
+    [horas] => 60
+    [publicaciones_id] => 2
+    [proyecto_path] => 
+    [poster_path] => 
+    [created_at] => 2025-01-27 02:38:00
+    [updated_at] => 2025-01-27 02:38:00
+)
+
+DEBUG - 2025-01-27 12:29:31 --> IDs de relaciones del primer proyecto:  programa_id: 1 linea_investigacion_id: 13 campo_amplio_id: 9 campo_especifico_id: 19 campo_detallado_id: 62 publicaciones_id: 2
+INFO - 2025-01-27 12:29:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 12:39:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-27 12:39:23 --> SQL Query que se va a ejecutar: SELECT `proyectos_integradores_saberes`.*, `programas`.`nombre_programa` as `nombre_programa`, `// Note el "as nombre_programa" lineas_investigacion_carreras`.`nombre_linea` as `nombre_linea`, `campo_amplio`.`nombre_amplio` as `nombre_amplio`, `campo_especifico`.`nombre_especifico` as `nombre_especifico`, `campo_detallado`.`nombre_detallado` as `nombre_detallado`, `produccion_cientifica_tecnica`.`nombre` as `nombre_publicacion`
+FROM `proyectos_integradores_saberes`
+LEFT JOIN `programas` ON `programas`.`id` = `proyectos_integradores_saberes`.`programa_id`
+LEFT JOIN `lineas_investigacion_carreras` ON `lineas_investigacion_carreras`.`id` = `proyectos_integradores_saberes`.`linea_investigacion_carrera_id`
+LEFT JOIN `campo_amplio` ON `campo_amplio`.`id` = `proyectos_integradores_saberes`.`campo_amplio_id`
+LEFT JOIN `campo_especifico` ON `campo_especifico`.`id` = `proyectos_integradores_saberes`.`campo_especifico_id`
+LEFT JOIN `campo_detallado` ON `campo_detallado`.`id` = `proyectos_integradores_saberes`.`campo_detallado_id`
+LEFT JOIN `produccion_cientifica_tecnica` ON `produccion_cientifica_tecnica`.`id` = `proyectos_integradores_saberes`.`publicaciones_id`
+DEBUG - 2025-01-27 12:39:23 --> Número de proyectos encontrados: 1
+DEBUG - 2025-01-27 12:39:23 --> Primer proyecto encontrado: Array
+(
+    [id] => 4
+    [nombre] => Tienda Zapatos
+    [codigo] => 100117
+    [tipo] => Investigación
+    [objetivo] => Crear una aplicacion web para una tienda de zapatos.
+    [programa_id] => 1
+    [estado] => En Cierre
+    [linea_investigacion_carrera_id] => 13
+    [facultad_entidad_area] => Software
+    [fecha_inicio] => 2025-01-01
+    [coordinador_director] => Morales
+    [fecha_fin_planificado] => 2025-01-01
+    [correo_coordinador] => bismuto7@gmail.com
+    [fecha_fin_real] => 2025-01-02
+    [telefono_coordinador] => 983104196
+    [campo_amplio_id] => 9
+    [campo_especifico_id] => 19
+    [campo_detallado_id] => 62
+    [alcance_territorial] => Institucional
+    [investigadores_acreditados] => Si
+    [impacto_social] => trabajo rapido
+    [impacto_cientifico] => aporte a la sociedad
+    [impacto_economico] => gratis
+    [impacto_politico] => buena nota
+    [impacto_ambiental] => no usa cuaderno
+    [otro_impacto] => aprendizaje
+    [fuente_financiamiento] => Fondos Concursables Interno IES
+    [descripcion_actividad] => poner en practica lo aprendido.
+    [parametro_cumplimiento] => Gasto Externo
+    [cooperacion] => Nacional
+    [red] => Nacional
+    [resultados_verificables] => Totales
+    [anio] => 2025
+    [presupuesto_planificado] => 455.00
+    [presupuesto_ejecutado] => 455.00
+    [tipo_participante] => Estudiante
+    [horas] => 60
+    [publicaciones_id] => 2
+    [proyecto_path] => 
+    [poster_path] => 
+    [created_at] => 2025-01-27 02:38:00
+    [updated_at] => 2025-01-27 02:38:00
+)
+
+DEBUG - 2025-01-27 12:39:23 --> IDs de relaciones del primer proyecto:  programa_id: 1 linea_investigacion_id: 13 campo_amplio_id: 9 campo_especifico_id: 19 campo_detallado_id: 62 publicaciones_id: 2
+INFO - 2025-01-27 12:39:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 13:00:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-01-27 13:00:00 --> mysqli_sql_exception: Unknown column '// Note el "as nombre_programa" lineas_investigacion_carreras.nombre_linea' in 'field list' in C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(312): mysqli->query('SELECT `proyect...', 0)
+#1 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `proyect...')
+#2 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `proyect...')
+#3 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `proyect...', Array, false)
+#4 C:\xampp\htdocs\analisis\app\Controllers\PISController.php(74): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\PISController->index()
+#6 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PISController))
+#7 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\analisis\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+CRITICAL - 2025-01-27 13:00:00 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column '// Note el "as nombre_programa" lineas_investigacion_carreras.nombre_linea' in 'field list'
+[Method: GET, Route: pis]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `proyectos_integradores_saberes`.*, `programas`.`nombre_programa` as `nombre_programa`, `// Note el "as nombre_programa" lineas_investigacion_carreras`.`nombre_linea` as `nombre_linea`, `campo_amplio`.`nombre_amplio` as `nombre_amplio`, `campo_especifico`.`nombre_especifico` as `nombre_especifico`, `campo_detallado`.`nombre_detallado` as `nombre_detallado`, `produccion_cientifica_tecnica`.`nombre` as `nombre_publicacion`
+FROM `proyectos_integradores_saberes`
+LEFT JOIN `programas` ON `programas`.`id` = `proyectos_integradores_saberes`.`programa_id`
+LEFT JOIN `lineas_investigacion_carreras` ON `lineas_investigacion_carreras`.`id` = `proyectos_integradores_saberes`.`linea_investigacion_carrera_id`
+LEFT JOIN `campo_amplio` ON `campo_amplio`.`id` = `proyectos_integradores_saberes`.`campo_amplio_id`
+LEFT JOIN `campo_especifico` ON `campo_especifico`.`id` = `proyectos_integradores_saberes`.`campo_especifico_id`
+LEFT JOIN `campo_detallado` ON `campo_detallado`.`id` = `proyectos_integradores_saberes`.`campo_detallado_id`
+LEFT JOIN `produccion_cientifica_tecnica` ON `produccion_cientifica_tecnica`.`id` = `proyectos_integradores_saberes`.`publicaciones_id`', [], false)
+ 2 APPPATH\Controllers\PISController.php(74): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PISController->index()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PISController))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-01-27 13:00:00 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column '// Note el "as nombre_programa" lineas_investigacion_carreras.nombre_linea' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `proyectos_integradores_saberes`.*, `programas`.`nombre_programa` as `nombre_programa`, `// Note el "as nombre_programa" lineas_investigacion_carreras`.`nombre_linea` as `nombre_linea`, `campo_amplio`.`nombre_amplio` as `nombre_amplio`, `campo_especifico`.`nombre_especifico` as `nombre_especifico`, `campo_detallado`.`nombre_detallado` as `nombre_detallado`, `produccion_cientifica_tecnica`.`nombre` as `nombre_publicacion`
+FROM `proyectos_integradores_saberes`
+LEFT JOIN `programas` ON `programas`.`id` = `proyectos_integradores_saberes`.`programa_id`
+LEFT JOIN `lineas_investigacion_carreras` ON `lineas_investigacion_carreras`.`id` = `proyectos_integradores_saberes`.`linea_investigacion_carrera_id`
+LEFT JOIN `campo_amplio` ON `campo_amplio`.`id` = `proyectos_integradores_saberes`.`campo_amplio_id`
+LEFT JOIN `campo_especifico` ON `campo_especifico`.`id` = `proyectos_integradores_saberes`.`campo_especifico_id`
+LEFT JOIN `campo_detallado` ON `campo_detallado`.`id` = `proyectos_integradores_saberes`.`campo_detallado_id`
+LEFT JOIN `produccion_cientifica_tecnica` ON `produccion_cientifica_tecnica`.`id` = `proyectos_integradores_saberes`.`publicaciones_id`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `proyectos_integradores_saberes`.*, `programas`.`nombre_programa` as `nombre_programa`, `// Note el "as nombre_programa" lineas_investigacion_carreras`.`nombre_linea` as `nombre_linea`, `campo_amplio`.`nombre_amplio` as `nombre_amplio`, `campo_especifico`.`nombre_especifico` as `nombre_especifico`, `campo_detallado`.`nombre_detallado` as `nombre_detallado`, `produccion_cientifica_tecnica`.`nombre` as `nombre_publicacion`
+FROM `proyectos_integradores_saberes`
+LEFT JOIN `programas` ON `programas`.`id` = `proyectos_integradores_saberes`.`programa_id`
+LEFT JOIN `lineas_investigacion_carreras` ON `lineas_investigacion_carreras`.`id` = `proyectos_integradores_saberes`.`linea_investigacion_carrera_id`
+LEFT JOIN `campo_amplio` ON `campo_amplio`.`id` = `proyectos_integradores_saberes`.`campo_amplio_id`
+LEFT JOIN `campo_especifico` ON `campo_especifico`.`id` = `proyectos_integradores_saberes`.`campo_especifico_id`
+LEFT JOIN `campo_detallado` ON `campo_detallado`.`id` = `proyectos_integradores_saberes`.`campo_detallado_id`
+LEFT JOIN `produccion_cientifica_tecnica` ON `produccion_cientifica_tecnica`.`id` = `proyectos_integradores_saberes`.`publicaciones_id`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `proyectos_integradores_saberes`.*, `programas`.`nombre_programa` as `nombre_programa`, `// Note el "as nombre_programa" lineas_investigacion_carreras`.`nombre_linea` as `nombre_linea`, `campo_amplio`.`nombre_amplio` as `nombre_amplio`, `campo_especifico`.`nombre_especifico` as `nombre_especifico`, `campo_detallado`.`nombre_detallado` as `nombre_detallado`, `produccion_cientifica_tecnica`.`nombre` as `nombre_publicacion`
+FROM `proyectos_integradores_saberes`
+LEFT JOIN `programas` ON `programas`.`id` = `proyectos_integradores_saberes`.`programa_id`
+LEFT JOIN `lineas_investigacion_carreras` ON `lineas_investigacion_carreras`.`id` = `proyectos_integradores_saberes`.`linea_investigacion_carrera_id`
+LEFT JOIN `campo_amplio` ON `campo_amplio`.`id` = `proyectos_integradores_saberes`.`campo_amplio_id`
+LEFT JOIN `campo_especifico` ON `campo_especifico`.`id` = `proyectos_integradores_saberes`.`campo_especifico_id`
+LEFT JOIN `campo_detallado` ON `campo_detallado`.`id` = `proyectos_integradores_saberes`.`campo_detallado_id`
+LEFT JOIN `produccion_cientifica_tecnica` ON `produccion_cientifica_tecnica`.`id` = `proyectos_integradores_saberes`.`publicaciones_id`', [], false)
+ 4 APPPATH\Controllers\PISController.php(74): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PISController->index()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PISController))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-01-27 13:00:00 --> [Caused by] mysqli_sql_exception: Unknown column '// Note el "as nombre_programa" lineas_investigacion_carreras.nombre_linea' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('SELECT `proyectos_integradores_saberes`.*, `programas`.`nombre_programa` as `nombre_programa`, `// Note el "as nombre_programa" lineas_investigacion_carreras`.`nombre_linea` as `nombre_linea`, `campo_amplio`.`nombre_amplio` as `nombre_amplio`, `campo_especifico`.`nombre_especifico` as `nombre_especifico`, `campo_detallado`.`nombre_detallado` as `nombre_detallado`, `produccion_cientifica_tecnica`.`nombre` as `nombre_publicacion`
+FROM `proyectos_integradores_saberes`
+LEFT JOIN `programas` ON `programas`.`id` = `proyectos_integradores_saberes`.`programa_id`
+LEFT JOIN `lineas_investigacion_carreras` ON `lineas_investigacion_carreras`.`id` = `proyectos_integradores_saberes`.`linea_investigacion_carrera_id`
+LEFT JOIN `campo_amplio` ON `campo_amplio`.`id` = `proyectos_integradores_saberes`.`campo_amplio_id`
+LEFT JOIN `campo_especifico` ON `campo_especifico`.`id` = `proyectos_integradores_saberes`.`campo_especifico_id`
+LEFT JOIN `campo_detallado` ON `campo_detallado`.`id` = `proyectos_integradores_saberes`.`campo_detallado_id`
+LEFT JOIN `produccion_cientifica_tecnica` ON `produccion_cientifica_tecnica`.`id` = `proyectos_integradores_saberes`.`publicaciones_id`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `proyectos_integradores_saberes`.*, `programas`.`nombre_programa` as `nombre_programa`, `// Note el "as nombre_programa" lineas_investigacion_carreras`.`nombre_linea` as `nombre_linea`, `campo_amplio`.`nombre_amplio` as `nombre_amplio`, `campo_especifico`.`nombre_especifico` as `nombre_especifico`, `campo_detallado`.`nombre_detallado` as `nombre_detallado`, `produccion_cientifica_tecnica`.`nombre` as `nombre_publicacion`
+FROM `proyectos_integradores_saberes`
+LEFT JOIN `programas` ON `programas`.`id` = `proyectos_integradores_saberes`.`programa_id`
+LEFT JOIN `lineas_investigacion_carreras` ON `lineas_investigacion_carreras`.`id` = `proyectos_integradores_saberes`.`linea_investigacion_carrera_id`
+LEFT JOIN `campo_amplio` ON `campo_amplio`.`id` = `proyectos_integradores_saberes`.`campo_amplio_id`
+LEFT JOIN `campo_especifico` ON `campo_especifico`.`id` = `proyectos_integradores_saberes`.`campo_especifico_id`
+LEFT JOIN `campo_detallado` ON `campo_detallado`.`id` = `proyectos_integradores_saberes`.`campo_detallado_id`
+LEFT JOIN `produccion_cientifica_tecnica` ON `produccion_cientifica_tecnica`.`id` = `proyectos_integradores_saberes`.`publicaciones_id`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `proyectos_integradores_saberes`.*, `programas`.`nombre_programa` as `nombre_programa`, `// Note el "as nombre_programa" lineas_investigacion_carreras`.`nombre_linea` as `nombre_linea`, `campo_amplio`.`nombre_amplio` as `nombre_amplio`, `campo_especifico`.`nombre_especifico` as `nombre_especifico`, `campo_detallado`.`nombre_detallado` as `nombre_detallado`, `produccion_cientifica_tecnica`.`nombre` as `nombre_publicacion`
+FROM `proyectos_integradores_saberes`
+LEFT JOIN `programas` ON `programas`.`id` = `proyectos_integradores_saberes`.`programa_id`
+LEFT JOIN `lineas_investigacion_carreras` ON `lineas_investigacion_carreras`.`id` = `proyectos_integradores_saberes`.`linea_investigacion_carrera_id`
+LEFT JOIN `campo_amplio` ON `campo_amplio`.`id` = `proyectos_integradores_saberes`.`campo_amplio_id`
+LEFT JOIN `campo_especifico` ON `campo_especifico`.`id` = `proyectos_integradores_saberes`.`campo_especifico_id`
+LEFT JOIN `campo_detallado` ON `campo_detallado`.`id` = `proyectos_integradores_saberes`.`campo_detallado_id`
+LEFT JOIN `produccion_cientifica_tecnica` ON `produccion_cientifica_tecnica`.`id` = `proyectos_integradores_saberes`.`publicaciones_id`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `proyectos_integradores_saberes`.*, `programas`.`nombre_programa` as `nombre_programa`, `// Note el "as nombre_programa" lineas_investigacion_carreras`.`nombre_linea` as `nombre_linea`, `campo_amplio`.`nombre_amplio` as `nombre_amplio`, `campo_especifico`.`nombre_especifico` as `nombre_especifico`, `campo_detallado`.`nombre_detallado` as `nombre_detallado`, `produccion_cientifica_tecnica`.`nombre` as `nombre_publicacion`
+FROM `proyectos_integradores_saberes`
+LEFT JOIN `programas` ON `programas`.`id` = `proyectos_integradores_saberes`.`programa_id`
+LEFT JOIN `lineas_investigacion_carreras` ON `lineas_investigacion_carreras`.`id` = `proyectos_integradores_saberes`.`linea_investigacion_carrera_id`
+LEFT JOIN `campo_amplio` ON `campo_amplio`.`id` = `proyectos_integradores_saberes`.`campo_amplio_id`
+LEFT JOIN `campo_especifico` ON `campo_especifico`.`id` = `proyectos_integradores_saberes`.`campo_especifico_id`
+LEFT JOIN `campo_detallado` ON `campo_detallado`.`id` = `proyectos_integradores_saberes`.`campo_detallado_id`
+LEFT JOIN `produccion_cientifica_tecnica` ON `produccion_cientifica_tecnica`.`id` = `proyectos_integradores_saberes`.`publicaciones_id`', [], false)
+ 5 APPPATH\Controllers\PISController.php(74): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PISController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PISController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-01-27 13:00:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-27 13:00:33 --> Resultado completo del primer proyecto con joins: Array
+(
+    [id] => 4
+    [nombre] => Tienda Zapatos
+    [codigo] => 100117
+    [tipo] => Investigación
+    [objetivo] => Crear una aplicacion web para una tienda de zapatos.
+    [programa_id] => 1
+    [estado] => En Cierre
+    [linea_investigacion_carrera_id] => 13
+    [facultad_entidad_area] => Software
+    [fecha_inicio] => 2025-01-01
+    [coordinador_director] => Morales
+    [fecha_fin_planificado] => 2025-01-01
+    [correo_coordinador] => bismuto7@gmail.com
+    [fecha_fin_real] => 2025-01-02
+    [telefono_coordinador] => 983104196
+    [campo_amplio_id] => 9
+    [campo_especifico_id] => 19
+    [campo_detallado_id] => 62
+    [alcance_territorial] => Institucional
+    [investigadores_acreditados] => Si
+    [impacto_social] => trabajo rapido
+    [impacto_cientifico] => aporte a la sociedad
+    [impacto_economico] => gratis
+    [impacto_politico] => buena nota
+    [impacto_ambiental] => no usa cuaderno
+    [otro_impacto] => aprendizaje
+    [fuente_financiamiento] => Fondos Concursables Interno IES
+    [descripcion_actividad] => poner en practica lo aprendido.
+    [parametro_cumplimiento] => Gasto Externo
+    [cooperacion] => Nacional
+    [red] => Nacional
+    [resultados_verificables] => Totales
+    [anio] => 2025
+    [presupuesto_planificado] => 455.00
+    [presupuesto_ejecutado] => 455.00
+    [tipo_participante] => Estudiante
+    [horas] => 60
+    [publicaciones_id] => 2
+    [proyecto_path] => 
+    [poster_path] => 
+    [created_at] => 2025-01-27 02:38:00
+    [updated_at] => 2025-01-27 02:38:00
+    [nombre_programa] => Programa de Vinculación con la Sociedad
+    [nombre_linea] => Diseño web para el desarrollo
+    [nombre_amplio] => Ingeniería, industria y construcción
+    [nombre_especifico] => Arquitectura y construcción
+    [nombre_detallado] => Arquitectura, urbanismo y restauración
+    [nombre_publicacion] => Análisis del uso de herramientas de marketing digital en las PYMES de la región norte del Ecuador
+)
+
+INFO - 2025-01-27 13:00:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 14:05:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 14:05:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 14:23:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 14:23:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 14:42:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 14:42:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 14:43:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 14:49:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 14:49:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 15:12:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-01-27 15:12:07 --> mysqli_sql_exception: Unknown column '// Note el "as nombre_programa" lineas_investigacion_carreras.nombre_linea' in 'field list' in C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(312): mysqli->query('SELECT `proyect...', 0)
+#1 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `proyect...')
+#2 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `proyect...')
+#3 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `proyect...', Array, false)
+#4 C:\xampp\htdocs\analisis\app\Controllers\PISController.php(74): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\PISController->index()
+#6 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PISController))
+#7 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\analisis\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+CRITICAL - 2025-01-27 15:12:07 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column '// Note el "as nombre_programa" lineas_investigacion_carreras.nombre_linea' in 'field list'
+[Method: GET, Route: pis]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `proyectos_integradores_saberes`.*, `programas`.`nombre_programa` as `nombre_programa`, `// Note el "as nombre_programa" lineas_investigacion_carreras`.`nombre_linea` as `nombre_linea`, `campo_amplio`.`nombre_amplio` as `nombre_amplio`, `campo_especifico`.`nombre_especifico` as `nombre_especifico`, `campo_detallado`.`nombre_detallado` as `nombre_detallado`, `produccion_cientifica_tecnica`.`nombre` as `nombre_publicacion`
+FROM `proyectos_integradores_saberes`
+LEFT JOIN `programas` ON `programas`.`id` = `proyectos_integradores_saberes`.`programa_id`
+LEFT JOIN `lineas_investigacion_carreras` ON `lineas_investigacion_carreras`.`id` = `proyectos_integradores_saberes`.`linea_investigacion_carrera_id`
+LEFT JOIN `campo_amplio` ON `campo_amplio`.`id` = `proyectos_integradores_saberes`.`campo_amplio_id`
+LEFT JOIN `campo_especifico` ON `campo_especifico`.`id` = `proyectos_integradores_saberes`.`campo_especifico_id`
+LEFT JOIN `campo_detallado` ON `campo_detallado`.`id` = `proyectos_integradores_saberes`.`campo_detallado_id`
+LEFT JOIN `produccion_cientifica_tecnica` ON `produccion_cientifica_tecnica`.`id` = `proyectos_integradores_saberes`.`publicaciones_id`', [], false)
+ 2 APPPATH\Controllers\PISController.php(74): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PISController->index()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PISController))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-01-27 15:12:07 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column '// Note el "as nombre_programa" lineas_investigacion_carreras.nombre_linea' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `proyectos_integradores_saberes`.*, `programas`.`nombre_programa` as `nombre_programa`, `// Note el "as nombre_programa" lineas_investigacion_carreras`.`nombre_linea` as `nombre_linea`, `campo_amplio`.`nombre_amplio` as `nombre_amplio`, `campo_especifico`.`nombre_especifico` as `nombre_especifico`, `campo_detallado`.`nombre_detallado` as `nombre_detallado`, `produccion_cientifica_tecnica`.`nombre` as `nombre_publicacion`
+FROM `proyectos_integradores_saberes`
+LEFT JOIN `programas` ON `programas`.`id` = `proyectos_integradores_saberes`.`programa_id`
+LEFT JOIN `lineas_investigacion_carreras` ON `lineas_investigacion_carreras`.`id` = `proyectos_integradores_saberes`.`linea_investigacion_carrera_id`
+LEFT JOIN `campo_amplio` ON `campo_amplio`.`id` = `proyectos_integradores_saberes`.`campo_amplio_id`
+LEFT JOIN `campo_especifico` ON `campo_especifico`.`id` = `proyectos_integradores_saberes`.`campo_especifico_id`
+LEFT JOIN `campo_detallado` ON `campo_detallado`.`id` = `proyectos_integradores_saberes`.`campo_detallado_id`
+LEFT JOIN `produccion_cientifica_tecnica` ON `produccion_cientifica_tecnica`.`id` = `proyectos_integradores_saberes`.`publicaciones_id`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `proyectos_integradores_saberes`.*, `programas`.`nombre_programa` as `nombre_programa`, `// Note el "as nombre_programa" lineas_investigacion_carreras`.`nombre_linea` as `nombre_linea`, `campo_amplio`.`nombre_amplio` as `nombre_amplio`, `campo_especifico`.`nombre_especifico` as `nombre_especifico`, `campo_detallado`.`nombre_detallado` as `nombre_detallado`, `produccion_cientifica_tecnica`.`nombre` as `nombre_publicacion`
+FROM `proyectos_integradores_saberes`
+LEFT JOIN `programas` ON `programas`.`id` = `proyectos_integradores_saberes`.`programa_id`
+LEFT JOIN `lineas_investigacion_carreras` ON `lineas_investigacion_carreras`.`id` = `proyectos_integradores_saberes`.`linea_investigacion_carrera_id`
+LEFT JOIN `campo_amplio` ON `campo_amplio`.`id` = `proyectos_integradores_saberes`.`campo_amplio_id`
+LEFT JOIN `campo_especifico` ON `campo_especifico`.`id` = `proyectos_integradores_saberes`.`campo_especifico_id`
+LEFT JOIN `campo_detallado` ON `campo_detallado`.`id` = `proyectos_integradores_saberes`.`campo_detallado_id`
+LEFT JOIN `produccion_cientifica_tecnica` ON `produccion_cientifica_tecnica`.`id` = `proyectos_integradores_saberes`.`publicaciones_id`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `proyectos_integradores_saberes`.*, `programas`.`nombre_programa` as `nombre_programa`, `// Note el "as nombre_programa" lineas_investigacion_carreras`.`nombre_linea` as `nombre_linea`, `campo_amplio`.`nombre_amplio` as `nombre_amplio`, `campo_especifico`.`nombre_especifico` as `nombre_especifico`, `campo_detallado`.`nombre_detallado` as `nombre_detallado`, `produccion_cientifica_tecnica`.`nombre` as `nombre_publicacion`
+FROM `proyectos_integradores_saberes`
+LEFT JOIN `programas` ON `programas`.`id` = `proyectos_integradores_saberes`.`programa_id`
+LEFT JOIN `lineas_investigacion_carreras` ON `lineas_investigacion_carreras`.`id` = `proyectos_integradores_saberes`.`linea_investigacion_carrera_id`
+LEFT JOIN `campo_amplio` ON `campo_amplio`.`id` = `proyectos_integradores_saberes`.`campo_amplio_id`
+LEFT JOIN `campo_especifico` ON `campo_especifico`.`id` = `proyectos_integradores_saberes`.`campo_especifico_id`
+LEFT JOIN `campo_detallado` ON `campo_detallado`.`id` = `proyectos_integradores_saberes`.`campo_detallado_id`
+LEFT JOIN `produccion_cientifica_tecnica` ON `produccion_cientifica_tecnica`.`id` = `proyectos_integradores_saberes`.`publicaciones_id`', [], false)
+ 4 APPPATH\Controllers\PISController.php(74): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PISController->index()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PISController))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-01-27 15:12:07 --> [Caused by] mysqli_sql_exception: Unknown column '// Note el "as nombre_programa" lineas_investigacion_carreras.nombre_linea' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('SELECT `proyectos_integradores_saberes`.*, `programas`.`nombre_programa` as `nombre_programa`, `// Note el "as nombre_programa" lineas_investigacion_carreras`.`nombre_linea` as `nombre_linea`, `campo_amplio`.`nombre_amplio` as `nombre_amplio`, `campo_especifico`.`nombre_especifico` as `nombre_especifico`, `campo_detallado`.`nombre_detallado` as `nombre_detallado`, `produccion_cientifica_tecnica`.`nombre` as `nombre_publicacion`
+FROM `proyectos_integradores_saberes`
+LEFT JOIN `programas` ON `programas`.`id` = `proyectos_integradores_saberes`.`programa_id`
+LEFT JOIN `lineas_investigacion_carreras` ON `lineas_investigacion_carreras`.`id` = `proyectos_integradores_saberes`.`linea_investigacion_carrera_id`
+LEFT JOIN `campo_amplio` ON `campo_amplio`.`id` = `proyectos_integradores_saberes`.`campo_amplio_id`
+LEFT JOIN `campo_especifico` ON `campo_especifico`.`id` = `proyectos_integradores_saberes`.`campo_especifico_id`
+LEFT JOIN `campo_detallado` ON `campo_detallado`.`id` = `proyectos_integradores_saberes`.`campo_detallado_id`
+LEFT JOIN `produccion_cientifica_tecnica` ON `produccion_cientifica_tecnica`.`id` = `proyectos_integradores_saberes`.`publicaciones_id`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `proyectos_integradores_saberes`.*, `programas`.`nombre_programa` as `nombre_programa`, `// Note el "as nombre_programa" lineas_investigacion_carreras`.`nombre_linea` as `nombre_linea`, `campo_amplio`.`nombre_amplio` as `nombre_amplio`, `campo_especifico`.`nombre_especifico` as `nombre_especifico`, `campo_detallado`.`nombre_detallado` as `nombre_detallado`, `produccion_cientifica_tecnica`.`nombre` as `nombre_publicacion`
+FROM `proyectos_integradores_saberes`
+LEFT JOIN `programas` ON `programas`.`id` = `proyectos_integradores_saberes`.`programa_id`
+LEFT JOIN `lineas_investigacion_carreras` ON `lineas_investigacion_carreras`.`id` = `proyectos_integradores_saberes`.`linea_investigacion_carrera_id`
+LEFT JOIN `campo_amplio` ON `campo_amplio`.`id` = `proyectos_integradores_saberes`.`campo_amplio_id`
+LEFT JOIN `campo_especifico` ON `campo_especifico`.`id` = `proyectos_integradores_saberes`.`campo_especifico_id`
+LEFT JOIN `campo_detallado` ON `campo_detallado`.`id` = `proyectos_integradores_saberes`.`campo_detallado_id`
+LEFT JOIN `produccion_cientifica_tecnica` ON `produccion_cientifica_tecnica`.`id` = `proyectos_integradores_saberes`.`publicaciones_id`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `proyectos_integradores_saberes`.*, `programas`.`nombre_programa` as `nombre_programa`, `// Note el "as nombre_programa" lineas_investigacion_carreras`.`nombre_linea` as `nombre_linea`, `campo_amplio`.`nombre_amplio` as `nombre_amplio`, `campo_especifico`.`nombre_especifico` as `nombre_especifico`, `campo_detallado`.`nombre_detallado` as `nombre_detallado`, `produccion_cientifica_tecnica`.`nombre` as `nombre_publicacion`
+FROM `proyectos_integradores_saberes`
+LEFT JOIN `programas` ON `programas`.`id` = `proyectos_integradores_saberes`.`programa_id`
+LEFT JOIN `lineas_investigacion_carreras` ON `lineas_investigacion_carreras`.`id` = `proyectos_integradores_saberes`.`linea_investigacion_carrera_id`
+LEFT JOIN `campo_amplio` ON `campo_amplio`.`id` = `proyectos_integradores_saberes`.`campo_amplio_id`
+LEFT JOIN `campo_especifico` ON `campo_especifico`.`id` = `proyectos_integradores_saberes`.`campo_especifico_id`
+LEFT JOIN `campo_detallado` ON `campo_detallado`.`id` = `proyectos_integradores_saberes`.`campo_detallado_id`
+LEFT JOIN `produccion_cientifica_tecnica` ON `produccion_cientifica_tecnica`.`id` = `proyectos_integradores_saberes`.`publicaciones_id`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `proyectos_integradores_saberes`.*, `programas`.`nombre_programa` as `nombre_programa`, `// Note el "as nombre_programa" lineas_investigacion_carreras`.`nombre_linea` as `nombre_linea`, `campo_amplio`.`nombre_amplio` as `nombre_amplio`, `campo_especifico`.`nombre_especifico` as `nombre_especifico`, `campo_detallado`.`nombre_detallado` as `nombre_detallado`, `produccion_cientifica_tecnica`.`nombre` as `nombre_publicacion`
+FROM `proyectos_integradores_saberes`
+LEFT JOIN `programas` ON `programas`.`id` = `proyectos_integradores_saberes`.`programa_id`
+LEFT JOIN `lineas_investigacion_carreras` ON `lineas_investigacion_carreras`.`id` = `proyectos_integradores_saberes`.`linea_investigacion_carrera_id`
+LEFT JOIN `campo_amplio` ON `campo_amplio`.`id` = `proyectos_integradores_saberes`.`campo_amplio_id`
+LEFT JOIN `campo_especifico` ON `campo_especifico`.`id` = `proyectos_integradores_saberes`.`campo_especifico_id`
+LEFT JOIN `campo_detallado` ON `campo_detallado`.`id` = `proyectos_integradores_saberes`.`campo_detallado_id`
+LEFT JOIN `produccion_cientifica_tecnica` ON `produccion_cientifica_tecnica`.`id` = `proyectos_integradores_saberes`.`publicaciones_id`', [], false)
+ 5 APPPATH\Controllers\PISController.php(74): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PISController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PISController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-01-27 15:12:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 15:12:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 15:12:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-01-27 15:12:23 --> mysqli_sql_exception: Unknown column '// Note el "as nombre_programa" lineas_investigacion_carreras.nombre_linea' in 'field list' in C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(312): mysqli->query('SELECT `proyect...', 0)
+#1 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `proyect...')
+#2 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `proyect...')
+#3 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `proyect...', Array, false)
+#4 C:\xampp\htdocs\analisis\app\Controllers\PISController.php(74): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\PISController->index()
+#6 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PISController))
+#7 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#10 C:\xampp\htdocs\analisis\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#11 {main}
+CRITICAL - 2025-01-27 15:12:23 --> CodeIgniter\Database\Exceptions\DatabaseException: Unknown column '// Note el "as nombre_programa" lineas_investigacion_carreras.nombre_linea' in 'field list'
+[Method: GET, Route: pis]
+in SYSTEMPATH\Database\BaseConnection.php on line 688.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `proyectos_integradores_saberes`.*, `programas`.`nombre_programa` as `nombre_programa`, `// Note el "as nombre_programa" lineas_investigacion_carreras`.`nombre_linea` as `nombre_linea`, `campo_amplio`.`nombre_amplio` as `nombre_amplio`, `campo_especifico`.`nombre_especifico` as `nombre_especifico`, `campo_detallado`.`nombre_detallado` as `nombre_detallado`, `produccion_cientifica_tecnica`.`nombre` as `nombre_publicacion`
+FROM `proyectos_integradores_saberes`
+LEFT JOIN `programas` ON `programas`.`id` = `proyectos_integradores_saberes`.`programa_id`
+LEFT JOIN `lineas_investigacion_carreras` ON `lineas_investigacion_carreras`.`id` = `proyectos_integradores_saberes`.`linea_investigacion_carrera_id`
+LEFT JOIN `campo_amplio` ON `campo_amplio`.`id` = `proyectos_integradores_saberes`.`campo_amplio_id`
+LEFT JOIN `campo_especifico` ON `campo_especifico`.`id` = `proyectos_integradores_saberes`.`campo_especifico_id`
+LEFT JOIN `campo_detallado` ON `campo_detallado`.`id` = `proyectos_integradores_saberes`.`campo_detallado_id`
+LEFT JOIN `produccion_cientifica_tecnica` ON `produccion_cientifica_tecnica`.`id` = `proyectos_integradores_saberes`.`publicaciones_id`', [], false)
+ 2 APPPATH\Controllers\PISController.php(74): CodeIgniter\Database\BaseBuilder->get()
+ 3 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PISController->index()
+ 4 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PISController))
+ 5 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 8 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-01-27 15:12:23 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Unknown column '// Note el "as nombre_programa" lineas_investigacion_carreras.nombre_linea' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 317.
+ 1 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `proyectos_integradores_saberes`.*, `programas`.`nombre_programa` as `nombre_programa`, `// Note el "as nombre_programa" lineas_investigacion_carreras`.`nombre_linea` as `nombre_linea`, `campo_amplio`.`nombre_amplio` as `nombre_amplio`, `campo_especifico`.`nombre_especifico` as `nombre_especifico`, `campo_detallado`.`nombre_detallado` as `nombre_detallado`, `produccion_cientifica_tecnica`.`nombre` as `nombre_publicacion`
+FROM `proyectos_integradores_saberes`
+LEFT JOIN `programas` ON `programas`.`id` = `proyectos_integradores_saberes`.`programa_id`
+LEFT JOIN `lineas_investigacion_carreras` ON `lineas_investigacion_carreras`.`id` = `proyectos_integradores_saberes`.`linea_investigacion_carrera_id`
+LEFT JOIN `campo_amplio` ON `campo_amplio`.`id` = `proyectos_integradores_saberes`.`campo_amplio_id`
+LEFT JOIN `campo_especifico` ON `campo_especifico`.`id` = `proyectos_integradores_saberes`.`campo_especifico_id`
+LEFT JOIN `campo_detallado` ON `campo_detallado`.`id` = `proyectos_integradores_saberes`.`campo_detallado_id`
+LEFT JOIN `produccion_cientifica_tecnica` ON `produccion_cientifica_tecnica`.`id` = `proyectos_integradores_saberes`.`publicaciones_id`')
+ 2 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `proyectos_integradores_saberes`.*, `programas`.`nombre_programa` as `nombre_programa`, `// Note el "as nombre_programa" lineas_investigacion_carreras`.`nombre_linea` as `nombre_linea`, `campo_amplio`.`nombre_amplio` as `nombre_amplio`, `campo_especifico`.`nombre_especifico` as `nombre_especifico`, `campo_detallado`.`nombre_detallado` as `nombre_detallado`, `produccion_cientifica_tecnica`.`nombre` as `nombre_publicacion`
+FROM `proyectos_integradores_saberes`
+LEFT JOIN `programas` ON `programas`.`id` = `proyectos_integradores_saberes`.`programa_id`
+LEFT JOIN `lineas_investigacion_carreras` ON `lineas_investigacion_carreras`.`id` = `proyectos_integradores_saberes`.`linea_investigacion_carrera_id`
+LEFT JOIN `campo_amplio` ON `campo_amplio`.`id` = `proyectos_integradores_saberes`.`campo_amplio_id`
+LEFT JOIN `campo_especifico` ON `campo_especifico`.`id` = `proyectos_integradores_saberes`.`campo_especifico_id`
+LEFT JOIN `campo_detallado` ON `campo_detallado`.`id` = `proyectos_integradores_saberes`.`campo_detallado_id`
+LEFT JOIN `produccion_cientifica_tecnica` ON `produccion_cientifica_tecnica`.`id` = `proyectos_integradores_saberes`.`publicaciones_id`')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `proyectos_integradores_saberes`.*, `programas`.`nombre_programa` as `nombre_programa`, `// Note el "as nombre_programa" lineas_investigacion_carreras`.`nombre_linea` as `nombre_linea`, `campo_amplio`.`nombre_amplio` as `nombre_amplio`, `campo_especifico`.`nombre_especifico` as `nombre_especifico`, `campo_detallado`.`nombre_detallado` as `nombre_detallado`, `produccion_cientifica_tecnica`.`nombre` as `nombre_publicacion`
+FROM `proyectos_integradores_saberes`
+LEFT JOIN `programas` ON `programas`.`id` = `proyectos_integradores_saberes`.`programa_id`
+LEFT JOIN `lineas_investigacion_carreras` ON `lineas_investigacion_carreras`.`id` = `proyectos_integradores_saberes`.`linea_investigacion_carrera_id`
+LEFT JOIN `campo_amplio` ON `campo_amplio`.`id` = `proyectos_integradores_saberes`.`campo_amplio_id`
+LEFT JOIN `campo_especifico` ON `campo_especifico`.`id` = `proyectos_integradores_saberes`.`campo_especifico_id`
+LEFT JOIN `campo_detallado` ON `campo_detallado`.`id` = `proyectos_integradores_saberes`.`campo_detallado_id`
+LEFT JOIN `produccion_cientifica_tecnica` ON `produccion_cientifica_tecnica`.`id` = `proyectos_integradores_saberes`.`publicaciones_id`', [], false)
+ 4 APPPATH\Controllers\PISController.php(74): CodeIgniter\Database\BaseBuilder->get()
+ 5 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PISController->index()
+ 6 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PISController))
+ 7 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 9 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+10 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-01-27 15:12:23 --> [Caused by] mysqli_sql_exception: Unknown column '// Note el "as nombre_programa" lineas_investigacion_carreras.nombre_linea' in 'field list'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 312.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(312): mysqli->query('SELECT `proyectos_integradores_saberes`.*, `programas`.`nombre_programa` as `nombre_programa`, `// Note el "as nombre_programa" lineas_investigacion_carreras`.`nombre_linea` as `nombre_linea`, `campo_amplio`.`nombre_amplio` as `nombre_amplio`, `campo_especifico`.`nombre_especifico` as `nombre_especifico`, `campo_detallado`.`nombre_detallado` as `nombre_detallado`, `produccion_cientifica_tecnica`.`nombre` as `nombre_publicacion`
+FROM `proyectos_integradores_saberes`
+LEFT JOIN `programas` ON `programas`.`id` = `proyectos_integradores_saberes`.`programa_id`
+LEFT JOIN `lineas_investigacion_carreras` ON `lineas_investigacion_carreras`.`id` = `proyectos_integradores_saberes`.`linea_investigacion_carrera_id`
+LEFT JOIN `campo_amplio` ON `campo_amplio`.`id` = `proyectos_integradores_saberes`.`campo_amplio_id`
+LEFT JOIN `campo_especifico` ON `campo_especifico`.`id` = `proyectos_integradores_saberes`.`campo_especifico_id`
+LEFT JOIN `campo_detallado` ON `campo_detallado`.`id` = `proyectos_integradores_saberes`.`campo_detallado_id`
+LEFT JOIN `produccion_cientifica_tecnica` ON `produccion_cientifica_tecnica`.`id` = `proyectos_integradores_saberes`.`publicaciones_id`', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('SELECT `proyectos_integradores_saberes`.*, `programas`.`nombre_programa` as `nombre_programa`, `// Note el "as nombre_programa" lineas_investigacion_carreras`.`nombre_linea` as `nombre_linea`, `campo_amplio`.`nombre_amplio` as `nombre_amplio`, `campo_especifico`.`nombre_especifico` as `nombre_especifico`, `campo_detallado`.`nombre_detallado` as `nombre_detallado`, `produccion_cientifica_tecnica`.`nombre` as `nombre_publicacion`
+FROM `proyectos_integradores_saberes`
+LEFT JOIN `programas` ON `programas`.`id` = `proyectos_integradores_saberes`.`programa_id`
+LEFT JOIN `lineas_investigacion_carreras` ON `lineas_investigacion_carreras`.`id` = `proyectos_integradores_saberes`.`linea_investigacion_carrera_id`
+LEFT JOIN `campo_amplio` ON `campo_amplio`.`id` = `proyectos_integradores_saberes`.`campo_amplio_id`
+LEFT JOIN `campo_especifico` ON `campo_especifico`.`id` = `proyectos_integradores_saberes`.`campo_especifico_id`
+LEFT JOIN `campo_detallado` ON `campo_detallado`.`id` = `proyectos_integradores_saberes`.`campo_detallado_id`
+LEFT JOIN `produccion_cientifica_tecnica` ON `produccion_cientifica_tecnica`.`id` = `proyectos_integradores_saberes`.`publicaciones_id`')
+ 3 SYSTEMPATH\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT `proyectos_integradores_saberes`.*, `programas`.`nombre_programa` as `nombre_programa`, `// Note el "as nombre_programa" lineas_investigacion_carreras`.`nombre_linea` as `nombre_linea`, `campo_amplio`.`nombre_amplio` as `nombre_amplio`, `campo_especifico`.`nombre_especifico` as `nombre_especifico`, `campo_detallado`.`nombre_detallado` as `nombre_detallado`, `produccion_cientifica_tecnica`.`nombre` as `nombre_publicacion`
+FROM `proyectos_integradores_saberes`
+LEFT JOIN `programas` ON `programas`.`id` = `proyectos_integradores_saberes`.`programa_id`
+LEFT JOIN `lineas_investigacion_carreras` ON `lineas_investigacion_carreras`.`id` = `proyectos_integradores_saberes`.`linea_investigacion_carrera_id`
+LEFT JOIN `campo_amplio` ON `campo_amplio`.`id` = `proyectos_integradores_saberes`.`campo_amplio_id`
+LEFT JOIN `campo_especifico` ON `campo_especifico`.`id` = `proyectos_integradores_saberes`.`campo_especifico_id`
+LEFT JOIN `campo_detallado` ON `campo_detallado`.`id` = `proyectos_integradores_saberes`.`campo_detallado_id`
+LEFT JOIN `produccion_cientifica_tecnica` ON `produccion_cientifica_tecnica`.`id` = `proyectos_integradores_saberes`.`publicaciones_id`')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1644): CodeIgniter\Database\BaseConnection->query('SELECT `proyectos_integradores_saberes`.*, `programas`.`nombre_programa` as `nombre_programa`, `// Note el "as nombre_programa" lineas_investigacion_carreras`.`nombre_linea` as `nombre_linea`, `campo_amplio`.`nombre_amplio` as `nombre_amplio`, `campo_especifico`.`nombre_especifico` as `nombre_especifico`, `campo_detallado`.`nombre_detallado` as `nombre_detallado`, `produccion_cientifica_tecnica`.`nombre` as `nombre_publicacion`
+FROM `proyectos_integradores_saberes`
+LEFT JOIN `programas` ON `programas`.`id` = `proyectos_integradores_saberes`.`programa_id`
+LEFT JOIN `lineas_investigacion_carreras` ON `lineas_investigacion_carreras`.`id` = `proyectos_integradores_saberes`.`linea_investigacion_carrera_id`
+LEFT JOIN `campo_amplio` ON `campo_amplio`.`id` = `proyectos_integradores_saberes`.`campo_amplio_id`
+LEFT JOIN `campo_especifico` ON `campo_especifico`.`id` = `proyectos_integradores_saberes`.`campo_especifico_id`
+LEFT JOIN `campo_detallado` ON `campo_detallado`.`id` = `proyectos_integradores_saberes`.`campo_detallado_id`
+LEFT JOIN `produccion_cientifica_tecnica` ON `produccion_cientifica_tecnica`.`id` = `proyectos_integradores_saberes`.`publicaciones_id`', [], false)
+ 5 APPPATH\Controllers\PISController.php(74): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PISController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PISController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-01-27 15:12:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 15:12:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 15:12:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 15:12:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 15:16:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 15:16:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 15:37:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 15:37:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 15:42:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 15:42:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 15:46:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 15:46:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 15:46:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 15:49:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 15:49:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 15:49:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 16:08:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 16:08:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 16:08:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 16:08:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 16:08:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 16:08:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 16:08:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 16:08:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 16:08:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 16:08:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 16:08:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 16:08:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 16:18:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 16:18:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 16:18:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 16:18:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 16:22:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 16:22:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 16:22:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 16:22:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 16:22:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 16:22:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 16:22:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 17:06:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 17:06:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 17:06:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 17:06:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 17:06:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 17:06:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 17:06:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 17:06:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 17:06:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 17:06:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 17:11:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 17:11:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 17:42:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 17:42:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 17:42:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 17:42:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 17:42:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 17:42:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 17:42:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 17:45:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 17:45:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 17:50:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 17:50:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 17:50:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 17:51:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 17:52:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 17:52:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 17:53:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 17:53:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 17:53:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 17:54:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 17:55:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 17:55:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 17:55:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 17:55:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 18:10:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 18:10:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 18:11:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 18:11:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 18:11:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 18:11:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 18:13:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 18:13:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 18:14:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 18:14:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 18:15:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 18:15:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 18:15:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 18:15:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 18:18:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 18:18:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 18:29:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 18:29:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 18:29:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 18:29:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 18:30:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 18:30:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 18:31:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 18:31:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 18:31:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 18:31:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 18:32:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 18:32:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 18:33:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 18:33:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 18:36:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 18:36:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 18:37:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 18:37:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 18:37:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 18:37:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 18:38:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 18:38:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 18:38:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 18:38:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 18:50:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 18:50:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 18:52:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 18:52:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 18:54:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 18:54:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 18:55:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 18:55:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 18:56:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 18:56:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 18:58:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 18:58:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 18:58:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 18:58:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 18:59:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 18:59:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 19:00:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 19:00:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 19:00:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 19:00:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 19:01:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 19:01:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 19:01:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 19:01:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 19:01:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 19:01:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 19:03:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 19:03:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 19:03:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 19:03:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 19:04:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 19:04:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 19:04:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 19:04:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 19:04:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 19:04:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 19:05:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 19:05:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 19:05:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 19:05:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 19:05:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 19:05:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 19:05:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 19:05:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 19:06:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 19:06:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 19:06:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 19:06:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 19:08:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 19:08:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 19:09:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 19:09:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 19:09:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 19:09:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 19:09:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 19:09:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 19:10:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 19:10:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 19:11:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 19:11:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 19:12:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 19:12:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 19:14:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 19:14:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 19:15:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 19:15:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 19:16:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 19:16:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 19:24:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 19:24:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 19:26:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 19:26:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 19:26:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 19:26:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 19:26:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 19:27:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 19:27:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 19:28:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 19:28:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 19:28:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 19:32:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 19:32:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 19:32:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 19:45:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 19:45:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 19:45:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 19:50:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 19:50:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 19:53:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 19:53:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 19:55:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 19:55:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 19:56:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 19:56:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 19:56:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 19:56:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 19:56:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 19:56:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 19:59:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 19:59:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 19:59:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 19:59:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 20:00:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 20:00:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 20:00:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 20:00:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 20:01:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 20:01:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 20:01:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 20:01:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 20:01:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 20:01:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 20:01:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 20:01:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 20:02:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 20:02:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 20:02:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 20:02:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 20:03:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 20:03:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 20:04:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 20:04:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 20:05:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 20:05:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 20:06:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 20:06:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 20:07:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 20:07:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 20:07:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 20:07:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 20:07:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 20:07:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 20:08:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 20:08:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 20:08:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 20:08:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 20:09:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 20:09:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 20:12:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 20:12:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 20:13:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 20:13:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 22:30:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-27 22:30:20 --> Método login llamado
+INFO - 2025-01-27 22:30:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 22:30:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-27 22:30:23 --> Método login llamado
+DEBUG - 2025-01-27 22:30:23 --> Método POST detectado
+DEBUG - 2025-01-27 22:30:23 --> Datos recibidos - Username: admin
+INFO - 2025-01-27 22:30:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-01-27 22:30:23 --> Login exitoso, redirigiendo...
+INFO - 2025-01-27 22:30:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 22:30:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 22:30:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 22:30:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 22:30:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 22:30:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 22:31:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 22:31:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 22:32:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 22:32:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 22:33:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 22:33:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 22:33:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 22:33:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 22:36:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 22:36:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 22:38:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 22:38:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 22:40:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 22:40:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 22:42:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 22:42:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 22:42:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 22:42:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 22:43:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 22:43:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 22:51:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 22:51:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 22:52:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 22:52:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 22:52:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 22:52:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 22:56:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 22:56:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 22:56:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 22:56:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 22:56:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 22:56:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 22:59:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 22:59:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 22:59:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 22:59:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 22:59:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 22:59:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 23:00:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 23:00:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 23:00:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 23:00:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 23:00:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 23:00:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 23:00:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 23:02:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 23:02:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 23:02:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 23:02:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 23:03:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 23:03:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 23:04:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 23:04:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 23:06:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 23:06:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 23:08:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 23:08:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 23:09:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 23:09:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 23:09:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 23:09:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 23:10:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 23:10:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 23:10:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 23:10:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 23:11:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 23:11:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 23:12:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 23:12:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 23:15:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 23:15:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 23:15:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 23:15:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 23:25:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 23:25:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 23:25:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 23:25:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 23:25:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 23:25:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 23:26:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 23:26:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 23:26:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 23:26:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 23:27:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 23:27:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 23:28:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 23:28:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 23:31:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 23:31:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 23:31:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 23:31:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 23:31:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 23:31:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 23:31:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 23:32:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 23:32:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 23:32:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 23:42:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 23:42:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 23:43:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 23:43:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 23:44:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 23:44:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 23:45:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 23:45:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 23:49:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 23:49:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 23:50:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 23:50:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 23:51:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 23:51:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 23:53:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 23:53:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 23:56:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 23:56:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 23:57:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 23:57:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 23:58:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 23:58:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 23:59:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-01-27 23:59:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

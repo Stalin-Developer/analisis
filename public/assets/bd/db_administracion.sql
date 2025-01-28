@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 27, 2025 at 08:52 AM
+-- Generation Time: Jan 28, 2025 at 07:17 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -457,7 +457,8 @@ CREATE TABLE `programas` (
 --
 
 INSERT INTO `programas` (`id`, `nombre_programa`) VALUES
-(1, 'Programa de Vinculación con la Sociedad');
+(1, 'Programa de Vinculación con la Sociedad'),
+(2, 'Programa de relaciones interinstitucionales');
 
 -- --------------------------------------------------------
 
@@ -501,7 +502,7 @@ CREATE TABLE `proyectos_integradores_saberes` (
   `anio` int(4) NOT NULL,
   `presupuesto_planificado` decimal(10,2) NOT NULL,
   `presupuesto_ejecutado` decimal(10,2) NOT NULL,
-  `tipo_participante` enum('Docente','Estudiante','Ambos') NOT NULL,
+  `tipo_participante` enum('Docente','Estudiante','Docente/Estudiante') NOT NULL,
   `horas` int(11) NOT NULL,
   `publicaciones_id` int(11) DEFAULT NULL,
   `proyecto_path` varchar(255) DEFAULT NULL,
@@ -515,7 +516,7 @@ CREATE TABLE `proyectos_integradores_saberes` (
 --
 
 INSERT INTO `proyectos_integradores_saberes` (`id`, `nombre`, `codigo`, `tipo`, `objetivo`, `programa_id`, `estado`, `linea_investigacion_carrera_id`, `facultad_entidad_area`, `fecha_inicio`, `coordinador_director`, `fecha_fin_planificado`, `correo_coordinador`, `fecha_fin_real`, `telefono_coordinador`, `campo_amplio_id`, `campo_especifico_id`, `campo_detallado_id`, `alcance_territorial`, `investigadores_acreditados`, `impacto_social`, `impacto_cientifico`, `impacto_economico`, `impacto_politico`, `impacto_ambiental`, `otro_impacto`, `fuente_financiamiento`, `descripcion_actividad`, `parametro_cumplimiento`, `cooperacion`, `red`, `resultados_verificables`, `anio`, `presupuesto_planificado`, `presupuesto_ejecutado`, `tipo_participante`, `horas`, `publicaciones_id`, `proyecto_path`, `poster_path`, `created_at`, `updated_at`) VALUES
-(4, 'Tienda Zapatos', '100117', 'Investigación', 'Crear una aplicacion web para una tienda de zapatos.', 1, 'En Cierre', 13, 'Software', '2025-01-01', 'Morales', '2025-01-01', 'bismuto7@gmail.com', '2025-01-02', 983104196, 9, 19, 62, 'Institucional', 'Si', 'trabajo rapido', 'aporte a la sociedad', 'gratis', 'buena nota', 'no usa cuaderno', 'aprendizaje', 'Fondos Concursables Interno IES', 'poner en practica lo aprendido.', 'Gasto Externo', 'Nacional', 'Nacional', 'Totales', 2025, 455.00, 455.00, 'Estudiante', 60, 2, NULL, NULL, '2025-01-27 07:38:00', '2025-01-27 07:38:00');
+(6, 'Creacion de una aplicacion web para manejar la caja y el inventario de una tienda de zapatos', '100117', 'Investigación', 'Aprender y desarrollar nuevas habilidades puede ser un desafío emocionante. La clave está en establecer metas claras, organizar el tiempo, ser constante y buscar recursos adecuados. La práctica diaria asegura el éxito en cualquier actividad que deseas', 1, 'En Ejecución', 10, 'Aprender y desarrollar nuevas habilidades puede ser un desafío emocionante. La clave está en establecer metas claras, organizar el tiempo, ser constante y buscar recursos adecuados. La práctica diaria asegura el éxito en cualquier actividad que deseas', '2024-04-10', 'Aprender y desarrollar nuevas habilidades puede ser un desafío emocionante. La clave está en establecer metas claras, organizar el tiempo, ser constante y buscar recursos adecuados. La práctica diaria asegura el éxito en cualquier actividad que deseas', '2024-08-20', 'bismuto7@gmail.com', '2024-08-20', 983104196, 13, 30, 99, 'Cantonal', 'No', 'Aprender y desarrollar nuevas habilidades puede ser un desafío emocionante. La clave está en establecer metas claras, organizar el tiempe y buscar recursos adecuados. La práctica diaria asegura el éxito en cualquier actividad que deseas', 'Aprendetasd que deseas', 'Aprender y desarrosafío emocionante. La clave está en establecer metas claras, organizar el tiempo, ser constante y buscar recursos adecuados. La práctica diaria asegura el éxito en cualquier actividad que deseas', 'Aprender y desarrollar nuevas habilidades puede ser un desafío emocionante. La clave está en establecer metas claras, organizar el tiempo, ser constante y buscar recursos adecuados. La práctica diaria asegura el éxito en cualquier actividad que deseas', 'Aprender y desarrollar nuevas hn desafío emocionante. La clave está en establecer metas claras, organizar el tiempo, ser constante y buscar recursos adecuados. La práctica diaria asegura el éxito en cualquier actividad que deseas', 'uno y dos', 'Asignación Regular IES', 'Aprender y desarrollar nuevas habilidades puede ser un desafío emocionante. La clave está en establecer metas claras, organizar el tiempo, ser constante y buscar recursos adecuados. La práctica diaria asegura el éxito en cualquier actividad que deseas', 'Gasto Interno', 'Nacional', 'No Aplica', 'Parciales', 2024, 100.00, 100.00, 'Estudiante', 60, 1, 'uploads/proyectos_integradores_saberes/proyectos/1738018390_1dacce217e2b84096198.docx', 'uploads/proyectos_integradores_saberes/posters/1738018390_ae15c17be825cade8997.pptx', '2025-01-27 22:50:36', '2025-01-28 05:48:11');
 
 -- --------------------------------------------------------
 
@@ -786,13 +787,13 @@ ALTER TABLE `produccion_cientifica_tecnica`
 -- AUTO_INCREMENT for table `programas`
 --
 ALTER TABLE `programas`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `proyectos_integradores_saberes`
 --
 ALTER TABLE `proyectos_integradores_saberes`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `trabajos_de_titulacion`

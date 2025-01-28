@@ -70,7 +70,7 @@ $routes->group('', ['filter' => 'auth'], function($routes) {
     $routes->get('pis/new', 'PISController::new');
     $routes->post('pis/create', 'PISController::create');
     $routes->get('pis/edit/(:num)', 'PISController::edit/$1');
-    $routes->post('pis/update/(:num)', 'PISController::update/$1');
+    $routes->put('pis/update/(:num)', 'PISController::update/$1');
     $routes->get('pis/delete/(:num)', 'PISController::delete/$1');
     $routes->get('pis/download/(:num)', 'PISController::download/$1');
     $routes->get('pis/download-poster/(:num)', 'PISController::downloadPoster/$1');

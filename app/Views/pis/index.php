@@ -15,41 +15,50 @@ Gestión de Proyectos Integradores de Saberes
 
 
 
+
+
 <?= $this->section('styles') ?>
 <!-- DataTables -->
 <link rel="stylesheet" href="<?= base_url('assets/plugins/datatables-bs4/css/dataTables.bootstrap4.min.css') ?>">
+
 <style>
     .table-container {
         width: 100%;
         margin-bottom: 1rem;
         -webkit-overflow-scrolling: touch;
     }
-    
+
     .table-container .table {
         margin-bottom: 0;
-        white-space: nowrap;
+        width: 100%;
+        
     }
 
-    /* Para mejorar la visibilidad de las columnas */
-    .table td, .table th {
-        min-width: 100px; /* ancho mínimo para cada columna */
-        padding: 8px;
-    }
-
-    /* Para columnas específicas que necesiten más espacio */
-    .table .column-description {
-        min-width: 200px;
-    }
-
-    /* Para mantener la columna de acciones siempre visible */
-    .table .actions-column {
+    .actions-column {
         position: sticky;
         right: 0;
         background-color: #fff;
         box-shadow: -5px 0 5px -5px rgba(0,0,0,.15);
+        width: 120px;
+        white-space: nowrap;
     }
+
+
+    .table-container .table th,
+    .table-container .table td {
+        text-align: center;     /* Centra horizontalmente */
+        vertical-align: middle; /* Centra verticalmente */
+    }
+
+
+
+
 </style>
+
 <?= $this->endSection() ?>
+
+
+
 
 
 
@@ -186,7 +195,7 @@ Gestión de Proyectos Integradores de Saberes
                         <th>Tipo Participante</th>
                         <th>Horas</th>
                         <th>Publicación</th>  <!-- nombre de la tabla produccion_cientifica_tecnica -->
-                        <th class="actions-column">Acciones</th>
+                        <th>Acciones</th>
                     </tr>
                 </thead>
 
@@ -200,7 +209,7 @@ Gestión de Proyectos Integradores de Saberes
                         <td><?= $proyecto['nombre'] ?></td>
                         <td><?= $proyecto['codigo'] ?></td>
                         <td><?= $proyecto['tipo'] ?></td>
-                        <td class="column-description"><?= $proyecto['objetivo'] ?></td>
+                        <td><?= $proyecto['objetivo'] ?></td>
                         <td><?= $proyecto['nombre_programa'] ?? 'No asignado' ?></td>
                         <td>
                             <?php
@@ -238,14 +247,14 @@ Gestión de Proyectos Integradores de Saberes
                         <td><?= $proyecto['nombre_detallado'] ?? 'No asignado' ?></td>
                         <td><?= $proyecto['alcance_territorial'] ?></td>
                         <td><?= $proyecto['investigadores_acreditados'] ?></td>
-                        <td class="column-description"><?= $proyecto['impacto_social'] ?></td>
-                        <td class="column-description"><?= $proyecto['impacto_cientifico'] ?></td>
-                        <td class="column-description"><?= $proyecto['impacto_economico'] ?></td>
-                        <td class="column-description"><?= $proyecto['impacto_politico'] ?></td>
-                        <td class="column-description"><?= $proyecto['impacto_ambiental'] ?></td>
-                        <td class="column-description"><?= $proyecto['otro_impacto'] ?></td>
+                        <td><?= $proyecto['impacto_social'] ?></td>
+                        <td><?= $proyecto['impacto_cientifico'] ?></td>
+                        <td><?= $proyecto['impacto_economico'] ?></td>
+                        <td><?= $proyecto['impacto_politico'] ?></td>
+                        <td><?= $proyecto['impacto_ambiental'] ?></td>
+                        <td><?= $proyecto['otro_impacto'] ?></td>
                         <td><?= $proyecto['fuente_financiamiento'] ?></td>
-                        <td class="column-description"><?= $proyecto['descripcion_actividad'] ?></td>
+                        <td><?= $proyecto['descripcion_actividad'] ?></td>
                         <td><?= $proyecto['parametro_cumplimiento'] ?></td>
                         <td><?= $proyecto['cooperacion'] ?></td>
                         <td><?= $proyecto['red'] ?></td>
@@ -258,10 +267,13 @@ Gestión de Proyectos Integradores de Saberes
                         <td><?= $proyecto['nombre_publicacion'] ?? 'No asignado' ?></td>
                         <td class="actions-column">
                             <div class="btn-group">
-                                <a href="<?= base_url('pis/download/' . $proyecto['id']) ?>" 
-                                class="btn btn-sm btn-info" title="Descargar Proyecto">
-                                    <i class="fas fa-download"></i>
-                                </a>
+                                <?php if ($proyecto['proyecto_path']): ?>
+                                    <a href="<?= base_url('pis/download/' . $proyecto['id']) ?>" 
+                                    class="btn btn-sm btn-info" title="Descargar Proyecto">
+                                        <i class="fas fa-download"></i>
+                                    </a>
+                                <?php endif; ?>
+                                
                                 <?php if ($proyecto['poster_path']): ?>
                                 <a href="<?= base_url('pis/download-poster/' . $proyecto['id']) ?>" 
                                 class="btn btn-sm btn-success" title="Descargar Póster">
@@ -300,19 +312,117 @@ Gestión de Proyectos Integradores de Saberes
 <script src="<?= base_url('assets/plugins/datatables/jquery.dataTables.min.js') ?>"></script>
 <script src="<?= base_url('assets/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js') ?>"></script>
 <script>
+
+//EL ANCHO DE LAS COLUMNAS DE ESTA TABLA SON DINAMICOS. SE BASA EN LA CELDA QUE TENGA MAS TEXTO EN DICHA COLUMNA.
 $(function () {
-    $('.table').DataTable({
-        "responsive": true,
-        "autoWidth": false,
-        "scrollX": true,  // Habilitamos scroll horizontal
+    // Función para calcular el ancho basado en la longitud del texto
+    function calcularAncho(length) {
+        if (length <= 10) return 75;
+        if (length <= 30) return 120;
+        if (length <= 60) return 200;
+        return 300;
+    }
+
+    // Función para obtener el contenido más largo de una columna
+    function obtenerLongitudMaxima(table, columnIndex) {
+        let maxLength = 0;
+        
+        // Revisar encabezado
+        const headerText = table.column(columnIndex).header().textContent.trim();
+        maxLength = headerText.length;
+
+        // Revisar celdas visibles
+        table.column(columnIndex).nodes().each(function(node) {
+            const cellText = $(node).text().trim();
+            if (cellText.length > maxLength) {
+                maxLength = cellText.length;
+            }
+        });
+
+        return maxLength;
+    }
+
+    // Función para aplicar los anchos a una columna
+    function aplicarAnchoColumna(table, columnIndex) {
+        if (columnIndex === table.columns().nodes().length - 1) return; // Ignorar última columna (acciones)
+        
+        const maxLength = obtenerLongitudMaxima(table, columnIndex);
+        const width = calcularAncho(maxLength);
+
+        // Aplicar el ancho usando columnDefs
+        table.column(columnIndex).nodes().each(function(node) {
+            $(node).css({
+                'min-width': width + 'px',
+                'max-width': width + 'px',
+                'width': width + 'px',
+                'white-space': 'normal',
+                'word-wrap': 'break-word'
+            });
+        });
+
+        // Aplicar también al encabezado
+        $(table.column(columnIndex).header()).css({
+            'min-width': width + 'px',
+            'max-width': width + 'px',
+            'width': width + 'px',
+            'white-space': 'normal',
+            'word-wrap': 'break-word'
+        });
+    }
+
+    // Inicializar DataTable
+    const dataTable = $('.table').DataTable({
+        "responsive": false, // Cambiado a false para evitar conflictos
+        "scrollX": true,
+        "autoWidth": false, // Cambiado a false para control manual
         "order": [],
         "language": {
             "url": "//cdn.datatables.net/plug-ins/1.10.25/i18n/Spanish.json"
         },
         "fixedColumns": {
-            rightColumns: 1 // Mantener la columna de acciones fija
+            rightColumns: 1
+        },
+        "pageLength": 10,
+        "initComplete": function(settings, json) {
+            const table = this.api();
+            
+            // Aplicar anchos iniciales
+            for(let i = 0; i < table.columns().nodes().length; i++) {
+                aplicarAnchoColumna(table, i);
+            }
+
+            // Forzar recálculo de anchos
+            setTimeout(function() {
+                table.columns.adjust();
+            }, 100);
+        },
+        "drawCallback": function(settings) {
+            const table = this.api();
+            
+            // Reaplicar anchos después de cualquier redibujado
+            for(let i = 0; i < table.columns().nodes().length; i++) {
+                aplicarAnchoColumna(table, i);
+            }
+
+            // Forzar recálculo de anchos
+            setTimeout(function() {
+                table.columns.adjust();
+            }, 100);
         }
     });
+
+    // También ajustar cuando se cambie de página o se filtre
+    dataTable.on('page.dt search.dt', function() {
+        const table = dataTable;
+        setTimeout(function() {
+            for(let i = 0; i < table.columns().nodes().length; i++) {
+                aplicarAnchoColumna(table, i);
+            }
+            table.columns.adjust();
+        }, 100);
+    });
 });
+
+
 </script>
 <?= $this->endSection() ?>

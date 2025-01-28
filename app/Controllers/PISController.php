@@ -27,39 +27,56 @@ class PISController extends BaseController
             
             
             // Construir la consulta base
-            $query = $this->pisModel->select('proyectos_integradores_saberes.*, 
-                programas.nombre_programa,
-                lineas_investigacion_carreras.nombre_linea,
-                campo_amplio.nombre_amplio,
-                campo_especifico.nombre_especifico,
-                campo_detallado.nombre_detallado,
-                produccion_cientifica_tecnica.nombre as nombre_publicacion')
-                ->join('programas', 'programas.id = proyectos_integradores_saberes.programa_id', 'left')
-                ->join('lineas_investigacion_carreras', 'lineas_investigacion_carreras.id = proyectos_integradores_saberes.linea_investigacion_carrera_id', 'left')
-                ->join('campo_amplio', 'campo_amplio.id = proyectos_integradores_saberes.campo_amplio_id', 'left')
-                ->join('campo_especifico', 'campo_especifico.id = proyectos_integradores_saberes.campo_especifico_id', 'left')
-                ->join('campo_detallado', 'campo_detallado.id = proyectos_integradores_saberes.campo_detallado_id', 'left')
-                ->join('produccion_cientifica_tecnica', 'produccion_cientifica_tecnica.id = proyectos_integradores_saberes.publicaciones_id', 'left')
-                ->orderBy('proyectos_integradores_saberes.created_at', 'DESC')
-                ->limit(100);
+            $builder = $this->pisModel->db->table('proyectos_integradores_saberes')
+            ->select('proyectos_integradores_saberes.*, 
+                programas.nombre_programa as nombre_programa,
+                lineas_investigacion_carreras.nombre_linea as nombre_linea,
+                campo_amplio.nombre_amplio as nombre_amplio,
+                campo_especifico.nombre_especifico as nombre_especifico,
+                campo_detallado.nombre_detallado as nombre_detallado,
+                produccion_cientifica_tecnica.nombre as nombre_publicacion');
 
 
 
 
+            $builder->join('programas', 
+                'programas.id = proyectos_integradores_saberes.programa_id', 'left');
+            $builder->join('lineas_investigacion_carreras', 
+                'lineas_investigacion_carreras.id = proyectos_integradores_saberes.linea_investigacion_carrera_id', 'left');
+            $builder->join('campo_amplio', 
+                'campo_amplio.id = proyectos_integradores_saberes.campo_amplio_id', 'left');
+            $builder->join('campo_especifico', 
+                'campo_especifico.id = proyectos_integradores_saberes.campo_especifico_id', 'left');
+            $builder->join('campo_detallado', 
+                'campo_detallado.id = proyectos_integradores_saberes.campo_detallado_id', 'left');
+            $builder->join('produccion_cientifica_tecnica', 
+                'produccion_cientifica_tecnica.id = proyectos_integradores_saberes.publicaciones_id', 'left');
 
+            
+            
 
 
 
             // Aplicar filtros si existen
             if ($tipo) {
-                $query->where('tipo', $tipo);
+                $builder->where('proyectos_integradores_saberes.tipo', $tipo);
             }
             if ($estado) {
-                $query->where('estado', $estado);
+                $builder->where('proyectos_integradores_saberes.estado', $estado);
             }
             if ($anio) {
-                $query->where('anio', $anio);
+                $builder->where('proyectos_integradores_saberes.anio', $anio);
             }
+
+
+
+            // Ejecutar la consulta
+            $proyectos = $builder->get()->getResultArray();
+
+
+
+
+
 
             // Obtener años únicos para el filtro
             $years = $this->pisModel->select('anio')
@@ -75,7 +92,7 @@ class PISController extends BaseController
 
 
             $data = [
-                'proyectos' => $query->findAll(),
+                'proyectos' => $proyectos,
                 'tipos' => $enums['tipo'],
                 'estados' => $enums['estado'],
                 'years' => array_unique(array_column($years, 'anio')),
@@ -93,26 +110,42 @@ class PISController extends BaseController
         }
     }
 
+
+
     public function new()
     {
         try {
+            // Obtener los enums directamente de la base de datos
+            $enumData = [];
+            $enumFields = [
+                'tipo', 'estado', 'alcance_territorial', 
+                'investigadores_acreditados', 'fuente_financiamiento',
+                'parametro_cumplimiento', 'cooperacion', 'red',
+                'resultados_verificables', 'tipo_participante'
+            ];
+
+            foreach ($enumFields as $field) {
+                $enumData[$field] = $this->pisModel->getEnumValues($field);
+            }
+
             $data = [
                 'programas' => $this->pisModel->getProgramas(),
                 'lineas_investigacion' => $this->pisModel->getLineasInvestigacion(),
                 'campos_amplios' => $this->pisModel->getCamposAmplios(),
                 'publicaciones' => $this->pisModel->getProduccionesCientificas(),
-                'enums' => $this->pisModel->getAllEnums()
+                'enumData' => $enumData
             ];
 
             return view('pis/create', $data);
-
-
         } catch (Exception $e) {
+            log_message('error', 'Error en PISController::new: ' . $e->getMessage());
             return view('pis/create', [
                 'error' => 'Error al cargar los datos del formulario'
             ]);
         }
     }
+
+
 
     public function create()
     {
@@ -124,14 +157,14 @@ class PISController extends BaseController
             }
 
 
-            // Procesar el archivo del proyecto
+            // Procesar el archivo del proyecto si existe
             $proyecto = $this->request->getFile('proyecto');
             $proyectoPath = null;
 
             if ($proyecto && $proyecto->isValid() && !$proyecto->hasMoved()) {
                 $newNameProyecto = $proyecto->getRandomName();
-                if ($proyecto->move(ROOTPATH . 'public/uploads/proyectos', $newNameProyecto)) {
-                    $proyectoPath = 'uploads/proyectos/' . $newNameProyecto;
+                if ($proyecto->move(ROOTPATH . 'public/uploads/proyectos_integradores_saberes/proyectos', $newNameProyecto)) {
+                    $proyectoPath = 'uploads/proyectos_integradores_saberes/proyectos/' . $newNameProyecto;
                 } else {
                     return redirect()->back()->withInput()->with('error', 'Error al guardar el archivo del proyecto');
                 }
@@ -142,8 +175,10 @@ class PISController extends BaseController
             $poster = $this->request->getFile('poster');
             if ($poster && $poster->isValid() && !$poster->hasMoved()) {
                 $newNamePoster = $poster->getRandomName();
-                if ($poster->move(ROOTPATH . 'public/uploads/posters', $newNamePoster)) {
-                    $posterPath = 'uploads/posters/' . $newNamePoster;
+                if ($poster->move(ROOTPATH . 'public/uploads/proyectos_integradores_saberes/posters', $newNamePoster)) {
+                    $posterPath = 'uploads/proyectos_integradores_saberes/posters/' . $newNamePoster;
+                } else {
+                    return redirect()->back()->withInput()->with('error', 'Error al guardar el archivo del poster');
                 }
             }
 
@@ -180,6 +215,14 @@ class PISController extends BaseController
         }
     }
 
+
+
+
+
+
+
+
+
     public function getCamposEspecificos($amplioId)
     {
         try {
@@ -204,6 +247,9 @@ class PISController extends BaseController
         }
     }
 
+
+
+
     public function edit($id)
     {
         try {
@@ -220,7 +266,8 @@ class PISController extends BaseController
                 'campos_amplios' => $this->pisModel->getCamposAmplios(),
                 'campos_especificos' => $this->pisModel->getCamposEspecificos($proyecto['campo_amplio_id']),
                 'campos_detallados' => $this->pisModel->getCamposDetallados($proyecto['campo_especifico_id']),
-                'publicaciones' => $this->pisModel->getProduccionesCientificas()
+                'publicaciones' => $this->pisModel->getProduccionesCientificas(),
+                'enumData' => $this->pisModel->getAllEnums()
             ];
 
             return view('pis/edit', $data);
@@ -254,8 +301,8 @@ class PISController extends BaseController
                 
                 // Guardar nuevo archivo
                 $newNameProyecto = $proyectoFile->getRandomName();
-                if ($proyectoFile->move(ROOTPATH . 'public/uploads/proyectos', $newNameProyecto)) {
-                    $data['proyecto_path'] = 'uploads/proyectos/' . $newNameProyecto;
+                if ($proyectoFile->move(ROOTPATH . 'public/uploads/proyectos_integradores_saberes/proyectos', $newNameProyecto)) {
+                    $data['proyecto_path'] = 'uploads/proyectos_integradores_saberes/proyectos/' . $newNameProyecto;
                 }
             }
 
@@ -269,8 +316,8 @@ class PISController extends BaseController
                 
                 // Guardar nuevo póster
                 $newNamePoster = $posterFile->getRandomName();
-                if ($posterFile->move(ROOTPATH . 'public/uploads/posters', $newNamePoster)) {
-                    $data['poster_path'] = 'uploads/posters/' . $newNamePoster;
+                if ($posterFile->move(ROOTPATH . 'public/uploads/proyectos_integradores_saberes/posters', $newNamePoster)) {
+                    $data['poster_path'] = 'uploads/proyectos_integradores_saberes/posters/' . $newNamePoster;
                 }
             }
 
@@ -283,6 +330,11 @@ class PISController extends BaseController
                 ->with('error', 'Error al actualizar el proyecto: ' . $e->getMessage());
         }
     }
+
+
+
+
+
 
     public function delete($id)
     {
