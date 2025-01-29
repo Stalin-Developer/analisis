@@ -31,10 +31,10 @@ class PISModelo extends Model
 
     // Validaciones
     protected $validationRules = [
-        'nombre' => 'required|min_length[3]|max_length[255]',
+        'nombre' => 'required|min_length[3]',
         'codigo' => 'required|max_length[50]',
         'tipo' => 'required|in_list[Investigación,Vinculación,Investigación y Vinculación]',
-        'objetivo' => 'required|max_length[255]',
+        'objetivo' => 'required',
         'programa_id' => 'permit_empty|integer',
         'estado' => 'required|in_list[Finalizado,En Cierre,En Ejecución,Detenido,Cancelado]',
         'linea_investigacion_carrera_id' => 'permit_empty|integer',
@@ -50,19 +50,19 @@ class PISModelo extends Model
         'campo_detallado_id' => 'permit_empty|integer',
         'alcance_territorial' => 'required|in_list[Cantonal,Institucional,Internacional,Nacional,Parroquial,Provincial]',
         'investigadores_acreditados' => 'required|in_list[Si,No]',
-        'impacto_social' => 'permit_empty|max_length[255]',
-        'impacto_cientifico' => 'permit_empty|max_length[255]',
-        'impacto_economico' => 'permit_empty|max_length[255]',
-        'impacto_politico' => 'permit_empty|max_length[255]',
-        'impacto_ambiental' => 'permit_empty|max_length[255]',
-        'otro_impacto' => 'permit_empty|max_length[255]',
+        'impacto_social' => 'permit_empty',
+        'impacto_cientifico' => 'permit_empty',
+        'impacto_economico' => 'permit_empty',
+        'impacto_politico' => 'permit_empt]',
+        'impacto_ambiental' => 'permit_empty',
+        'otro_impacto' => 'permit_empty',
         'fuente_financiamiento' => [
             'rules' => 'required|in_list[Asignación Regular IES,Fondos Concursables Interno IES,Fondos Concursables Nacionales,Fondos Concursables Internacionales,Fondos No Concursables Internacionales,Fondos No Concursables Nacionales Externos a la IES,Otros]',
             'errors' => [
                 'in_list' => 'La fuente de financiamiento seleccionada no es válida'
             ]
         ],
-        'descripcion_actividad' => 'required|max_length[255]',
+        'descripcion_actividad' => 'required',
         'parametro_cumplimiento' => [
             'rules' => 'required|in_list[Gasto Interno,Gasto Externo,Gasto de Capital,Gasto Interno Bruto en I + D + I,Gasto Nacional Bruto en I + D + I,Créditos Presupuestarios Públicos en I + D + I,Costos Salariales Personal  I +D + I]',
             'errors' => [
@@ -85,8 +85,7 @@ class PISModelo extends Model
     protected $validationMessages = [
         'nombre' => [
             'required' => 'El nombre es obligatorio',
-            'min_length' => 'El nombre debe tener al menos 3 caracteres',
-            'max_length' => 'El nombre no puede exceder los 255 caracteres'
+            'min_length' => 'El nombre debe tener al menos 3 caracteres'
         ],
         'codigo' => [
             'required' => 'El código es obligatorio',
@@ -97,8 +96,7 @@ class PISModelo extends Model
             'in_list' => 'El tipo de proyecto seleccionado no es válido'
         ],
         'objetivo' => [
-            'required' => 'El objetivo es obligatorio',
-            'max_length' => 'El objetivo no puede exceder los 255 caracteres'
+            'required' => 'El objetivo es obligatorio'
         ],
         'estado' => [
             'required' => 'El estado es obligatorio',
@@ -143,8 +141,7 @@ class PISModelo extends Model
             'in_list' => 'La opción seleccionada no es válida'
         ],
         'descripcion_actividad' => [
-            'required' => 'La descripción de la actividad es obligatoria',
-            'max_length' => 'La descripción no puede exceder los 255 caracteres'
+            'required' => 'La descripción de la actividad es obligatoria'
         ],
         'anio' => [
             'required' => 'El año es obligatorio',

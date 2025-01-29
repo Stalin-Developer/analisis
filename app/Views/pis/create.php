@@ -86,8 +86,8 @@ Nuevo Proyecto Integrador de Saberes
             <div class="row">
                 <div class="col-md-4">
                     <div class="form-group">
-                        <label for="programa_id">Programa</label>
-                        <select class="form-control" id="programa_id" name="programa_id">
+                        <label for="programa_id">Programa *</label>
+                        <select class="form-control" id="programa_id" name="programa_id" require>
                             <option value="">Seleccione un programa</option>
                             <?php foreach ($programas as $programa): ?>
                                 <option value="<?= $programa['id'] ?>" <?= old('programa_id') == $programa['id'] ? 'selected' : '' ?>>
@@ -112,8 +112,8 @@ Nuevo Proyecto Integrador de Saberes
                 </div>
                 <div class="col-md-4">
                     <div class="form-group">
-                        <label for="linea_investigacion_carrera_id">Línea de Investigación</label>
-                        <select class="form-control" id="linea_investigacion_carrera_id" name="linea_investigacion_carrera_id">
+                        <label for="linea_investigacion_carrera_id">Línea de Investigación *</label>
+                        <select class="form-control" id="linea_investigacion_carrera_id" name="linea_investigacion_carrera_id" require>
                             <option value="">Seleccione una línea</option>
                             <?php foreach ($lineas_investigacion as $linea): ?>
                                 <option value="<?= $linea['id'] ?>" <?= old('linea_investigacion_carrera_id') == $linea['id'] ? 'selected' : '' ?>>
@@ -159,9 +159,9 @@ Nuevo Proyecto Integrador de Saberes
                 </div>
                 <div class="col-md-4">
                     <div class="form-group">
-                        <label for="fecha_fin_real">Fecha de Fin Real</label>
+                        <label for="fecha_fin_real">Fecha de Fin Real *</label>
                         <input type="date" class="form-control" id="fecha_fin_real" name="fecha_fin_real" 
-                               value="<?= old('fecha_fin_real') ?>">
+                               value="<?= old('fecha_fin_real') ?>" require>
                     </div>
                 </div>
             </div>

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 28, 2025 at 07:17 AM
+-- Generation Time: Jan 29, 2025 at 06:13 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -429,7 +429,7 @@ INSERT INTO `migrations` (`id`, `version`, `class`, `group`, `namespace`, `time`
 
 CREATE TABLE `produccion_cientifica_tecnica` (
   `id` int(11) NOT NULL,
-  `nombre` varchar(255) NOT NULL
+  `nombre` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -437,9 +437,8 @@ CREATE TABLE `produccion_cientifica_tecnica` (
 --
 
 INSERT INTO `produccion_cientifica_tecnica` (`id`, `nombre`) VALUES
-(1, 'Impacto de las Metodologías Ágiles en el Desarrollo de Software en Institutos Tecnológicos Superiores del Ecuador'),
-(2, 'Análisis del uso de herramientas de marketing digital en las PYMES de la región norte del Ecuador'),
-(3, 'Estudio sobre la implementación de redes de sensores IoT para el monitoreo ambiental en zonas urbanas');
+(4, 'Libro'),
+(5, 'Capitulo de libro');
 
 -- --------------------------------------------------------
 
@@ -468,10 +467,10 @@ INSERT INTO `programas` (`id`, `nombre_programa`) VALUES
 
 CREATE TABLE `proyectos_integradores_saberes` (
   `id` int(11) NOT NULL,
-  `nombre` varchar(255) NOT NULL,
+  `nombre` text NOT NULL,
   `codigo` varchar(50) NOT NULL,
   `tipo` enum('Investigación','Vinculación','Investigación y Vinculación') NOT NULL,
-  `objetivo` varchar(255) NOT NULL,
+  `objetivo` text NOT NULL,
   `programa_id` int(11) DEFAULT NULL,
   `estado` enum('Finalizado','En Cierre','En Ejecución','Detenido','Cancelado') NOT NULL,
   `linea_investigacion_carrera_id` int(11) DEFAULT NULL,
@@ -487,14 +486,14 @@ CREATE TABLE `proyectos_integradores_saberes` (
   `campo_detallado_id` int(11) DEFAULT NULL,
   `alcance_territorial` enum('Cantonal','Institucional','Internacional','Nacional','Parroquial','Provincial') NOT NULL,
   `investigadores_acreditados` enum('Si','No') NOT NULL,
-  `impacto_social` varchar(255) DEFAULT NULL,
-  `impacto_cientifico` varchar(255) DEFAULT NULL,
-  `impacto_economico` varchar(255) DEFAULT NULL,
-  `impacto_politico` varchar(255) DEFAULT NULL,
-  `impacto_ambiental` varchar(255) DEFAULT NULL,
-  `otro_impacto` varchar(255) DEFAULT NULL,
+  `impacto_social` text DEFAULT NULL,
+  `impacto_cientifico` text DEFAULT NULL,
+  `impacto_economico` text DEFAULT NULL,
+  `impacto_politico` text DEFAULT NULL,
+  `impacto_ambiental` text DEFAULT NULL,
+  `otro_impacto` text DEFAULT NULL,
   `fuente_financiamiento` enum('Asignación Regular IES','Fondos Concursables Interno IES','Fondos Concursables Nacionales','Fondos Concursables Internacionales','Fondos No Concursables Internacionales','Fondos No Concursables Nacionales Externos a la IES','Otros') NOT NULL,
-  `descripcion_actividad` varchar(255) NOT NULL,
+  `descripcion_actividad` text NOT NULL,
   `parametro_cumplimiento` enum('Gasto Interno','Gasto Externo','Gasto de Capital','Gasto Interno Bruto en I + D + I','Gasto Nacional Bruto en I + D + I','Créditos Presupuestarios Públicos en I + D + I','Costos Salariales Personal  I +D + I') NOT NULL,
   `cooperacion` enum('Internacional','Nacional','Internacional y Nacional','No Aplica') NOT NULL,
   `red` enum('Internacional','Nacional','Internacional y Nacional','No Aplica') NOT NULL,
@@ -510,13 +509,6 @@ CREATE TABLE `proyectos_integradores_saberes` (
   `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
   `updated_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Dumping data for table `proyectos_integradores_saberes`
---
-
-INSERT INTO `proyectos_integradores_saberes` (`id`, `nombre`, `codigo`, `tipo`, `objetivo`, `programa_id`, `estado`, `linea_investigacion_carrera_id`, `facultad_entidad_area`, `fecha_inicio`, `coordinador_director`, `fecha_fin_planificado`, `correo_coordinador`, `fecha_fin_real`, `telefono_coordinador`, `campo_amplio_id`, `campo_especifico_id`, `campo_detallado_id`, `alcance_territorial`, `investigadores_acreditados`, `impacto_social`, `impacto_cientifico`, `impacto_economico`, `impacto_politico`, `impacto_ambiental`, `otro_impacto`, `fuente_financiamiento`, `descripcion_actividad`, `parametro_cumplimiento`, `cooperacion`, `red`, `resultados_verificables`, `anio`, `presupuesto_planificado`, `presupuesto_ejecutado`, `tipo_participante`, `horas`, `publicaciones_id`, `proyecto_path`, `poster_path`, `created_at`, `updated_at`) VALUES
-(6, 'Creacion de una aplicacion web para manejar la caja y el inventario de una tienda de zapatos', '100117', 'Investigación', 'Aprender y desarrollar nuevas habilidades puede ser un desafío emocionante. La clave está en establecer metas claras, organizar el tiempo, ser constante y buscar recursos adecuados. La práctica diaria asegura el éxito en cualquier actividad que deseas', 1, 'En Ejecución', 10, 'Aprender y desarrollar nuevas habilidades puede ser un desafío emocionante. La clave está en establecer metas claras, organizar el tiempo, ser constante y buscar recursos adecuados. La práctica diaria asegura el éxito en cualquier actividad que deseas', '2024-04-10', 'Aprender y desarrollar nuevas habilidades puede ser un desafío emocionante. La clave está en establecer metas claras, organizar el tiempo, ser constante y buscar recursos adecuados. La práctica diaria asegura el éxito en cualquier actividad que deseas', '2024-08-20', 'bismuto7@gmail.com', '2024-08-20', 983104196, 13, 30, 99, 'Cantonal', 'No', 'Aprender y desarrollar nuevas habilidades puede ser un desafío emocionante. La clave está en establecer metas claras, organizar el tiempe y buscar recursos adecuados. La práctica diaria asegura el éxito en cualquier actividad que deseas', 'Aprendetasd que deseas', 'Aprender y desarrosafío emocionante. La clave está en establecer metas claras, organizar el tiempo, ser constante y buscar recursos adecuados. La práctica diaria asegura el éxito en cualquier actividad que deseas', 'Aprender y desarrollar nuevas habilidades puede ser un desafío emocionante. La clave está en establecer metas claras, organizar el tiempo, ser constante y buscar recursos adecuados. La práctica diaria asegura el éxito en cualquier actividad que deseas', 'Aprender y desarrollar nuevas hn desafío emocionante. La clave está en establecer metas claras, organizar el tiempo, ser constante y buscar recursos adecuados. La práctica diaria asegura el éxito en cualquier actividad que deseas', 'uno y dos', 'Asignación Regular IES', 'Aprender y desarrollar nuevas habilidades puede ser un desafío emocionante. La clave está en establecer metas claras, organizar el tiempo, ser constante y buscar recursos adecuados. La práctica diaria asegura el éxito en cualquier actividad que deseas', 'Gasto Interno', 'Nacional', 'No Aplica', 'Parciales', 2024, 100.00, 100.00, 'Estudiante', 60, 1, 'uploads/proyectos_integradores_saberes/proyectos/1738018390_1dacce217e2b84096198.docx', 'uploads/proyectos_integradores_saberes/posters/1738018390_ae15c17be825cade8997.pptx', '2025-01-27 22:50:36', '2025-01-28 05:48:11');
 
 -- --------------------------------------------------------
 
@@ -781,7 +773,7 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT for table `produccion_cientifica_tecnica`
 --
 ALTER TABLE `produccion_cientifica_tecnica`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `programas`
