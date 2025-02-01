@@ -133,7 +133,8 @@ class PISController extends BaseController
                 'lineas_investigacion' => $this->pisModel->getLineasInvestigacion(),
                 'campos_amplios' => $this->pisModel->getCamposAmplios(),
                 'publicaciones' => $this->pisModel->getProduccionesCientificas(),
-                'enumData' => $enumData
+                'enumData' => $enumData,
+                'careers' => $this->pisModel->getCareers() //Agregamos esta linea porque necesitamos la variable careers para poder hacer el crud de las lineas de investigacion.
             ];
 
             return view('pis/create', $data);
@@ -403,4 +404,185 @@ class PISController extends BaseController
             return redirect()->back()->with('error', 'Error al descargar el póster');
         }
     }
+
+
+
+
+
+
+
+
+
+
+
+    //Funciones para el crud de lineas de investigacion.
+    public function lineasInvestigacionList()
+    {
+        try {
+            $lineas = $this->pisModel->getLineasConCarrera();
+        
+            // Agregar logs para depuración
+            log_message('debug', 'Datos recibidos de getLineasConCarrera(): ' . print_r($lineas, true));
+            
+            if (empty($lineas)) {
+                log_message('debug', 'No se encontraron líneas de investigación');
+            }
+
+            $response = [
+                'success' => true,
+                'data' => $lineas
+            ];
+
+            log_message('debug', 'Respuesta que se enviará al frontend: ' . print_r($response, true));
+            
+            return $this->response->setJSON($response);
+
+
+        } catch (Exception $e) {
+            log_message('error', 'Error en PISController::lineasInvestigacionList: ' . $e->getMessage());
+            return $this->response->setJSON([
+                'success' => false,
+                'error' => 'Error al cargar las líneas de investigación'
+            ]);
+        }
+    }
+
+    public function lineasInvestigacionGet($id)
+    {
+        try {
+            $linea = $this->pisModel->getLineaInvestigacion($id);
+            if (!$linea) {
+                return $this->response->setStatusCode(404)
+                    ->setJSON(['error' => 'Línea de investigación no encontrada']);
+            }
+            return $this->response->setJSON($linea);
+        } catch (Exception $e) {
+            return $this->response->setJSON([
+                'success' => false,
+                'error' => 'Error al obtener la línea de investigación'
+            ]);
+        }
+    }
+
+    public function lineasInvestigacionCreate()
+    {
+        try {
+            $data = [
+                'nombre_linea' => $this->request->getPost('nombre_linea'),
+                'carrera_id' => $this->request->getPost('carrera_id')
+            ];
+            
+            if (empty($data['nombre_linea']) || empty($data['carrera_id'])) {
+                return $this->response->setStatusCode(400)
+                    ->setJSON(['error' => 'El nombre de la línea y la carrera son obligatorios']);
+            }
+            
+            if ($this->pisModel->createLineaInvestigacion($data)) {
+                return $this->response->setJSON([
+                    'success' => true,
+                    'message' => 'Línea de investigación creada exitosamente'
+                ]);
+            }
+            
+            return $this->response->setStatusCode(500)
+                ->setJSON(['error' => 'Error al crear la línea de investigación']);
+        } catch (Exception $e) {
+            return $this->response->setStatusCode(500)
+                ->setJSON(['error' => 'Error al crear la línea de investigación']);
+        }
+    }
+
+    
+
+    
+    public function lineasInvestigacionUpdate($id)
+    {
+        try {
+            // Obtener los datos del cuerpo de la petición PUT
+            $input = $this->request->getRawInput();
+            $data = [
+                'nombre_linea' => $input['nombre_linea'] ?? null,
+                'carrera_id' => $input['carrera_id'] ?? null
+            ];
+            
+            if (empty($data['nombre_linea']) || empty($data['carrera_id'])) {
+                return $this->response->setStatusCode(400)
+                    ->setJSON(['error' => 'El nombre de la línea y la carrera son obligatorios']);
+            }
+            
+            if (!$this->pisModel->getLineaInvestigacion($id)) {
+                return $this->response->setStatusCode(404)
+                    ->setJSON(['error' => 'Línea de investigación no encontrada']);
+            }
+            
+            if ($this->pisModel->updateLineaInvestigacion($id, $data)) {
+                return $this->response->setJSON([
+                    'success' => true,
+                    'message' => 'Línea de investigación actualizada exitosamente'
+                ]);
+            }
+            
+            return $this->response->setStatusCode(500)
+                ->setJSON(['error' => 'Error al actualizar la línea de investigación']);
+        } catch (Exception $e) {
+            log_message('error', 'Error en lineasInvestigacionUpdate: ' . $e->getMessage());
+            return $this->response->setStatusCode(500)
+                ->setJSON(['error' => 'Error al actualizar la línea de investigación']);
+        }
+    }
+
+
+
+
+    public function lineasInvestigacionDelete($id)
+    {
+        try {
+            if (!$this->pisModel->getLineaInvestigacion($id)) {
+                return $this->response->setStatusCode(404)
+                    ->setJSON(['error' => 'Línea de investigación no encontrada']);
+            }
+            
+            if ($this->pisModel->isLineaEnUso($id)) {
+                return $this->response->setStatusCode(400)
+                    ->setJSON(['error' => 'No se puede eliminar la línea porque está siendo utilizada en proyectos']);
+            }
+            
+            if ($this->pisModel->deleteLineaInvestigacion($id)) {
+                return $this->response->setJSON([
+                    'success' => true,
+                    'message' => 'Línea de investigación eliminada exitosamente'
+                ]);
+            }
+            
+            return $this->response->setStatusCode(500)
+                ->setJSON(['error' => 'Error al eliminar la línea de investigación']);
+        } catch (Exception $e) {
+            return $this->response->setStatusCode(500)
+                ->setJSON(['error' => 'Error al eliminar la línea de investigación']);
+        }
+    }
+
+    public function getCareers()
+    {
+        try {
+            $careers = $this->pisModel->getCareers();
+            return $this->response->setJSON($careers);
+        } catch (Exception $e) {
+            return $this->response->setStatusCode(500)
+                ->setJSON(['error' => 'Error al cargar las carreras']);
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
 }

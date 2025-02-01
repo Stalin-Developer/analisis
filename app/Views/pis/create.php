@@ -110,19 +110,31 @@ Nuevo Proyecto Integrador de Saberes
                         </select>
                     </div>
                 </div>
+
+
+
                 <div class="col-md-4">
                     <div class="form-group">
                         <label for="linea_investigacion_carrera_id">Línea de Investigación *</label>
-                        <select class="form-control" id="linea_investigacion_carrera_id" name="linea_investigacion_carrera_id" require>
-                            <option value="">Seleccione una línea</option>
-                            <?php foreach ($lineas_investigacion as $linea): ?>
-                                <option value="<?= $linea['id'] ?>" <?= old('linea_investigacion_carrera_id') == $linea['id'] ? 'selected' : '' ?>>
-                                    <?= $linea['nombre_linea'] ?>
-                                </option>
-                            <?php endforeach; ?>
-                        </select>
+                        <div class="d-flex">
+                            <select class="form-control" id="linea_investigacion_carrera_id" name="linea_investigacion_carrera_id" required>
+                                <option value="">Seleccione una línea</option>
+                                <?php foreach ($lineas_investigacion as $linea): ?>
+                                    <option value="<?= $linea['id'] ?>" <?= old('linea_investigacion_carrera_id') == $linea['id'] ? 'selected' : '' ?>>
+                                        <?= $linea['nombre_linea'] ?>
+                                    </option>
+                                <?php endforeach; ?>
+                            </select>
+                            <button type="button" class="btn btn-primary ml-2" data-toggle="modal" data-target="#modalLineasInvestigacion">Administrar</button>
+                        </div>
                     </div>
                 </div>
+
+                <!-- La logica del modal esta en este archivo: Views/pis/lineas_investigacion.php -->
+                <?= $this->include('pis/lineas_investigacion') ?>
+
+
+
             </div>
 
             <div class="row">
@@ -317,7 +329,7 @@ Nuevo Proyecto Integrador de Saberes
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label for="descripcion_actividad">Descripción de la Actividad *</label>
+                                <label for="descripcion_actividad">Descripción de la Actividad I + D *</label>
                                 <textarea class="form-control" id="descripcion_actividad" name="descripcion_actividad" rows="2" required><?= old('descripcion_actividad') ?></textarea>
                             </div>
                         </div>
@@ -492,11 +504,18 @@ Nuevo Proyecto Integrador de Saberes
 </div>
 <?= $this->endSection() ?>
 
+
+
+
+
 <?= $this->section('scripts') ?>
 <!-- Plugin para el manejo de archivos -->
 <script src="<?= base_url('assets/plugins/bs-custom-file-input/bs-custom-file-input.min.js') ?>"></script>
 
 <script>
+// ===============================================
+// Manejo de campos dependientes (amplio, específico, detallado)
+// ===============================================
 $(function() {
     // Manejar cambios en campo amplio
     $('#campo_amplio_id').change(function() {
@@ -537,32 +556,10 @@ $(function() {
     });
 });
 
-// Restaurar campos específicos y detallados si hay valores antiguos
+// ===============================================
+// Inicialización y manejo de archivos
+// ===============================================
 $(document).ready(function() {
-    const oldAmplioId = $('#campo_amplio_id').val();
-    const oldEspecificoId = '<?= old('campo_especifico_id') ?>';
-    const oldDetalladoId = '<?= old('campo_detallado_id') ?>';
-
-    if (oldAmplioId) {
-        $.get(`<?= base_url('pis/get-campos-especificos') ?>/${oldAmplioId}`, function(data) {
-            let options = '<option value="">Seleccione un campo específico</option>';
-            data.forEach(function(campo) {
-                options += `<option value="${campo.id}" ${campo.id == oldEspecificoId ? 'selected' : ''}>${campo.nombre_especifico}</option>`;
-            });
-            $('#campo_especifico_id').html(options);
-
-            if (oldEspecificoId) {
-                $.get(`<?= base_url('pis/get-campos-detallados') ?>/${oldEspecificoId}`, function(data) {
-                    let options = '<option value="">Seleccione un campo detallado</option>';
-                    data.forEach(function(campo) {
-                        options += `<option value="${campo.id}" ${campo.id == oldDetalladoId ? 'selected' : ''}>${campo.nombre_detallado}</option>`;
-                    });
-                    $('#campo_detallado_id').html(options);
-                });
-            }
-        });
-    }
-
     // Inicializar el plugin de archivo personalizado
     bsCustomFileInput.init();
 
@@ -598,5 +595,310 @@ $(document).ready(function() {
         $('#loadingOverlay').show();
     });
 });
+
+// ===============================================
+// Restaurar valores antiguos
+// ===============================================
+$(document).ready(function() {
+    const oldAmplioId = $('#campo_amplio_id').val();
+    const oldEspecificoId = '<?= old('campo_especifico_id') ?>';
+    const oldDetalladoId = '<?= old('campo_detallado_id') ?>';
+
+    if (oldAmplioId) {
+        $.get(`<?= base_url('pis/get-campos-especificos') ?>/${oldAmplioId}`, function(data) {
+            let options = '<option value="">Seleccione un campo específico</option>';
+            data.forEach(function(campo) {
+                options += `<option value="${campo.id}" ${campo.id == oldEspecificoId ? 'selected' : ''}>${campo.nombre_especifico}</option>`;
+            });
+            $('#campo_especifico_id').html(options);
+
+            if (oldEspecificoId) {
+                $.get(`<?= base_url('pis/get-campos-detallados') ?>/${oldEspecificoId}`, function(data) {
+                    let options = '<option value="">Seleccione un campo detallado</option>';
+                    data.forEach(function(campo) {
+                        options += `<option value="${campo.id}" ${campo.id == oldDetalladoId ? 'selected' : ''}>${campo.nombre_detallado}</option>`;
+                    });
+                    $('#campo_detallado_id').html(options);
+                });
+            }
+        });
+    }
+});
+
+
+
+
+// ===============================================
+// Código para el manejo de líneas de investigación
+// ===============================================
+$(function() {
+    // Cargar líneas al abrir el modal
+    $('#modalLineasInvestigacion').on('show.bs.modal', function () {
+        console.log('Modal está abriéndose');
+        cargarLineasInvestigacion();
+    });
+
+    
+
+    function cargarLineasInvestigacion() {
+        $.get('<?= base_url('pis/lineas-investigacion/list') ?>')
+            .done(function(response) {
+                let html = '';
+                clearModalMessages();
+                
+                if (!response.success) {
+                    showModalError(response.error);
+                    $('#tbodyLineasInvestigacion').html('<tr><td colspan="3" class="text-center">Error al cargar los datos</td></tr>');
+                    return;
+                }
+
+                const lineas = response.data;
+                
+                if (!lineas || lineas.length === 0) {
+                    html = '<tr><td colspan="3" class="text-center">No hay líneas de investigación registradas</td></tr>';
+                } else {
+                    lineas.forEach(function(linea) {
+                        html += `
+                            <tr>
+                                <td>${linea.nombre_linea || ''}</td>
+                                <td>${linea.carrera_nombre || ''}</td>
+                                <td>
+                                    <button class="btn btn-sm btn-primary" onclick="editarLinea(${linea.id})" type="button">
+                                        <i class="fas fa-edit"></i>
+                                    </button>
+                                    <button class="btn btn-sm btn-danger" onclick="eliminarLinea(${linea.id})" type="button">
+                                        <i class="fas fa-trash"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                        `;
+                    });
+                }
+                
+                $('#tbodyLineasInvestigacion').html(html);
+            })
+            .fail(function(jqXHR, textStatus, errorThrown) {
+                console.error('Error en la petición:', {
+                    status: jqXHR.status,
+                    textStatus: textStatus,
+                    error: errorThrown
+                });
+                clearModalMessages();
+                showModalError('Error al cargar las líneas de investigación');
+                $('#tbodyLineasInvestigacion').html('<tr><td colspan="3" class="text-center">Error al cargar los datos</td></tr>');
+            });
+    }
+
+    // Función para editar una línea
+    window.editarLinea = function(id) {
+        // Cerrar el primer modal
+        //$('#modalLineasInvestigacion').modal('hide');
+        
+        // Obtener los datos de la línea y cargarlos en el formulario de edición
+        $.get(`<?= base_url('pis/lineas-investigacion/get') ?>/${id}`, function(data) {
+            $('#edit_linea_id').val(data.id);
+            $('#edit_nombre_linea').val(data.nombre_linea);
+            $('#edit_carrera_id').val(data.carrera_id);
+            
+            // Abrir el modal de edición
+            $('#modalEditarLinea').modal('show');
+        });
+    };
+
+    // Función para eliminar una línea
+    window.eliminarLinea = function(id) {
+        if(confirm('¿Está seguro de eliminar esta línea de investigación?')) {
+            clearModalMessages();
+            
+            $.ajax({
+                url: `<?= base_url('pis/lineas-investigacion/delete') ?>/${id}`,
+                type: 'DELETE',
+                success: function(response) {
+                    if(response.success) {
+                        showModalSuccess(response.message);
+
+                        // Esperar 2 segundos antes de actualizar la tabla
+                        setTimeout(function() {
+                            cargarLineasInvestigacion();
+                            actualizarSelectLineasInvestigacion();
+                        }, 2000); // 2000 milisegundos = 2 segundos
+
+                    } else {
+                        showModalError(response.error);
+                    }
+                },
+                error: function(xhr) {
+                    let errorMsg = 'Error al eliminar la línea';
+                    if (xhr.responseJSON && xhr.responseJSON.error) {
+                        errorMsg = xhr.responseJSON.error;
+                    }
+                    showModalError(errorMsg);
+                }
+            });
+        }
+    };
+
+    // Función para resetear el formulario
+    function resetearFormulario() {
+        $('#linea_id').val('');
+        $('#formLineasInvestigacion')[0].reset();
+    }
+
+    // Función para actualizar el select en el formulario principal
+    function actualizarSelectLineasInvestigacion() {
+        $.get('<?= base_url('pis/lineas-investigacion/list') ?>', function(response) {
+            let options = '<option value="">Seleccione una línea</option>';
+            if (response.success && response.data) {
+                response.data.forEach(function(linea) {
+                    options += `<option value="${linea.id}">${linea.nombre_linea}</option>`;
+                });
+            }
+            $('#linea_investigacion_carrera_id').html(options);
+        });
+    }
+
+    // Funciones para manejar mensajes
+    window.clearModalMessages = function() {
+        $('#modalErrorAlert').hide();
+        $('#modalSuccessAlert').hide();
+    };
+
+    window.showModalError = function(message) {
+        const errorList = $('#modalErrorList');
+        errorList.empty();
+        
+        if (Array.isArray(message)) {
+            message.forEach(msg => {
+                errorList.append(`<li>${msg}</li>`);
+            });
+        } else {
+            errorList.append(`<li>${message}</li>`);
+        }
+        
+        $('#modalErrorAlert').show();
+        $('#modalSuccessAlert').hide();
+    };
+
+    window.showModalSuccess = function(message) {
+        $('#modalSuccessMessage').text(message);
+        $('#modalSuccessAlert').show();
+        $('#modalErrorAlert').hide();
+    };
+
+
+
+
+    // Handler para el formulario de nueva línea
+    $(document).ready(function() {
+        $('button[form="formNuevaLinea"]').on('click', function(e) {
+            e.preventDefault();
+            
+            const data = {
+                nombre_linea: $('#nombre_linea').val(),
+                carrera_id: $('#carrera_id').val()
+            };
+
+            // Validar campos manualmente ya que no usamos el submit del formulario
+            if (!data.nombre_linea || !data.carrera_id) {
+                showModalError('El nombre de la línea y la carrera son obligatorios');
+                return;
+            }
+
+            $.ajax({
+                url: '<?= base_url('pis/lineas-investigacion/create') ?>',
+                type: 'POST',
+                data: data,
+                success: function(response) {
+                    if(response.success) {
+                        showModalSuccess(response.message);
+                        $('#formNuevaLinea').reset();
+
+                        // Esperar 2 segundos antes de actualizar la tabla
+                        setTimeout(function() {
+                            cargarLineasInvestigacion();
+                            actualizarSelectLineasInvestigacion();
+                            
+                        }, 1500);
+
+                    } else {
+                        showModalError(response.error);
+                    }
+                },
+                error: function(xhr) {
+                    let errorMsg = 'Error al crear la línea de investigación';
+                    if (xhr.responseJSON && xhr.responseJSON.error) {
+                        errorMsg = xhr.responseJSON.error;
+                    }
+                    showModalError(errorMsg);
+                }
+            });
+        });
+    });
+
+
+
+
+
+
+
+    // Agregar el handler para el formulario de edición
+    $('#formEditarLinea').on('submit', function(e) {
+        e.preventDefault();
+        const lineaId = $('#edit_linea_id').val();
+        const data = {
+            nombre_linea: $('#edit_nombre_linea').val(),
+            carrera_id: $('#edit_carrera_id').val()
+        };
+
+        $.ajax({
+            url: `<?= base_url('pis/lineas-investigacion/update') ?>/${lineaId}`,
+            type: 'PUT',
+            data: data,
+            success: function(response) {
+                if(response.success) {
+                    // Mostrar mensaje de éxito
+                    $('#modalEditSuccessMessage').text(response.message);
+                    $('#modalEditSuccessAlert').show();
+                    $('#modalEditErrorAlert').hide();
+                    
+                    // Cerrar el modal de edición después de un breve delay
+                    setTimeout(function() {
+                        $('#modalEditarLinea').modal('hide');
+                        // Reabrir el modal principal y actualizar la tabla
+                        //$('#modalLineasInvestigacion').modal('show');
+                        cargarLineasInvestigacion();
+                    }, 1500);
+                } else {
+                    $('#modalEditErrorList').html(`<li>${response.error}</li>`);
+                    $('#modalEditErrorAlert').show();
+                    $('#modalEditSuccessAlert').hide();
+                }
+            },
+            error: function(xhr) {
+                let errorMsg = 'Error al actualizar la línea de investigación';
+                if (xhr.responseJSON && xhr.responseJSON.error) {
+                    errorMsg = xhr.responseJSON.error;
+                }
+                $('#modalEditErrorList').html(`<li>${errorMsg}</li>`);
+                $('#modalEditErrorAlert').show();
+                $('#modalEditSuccessAlert').hide();
+            }
+        });
+    });
+
+
+
+
+
+
+
+
+
+
+
+
+});
+
+
 </script>
-<?= $this->endSection() ?>                                
+<?= $this->endSection() ?>                             

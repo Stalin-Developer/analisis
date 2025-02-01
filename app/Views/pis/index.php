@@ -184,7 +184,7 @@ Gestión de Proyectos Integradores de Saberes
                         <th>Impacto Ambiental</th>
                         <th>Otro Impacto</th>
                         <th>Fuente Financiamiento</th>
-                        <th>Descripción Actividad</th>
+                        <th>Descripción Actividad I + D</th>
                         <th>Parámetro Cumplimiento</th>
                         <th>Cooperación</th>
                         <th>Red</th>

@@ -77,6 +77,13 @@ $routes->group('', ['filter' => 'auth'], function($routes) {
     $routes->get('pis/get-campos-especificos/(:num)', 'PISController::getCamposEspecificos/$1');
     $routes->get('pis/get-campos-detallados/(:num)', 'PISController::getCamposDetallados/$1');
 
+    //Rutas para las lineas de investigacion
+    $routes->get('pis/lineas-investigacion/list', 'PISController::lineasInvestigacionList');
+    $routes->get('pis/lineas-investigacion/get/(:num)', 'PISController::lineasInvestigacionGet/$1');
+    $routes->post('pis/lineas-investigacion/create', 'PISController::lineasInvestigacionCreate');
+    $routes->put('pis/lineas-investigacion/update/(:num)', 'PISController::lineasInvestigacionUpdate/$1');
+    $routes->delete('pis/lineas-investigacion/delete/(:num)', 'PISController::lineasInvestigacionDelete/$1');
+    $routes->get('pis/careers', 'PISController::getCareers');
 
 
 

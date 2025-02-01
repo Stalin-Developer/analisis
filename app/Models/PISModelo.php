@@ -446,4 +446,108 @@ class PISModelo extends Model
 
 
 
+
+
+    //Metodos para hacer el crud de las lineas de investigacion.
+    public function getLineasConCarrera()
+    {
+        try {
+            return $this->db->table('lineas_investigacion_carreras')
+                        ->select('lineas_investigacion_carreras.*, careers.name as carrera_nombre')
+                        ->join('careers', 'careers.id = lineas_investigacion_carreras.carrera_id', 'left')
+                        ->get()
+                        ->getResultArray();
+        } catch (Exception $e) {
+            return [];
+        }
+    }
+
+    public function getLineaInvestigacion($id)
+    {
+        try {
+            return $this->db->table('lineas_investigacion_carreras')
+                        ->where('id', $id)
+                        ->get()
+                        ->getRowArray();
+        } catch (Exception $e) {
+            return null;
+        }
+    }
+
+    public function createLineaInvestigacion($data)
+    {
+        try {
+            return $this->db->table('lineas_investigacion_carreras')
+                        ->insert($data);
+        } catch (Exception $e) {
+            return false;
+        }
+    }
+
+    public function updateLineaInvestigacion($id, $data)
+    {
+        try {
+            return $this->db->table('lineas_investigacion_carreras')
+                        ->where('id', $id)
+                        ->update($data);
+        } catch (Exception $e) {
+            return false;
+        }
+    }
+
+    public function deleteLineaInvestigacion($id)
+    {
+        try {
+            // Verificar si la línea está siendo usada
+            $proyectosRelacionados = $this->db->table('proyectos_integradores_saberes')
+                                            ->where('linea_investigacion_carrera_id', $id)
+                                            ->countAllResults();
+                                            
+            if ($proyectosRelacionados > 0) {
+                return false;
+            }
+
+            return $this->db->table('lineas_investigacion_carreras')
+                        ->where('id', $id)
+                        ->delete();
+        } catch (Exception $e) {
+            return false;
+        }
+    }
+
+    public function isLineaEnUso($id)
+    {
+        try {
+            return $this->db->table('proyectos_integradores_saberes')
+                        ->where('linea_investigacion_carrera_id', $id)
+                        ->countAllResults() > 0;
+        } catch (Exception $e) {
+            return false;
+        }
+    }
+
+    public function getCareers()
+    {
+        try {
+            return $this->db->table('careers')
+                        ->select('id, name')
+                        ->get()
+                        ->getResultArray();
+        } catch (Exception $e) {
+            return [];
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
 }

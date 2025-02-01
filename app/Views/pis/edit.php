@@ -332,7 +332,7 @@ Editar Proyecto Integrador de Saberes
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label for="descripcion_actividad">Descripción de la Actividad *</label>
+                                <label for="descripcion_actividad">Descripción de la Actividad I + D *</label>
                                 <textarea class="form-control" id="descripcion_actividad" name="descripcion_actividad" rows="2" required><?= $proyecto['descripcion_actividad'] ?? old('descripcion_actividad') ?></textarea>
                             </div>
                         </div>
