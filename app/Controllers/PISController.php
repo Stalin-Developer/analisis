@@ -268,7 +268,8 @@ class PISController extends BaseController
                 'campos_especificos' => $this->pisModel->getCamposEspecificos($proyecto['campo_amplio_id']),
                 'campos_detallados' => $this->pisModel->getCamposDetallados($proyecto['campo_especifico_id']),
                 'publicaciones' => $this->pisModel->getProduccionesCientificas(),
-                'enumData' => $this->pisModel->getAllEnums()
+                'enumData' => $this->pisModel->getAllEnums(),
+                'careers' => $this->pisModel->getCareers()
             ];
 
             return view('pis/edit', $data);

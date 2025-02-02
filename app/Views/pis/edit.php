@@ -40,7 +40,7 @@ Editar Proyecto Integrador de Saberes
             </div>
         <?php endif; ?>
 
-        <form action="<?= base_url('pis/update/' . $proyecto['id']) ?>" method="POST" enctype="multipart/form-data">
+        <form id="formPISEdit" action="<?= base_url('pis/update/' . $proyecto['id']) ?>" method="POST" enctype="multipart/form-data">
             <?= csrf_field() ?>
             <input type="hidden" name="_method" value="PUT">
 
@@ -114,16 +114,27 @@ Editar Proyecto Integrador de Saberes
                 <div class="col-md-4">
                     <div class="form-group">
                         <label for="linea_investigacion_carrera_id">Línea de Investigación</label>
-                        <select class="form-control" id="linea_investigacion_carrera_id" name="linea_investigacion_carrera_id">
-                            <option value="">Seleccione una línea</option>
-                            <?php foreach ($lineas_investigacion as $linea): ?>
-                                <option value="<?= $linea['id'] ?>" <?= ($proyecto['linea_investigacion_carrera_id'] ?? old('linea_investigacion_carrera_id')) == $linea['id'] ? 'selected' : '' ?>>
-                                    <?= $linea['nombre_linea'] ?>
-                                </option>
-                            <?php endforeach; ?>
-                        </select>
+                        <div class="d-flex">
+
+                            <select class="form-control" id="linea_investigacion_carrera_id" name="linea_investigacion_carrera_id">
+                                <option value="">Seleccione una línea</option>
+                                <?php foreach ($lineas_investigacion as $linea): ?>
+                                    <option value="<?= $linea['id'] ?>" <?= ($proyecto['linea_investigacion_carrera_id'] ?? old('linea_investigacion_carrera_id')) == $linea['id'] ? 'selected' : '' ?>>
+                                        <?= $linea['nombre_linea'] ?>
+                                    </option>
+                                <?php endforeach; ?>
+                            </select>
+                            <button type="button" class="btn btn-primary ml-2" data-toggle="modal" data-target="#modalLineasInvestigacion">Administrar</button>
+
+                        </div>
+
                     </div>
                 </div>
+                
+
+
+
+
             </div>
 
             <div class="row">
@@ -498,7 +509,7 @@ Editar Proyecto Integrador de Saberes
             </div>
 
             <div class="mt-4 text-right">
-                <button type="submit" class="btn btn-primary">Actualizar</button>
+                <button type="submit" class="btn btn-primary" form="formPISEdit">Actualizar</button>
                 <a href="<?= base_url('pis') ?>" class="btn btn-secondary">Cancelar</a>
             </div>
         </form>
@@ -509,6 +520,12 @@ Editar Proyecto Integrador de Saberes
                 <span class="visually-hidden">Guardando...</span>
             </div>
         </div>
+
+
+        <!-- La logica del modal esta en este archivo: Views/pis/lineas_investigacion.php -->
+        <?= $this->include('pis/lineas_investigacion') ?>
+
+
     </div>
 </div>
 <?= $this->endSection() ?>
@@ -568,7 +585,7 @@ $(function() {
     });
     
     // Validar tamaño y tipo de archivo antes de enviar
-    $('form').on('submit', function(e) {
+    $('#formPISEdit').on('submit', function(e) {
         const maxSize = 10 * 1024 * 1024; // 10MB
         const proyecto = $('#proyecto')[0].files[0];
         const poster = $('#poster')[0].files[0];
@@ -593,5 +610,319 @@ $(function() {
         $('#loadingOverlay').show();
     });
 });
+
+
+
+
+
+
+
+
+
+
+
+// ===============================================
+// Código para el manejo de líneas de investigación
+// ===============================================
+$(function() {
+    // Cargar líneas al abrir el modal
+    $('#modalLineasInvestigacion').on('show.bs.modal', function () {
+        cargarLineasInvestigacion();
+    });
+
+    /*Esto hace que cuando se vuelve al primer modal despues de haber cerrado el segundo modal.
+    El scroll vertical del primer modal siga funcionado.*/
+    $('#modalEditarLinea').on('hidden.bs.modal', function () {
+        // Asegurarnos de que se mantenga la clase modal-open 
+        // si el primer modal sigue abierto
+        if ($('#modalLineasInvestigacion').hasClass('show')) {
+            $('body').addClass('modal-open');
+        }
+    });
+
+    
+
+    function cargarLineasInvestigacion() {
+        $.get('<?= base_url('pis/lineas-investigacion/list') ?>')
+            .done(function(response) {
+                let html = '';
+                clearModalMessages();
+                
+                if (!response.success) {
+                    showModalError(response.error);
+                    $('#tbodyLineasInvestigacion').html('<tr><td colspan="3" class="text-center">Error al cargar los datos</td></tr>');
+                    return;
+                }
+
+                const lineas = response.data;
+                
+                if (!lineas || lineas.length === 0) {
+                    html = '<tr><td colspan="3" class="text-center">No hay líneas de investigación registradas</td></tr>';
+                } else {
+                    lineas.forEach(function(linea) {
+                        html += `
+                            <tr>
+                                <td>${linea.nombre_linea || ''}</td>
+                                <td>${linea.carrera_nombre || ''}</td>
+                                <td>
+                                    <button class="btn btn-sm btn-primary" onclick="editarLinea(${linea.id})" type="button">
+                                        <i class="fas fa-edit"></i>
+                                    </button>
+                                    <button class="btn btn-sm btn-danger" onclick="eliminarLinea(${linea.id})" type="button">
+                                        <i class="fas fa-trash"></i>
+                                    </button>
+                                </td>
+                            </tr>
+                        `;
+                    });
+                }
+                
+                $('#tbodyLineasInvestigacion').html(html);
+            })
+            .fail(function(jqXHR, textStatus, errorThrown) {
+                console.error('Error en la petición:', {
+                    status: jqXHR.status,
+                    textStatus: textStatus,
+                    error: errorThrown
+                });
+                clearModalMessages();
+                showModalError('Error al cargar las líneas de investigación');
+                $('#tbodyLineasInvestigacion').html('<tr><td colspan="3" class="text-center">Error al cargar los datos</td></tr>');
+            });
+    }
+
+    // Función para editar una línea
+    window.editarLinea = function(id) {
+        // Cerrar el primer modal
+        //$('#modalLineasInvestigacion').modal('hide');
+        
+        // Obtener los datos de la línea y cargarlos en el formulario de edición
+        $.get(`<?= base_url('pis/lineas-investigacion/get') ?>/${id}`, function(data) {
+            $('#edit_linea_id').val(data.id);
+            $('#edit_nombre_linea').val(data.nombre_linea);
+            $('#edit_carrera_id').val(data.carrera_id);
+            
+            // Abrir el modal de edición
+            $('#modalEditarLinea').modal('show');
+        });
+    };
+
+    // Función para eliminar una línea
+    window.eliminarLinea = function(id) {
+        if(confirm('¿Está seguro de eliminar esta línea de investigación?')) {
+            clearModalMessages();
+            
+            $.ajax({
+                url: `<?= base_url('pis/lineas-investigacion/delete') ?>/${id}`,
+                type: 'DELETE',
+                success: function(response) {
+                    if(response.success) {
+                        showModalSuccess(response.message);
+
+                        // Esperar 2 segundos antes de actualizar la tabla
+                        setTimeout(function() {
+                            cargarLineasInvestigacion();
+                            actualizarSelectLineasInvestigacion();
+                        }, 1000); // 2000 milisegundos = 2 segundos
+
+                    } else {
+                        showModalError(response.error);
+                    }
+                },
+                error: function(xhr) {
+                    let errorMsg = 'Error al eliminar la línea';
+                    if (xhr.responseJSON && xhr.responseJSON.error) {
+                        errorMsg = xhr.responseJSON.error;
+                    }
+                    showModalError(errorMsg);
+                }
+            });
+        }
+    };
+
+    // Función para resetear el formulario
+    function resetearFormulario() {
+        $('#linea_id').val('');
+        $('#formLineasInvestigacion')[0].reset();
+    }
+
+    // Función para actualizar el select en el formulario principal
+    function actualizarSelectLineasInvestigacion() {
+        $.get('<?= base_url('pis/lineas-investigacion/list') ?>', function(response) {
+            let options = '<option value="">Seleccione una línea</option>';
+            if (response.success && response.data) {
+                response.data.forEach(function(linea) {
+                    options += `<option value="${linea.id}">${linea.nombre_linea}</option>`;
+                });
+            }
+            $('#linea_investigacion_carrera_id').html(options);
+        });
+    }
+
+    // Funciones para manejar mensajes
+    window.clearModalMessages = function() {
+        $('#modalErrorAlert').hide();
+        $('#modalSuccessAlert').hide();
+    };
+
+    window.showModalError = function(message) {
+        const errorList = $('#modalErrorList');
+        errorList.empty();
+        
+        if (Array.isArray(message)) {
+            message.forEach(msg => {
+                errorList.append(`<li>${msg}</li>`);
+            });
+        } else {
+            errorList.append(`<li>${message}</li>`);
+        }
+        
+        $('#modalErrorAlert').show();
+        $('#modalSuccessAlert').hide();
+    };
+
+    window.showModalSuccess = function(message) {
+        $('#modalSuccessMessage').text(message);
+        $('#modalSuccessAlert').show();
+        $('#modalErrorAlert').hide();
+    };
+
+
+
+
+    // Handler para el formulario de nueva línea
+    $(document).ready(function() {
+        $('button[form="formNuevaLinea"]').on('click', function(e) {
+            e.preventDefault();
+            
+            const data = {
+                nombre_linea: $('#nombre_linea').val(),
+                carrera_id: $('#carrera_id').val()
+            };
+
+            // Validar campos manualmente ya que no usamos el submit del formulario
+            if (!data.nombre_linea || !data.carrera_id) {
+                showModalError('El nombre de la línea y la carrera son obligatorios');
+                return;
+            }
+
+            $.ajax({
+                url: '<?= base_url('pis/lineas-investigacion/create') ?>',
+                type: 'POST',
+                data: data,
+                success: function(response) {
+                    if(response.success) {
+                        showModalSuccess(response.message);
+                        // Limpiar los campos individualmente
+                        $('#nombre_linea').val('');  // Limpia el input de nombre
+                        $('#carrera_id').val('');    // Resetea el select de carrera
+
+
+                        // Esperar 2 segundos antes de actualizar la tabla
+                        setTimeout(function() {
+                            cargarLineasInvestigacion();
+                            actualizarSelectLineasInvestigacion();
+                            
+                        }, 1500);
+
+                    } else {
+                        showModalError(response.error);
+                    }
+                },
+                error: function(xhr) {
+                    let errorMsg = 'Error al crear la línea de investigación';
+                    if (xhr.responseJSON && xhr.responseJSON.error) {
+                        errorMsg = xhr.responseJSON.error;
+                    }
+                    showModalError(errorMsg);
+                }
+            });
+        });
+    });
+
+
+
+
+
+
+
+    // Agregar el handler para el formulario de edición
+    $('#formEditarLinea').on('submit', function(e) {
+        e.preventDefault();
+        const lineaId = $('#edit_linea_id').val();
+        const data = {
+            nombre_linea: $('#edit_nombre_linea').val(),
+            carrera_id: $('#edit_carrera_id').val()
+        };
+
+        $.ajax({
+            url: `<?= base_url('pis/lineas-investigacion/update') ?>/${lineaId}`,
+            type: 'PUT',
+            data: data,
+            success: function(response) {
+                if(response.success) {
+                    // Mostrar mensaje de éxito
+                    $('#modalEditSuccessMessage').text(response.message);
+                    $('#modalEditSuccessAlert').show();
+                    $('#modalEditErrorAlert').hide();
+                    
+                    // Cerrar el modal de edición después de un breve delay
+                    setTimeout(function() {
+                        $('#modalEditarLinea').modal('hide');
+                        cargarLineasInvestigacion();
+                    }, 1000);
+                    // Esperar 2 segundos antes de actualizar la tabla
+                    setTimeout(function() {
+                            cargarLineasInvestigacion();
+                            actualizarSelectLineasInvestigacion();
+                            
+                        }, 1500);
+
+                } else {
+                    $('#modalEditErrorList').html(`<li>${response.error}</li>`);
+                    $('#modalEditErrorAlert').show();
+                    $('#modalEditSuccessAlert').hide();
+                }
+            },
+            error: function(xhr) {
+                let errorMsg = 'Error al actualizar la línea de investigación';
+                if (xhr.responseJSON && xhr.responseJSON.error) {
+                    errorMsg = xhr.responseJSON.error;
+                }
+                $('#modalEditErrorList').html(`<li>${errorMsg}</li>`);
+                $('#modalEditErrorAlert').show();
+                $('#modalEditSuccessAlert').hide();
+            }
+        });
+    });
+
+
+
+
+
+
+
+
+
+
+
+
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </script>
 <?= $this->endSection() ?>

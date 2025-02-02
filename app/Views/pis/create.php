@@ -40,7 +40,7 @@ Nuevo Proyecto Integrador de Saberes
             </div>
         <?php endif; ?>
 
-        <form action="<?= base_url('pis/create') ?>" method="POST" enctype="multipart/form-data">
+        <form id="formPIS" action="<?= base_url('pis/create') ?>" method="POST" enctype="multipart/form-data">
             <?= csrf_field() ?>
 
             <!-- Información básica del proyecto -->
@@ -130,8 +130,7 @@ Nuevo Proyecto Integrador de Saberes
                     </div>
                 </div>
 
-                <!-- La logica del modal esta en este archivo: Views/pis/lineas_investigacion.php -->
-                <?= $this->include('pis/lineas_investigacion') ?>
+                
 
 
 
@@ -181,14 +180,14 @@ Nuevo Proyecto Integrador de Saberes
             <div class="row">
                 <div class="col-md-4">
                     <div class="form-group">
-                        <label for="correo_coordinador">Correo del Coordinador *</label>
+                        <label for="correo_coordinador">Correo del Coordinador/Director *</label>
                         <input type="email" class="form-control" id="correo_coordinador" name="correo_coordinador" 
                                value="<?= old('correo_coordinador') ?>" required>
                     </div>
                 </div>
                 <div class="col-md-4">
                     <div class="form-group">
-                        <label for="telefono_coordinador">Teléfono del Coordinador *</label>
+                        <label for="telefono_coordinador">Teléfono del Coordinador/Director *</label>
                         <input type="number" class="form-control" id="telefono_coordinador" name="telefono_coordinador" 
                                value="<?= old('telefono_coordinador') ?>" required>
                     </div>
@@ -489,7 +488,7 @@ Nuevo Proyecto Integrador de Saberes
             </div>
 
             <div class="mt-4 text-right">
-                <button type="submit" class="btn btn-primary">Guardar</button>
+                <button type="submit" class="btn btn-primary" form="formPIS">Guardar</button>
                 <a href="<?= base_url('pis') ?>" class="btn btn-secondary">Cancelar</a>
             </div>
         </form>
@@ -500,6 +499,11 @@ Nuevo Proyecto Integrador de Saberes
                 <span class="visually-hidden">Guardando...</span>
             </div>
         </div>
+
+        <!-- La logica del modal esta en este archivo: Views/pis/lineas_investigacion.php -->
+        <?= $this->include('pis/lineas_investigacion') ?>
+
+
     </div>
 </div>
 <?= $this->endSection() ?>
@@ -570,7 +574,7 @@ $(document).ready(function() {
     });
     
     // Validar tamaño y tipo de archivo antes de enviar
-    $('form').on('submit', function(e) {
+    $('#formPIS').on('submit', function(e) {
         const maxSize = 10 * 1024 * 1024; // 10MB
         const proyecto = $('#proyecto')[0].files[0];
         const poster = $('#poster')[0].files[0];
@@ -636,6 +640,17 @@ $(function() {
     $('#modalLineasInvestigacion').on('show.bs.modal', function () {
         console.log('Modal está abriéndose');
         cargarLineasInvestigacion();
+    });
+
+
+    /*Esto hace que cuando se vuelve al primer modal despues de haber cerrado el segundo modal.
+    El scroll vertical del primer modal siga funcionado.*/
+    $('#modalEditarLinea').on('hidden.bs.modal', function () {
+        // Asegurarnos de que se mantenga la clase modal-open 
+        // si el primer modal sigue abierto
+        if ($('#modalLineasInvestigacion').hasClass('show')) {
+            $('body').addClass('modal-open');
+        }
     });
 
     

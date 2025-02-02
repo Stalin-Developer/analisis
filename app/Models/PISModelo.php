@@ -53,7 +53,7 @@ class PISModelo extends Model
         'impacto_social' => 'permit_empty',
         'impacto_cientifico' => 'permit_empty',
         'impacto_economico' => 'permit_empty',
-        'impacto_politico' => 'permit_empt]',
+        'impacto_politico' => 'permit_empty',
         'impacto_ambiental' => 'permit_empty',
         'otro_impacto' => 'permit_empty',
         'fuente_financiamiento' => [

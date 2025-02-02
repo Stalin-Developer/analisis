@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 29, 2025 at 06:13 AM
+-- Generation Time: Feb 03, 2025 at 12:20 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -256,13 +256,14 @@ CREATE TABLE `careers` (
 --
 
 INSERT INTO `careers` (`id`, `name`, `created_at`) VALUES
-(1, 'Desarrollo de Software', '2024-11-06 09:17:45'),
-(2, 'Diseño Gráfico', '2024-11-06 09:17:45'),
+(1, 'Institucionales', '2024-11-06 09:17:45'),
+(2, 'Desarrollo de Software', '2024-11-06 09:17:45'),
 (3, 'Desarrollo y Análisis de Software - Modalidad Virtual', '2024-11-21 00:06:34'),
-(4, 'Atención Integral a Adultos Mayores', '2024-11-21 00:06:34'),
+(4, 'Diseño Gráfico', '2024-11-21 00:06:34'),
 (5, 'Administración', '2024-11-21 00:06:34'),
 (6, 'Marketing Digital y Comercio Electrónico', '2024-11-21 00:06:34'),
-(7, 'Redes y Telecomunicaciones', '2024-11-21 00:06:34');
+(7, 'Redes y Telecomunicaciones', '2024-11-21 00:06:34'),
+(8, 'Atención Integral a Adultos Mayores', '2025-02-02 15:00:36');
 
 -- --------------------------------------------------------
 
@@ -332,38 +333,62 @@ CREATE TABLE `lineas_investigacion_carreras` (
 --
 
 INSERT INTO `lineas_investigacion_carreras` (`id`, `nombre_linea`, `carrera_id`) VALUES
-(1, 'Desarrollo de software', 1),
-(2, 'Innovación tecnológica y negocios', 1),
-(3, 'Aplicaciones tecnológicas para el desarrollo', 1),
-(4, 'Administración y seguridad de las bases de datos', 1),
-(5, 'Administración y auditoria de hardware', 1),
-(6, 'Redes y telecomunicaciones en la producción de bienes y servicios', 1),
-(7, 'Metodologías para el desarrollo de software', 1),
-(8, 'Desarrollo tecnológico y sociedad', 1),
-(9, 'Fundamentos del diseño', 2),
-(10, 'Software y autoedición', 2),
-(11, 'Comunicación visual', 2),
-(12, 'Marketing integral', 2),
-(13, 'Diseño web para el desarrollo', 2),
-(14, 'Innovación tecnológica en Marketing Digital', 2),
-(15, 'Internet y redes de nueva generación', 7),
-(16, 'Sistemas de trasmisión', 7),
-(17, 'Comunicaciones ópticas', 7),
-(18, 'Redes inteligentes y servicios avanzados de telecomunicación', 7),
-(19, 'Procesamiento digital de señales e imágenes en comunicación', 7),
-(20, 'Comunicaciones ópticas de alta velocidad', 7),
-(21, 'Herramientas de marketing digital', 6),
-(22, 'Utilización de datos digitales', 6),
-(23, 'Comportamiento del consumidor', 6),
-(24, 'Tendencias del comercio electrónico', 6),
-(25, 'Estrategias de marketing para aumentar las ventas', 6),
-(26, 'Vulnerabilidad de derechos', 4),
-(27, 'Salud integral del adulto-mayor', 4),
-(28, 'Inclusión del adulto mayor', 4),
-(29, 'Condiciones de desarrollo de las personas A-M', 4),
-(30, 'Adultos mayores y productividad', 4),
-(31, 'Adultos mayores y políticas públicas', 4),
-(32, 'Atención a personas A-M', 4);
+(48, 'ITSI-L1-INNOVACIÓN EDUCATIVA, PEDAGOGÍA E INTERCULTURALIDAD', 1),
+(49, 'ITSI-L2-CIENCIAS DE LA VIDA, SOSTENIBILIDAD, MATEMÁTICA Y ESTADÍSTICA', 1),
+(50, 'ITSI-L3-DISEÑO Y PRODUCCIÓN AUDIOVISUAL', 1),
+(51, 'ITSI-L4-SALUD PÚBLICA Y PROMOCIÓN DE LA SALUD', 1),
+(52, 'ITSI-L5-TECNOLOGÍAS DE LA INFORMACIÓN Y LA COMUNICACIÓN (TIC)', 1),
+(53, 'ITSI-L6-INGENIERÍA, PRODUCCIÓN Y CONSTRUCCIÓN', 1),
+(54, 'ITSI-L7-CIENCIAS SOCIALES Y DESARROLLO COMUNITARIO', 1),
+(55, 'ITSI-L8-SERVICIOS Y ADMINISTRACIÓN', 1),
+(56, 'ITSI-L9-DESARROLLO TECNOLÓGICO', 1),
+(57, 'ITSI-DS-L1-TECNOLOGÍAS DE INFORMACIÓN Y COMUNICACIÓN', 2),
+(58, 'ITSI-DS-L2-SOFTWARE APLICADO', 2),
+(59, 'ITSI-DS-L3-DESARROLLO DE SOFTWARE', 2),
+(60, 'ITSI-DS-L4-INNOVACIÓN TECNOLÓGICA Y NEGOCIOS', 2),
+(61, 'ITSI-DS-L5-APLICACIONES TECNOLÓGICAS PARA EL DESARROLLO', 2),
+(62, 'ITSI-DS-L6-ADMINISTRACIÓN Y SEGURIDAD DE LAS BASES DE DATOS', 2),
+(63, 'ITSI-DS-L7-ADMINISTRACIÓN Y AUDITORIA DE HARDWARE.', 2),
+(64, 'ITSI-DS-L8-REDES Y TELECOMUNICACIONES EN LA PRODUCCIÓN DE BIENES Y SERVICIOS', 2),
+(65, 'ITSI-DS-L9-METODOLOGÍAS PARA EL DESARROLLO DE SOFTWARE', 2),
+(66, 'ITSI-DS-L10-DESARROLLO TECNOLÓGICO Y SOCIEDAD.', 2),
+(67, 'ITSI-RT-L1-PROCESAMIENTO DIGITAL DE SEÑALES E IMÁGENES EN COMUNICACIÓN', 7),
+(68, 'ITSI-RT-L2-COMUNICACIONES ÓPTICAS DE ALTA VELOCIDAD', 7),
+(69, 'ITSI-RT-L3-INTERNET Y REDES DE NUEVA GENERACIÓN', 7),
+(70, 'ITSI-RT-L4-REDES INTELIGENTES Y SERVICIOS AVANZADOS DE TELECOMUNICACIONES', 7),
+(71, 'ITSI-RT-L5- SISTEMAS DE TRASMISIÓN', 7),
+(72, 'ITSI-RT-L6-PROCESAMIENTO DIGITAL DE SEÑALES E IMÁGENES EN COMUNICACIÓN', 7),
+(73, 'ITSI-DG-L1-ESTRATEGIAS Y MARCAS', 4),
+(74, 'ITSI-DG-L2-PUBLICACIONES IMPRESAS Y DIGITALES', 4),
+(75, 'ITSI-DG-L3-FUNDAMENTOS DEL DISEÑO', 4),
+(76, 'ITSI-DG-L4-SOFTWARE Y AUTOEDICIÓN', 4),
+(77, 'ITSI-DG-L5-COMUNICACIÓN VISUAL', 4),
+(78, 'ITSI-DG-L6-MARKETING INTEGRAL', 4),
+(79, 'ITSI-DG-L7-DISEÑO WEB PARA EL DESARROLLO.', 4),
+(80, 'ITSI-DG-L8-INNOVACIÓN TECNOLÓGICA EN MARKETING DIGITAL.', 4),
+(81, 'ITSI-MD-L1-HERRAMIENTAS DE MARKETING DIGITAL', 6),
+(82, 'ITSI-MD-L2-UTILIZACIÓN DE DATOS DIGITALES', 6),
+(83, 'ITSI-MD-L3-COMPORTAMIENTO DE CONSUMIDOR', 6),
+(84, 'ITSI-MD-L4- TENDENCIAS DEL COMERCIO ELECTRÓNICO', 6),
+(85, 'ITSI-MD-L5-ESTRATEGIAS DE MARKETING PARA AUMENTAR LAS VENTAS', 6),
+(86, 'ITSI-A-L1-EMPRENDIMIENTO', 5),
+(87, 'ITSI-A-L2-LIDERAZGO EMPRESARIAL', 5),
+(88, 'ITSI-A-L3-ESTRATEGIAS DE MARKETING', 5),
+(89, 'ITSI-A-L4-HERRAMIENTAS DE ANÁLISIS DE DATOS PARA LA TOMA DE DECISIONES EMPRESARIALES', 5),
+(90, 'ITSI-A-L5-GESTIÓN FINANCIERA PARA LA SOSTENIBILIDAD DE EMPRESAS', 5),
+(91, 'ITSI-A-L6-GESTIÓN DE OPERACIONES', 5),
+(92, 'ITSI-A-L7-PLANIFICACIÓN ESTRATÉGICA', 5),
+(93, 'ITSI-A-L8-PLANIFICACIÓN FINANCIERA', 5),
+(94, 'ITSI-AM-L1-LA GERONTOLOGÍA ANILIZADA Y EXPLICADA INTERDISCIPLINARIAMENTE DESDE LA COMPLEJIDAD DE LOS PROCESOS DE ENVEJECIMIENTO DEL SER HUMANO', 8),
+(95, 'ITSI-AM-L2-INCLUSIÓN DE LAS PERSONAS DE LA TERCERA EDAD EN FUNCIÓN DE LA PARTICIPACIÓN Y APORTE A LA SOCIEDAD EN DIFERENTES ESPACIOS PRODUCTIVOS', 8),
+(96, 'ITSI-AM-L3-RECONOCIMIENTO DE LOS DERECHOS DEL ADULTO MAYOR DESDE LAS POLÍTICAS Y PROYECTOS GUBERNAMENTALES.', 8),
+(97, 'ITSI-AM-L4-VULNERABILIDAD DE DERECHOS', 8),
+(98, 'ITSI-AM-L5-SALUD INTEGRAL DEL ADULTO-MAYOR', 8),
+(99, 'ITSI-AM-L6-INCLUSIÓN DEL ADULTO MAYOR', 8),
+(100, 'ITSI-AM-L17-CONDICIONES DE DESARROLLO DE LAS PERSONAS A-M', 8),
+(101, 'ITSI-AM-L8-ADULTOS MAYORES Y PRODUCTIVIDAD', 8),
+(102, 'ITSI-AM-L9-ADULTOS MAYORES Y POLÍTICAS PÚBLICAS', 8),
+(103, 'ITSI-AM-L10-ATENCIÓN A PERSONAS A-M', 8);
 
 -- --------------------------------------------------------
 
@@ -457,7 +482,10 @@ CREATE TABLE `programas` (
 
 INSERT INTO `programas` (`id`, `nombre_programa`) VALUES
 (1, 'Programa de Vinculación con la Sociedad'),
-(2, 'Programa de relaciones interinstitucionales');
+(2, 'Programa de fomento a la investigación'),
+(3, 'Programa de desarrollo de redes internas y externas'),
+(4, 'Programa de investigación continua en el ámbito de la investigación técnica y tecnológica para el desarrollo'),
+(5, 'Programa de iniciación en la investigación');
 
 -- --------------------------------------------------------
 
@@ -509,6 +537,16 @@ CREATE TABLE `proyectos_integradores_saberes` (
   `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
   `updated_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `proyectos_integradores_saberes`
+--
+
+INSERT INTO `proyectos_integradores_saberes` (`id`, `nombre`, `codigo`, `tipo`, `objetivo`, `programa_id`, `estado`, `linea_investigacion_carrera_id`, `facultad_entidad_area`, `fecha_inicio`, `coordinador_director`, `fecha_fin_planificado`, `correo_coordinador`, `fecha_fin_real`, `telefono_coordinador`, `campo_amplio_id`, `campo_especifico_id`, `campo_detallado_id`, `alcance_territorial`, `investigadores_acreditados`, `impacto_social`, `impacto_cientifico`, `impacto_economico`, `impacto_politico`, `impacto_ambiental`, `otro_impacto`, `fuente_financiamiento`, `descripcion_actividad`, `parametro_cumplimiento`, `cooperacion`, `red`, `resultados_verificables`, `anio`, `presupuesto_planificado`, `presupuesto_ejecutado`, `tipo_participante`, `horas`, `publicaciones_id`, `proyecto_path`, `poster_path`, `created_at`, `updated_at`) VALUES
+(7, 'sfsdf', '100117', 'Investigación', 'sdfsdf', 1, 'En Cierre', 60, 'sdf', '2025-02-20', 'sdf', '2025-02-11', 'bismuto7@gmail.com', '2025-02-04', 983104196, NULL, NULL, NULL, 'Institucional', 'Si', NULL, NULL, NULL, NULL, NULL, NULL, 'Fondos Concursables Nacionales', 'sdfsf', 'Gasto Externo', 'Nacional', 'Nacional', 'Parciales', 2025, 55555.00, 55555.00, 'Docente', 655, NULL, NULL, NULL, '2025-02-02 16:18:07', '2025-02-02 16:18:07'),
+(8, 'Tienda Zapatos Mania', '100117', 'Investigación', 'asdf', 2, 'En Cierre', 57, 'asdf', '2025-02-21', 'sfs', '2025-02-24', 'bismuto7@gmail.com', '2025-02-22', 983104196, NULL, NULL, NULL, 'Cantonal', 'Si', NULL, NULL, NULL, NULL, NULL, NULL, 'Fondos Concursables Nacionales', 'asdf', 'Gasto de Capital', 'No Aplica', 'Internacional y Nacional', 'Parciales', 2025, 555.00, 555.00, 'Estudiante', 55, NULL, NULL, NULL, '2025-02-02 16:23:29', '2025-02-02 20:17:57'),
+(9, 'aaaaazzzzzz', '100117', 'Investigación', 'sadf', 2, 'En Ejecución', 61, 'adf', '2025-02-19', 'adf', '2025-02-13', 'bismuto7@gmail.com', '2025-02-18', 983104196, 10, NULL, NULL, 'Internacional', 'No', NULL, NULL, NULL, NULL, NULL, NULL, 'Fondos Concursables Interno IES', 'adsfadf', 'Gasto Nacional Bruto en I + D + I', 'Nacional', 'Internacional y Nacional', 'Parciales', 2025, 55.00, 66.00, 'Estudiante', 44, NULL, NULL, NULL, '2025-02-02 20:20:47', '2025-02-02 20:20:47'),
+(10, 'Tienda Zapatos', '100117', 'Investigación', 'Desarrollar un sistema web de gestión integral, mediante la utilización de herramientas tecnológicas modernas, para optimizar los procesos clave y mejorar su eficiencia operativa y toma de decisiones, para la zapatería “Calzado Americano” de la ciudad de Pimampiro.', 2, 'Finalizado', 58, 'Área de Tecnologías', '2024-05-05', 'Morales', '2024-08-20', 'bismuto7@gmail.com', '2024-09-12', 983104196, 13, 30, 99, 'Provincial', 'No', 'Este proyecto ayuda al propietario a tomar mejores desiciones.', 'Se pone en práctica lo aprendido.', 'El propietario administra mejor su negocio, mejorando sus ventas.', 'Mejora la reputación del ITSI.', 'Reducción del uso del papel.', 'El estudiante aprende mientras investiga.', 'Asignación Regular IES', 'Se divide el 4to de desarrollo de software en grupos de 2 o 3 personas. Y a cada grupo se le asigna un pis.', 'Gasto Interno', 'No Aplica', 'No Aplica', 'Sin Resultados', 2024, 300.00, 300.00, 'Estudiante', 70, 4, 'uploads/proyectos_integradores_saberes/proyectos/1738533565_288f2a3f2aa09ef9a296.docx', 'uploads/proyectos_integradores_saberes/posters/1738533565_feb9a5db6a513e71c819.pptx', '2025-02-02 21:59:25', '2025-02-02 21:59:25');
 
 -- --------------------------------------------------------
 
@@ -737,7 +775,7 @@ ALTER TABLE `campo_especifico`
 -- AUTO_INCREMENT for table `careers`
 --
 ALTER TABLE `careers`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `categories`
@@ -755,7 +793,7 @@ ALTER TABLE `documents`
 -- AUTO_INCREMENT for table `lineas_investigacion_carreras`
 --
 ALTER TABLE `lineas_investigacion_carreras`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=107;
 
 --
 -- AUTO_INCREMENT for table `meses`
@@ -779,13 +817,13 @@ ALTER TABLE `produccion_cientifica_tecnica`
 -- AUTO_INCREMENT for table `programas`
 --
 ALTER TABLE `programas`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `proyectos_integradores_saberes`
 --
 ALTER TABLE `proyectos_integradores_saberes`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `trabajos_de_titulacion`
