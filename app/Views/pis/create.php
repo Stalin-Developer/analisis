@@ -721,7 +721,7 @@ $(function() {
                         setTimeout(function() {
                             cargarLineasInvestigacion();
                             actualizarSelectLineasInvestigacion();
-                        }, 2000); // 2000 milisegundos = 2 segundos
+                        }, 1000); // 2000 milisegundos = 2 segundos
 
                     } else {
                         showModalError(response.error);
@@ -811,7 +811,10 @@ $(function() {
                 success: function(response) {
                     if(response.success) {
                         showModalSuccess(response.message);
-                        $('#formNuevaLinea').reset();
+                        // Limpiar los campos individualmente
+                        $('#nombre_linea').val('');  // Limpia el input de nombre
+                        $('#carrera_id').val('');    // Resetea el select de carrera
+
 
                         // Esperar 2 segundos antes de actualizar la tabla
                         setTimeout(function() {
@@ -867,7 +870,7 @@ $(function() {
                         // Reabrir el modal principal y actualizar la tabla
                         //$('#modalLineasInvestigacion').modal('show');
                         cargarLineasInvestigacion();
-                    }, 1500);
+                    }, 1000);
                 } else {
                     $('#modalEditErrorList').html(`<li>${response.error}</li>`);
                     $('#modalEditErrorAlert').show();

@@ -44,9 +44,9 @@
                         </div>
                         <div class="col-md-4">
                             <div class="form-group">
-                                <label for="carrera_id">Carrera *</label>
+                                <label for="carrera_id">Área *</label>
                                 <select class="form-control" id="carrera_id" name="carrera_id" required>
-                                    <option value="">Seleccione una carrera</option>
+                                    <option value="">Seleccionar un área</option>
                                     <?php foreach ($careers as $career): ?>
                                         <option value="<?= $career['id'] ?>"><?= $career['name'] ?></option>
                                     <?php endforeach; ?>
@@ -78,7 +78,7 @@
                         <thead>
                             <tr>
                                 <th>Nombre</th>
-                                <th>Carrera</th>
+                                <th>Área</th>
                                 <th>Acciones</th>
                             </tr>
                         </thead>
@@ -123,9 +123,9 @@
                         <input type="text" class="form-control" id="edit_nombre_linea" required>
                     </div>
                     <div class="form-group">
-                        <label for="edit_carrera_id">Carrera *</label>
+                        <label for="edit_carrera_id">Área *</label>
                         <select class="form-control" id="edit_carrera_id" required>
-                            <option value="">Seleccione una carrera</option>
+                            <option value="">Seleccionar un área</option>
                             <?php foreach ($careers as $career): ?>
                                 <option value="<?= $career['id'] ?>"><?= $career['name'] ?></option>
                             <?php endforeach; ?>
