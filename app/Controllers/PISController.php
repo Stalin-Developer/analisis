@@ -196,11 +196,91 @@ class PISController extends BaseController
             // Intentar guardar en la base de datos
             $inserted = $this->pisModel->insert($data);
             
+            
+
             if ($inserted) {
+                // Obtener el ID del PIS recién insertado
+                $pisId = $this->pisModel->getInsertID();
+                $participanteController = new ParticipanteController();
+            
+                // Verificar el tipo de participante seleccionado
+                $tipoParticipante = $this->request->getPost('tipo_participante');
+
+
+                log_message('debug', '=== Debugueando Tipo Participante ===');
+                
+
+
+            
+                if ($tipoParticipante === 'Docente') {
+                    // Verificar si hay datos de docentes
+                    $docentesData = $this->request->getPost('docentes_data');
+                    if (!empty($docentesData)) {
+                        try {
+                            // Decodificar los datos de docentes
+                            $docentes = json_decode($docentesData, true);
+                                                      
+                            // Llamar al método para crear docentes
+                            $response = $participanteController->createDocente($pisId, $docentes);
+                            
+                            // Si hay error al guardar los docentes, hacemos rollback
+                            if (!$response['success']) {
+                                // Eliminar el PIS recién creado
+                                $this->pisModel->delete($pisId);
+                                return redirect()->back()->withInput()
+                                    ->with('error', 'Error al guardar los docentes: ' . ($response['error'] ?? 'Error desconocido'));
+                            }
+                        } catch (Exception $e) {
+                            // Si hay error, eliminar el PIS recién creado
+                            $this->pisModel->delete($pisId);
+                            return redirect()->back()->withInput()
+                                ->with('error', 'Error al procesar los docentes: ' . $e->getMessage());
+                        }
+                    }
+                } 
+                else if ($tipoParticipante === 'Estudiante') {
+                    // Verificar si hay datos de estudiantes
+                    $estudiantesData = $this->request->getPost('estudiantes_data');
+
+                    // Verificar si hay datos de estudiantes
+                    log_message('debug', 'TODOS los datos POST recibidos: ' . print_r($this->request->getPost(), true));
+                    $estudiantesData = $this->request->getPost('estudiantes_data');
+                    log_message('debug', 'Datos de estudiantes recibidos: ' . print_r($estudiantesData, true));
+
+
+                    if (!empty($estudiantesData)) {
+                        try {
+                            // Decodificar los datos de estudiantes
+                            $estudiantes = json_decode($estudiantesData, true);
+                                                      
+                            // Llamar al método para crear estudiantes
+                            $response = $participanteController->createEstudiante($pisId, $estudiantes);
+                            
+                            // Si hay error al guardar los estudiantes, hacemos rollback
+                            if (!$response['success']) {
+                                // Eliminar el PIS recién creado
+                                $this->pisModel->delete($pisId);
+                                return redirect()->back()->withInput()
+                                    ->with('error', 'Error al guardar los estudiantes: ' . ($response['error'] ?? 'Error desconocido'));
+                            }
+                        } catch (Exception $e) {
+                            // Si hay error, eliminar el PIS recién creado
+                            $this->pisModel->delete($pisId);
+                            return redirect()->back()->withInput()
+                                ->with('error', 'Error al procesar los estudiantes: ' . $e->getMessage());
+                        }
+                    }
+                }
+            
                 return redirect()->to('pis')->with('message', 'Proyecto guardado exitosamente');
             } else {
                 return redirect()->back()->withInput()->with('error', 'Error al guardar en la base de datos');
             }
+
+
+
+
+
 
         } catch (Exception $e) {
             // Limpiar archivos si se subieron

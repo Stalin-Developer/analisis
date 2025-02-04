@@ -1,0 +1,383 @@
+INFO - 2025-02-04 00:03:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-04 00:03:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-04 00:03:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-04 00:03:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-04 00:04:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 00:04:44 --> === Debugueando Tipo Participante ===
+DEBUG - 2025-02-04 00:04:44 --> TODOS los datos POST recibidos: Array
+(
+    [csrf_token_name] => 79406fa49e2fdb70cb29b89a0a43656c
+    [nombre] => adsfadsfaf
+    [codigo] => adsfadf
+    [tipo] => Vinculación
+    [objetivo] => asdfas
+    [programa_id] => 1
+    [estado] => Detenido
+    [linea_investigacion_carrera_id] => 61
+    [facultad_entidad_area] => asdfaf
+    [coordinador_director] => asdfaf
+    [fecha_inicio] => 2025-02-15
+    [fecha_fin_planificado] => 2025-02-13
+    [fecha_fin_real] => 2025-02-28
+    [correo_coordinador] => bismuto7@gmail.com
+    [telefono_coordinador] => 0983104196
+    [campo_amplio_id] => 
+    [campo_especifico_id] => 
+    [campo_detallado_id] => 
+    [alcance_territorial] => Parroquial
+    [investigadores_acreditados] => Si
+    [impacto_social] => 
+    [impacto_cientifico] => 
+    [impacto_economico] => 
+    [impacto_politico] => 
+    [impacto_ambiental] => 
+    [otro_impacto] => 
+    [fuente_financiamiento] => Fondos Concursables Nacionales
+    [descripcion_actividad] => asdfasf
+    [parametro_cumplimiento] => Gasto de Capital
+    [cooperacion] => Nacional
+    [red] => Nacional
+    [resultados_verificables] => Totales
+    [anio] => 2025
+    [presupuesto_planificado] => 11122
+    [presupuesto_ejecutado] => 222
+    [tipo_participante] => Estudiante
+    [horas] => 11
+    [publicaciones_id] => 
+    [docentes_data] => 
+)
+
+DEBUG - 2025-02-04 00:04:44 --> Datos de estudiantes recibidos: 
+INFO - 2025-02-04 00:04:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-04 00:04:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-04 00:16:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-04 00:16:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-04 00:16:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-04 00:16:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-04 00:20:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 00:20:34 --> === Debugueando Tipo Participante ===
+DEBUG - 2025-02-04 00:20:34 --> TODOS los datos POST recibidos: Array
+(
+    [csrf_token_name] => 79406fa49e2fdb70cb29b89a0a43656c
+    [nombre] => Estudiantes
+    [codigo] => 100117
+    [tipo] => Vinculación
+    [objetivo] => asdfaf
+    [programa_id] => 2
+    [estado] => En Cierre
+    [linea_investigacion_carrera_id] => 60
+    [facultad_entidad_area] => asdfa
+    [coordinador_director] => asdfaf
+    [fecha_inicio] => 2025-02-06
+    [fecha_fin_planificado] => 2025-02-14
+    [fecha_fin_real] => 2025-02-13
+    [correo_coordinador] => bismuto7@gmail.com
+    [telefono_coordinador] => 0983104196
+    [campo_amplio_id] => 
+    [campo_especifico_id] => 
+    [campo_detallado_id] => 
+    [alcance_territorial] => Nacional
+    [investigadores_acreditados] => No
+    [impacto_social] => 
+    [impacto_cientifico] => 
+    [impacto_economico] => 
+    [impacto_politico] => 
+    [impacto_ambiental] => 
+    [otro_impacto] => 
+    [fuente_financiamiento] => Fondos Concursables Nacionales
+    [descripcion_actividad] => asdf
+    [parametro_cumplimiento] => Gasto Externo
+    [cooperacion] => Nacional
+    [red] => Nacional
+    [resultados_verificables] => Totales
+    [anio] => 2025
+    [presupuesto_planificado] => 11
+    [presupuesto_ejecutado] => 55
+    [tipo_participante] => Estudiante
+    [horas] => 51
+    [publicaciones_id] => 
+    [docentes_data] => 
+    [estudiantes_data] => [{"nombre":"Stalin Chavez","cedula":"1003816533"},{"nombre":"Victor Robles","cedula":"2222222222"}]
+)
+
+DEBUG - 2025-02-04 00:20:34 --> Datos de estudiantes recibidos: [{"nombre":"Stalin Chavez","cedula":"1003816533"},{"nombre":"Victor Robles","cedula":"2222222222"}]
+ERROR - 2025-02-04 00:20:34 --> mysqli_sql_exception: Duplicate entry '23-1' for key 'idx_proyecto_estudiante' in C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `pi...', 0)
+#1 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pi...')
+#2 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pi...')
+#3 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pi...', Array, false)
+#4 C:\xampp\htdocs\analisis\app\Models\ParticipanteModel.php(186): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp\htdocs\analisis\app\Controllers\ParticipanteController.php(207): App\Models\ParticipanteModel->createEstudianteAndAssociate(Array, 23)
+#6 C:\xampp\htdocs\analisis\app\Controllers\PISController.php(257): App\Controllers\ParticipanteController->createEstudiante(23, Array)
+#7 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\PISController->create()
+#8 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PISController))
+#9 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\analisis\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+ERROR - 2025-02-04 00:20:34 --> Error en ParticipanteController::createEstudiante: Error al guardar los estudiantes
+INFO - 2025-02-04 00:20:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-04 00:20:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-04 00:21:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 00:21:58 --> === Debugueando Tipo Participante ===
+DEBUG - 2025-02-04 00:21:58 --> TODOS los datos POST recibidos: Array
+(
+    [csrf_token_name] => 79406fa49e2fdb70cb29b89a0a43656c
+    [nombre] => Estudiantes
+    [codigo] => 100117
+    [tipo] => Vinculación
+    [objetivo] => asdfaf
+    [programa_id] => 2
+    [estado] => En Cierre
+    [linea_investigacion_carrera_id] => 60
+    [facultad_entidad_area] => asdfa
+    [coordinador_director] => asdfaf
+    [fecha_inicio] => 2025-02-06
+    [fecha_fin_planificado] => 2025-02-14
+    [fecha_fin_real] => 2025-02-13
+    [correo_coordinador] => bismuto7@gmail.com
+    [telefono_coordinador] => 0983104196
+    [campo_amplio_id] => 
+    [campo_especifico_id] => 
+    [campo_detallado_id] => 
+    [alcance_territorial] => Nacional
+    [investigadores_acreditados] => No
+    [impacto_social] => 
+    [impacto_cientifico] => 
+    [impacto_economico] => 
+    [impacto_politico] => 
+    [impacto_ambiental] => 
+    [otro_impacto] => 
+    [fuente_financiamiento] => Fondos Concursables Nacionales
+    [descripcion_actividad] => asdf
+    [parametro_cumplimiento] => Gasto Externo
+    [cooperacion] => Nacional
+    [red] => Nacional
+    [resultados_verificables] => Totales
+    [anio] => 2025
+    [presupuesto_planificado] => 11
+    [presupuesto_ejecutado] => 55
+    [tipo_participante] => Estudiante
+    [horas] => 51
+    [publicaciones_id] => 
+    [docentes_data] => 
+    [estudiantes_data] => [{"nombre":"Stalin","cedula":"103816533"}]
+)
+
+DEBUG - 2025-02-04 00:21:58 --> Datos de estudiantes recibidos: [{"nombre":"Stalin","cedula":"103816533"}]
+ERROR - 2025-02-04 00:21:58 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`db_administracion`.`pis_estudiantes`, CONSTRAINT `fk_pis_estudiantes_estudiante` FOREIGN KEY (`estudiante_id`) REFERENCES `estudiantes` (`id`) ON DELETE CASCADE ON UPDATE CASCADE) in C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `pi...', 0)
+#1 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pi...')
+#2 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pi...')
+#3 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pi...', Array, false)
+#4 C:\xampp\htdocs\analisis\app\Models\ParticipanteModel.php(186): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp\htdocs\analisis\app\Controllers\ParticipanteController.php(207): App\Models\ParticipanteModel->createEstudianteAndAssociate(Array, 24)
+#6 C:\xampp\htdocs\analisis\app\Controllers\PISController.php(257): App\Controllers\ParticipanteController->createEstudiante(24, Array)
+#7 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\PISController->create()
+#8 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PISController))
+#9 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\analisis\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+ERROR - 2025-02-04 00:21:58 --> Error en ParticipanteController::createEstudiante: Error al guardar los estudiantes
+INFO - 2025-02-04 00:21:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-04 00:21:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-04 00:22:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 00:22:37 --> === Debugueando Tipo Participante ===
+INFO - 2025-02-04 00:22:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-04 00:22:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-04 00:27:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-04 00:27:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-04 00:28:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 00:28:59 --> === Debugueando Tipo Participante ===
+DEBUG - 2025-02-04 00:28:59 --> TODOS los datos POST recibidos: Array
+(
+    [csrf_token_name] => 79406fa49e2fdb70cb29b89a0a43656c
+    [nombre] => asdff
+    [codigo] => asdff
+    [tipo] => Vinculación
+    [objetivo] => asdfaf
+    [programa_id] => 2
+    [estado] => En Cierre
+    [linea_investigacion_carrera_id] => 60
+    [facultad_entidad_area] => asdf
+    [coordinador_director] => asdff
+    [fecha_inicio] => 2025-02-06
+    [fecha_fin_planificado] => 2025-02-14
+    [fecha_fin_real] => 2025-02-13
+    [correo_coordinador] => bismuto7@gmail.com
+    [telefono_coordinador] => 0983104196
+    [campo_amplio_id] => 
+    [campo_especifico_id] => 
+    [campo_detallado_id] => 
+    [alcance_territorial] => Nacional
+    [investigadores_acreditados] => No
+    [impacto_social] => 
+    [impacto_cientifico] => 
+    [impacto_economico] => 
+    [impacto_politico] => 
+    [impacto_ambiental] => 
+    [otro_impacto] => 
+    [fuente_financiamiento] => Fondos Concursables Nacionales
+    [descripcion_actividad] => asdfasf
+    [parametro_cumplimiento] => Gasto Externo
+    [cooperacion] => Nacional
+    [red] => Nacional
+    [resultados_verificables] => Totales
+    [anio] => 2025
+    [presupuesto_planificado] => 5151
+    [presupuesto_ejecutado] => 555
+    [tipo_participante] => Estudiante
+    [horas] => 555
+    [publicaciones_id] => 
+    [docentes_data] => 
+    [estudiantes_data] => [{"nombre":"Lucas","cedula":"1111111111"}]
+)
+
+DEBUG - 2025-02-04 00:28:59 --> Datos de estudiantes recibidos: [{"nombre":"Lucas","cedula":"1111111111"}]
+ERROR - 2025-02-04 00:28:59 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`db_administracion`.`pis_estudiantes`, CONSTRAINT `fk_pis_estudiantes_estudiante` FOREIGN KEY (`estudiante_id`) REFERENCES `estudiantes` (`id`) ON DELETE CASCADE ON UPDATE CASCADE) in C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `pi...', 0)
+#1 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pi...')
+#2 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pi...')
+#3 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pi...', Array, false)
+#4 C:\xampp\htdocs\analisis\app\Models\ParticipanteModel.php(186): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp\htdocs\analisis\app\Controllers\ParticipanteController.php(207): App\Models\ParticipanteModel->createEstudianteAndAssociate(Array, 26)
+#6 C:\xampp\htdocs\analisis\app\Controllers\PISController.php(257): App\Controllers\ParticipanteController->createEstudiante(26, Array)
+#7 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\PISController->create()
+#8 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PISController))
+#9 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\analisis\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+ERROR - 2025-02-04 00:28:59 --> Error en ParticipanteController::createEstudiante: Error al guardar los estudiantes
+INFO - 2025-02-04 00:28:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-04 00:28:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-04 08:49:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 08:49:58 --> Método login llamado
+INFO - 2025-02-04 08:49:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-04 08:49:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 08:50:00 --> Método login llamado
+DEBUG - 2025-02-04 08:50:00 --> Método POST detectado
+DEBUG - 2025-02-04 08:50:00 --> Datos recibidos - Username: admin
+INFO - 2025-02-04 08:50:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 08:50:01 --> Login exitoso, redirigiendo...
+INFO - 2025-02-04 08:50:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-04 08:50:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-04 08:50:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-04 08:50:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-04 08:50:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-04 08:50:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-04 08:51:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 08:51:41 --> === Debugueando Tipo Participante ===
+DEBUG - 2025-02-04 08:51:41 --> TODOS los datos POST recibidos: Array
+(
+    [csrf_token_name] => 3ae64e20ae9d16d829dc861e65b17982
+    [nombre] => asdfasf
+    [codigo] => asdfasf
+    [tipo] => Vinculación
+    [objetivo] => asdfasdf
+    [programa_id] => 1
+    [estado] => En Ejecución
+    [linea_investigacion_carrera_id] => 61
+    [facultad_entidad_area] => asdfasf
+    [coordinador_director] => asdfasf
+    [fecha_inicio] => 2025-02-01
+    [fecha_fin_planificado] => 2025-02-05
+    [fecha_fin_real] => 2025-02-11
+    [correo_coordinador] => bismuto7@gmail.com
+    [telefono_coordinador] => 0983104196
+    [campo_amplio_id] => 
+    [campo_especifico_id] => 
+    [campo_detallado_id] => 
+    [alcance_territorial] => Internacional
+    [investigadores_acreditados] => Si
+    [impacto_social] => 
+    [impacto_cientifico] => 
+    [impacto_economico] => 
+    [impacto_politico] => 
+    [impacto_ambiental] => 
+    [otro_impacto] => 
+    [fuente_financiamiento] => Fondos Concursables Interno IES
+    [descripcion_actividad] => asdfasf
+    [parametro_cumplimiento] => Gasto de Capital
+    [cooperacion] => Nacional
+    [red] => Nacional
+    [resultados_verificables] => Parciales
+    [anio] => 2025
+    [presupuesto_planificado] => 2333
+    [presupuesto_ejecutado] => 555
+    [tipo_participante] => Estudiante
+    [horas] => 555
+    [publicaciones_id] => 
+    [docentes_data] => 
+    [estudiantes_data] => [{"nombre":"Manana","cedula":"1234567892"}]
+)
+
+DEBUG - 2025-02-04 08:51:41 --> Datos de estudiantes recibidos: [{"nombre":"Manana","cedula":"1234567892"}]
+INFO - 2025-02-04 08:51:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-04 08:51:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-04 09:06:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-04 09:06:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-04 09:06:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-04 09:06:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-04 09:06:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-04 09:06:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-04 09:06:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-04 09:06:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-04 09:12:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-04 09:12:57 --> === Debugueando Tipo Participante ===
+DEBUG - 2025-02-04 09:12:57 --> TODOS los datos POST recibidos: Array
+(
+    [csrf_token_name] => 3ae64e20ae9d16d829dc861e65b17982
+    [nombre] => Prueba 1
+    [codigo] => asdfasfd
+    [tipo] => Investigación
+    [objetivo] => asdfasfd
+    [programa_id] => 1
+    [estado] => En Cierre
+    [linea_investigacion_carrera_id] => 60
+    [facultad_entidad_area] => asfasf
+    [coordinador_director] => adfasdf
+    [fecha_inicio] => 2025-02-10
+    [fecha_fin_planificado] => 2025-02-06
+    [fecha_fin_real] => 2025-02-15
+    [correo_coordinador] => bismuto7@gmail.com
+    [telefono_coordinador] => 0983104196
+    [campo_amplio_id] => 
+    [campo_especifico_id] => 
+    [campo_detallado_id] => 
+    [alcance_territorial] => Cantonal
+    [investigadores_acreditados] => No
+    [impacto_social] => 
+    [impacto_cientifico] => 
+    [impacto_economico] => 
+    [impacto_politico] => 
+    [impacto_ambiental] => 
+    [otro_impacto] => 
+    [fuente_financiamiento] => Fondos Concursables Nacionales
+    [descripcion_actividad] => asdfasdfasf
+    [parametro_cumplimiento] => Gasto de Capital
+    [cooperacion] => Internacional
+    [red] => Internacional y Nacional
+    [resultados_verificables] => Totales
+    [anio] => 2025
+    [presupuesto_planificado] => 56667
+    [presupuesto_ejecutado] => 2211
+    [tipo_participante] => Estudiante
+    [horas] => 78
+    [publicaciones_id] => 
+    [docentes_data] => 
+    [estudiantes_data] => [{"nombre":"Stalin Chavez","cedula":"1003816533"},{"nombre":"Juan Montalvo","cedula":"4444444444"}]
+)
+
+DEBUG - 2025-02-04 09:12:57 --> Datos de estudiantes recibidos: [{"nombre":"Stalin Chavez","cedula":"1003816533"},{"nombre":"Juan Montalvo","cedula":"4444444444"}]
+INFO - 2025-02-04 09:12:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-04 09:12:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-04 09:27:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-04 09:27:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

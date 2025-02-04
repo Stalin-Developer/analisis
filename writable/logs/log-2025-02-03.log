@@ -1,0 +1,1206 @@
+INFO - 2025-02-03 09:21:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-03 09:21:08 --> Método login llamado
+INFO - 2025-02-03 09:21:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 09:21:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-03 09:49:29 --> Método login llamado
+DEBUG - 2025-02-03 09:49:29 --> Método POST detectado
+DEBUG - 2025-02-03 09:49:29 --> Datos recibidos - Username: admin
+INFO - 2025-02-03 09:49:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-03 09:49:29 --> Login exitoso, redirigiendo...
+INFO - 2025-02-03 09:49:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 09:49:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 09:49:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 09:49:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 09:49:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 09:49:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 15:30:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-03 15:30:18 --> Método login llamado
+INFO - 2025-02-03 15:30:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 15:30:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-03 15:30:21 --> Método login llamado
+DEBUG - 2025-02-03 15:30:21 --> Método POST detectado
+DEBUG - 2025-02-03 15:30:21 --> Datos recibidos - Username: admin
+INFO - 2025-02-03 15:30:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-03 15:30:21 --> Login exitoso, redirigiendo...
+INFO - 2025-02-03 15:30:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 15:30:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 15:30:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 15:30:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 15:30:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 15:30:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 15:35:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 15:35:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 15:39:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 15:39:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 15:42:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 15:42:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 15:43:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 15:43:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 15:43:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 15:48:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 15:48:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 15:48:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 15:48:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 15:49:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 15:49:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 15:49:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 16:09:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 16:09:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 16:09:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 16:09:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 16:10:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 16:10:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 16:10:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 16:11:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2025-02-03 16:11:02 --> Error: Call to a member function isAJAX() on null
+[Method: POST, Route: pis/create]
+in APPPATH\Controllers\ParticipanteController.php on line 24.
+ 1 APPPATH\Controllers\PISController.php(219): App\Controllers\ParticipanteController->createDocente()
+ 2 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\PISController->create()
+ 3 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PISController))
+ 4 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 7 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+INFO - 2025-02-03 16:19:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 16:19:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 16:19:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 16:19:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 16:19:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 16:19:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 16:21:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 16:21:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 16:21:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 16:47:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 16:47:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 17:00:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 17:00:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 17:02:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 17:02:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 17:03:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 17:03:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 17:04:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 17:04:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 17:06:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 17:06:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 17:07:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 17:07:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 17:10:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 17:10:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 17:11:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 17:11:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 17:11:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 17:11:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 17:13:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 17:13:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 17:14:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 17:14:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 17:14:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 17:14:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 17:14:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 17:14:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 17:14:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 17:14:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 17:19:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 17:19:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 17:19:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 17:19:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 17:19:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 17:19:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 17:19:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 17:19:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 17:21:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 17:21:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 17:35:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 17:35:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 17:35:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 17:35:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 17:35:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 17:35:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 17:35:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 17:35:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 17:42:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 17:42:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 17:42:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 17:42:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 17:43:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 17:43:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 17:44:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 17:44:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 17:47:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 17:47:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 17:51:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 17:51:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 17:53:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 17:53:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 17:57:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 17:57:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 17:58:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 17:58:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 17:59:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 17:59:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 18:04:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 18:04:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 18:05:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 18:05:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 18:06:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 18:06:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 18:10:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 18:10:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 18:11:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 18:11:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 18:12:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 18:12:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 18:12:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 18:12:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 18:13:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 18:13:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 18:13:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 18:13:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 18:16:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 18:16:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 18:22:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 18:22:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 18:22:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 18:22:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 18:23:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 18:23:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 18:23:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 18:23:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 18:24:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 18:24:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 18:25:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 18:25:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 18:26:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 18:26:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 18:28:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 18:28:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 18:29:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 18:29:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 18:29:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 18:29:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 18:30:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 18:30:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 18:31:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 18:31:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 18:32:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 18:32:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 21:01:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-03 21:01:32 --> Método login llamado
+INFO - 2025-02-03 21:01:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 21:01:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-03 21:01:34 --> Método login llamado
+DEBUG - 2025-02-03 21:01:34 --> Método POST detectado
+DEBUG - 2025-02-03 21:01:34 --> Datos recibidos - Username: admin
+INFO - 2025-02-03 21:01:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-03 21:01:34 --> Login exitoso, redirigiendo...
+INFO - 2025-02-03 21:01:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 21:01:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 21:01:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 21:01:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 21:01:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 21:01:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 21:04:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 21:04:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 21:05:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 21:05:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 21:08:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 21:08:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 21:08:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 21:08:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 21:08:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-03 21:08:26 --> Datos recibidos de getLineasConCarrera(): Array
+(
+    [0] => Array
+        (
+            [id] => 48
+            [nombre_linea] => ITSI-L1-INNOVACIÓN EDUCATIVA, PEDAGOGÍA E INTERCULTURALIDAD
+            [carrera_id] => 1
+            [carrera_nombre] => Institucionales
+        )
+
+    [1] => Array
+        (
+            [id] => 49
+            [nombre_linea] => ITSI-L2-CIENCIAS DE LA VIDA, SOSTENIBILIDAD, MATEMÁTICA Y ESTADÍSTICA
+            [carrera_id] => 1
+            [carrera_nombre] => Institucionales
+        )
+
+    [2] => Array
+        (
+            [id] => 50
+            [nombre_linea] => ITSI-L3-DISEÑO Y PRODUCCIÓN AUDIOVISUAL
+            [carrera_id] => 1
+            [carrera_nombre] => Institucionales
+        )
+
+    [3] => Array
+        (
+            [id] => 51
+            [nombre_linea] => ITSI-L4-SALUD PÚBLICA Y PROMOCIÓN DE LA SALUD
+            [carrera_id] => 1
+            [carrera_nombre] => Institucionales
+        )
+
+    [4] => Array
+        (
+            [id] => 52
+            [nombre_linea] => ITSI-L5-TECNOLOGÍAS DE LA INFORMACIÓN Y LA COMUNICACIÓN (TIC)
+            [carrera_id] => 1
+            [carrera_nombre] => Institucionales
+        )
+
+    [5] => Array
+        (
+            [id] => 53
+            [nombre_linea] => ITSI-L6-INGENIERÍA, PRODUCCIÓN Y CONSTRUCCIÓN
+            [carrera_id] => 1
+            [carrera_nombre] => Institucionales
+        )
+
+    [6] => Array
+        (
+            [id] => 54
+            [nombre_linea] => ITSI-L7-CIENCIAS SOCIALES Y DESARROLLO COMUNITARIO
+            [carrera_id] => 1
+            [carrera_nombre] => Institucionales
+        )
+
+    [7] => Array
+        (
+            [id] => 55
+            [nombre_linea] => ITSI-L8-SERVICIOS Y ADMINISTRACIÓN
+            [carrera_id] => 1
+            [carrera_nombre] => Institucionales
+        )
+
+    [8] => Array
+        (
+            [id] => 56
+            [nombre_linea] => ITSI-L9-DESARROLLO TECNOLÓGICO
+            [carrera_id] => 1
+            [carrera_nombre] => Institucionales
+        )
+
+    [9] => Array
+        (
+            [id] => 57
+            [nombre_linea] => ITSI-DS-L1-TECNOLOGÍAS DE INFORMACIÓN Y COMUNICACIÓN
+            [carrera_id] => 2
+            [carrera_nombre] => Desarrollo de Software
+        )
+
+    [10] => Array
+        (
+            [id] => 58
+            [nombre_linea] => ITSI-DS-L2-SOFTWARE APLICADO
+            [carrera_id] => 2
+            [carrera_nombre] => Desarrollo de Software
+        )
+
+    [11] => Array
+        (
+            [id] => 59
+            [nombre_linea] => ITSI-DS-L3-DESARROLLO DE SOFTWARE
+            [carrera_id] => 2
+            [carrera_nombre] => Desarrollo de Software
+        )
+
+    [12] => Array
+        (
+            [id] => 60
+            [nombre_linea] => ITSI-DS-L4-INNOVACIÓN TECNOLÓGICA Y NEGOCIOS
+            [carrera_id] => 2
+            [carrera_nombre] => Desarrollo de Software
+        )
+
+    [13] => Array
+        (
+            [id] => 61
+            [nombre_linea] => ITSI-DS-L5-APLICACIONES TECNOLÓGICAS PARA EL DESARROLLO
+            [carrera_id] => 2
+            [carrera_nombre] => Desarrollo de Software
+        )
+
+    [14] => Array
+        (
+            [id] => 62
+            [nombre_linea] => ITSI-DS-L6-ADMINISTRACIÓN Y SEGURIDAD DE LAS BASES DE DATOS
+            [carrera_id] => 2
+            [carrera_nombre] => Desarrollo de Software
+        )
+
+    [15] => Array
+        (
+            [id] => 63
+            [nombre_linea] => ITSI-DS-L7-ADMINISTRACIÓN Y AUDITORIA DE HARDWARE.
+            [carrera_id] => 2
+            [carrera_nombre] => Desarrollo de Software
+        )
+
+    [16] => Array
+        (
+            [id] => 64
+            [nombre_linea] => ITSI-DS-L8-REDES Y TELECOMUNICACIONES EN LA PRODUCCIÓN DE BIENES Y SERVICIOS
+            [carrera_id] => 2
+            [carrera_nombre] => Desarrollo de Software
+        )
+
+    [17] => Array
+        (
+            [id] => 65
+            [nombre_linea] => ITSI-DS-L9-METODOLOGÍAS PARA EL DESARROLLO DE SOFTWARE
+            [carrera_id] => 2
+            [carrera_nombre] => Desarrollo de Software
+        )
+
+    [18] => Array
+        (
+            [id] => 66
+            [nombre_linea] => ITSI-DS-L10-DESARROLLO TECNOLÓGICO Y SOCIEDAD.
+            [carrera_id] => 2
+            [carrera_nombre] => Desarrollo de Software
+        )
+
+    [19] => Array
+        (
+            [id] => 67
+            [nombre_linea] => ITSI-RT-L1-PROCESAMIENTO DIGITAL DE SEÑALES E IMÁGENES EN COMUNICACIÓN
+            [carrera_id] => 7
+            [carrera_nombre] => Redes y Telecomunicaciones
+        )
+
+    [20] => Array
+        (
+            [id] => 68
+            [nombre_linea] => ITSI-RT-L2-COMUNICACIONES ÓPTICAS DE ALTA VELOCIDAD
+            [carrera_id] => 7
+            [carrera_nombre] => Redes y Telecomunicaciones
+        )
+
+    [21] => Array
+        (
+            [id] => 69
+            [nombre_linea] => ITSI-RT-L3-INTERNET Y REDES DE NUEVA GENERACIÓN
+            [carrera_id] => 7
+            [carrera_nombre] => Redes y Telecomunicaciones
+        )
+
+    [22] => Array
+        (
+            [id] => 70
+            [nombre_linea] => ITSI-RT-L4-REDES INTELIGENTES Y SERVICIOS AVANZADOS DE TELECOMUNICACIONES
+            [carrera_id] => 7
+            [carrera_nombre] => Redes y Telecomunicaciones
+        )
+
+    [23] => Array
+        (
+            [id] => 71
+            [nombre_linea] => ITSI-RT-L5- SISTEMAS DE TRASMISIÓN
+            [carrera_id] => 7
+            [carrera_nombre] => Redes y Telecomunicaciones
+        )
+
+    [24] => Array
+        (
+            [id] => 72
+            [nombre_linea] => ITSI-RT-L6-PROCESAMIENTO DIGITAL DE SEÑALES E IMÁGENES EN COMUNICACIÓN
+            [carrera_id] => 7
+            [carrera_nombre] => Redes y Telecomunicaciones
+        )
+
+    [25] => Array
+        (
+            [id] => 73
+            [nombre_linea] => ITSI-DG-L1-ESTRATEGIAS Y MARCAS
+            [carrera_id] => 4
+            [carrera_nombre] => Diseño Gráfico
+        )
+
+    [26] => Array
+        (
+            [id] => 74
+            [nombre_linea] => ITSI-DG-L2-PUBLICACIONES IMPRESAS Y DIGITALES
+            [carrera_id] => 4
+            [carrera_nombre] => Diseño Gráfico
+        )
+
+    [27] => Array
+        (
+            [id] => 75
+            [nombre_linea] => ITSI-DG-L3-FUNDAMENTOS DEL DISEÑO
+            [carrera_id] => 4
+            [carrera_nombre] => Diseño Gráfico
+        )
+
+    [28] => Array
+        (
+            [id] => 76
+            [nombre_linea] => ITSI-DG-L4-SOFTWARE Y AUTOEDICIÓN
+            [carrera_id] => 4
+            [carrera_nombre] => Diseño Gráfico
+        )
+
+    [29] => Array
+        (
+            [id] => 77
+            [nombre_linea] => ITSI-DG-L5-COMUNICACIÓN VISUAL
+            [carrera_id] => 4
+            [carrera_nombre] => Diseño Gráfico
+        )
+
+    [30] => Array
+        (
+            [id] => 78
+            [nombre_linea] => ITSI-DG-L6-MARKETING INTEGRAL
+            [carrera_id] => 4
+            [carrera_nombre] => Diseño Gráfico
+        )
+
+    [31] => Array
+        (
+            [id] => 79
+            [nombre_linea] => ITSI-DG-L7-DISEÑO WEB PARA EL DESARROLLO.
+            [carrera_id] => 4
+            [carrera_nombre] => Diseño Gráfico
+        )
+
+    [32] => Array
+        (
+            [id] => 80
+            [nombre_linea] => ITSI-DG-L8-INNOVACIÓN TECNOLÓGICA EN MARKETING DIGITAL.
+            [carrera_id] => 4
+            [carrera_nombre] => Diseño Gráfico
+        )
+
+    [33] => Array
+        (
+            [id] => 81
+            [nombre_linea] => ITSI-MD-L1-HERRAMIENTAS DE MARKETING DIGITAL
+            [carrera_id] => 6
+            [carrera_nombre] => Marketing Digital y Comercio Electrónico
+        )
+
+    [34] => Array
+        (
+            [id] => 82
+            [nombre_linea] => ITSI-MD-L2-UTILIZACIÓN DE DATOS DIGITALES
+            [carrera_id] => 6
+            [carrera_nombre] => Marketing Digital y Comercio Electrónico
+        )
+
+    [35] => Array
+        (
+            [id] => 83
+            [nombre_linea] => ITSI-MD-L3-COMPORTAMIENTO DE CONSUMIDOR
+            [carrera_id] => 6
+            [carrera_nombre] => Marketing Digital y Comercio Electrónico
+        )
+
+    [36] => Array
+        (
+            [id] => 84
+            [nombre_linea] => ITSI-MD-L4- TENDENCIAS DEL COMERCIO ELECTRÓNICO
+            [carrera_id] => 6
+            [carrera_nombre] => Marketing Digital y Comercio Electrónico
+        )
+
+    [37] => Array
+        (
+            [id] => 85
+            [nombre_linea] => ITSI-MD-L5-ESTRATEGIAS DE MARKETING PARA AUMENTAR LAS VENTAS
+            [carrera_id] => 6
+            [carrera_nombre] => Marketing Digital y Comercio Electrónico
+        )
+
+    [38] => Array
+        (
+            [id] => 86
+            [nombre_linea] => ITSI-A-L1-EMPRENDIMIENTO
+            [carrera_id] => 5
+            [carrera_nombre] => Administración
+        )
+
+    [39] => Array
+        (
+            [id] => 87
+            [nombre_linea] => ITSI-A-L2-LIDERAZGO EMPRESARIAL
+            [carrera_id] => 5
+            [carrera_nombre] => Administración
+        )
+
+    [40] => Array
+        (
+            [id] => 88
+            [nombre_linea] => ITSI-A-L3-ESTRATEGIAS DE MARKETING
+            [carrera_id] => 5
+            [carrera_nombre] => Administración
+        )
+
+    [41] => Array
+        (
+            [id] => 89
+            [nombre_linea] => ITSI-A-L4-HERRAMIENTAS DE ANÁLISIS DE DATOS PARA LA TOMA DE DECISIONES EMPRESARIALES
+            [carrera_id] => 5
+            [carrera_nombre] => Administración
+        )
+
+    [42] => Array
+        (
+            [id] => 90
+            [nombre_linea] => ITSI-A-L5-GESTIÓN FINANCIERA PARA LA SOSTENIBILIDAD DE EMPRESAS
+            [carrera_id] => 5
+            [carrera_nombre] => Administración
+        )
+
+    [43] => Array
+        (
+            [id] => 91
+            [nombre_linea] => ITSI-A-L6-GESTIÓN DE OPERACIONES
+            [carrera_id] => 5
+            [carrera_nombre] => Administración
+        )
+
+    [44] => Array
+        (
+            [id] => 92
+            [nombre_linea] => ITSI-A-L7-PLANIFICACIÓN ESTRATÉGICA
+            [carrera_id] => 5
+            [carrera_nombre] => Administración
+        )
+
+    [45] => Array
+        (
+            [id] => 93
+            [nombre_linea] => ITSI-A-L8-PLANIFICACIÓN FINANCIERA
+            [carrera_id] => 5
+            [carrera_nombre] => Administración
+        )
+
+    [46] => Array
+        (
+            [id] => 94
+            [nombre_linea] => ITSI-AM-L1-LA GERONTOLOGÍA ANILIZADA Y EXPLICADA INTERDISCIPLINARIAMENTE DESDE LA COMPLEJIDAD DE LOS PROCESOS DE ENVEJECIMIENTO DEL SER HUMANO
+            [carrera_id] => 8
+            [carrera_nombre] => Atención Integral a Adultos Mayores
+        )
+
+    [47] => Array
+        (
+            [id] => 95
+            [nombre_linea] => ITSI-AM-L2-INCLUSIÓN DE LAS PERSONAS DE LA TERCERA EDAD EN FUNCIÓN DE LA PARTICIPACIÓN Y APORTE A LA SOCIEDAD EN DIFERENTES ESPACIOS PRODUCTIVOS
+            [carrera_id] => 8
+            [carrera_nombre] => Atención Integral a Adultos Mayores
+        )
+
+    [48] => Array
+        (
+            [id] => 96
+            [nombre_linea] => ITSI-AM-L3-RECONOCIMIENTO DE LOS DERECHOS DEL ADULTO MAYOR DESDE LAS POLÍTICAS Y PROYECTOS GUBERNAMENTALES.
+            [carrera_id] => 8
+            [carrera_nombre] => Atención Integral a Adultos Mayores
+        )
+
+    [49] => Array
+        (
+            [id] => 97
+            [nombre_linea] => ITSI-AM-L4-VULNERABILIDAD DE DERECHOS
+            [carrera_id] => 8
+            [carrera_nombre] => Atención Integral a Adultos Mayores
+        )
+
+    [50] => Array
+        (
+            [id] => 98
+            [nombre_linea] => ITSI-AM-L5-SALUD INTEGRAL DEL ADULTO-MAYOR
+            [carrera_id] => 8
+            [carrera_nombre] => Atención Integral a Adultos Mayores
+        )
+
+    [51] => Array
+        (
+            [id] => 99
+            [nombre_linea] => ITSI-AM-L6-INCLUSIÓN DEL ADULTO MAYOR
+            [carrera_id] => 8
+            [carrera_nombre] => Atención Integral a Adultos Mayores
+        )
+
+    [52] => Array
+        (
+            [id] => 100
+            [nombre_linea] => ITSI-AM-L17-CONDICIONES DE DESARROLLO DE LAS PERSONAS A-M
+            [carrera_id] => 8
+            [carrera_nombre] => Atención Integral a Adultos Mayores
+        )
+
+    [53] => Array
+        (
+            [id] => 101
+            [nombre_linea] => ITSI-AM-L8-ADULTOS MAYORES Y PRODUCTIVIDAD
+            [carrera_id] => 8
+            [carrera_nombre] => Atención Integral a Adultos Mayores
+        )
+
+    [54] => Array
+        (
+            [id] => 102
+            [nombre_linea] => ITSI-AM-L9-ADULTOS MAYORES Y POLÍTICAS PÚBLICAS
+            [carrera_id] => 8
+            [carrera_nombre] => Atención Integral a Adultos Mayores
+        )
+
+    [55] => Array
+        (
+            [id] => 103
+            [nombre_linea] => ITSI-AM-L10-ATENCIÓN A PERSONAS A-M
+            [carrera_id] => 8
+            [carrera_nombre] => Atención Integral a Adultos Mayores
+        )
+
+)
+
+DEBUG - 2025-02-03 21:08:26 --> Respuesta que se enviará al frontend: Array
+(
+    [success] => 1
+    [data] => Array
+        (
+            [0] => Array
+                (
+                    [id] => 48
+                    [nombre_linea] => ITSI-L1-INNOVACIÓN EDUCATIVA, PEDAGOGÍA E INTERCULTURALIDAD
+                    [carrera_id] => 1
+                    [carrera_nombre] => Institucionales
+                )
+
+            [1] => Array
+                (
+                    [id] => 49
+                    [nombre_linea] => ITSI-L2-CIENCIAS DE LA VIDA, SOSTENIBILIDAD, MATEMÁTICA Y ESTADÍSTICA
+                    [carrera_id] => 1
+                    [carrera_nombre] => Institucionales
+                )
+
+            [2] => Array
+                (
+                    [id] => 50
+                    [nombre_linea] => ITSI-L3-DISEÑO Y PRODUCCIÓN AUDIOVISUAL
+                    [carrera_id] => 1
+                    [carrera_nombre] => Institucionales
+                )
+
+            [3] => Array
+                (
+                    [id] => 51
+                    [nombre_linea] => ITSI-L4-SALUD PÚBLICA Y PROMOCIÓN DE LA SALUD
+                    [carrera_id] => 1
+                    [carrera_nombre] => Institucionales
+                )
+
+            [4] => Array
+                (
+                    [id] => 52
+                    [nombre_linea] => ITSI-L5-TECNOLOGÍAS DE LA INFORMACIÓN Y LA COMUNICACIÓN (TIC)
+                    [carrera_id] => 1
+                    [carrera_nombre] => Institucionales
+                )
+
+            [5] => Array
+                (
+                    [id] => 53
+                    [nombre_linea] => ITSI-L6-INGENIERÍA, PRODUCCIÓN Y CONSTRUCCIÓN
+                    [carrera_id] => 1
+                    [carrera_nombre] => Institucionales
+                )
+
+            [6] => Array
+                (
+                    [id] => 54
+                    [nombre_linea] => ITSI-L7-CIENCIAS SOCIALES Y DESARROLLO COMUNITARIO
+                    [carrera_id] => 1
+                    [carrera_nombre] => Institucionales
+                )
+
+            [7] => Array
+                (
+                    [id] => 55
+                    [nombre_linea] => ITSI-L8-SERVICIOS Y ADMINISTRACIÓN
+                    [carrera_id] => 1
+                    [carrera_nombre] => Institucionales
+                )
+
+            [8] => Array
+                (
+                    [id] => 56
+                    [nombre_linea] => ITSI-L9-DESARROLLO TECNOLÓGICO
+                    [carrera_id] => 1
+                    [carrera_nombre] => Institucionales
+                )
+
+            [9] => Array
+                (
+                    [id] => 57
+                    [nombre_linea] => ITSI-DS-L1-TECNOLOGÍAS DE INFORMACIÓN Y COMUNICACIÓN
+                    [carrera_id] => 2
+                    [carrera_nombre] => Desarrollo de Software
+                )
+
+            [10] => Array
+                (
+                    [id] => 58
+                    [nombre_linea] => ITSI-DS-L2-SOFTWARE APLICADO
+                    [carrera_id] => 2
+                    [carrera_nombre] => Desarrollo de Software
+                )
+
+            [11] => Array
+                (
+                    [id] => 59
+                    [nombre_linea] => ITSI-DS-L3-DESARROLLO DE SOFTWARE
+                    [carrera_id] => 2
+                    [carrera_nombre] => Desarrollo de Software
+                )
+
+            [12] => Array
+                (
+                    [id] => 60
+                    [nombre_linea] => ITSI-DS-L4-INNOVACIÓN TECNOLÓGICA Y NEGOCIOS
+                    [carrera_id] => 2
+                    [carrera_nombre] => Desarrollo de Software
+                )
+
+            [13] => Array
+                (
+                    [id] => 61
+                    [nombre_linea] => ITSI-DS-L5-APLICACIONES TECNOLÓGICAS PARA EL DESARROLLO
+                    [carrera_id] => 2
+                    [carrera_nombre] => Desarrollo de Software
+                )
+
+            [14] => Array
+                (
+                    [id] => 62
+                    [nombre_linea] => ITSI-DS-L6-ADMINISTRACIÓN Y SEGURIDAD DE LAS BASES DE DATOS
+                    [carrera_id] => 2
+                    [carrera_nombre] => Desarrollo de Software
+                )
+
+            [15] => Array
+                (
+                    [id] => 63
+                    [nombre_linea] => ITSI-DS-L7-ADMINISTRACIÓN Y AUDITORIA DE HARDWARE.
+                    [carrera_id] => 2
+                    [carrera_nombre] => Desarrollo de Software
+                )
+
+            [16] => Array
+                (
+                    [id] => 64
+                    [nombre_linea] => ITSI-DS-L8-REDES Y TELECOMUNICACIONES EN LA PRODUCCIÓN DE BIENES Y SERVICIOS
+                    [carrera_id] => 2
+                    [carrera_nombre] => Desarrollo de Software
+                )
+
+            [17] => Array
+                (
+                    [id] => 65
+                    [nombre_linea] => ITSI-DS-L9-METODOLOGÍAS PARA EL DESARROLLO DE SOFTWARE
+                    [carrera_id] => 2
+                    [carrera_nombre] => Desarrollo de Software
+                )
+
+            [18] => Array
+                (
+                    [id] => 66
+                    [nombre_linea] => ITSI-DS-L10-DESARROLLO TECNOLÓGICO Y SOCIEDAD.
+                    [carrera_id] => 2
+                    [carrera_nombre] => Desarrollo de Software
+                )
+
+            [19] => Array
+                (
+                    [id] => 67
+                    [nombre_linea] => ITSI-RT-L1-PROCESAMIENTO DIGITAL DE SEÑALES E IMÁGENES EN COMUNICACIÓN
+                    [carrera_id] => 7
+                    [carrera_nombre] => Redes y Telecomunicaciones
+                )
+
+            [20] => Array
+                (
+                    [id] => 68
+                    [nombre_linea] => ITSI-RT-L2-COMUNICACIONES ÓPTICAS DE ALTA VELOCIDAD
+                    [carrera_id] => 7
+                    [carrera_nombre] => Redes y Telecomunicaciones
+                )
+
+            [21] => Array
+                (
+                    [id] => 69
+                    [nombre_linea] => ITSI-RT-L3-INTERNET Y REDES DE NUEVA GENERACIÓN
+                    [carrera_id] => 7
+                    [carrera_nombre] => Redes y Telecomunicaciones
+                )
+
+            [22] => Array
+                (
+                    [id] => 70
+                    [nombre_linea] => ITSI-RT-L4-REDES INTELIGENTES Y SERVICIOS AVANZADOS DE TELECOMUNICACIONES
+                    [carrera_id] => 7
+                    [carrera_nombre] => Redes y Telecomunicaciones
+                )
+
+            [23] => Array
+                (
+                    [id] => 71
+                    [nombre_linea] => ITSI-RT-L5- SISTEMAS DE TRASMISIÓN
+                    [carrera_id] => 7
+                    [carrera_nombre] => Redes y Telecomunicaciones
+                )
+
+            [24] => Array
+                (
+                    [id] => 72
+                    [nombre_linea] => ITSI-RT-L6-PROCESAMIENTO DIGITAL DE SEÑALES E IMÁGENES EN COMUNICACIÓN
+                    [carrera_id] => 7
+                    [carrera_nombre] => Redes y Telecomunicaciones
+                )
+
+            [25] => Array
+                (
+                    [id] => 73
+                    [nombre_linea] => ITSI-DG-L1-ESTRATEGIAS Y MARCAS
+                    [carrera_id] => 4
+                    [carrera_nombre] => Diseño Gráfico
+                )
+
+            [26] => Array
+                (
+                    [id] => 74
+                    [nombre_linea] => ITSI-DG-L2-PUBLICACIONES IMPRESAS Y DIGITALES
+                    [carrera_id] => 4
+                    [carrera_nombre] => Diseño Gráfico
+                )
+
+            [27] => Array
+                (
+                    [id] => 75
+                    [nombre_linea] => ITSI-DG-L3-FUNDAMENTOS DEL DISEÑO
+                    [carrera_id] => 4
+                    [carrera_nombre] => Diseño Gráfico
+                )
+
+            [28] => Array
+                (
+                    [id] => 76
+                    [nombre_linea] => ITSI-DG-L4-SOFTWARE Y AUTOEDICIÓN
+                    [carrera_id] => 4
+                    [carrera_nombre] => Diseño Gráfico
+                )
+
+            [29] => Array
+                (
+                    [id] => 77
+                    [nombre_linea] => ITSI-DG-L5-COMUNICACIÓN VISUAL
+                    [carrera_id] => 4
+                    [carrera_nombre] => Diseño Gráfico
+                )
+
+            [30] => Array
+                (
+                    [id] => 78
+                    [nombre_linea] => ITSI-DG-L6-MARKETING INTEGRAL
+                    [carrera_id] => 4
+                    [carrera_nombre] => Diseño Gráfico
+                )
+
+            [31] => Array
+                (
+                    [id] => 79
+                    [nombre_linea] => ITSI-DG-L7-DISEÑO WEB PARA EL DESARROLLO.
+                    [carrera_id] => 4
+                    [carrera_nombre] => Diseño Gráfico
+                )
+
+            [32] => Array
+                (
+                    [id] => 80
+                    [nombre_linea] => ITSI-DG-L8-INNOVACIÓN TECNOLÓGICA EN MARKETING DIGITAL.
+                    [carrera_id] => 4
+                    [carrera_nombre] => Diseño Gráfico
+                )
+
+            [33] => Array
+                (
+                    [id] => 81
+                    [nombre_linea] => ITSI-MD-L1-HERRAMIENTAS DE MARKETING DIGITAL
+                    [carrera_id] => 6
+                    [carrera_nombre] => Marketing Digital y Comercio Electrónico
+                )
+
+            [34] => Array
+                (
+                    [id] => 82
+                    [nombre_linea] => ITSI-MD-L2-UTILIZACIÓN DE DATOS DIGITALES
+                    [carrera_id] => 6
+                    [carrera_nombre] => Marketing Digital y Comercio Electrónico
+                )
+
+            [35] => Array
+                (
+                    [id] => 83
+                    [nombre_linea] => ITSI-MD-L3-COMPORTAMIENTO DE CONSUMIDOR
+                    [carrera_id] => 6
+                    [carrera_nombre] => Marketing Digital y Comercio Electrónico
+                )
+
+            [36] => Array
+                (
+                    [id] => 84
+                    [nombre_linea] => ITSI-MD-L4- TENDENCIAS DEL COMERCIO ELECTRÓNICO
+                    [carrera_id] => 6
+                    [carrera_nombre] => Marketing Digital y Comercio Electrónico
+                )
+
+            [37] => Array
+                (
+                    [id] => 85
+                    [nombre_linea] => ITSI-MD-L5-ESTRATEGIAS DE MARKETING PARA AUMENTAR LAS VENTAS
+                    [carrera_id] => 6
+                    [carrera_nombre] => Marketing Digital y Comercio Electrónico
+                )
+
+            [38] => Array
+                (
+                    [id] => 86
+                    [nombre_linea] => ITSI-A-L1-EMPRENDIMIENTO
+                    [carrera_id] => 5
+                    [carrera_nombre] => Administración
+                )
+
+            [39] => Array
+                (
+                    [id] => 87
+                    [nombre_linea] => ITSI-A-L2-LIDERAZGO EMPRESARIAL
+                    [carrera_id] => 5
+                    [carrera_nombre] => Administración
+                )
+
+            [40] => Array
+                (
+                    [id] => 88
+                    [nombre_linea] => ITSI-A-L3-ESTRATEGIAS DE MARKETING
+                    [carrera_id] => 5
+                    [carrera_nombre] => Administración
+                )
+
+            [41] => Array
+                (
+                    [id] => 89
+                    [nombre_linea] => ITSI-A-L4-HERRAMIENTAS DE ANÁLISIS DE DATOS PARA LA TOMA DE DECISIONES EMPRESARIALES
+                    [carrera_id] => 5
+                    [carrera_nombre] => Administración
+                )
+
+            [42] => Array
+                (
+                    [id] => 90
+                    [nombre_linea] => ITSI-A-L5-GESTIÓN FINANCIERA PARA LA SOSTENIBILIDAD DE EMPRESAS
+                    [carrera_id] => 5
+                    [carrera_nombre] => Administración
+                )
+
+            [43] => Array
+                (
+                    [id] => 91
+                    [nombre_linea] => ITSI-A-L6-GESTIÓN DE OPERACIONES
+                    [carrera_id] => 5
+                    [carrera_nombre] => Administración
+                )
+
+            [44] => Array
+                (
+                    [id] => 92
+                    [nombre_linea] => ITSI-A-L7-PLANIFICACIÓN ESTRATÉGICA
+                    [carrera_id] => 5
+                    [carrera_nombre] => Administración
+                )
+
+            [45] => Array
+                (
+                    [id] => 93
+                    [nombre_linea] => ITSI-A-L8-PLANIFICACIÓN FINANCIERA
+                    [carrera_id] => 5
+                    [carrera_nombre] => Administración
+                )
+
+            [46] => Array
+                (
+                    [id] => 94
+                    [nombre_linea] => ITSI-AM-L1-LA GERONTOLOGÍA ANILIZADA Y EXPLICADA INTERDISCIPLINARIAMENTE DESDE LA COMPLEJIDAD DE LOS PROCESOS DE ENVEJECIMIENTO DEL SER HUMANO
+                    [carrera_id] => 8
+                    [carrera_nombre] => Atención Integral a Adultos Mayores
+                )
+
+            [47] => Array
+                (
+                    [id] => 95
+                    [nombre_linea] => ITSI-AM-L2-INCLUSIÓN DE LAS PERSONAS DE LA TERCERA EDAD EN FUNCIÓN DE LA PARTICIPACIÓN Y APORTE A LA SOCIEDAD EN DIFERENTES ESPACIOS PRODUCTIVOS
+                    [carrera_id] => 8
+                    [carrera_nombre] => Atención Integral a Adultos Mayores
+                )
+
+            [48] => Array
+                (
+                    [id] => 96
+                    [nombre_linea] => ITSI-AM-L3-RECONOCIMIENTO DE LOS DERECHOS DEL ADULTO MAYOR DESDE LAS POLÍTICAS Y PROYECTOS GUBERNAMENTALES.
+                    [carrera_id] => 8
+                    [carrera_nombre] => Atención Integral a Adultos Mayores
+                )
+
+            [49] => Array
+                (
+                    [id] => 97
+                    [nombre_linea] => ITSI-AM-L4-VULNERABILIDAD DE DERECHOS
+                    [carrera_id] => 8
+                    [carrera_nombre] => Atención Integral a Adultos Mayores
+                )
+
+            [50] => Array
+                (
+                    [id] => 98
+                    [nombre_linea] => ITSI-AM-L5-SALUD INTEGRAL DEL ADULTO-MAYOR
+                    [carrera_id] => 8
+                    [carrera_nombre] => Atención Integral a Adultos Mayores
+                )
+
+            [51] => Array
+                (
+                    [id] => 99
+                    [nombre_linea] => ITSI-AM-L6-INCLUSIÓN DEL ADULTO MAYOR
+                    [carrera_id] => 8
+                    [carrera_nombre] => Atención Integral a Adultos Mayores
+                )
+
+            [52] => Array
+                (
+                    [id] => 100
+                    [nombre_linea] => ITSI-AM-L17-CONDICIONES DE DESARROLLO DE LAS PERSONAS A-M
+                    [carrera_id] => 8
+                    [carrera_nombre] => Atención Integral a Adultos Mayores
+                )
+
+            [53] => Array
+                (
+                    [id] => 101
+                    [nombre_linea] => ITSI-AM-L8-ADULTOS MAYORES Y PRODUCTIVIDAD
+                    [carrera_id] => 8
+                    [carrera_nombre] => Atención Integral a Adultos Mayores
+                )
+
+            [54] => Array
+                (
+                    [id] => 102
+                    [nombre_linea] => ITSI-AM-L9-ADULTOS MAYORES Y POLÍTICAS PÚBLICAS
+                    [carrera_id] => 8
+                    [carrera_nombre] => Atención Integral a Adultos Mayores
+                )
+
+            [55] => Array
+                (
+                    [id] => 103
+                    [nombre_linea] => ITSI-AM-L10-ATENCIÓN A PERSONAS A-M
+                    [carrera_id] => 8
+                    [carrera_nombre] => Atención Integral a Adultos Mayores
+                )
+
+        )
+
+)
+
+INFO - 2025-02-03 21:11:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 21:11:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 21:16:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 21:16:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 21:18:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 21:18:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 21:20:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 21:20:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 21:26:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 21:26:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 21:26:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 21:35:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 21:35:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 21:36:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 21:36:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 21:36:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 21:36:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 21:36:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 21:40:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 21:40:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 22:19:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 22:19:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 22:19:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 22:19:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 22:49:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 22:49:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 22:49:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 22:49:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 22:49:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 22:49:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 23:02:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 23:02:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 23:02:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 23:02:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 23:02:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 23:02:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 23:05:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 23:05:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 23:05:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 23:14:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 23:14:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 23:14:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 23:14:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 23:14:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 23:14:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 23:14:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 23:14:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 23:18:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 23:18:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 23:18:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 23:19:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 23:19:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 23:19:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 23:19:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 23:19:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 23:19:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 23:19:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 23:19:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 23:21:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 23:21:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 23:21:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 23:23:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 23:23:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 23:24:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 23:24:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 23:24:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 23:43:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 23:43:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 23:44:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 23:44:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 23:45:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-03 23:45:29 --> === Debugueando Tipo Participante ===
+DEBUG - 2025-02-03 23:45:29 --> Tipo Participante seleccionado: Estudiante
+INFO - 2025-02-03 23:45:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 23:45:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 23:48:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 23:48:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 23:48:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 23:48:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 23:48:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 23:48:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 23:49:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-03 23:49:37 --> === Debugueando Tipo Participante ===
+DEBUG - 2025-02-03 23:49:37 --> Datos de estudiantes recibidos: 
+INFO - 2025-02-03 23:49:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-03 23:49:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

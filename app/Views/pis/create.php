@@ -188,7 +188,7 @@ Nuevo Proyecto Integrador de Saberes
                 <div class="col-md-4">
                     <div class="form-group">
                         <label for="telefono_coordinador">Teléfono del Coordinador/Director *</label>
-                        <input type="number" class="form-control" id="telefono_coordinador" name="telefono_coordinador" 
+                        <input type="number" class="form-control" id="telefono_coordinador" name="telefono_coordinador"
                                value="<?= old('telefono_coordinador') ?>" required>
                     </div>
                 </div>
@@ -430,14 +430,18 @@ Nuevo Proyecto Integrador de Saberes
                         <div class="col-md-4">
                             <div class="form-group">
                                 <label for="tipo_participante">Tipo de Participante *</label>
-                                <select class="form-control" id="tipo_participante" name="tipo_participante" required>
-                                    <option value="">Seleccione un tipo</option>
-                                    <?php foreach ($enumData['tipo_participante'] as $tipo): ?>
-                                        <option value="<?= $tipo ?>" <?= old('tipo_participante') == $tipo ? 'selected' : '' ?>>
-                                            <?= $tipo ?>
-                                        </option>
-                                    <?php endforeach; ?>
-                                </select>
+                                <div class="d-flex">
+                                    <select class="form-control col-6" id="tipo_participante" name="tipo_participante" required>
+                                        <option value="">Seleccione un tipo</option>
+                                        <?php foreach ($enumData['tipo_participante'] as $tipo): ?>
+                                            <option value="<?= $tipo ?>" <?= old('tipo_participante') == $tipo ? 'selected' : '' ?>>
+                                                <?= $tipo ?>
+                                            </option>
+                                        <?php endforeach; ?>
+                                    </select>
+
+                                    <button type="button" id="btnAgregarParticipante" class="btn btn-primary ml-2 text-sm col-5">Agregar Participantes</button>
+                                </div>
                             </div>
                         </div>
                         <div class="col-md-4">
@@ -491,7 +495,18 @@ Nuevo Proyecto Integrador de Saberes
                 <button type="submit" class="btn btn-primary" form="formPIS">Guardar</button>
                 <a href="<?= base_url('pis') ?>" class="btn btn-secondary">Cancelar</a>
             </div>
+
+
+                                    
+            <!-- Agregar dentro del <form id="formPIS"> en create.php y edit.php -->
+            <input type="hidden" id="docentes_data" name="docentes_data" value="">
+            <input type="hidden" id="estudiantes_data" name="estudiantes_data" value="">
+
+
         </form>
+
+
+
 
         <!-- Mensaje de carga mientras se suben los archivos -->
         <div id="loadingOverlay" style="display: none;" class="position-fixed top-0 left-0 w-100 h-100 bg-dark bg-opacity-50 d-flex justify-content-center align-items-center">
@@ -502,6 +517,10 @@ Nuevo Proyecto Integrador de Saberes
 
         <!-- La logica del modal esta en este archivo: Views/pis/lineas_investigacion.php -->
         <?= $this->include('pis/lineas_investigacion') ?>
+
+
+        <!-- En create.php y edit.php, después de tu contenido actual -->
+        <?= $this->include('pis/participante') ?>
 
 
     </div>
@@ -916,6 +935,156 @@ $(function() {
 
 
 });
+
+
+
+
+
+
+
+
+
+// ===============================================
+// Código para Participantes
+// ===============================================
+$(function() {
+    // Variables para almacenar los datos de los participantes
+    let docentesData = [];
+    let estudiantesData = [];
+
+    //Handler para mostrar la ventana modal correspondiente a la opcion seleccionada
+    $('#btnAgregarParticipante').click(function() {
+        const tipoSeleccionado = $('#tipo_participante').val();
+        
+        if(tipoSeleccionado === 'Docente') {
+            $('#tipoParticipanteSeleccionado').text('Docente');
+            cargarDatosDocentes();
+            $('#modalParticipantes').modal('show');
+        } else if(tipoSeleccionado === 'Estudiante') {
+            $('#tipoParticipanteSeleccionado2').text('Estudiante');
+            cargarDatosEstudiantes();
+            $('#modalEstudiantes').modal('show');
+        }
+    });
+
+    // Función para cargar datos previos de docentes
+    function cargarDatosDocentes() {
+        if(docentesData.length > 0) {
+            docentesData.forEach((docente, index) => {
+                $(`#nombre_docente_${index}`).val(docente.nombre || '');
+                $(`#cedula_docente_${index}`).val(docente.cedula || '');
+            });
+        }
+    }
+
+    // Función para cargar datos previos de estudiantes
+    function cargarDatosEstudiantes() {
+        if(estudiantesData.length > 0) {
+            estudiantesData.forEach((estudiante, index) => {
+                $(`#nombre_estudiante_${index}`).val(estudiante.nombre || '');
+                $(`#cedula_estudiante_${index}`).val(estudiante.cedula || '');
+            });
+        }
+    }
+
+    // Handler para guardar datos cuando se ingresan (docentes)
+    $('.nombre-docente, .cedula-docente').on('input', function() {
+        const index = $(this).data('index');
+        const isNombre = $(this).hasClass('nombre-docente');
+        
+        if (!docentesData[index]) {
+            docentesData[index] = { nombre: '', cedula: '' };
+        }
+        
+        if (isNombre) {
+            docentesData[index].nombre = $(this).val();
+        } else {
+            docentesData[index].cedula = $(this).val();
+        }
+        
+        $('#docentes_data').val(JSON.stringify(docentesData));
+    });
+
+    // Handler para guardar datos cuando se ingresan (estudiantes)
+    $('.nombre-estudiante, .cedula-estudiante').on('input', function() {
+        const index = $(this).data('index');
+        const isNombre = $(this).hasClass('nombre-estudiante');
+        
+        if (!estudiantesData[index]) {
+            estudiantesData[index] = { nombre: '', cedula: '' };
+        }
+        
+        if (isNombre) {
+            estudiantesData[index].nombre = $(this).val();
+        } else {
+            estudiantesData[index].cedula = $(this).val();
+        }
+        
+        $('#estudiantes_data').val(JSON.stringify(estudiantesData));
+    });
+
+    
+
+
+    // Handler para el formulario principal antes de enviar
+    $('#formPIS').on('submit', function(e) {
+        const tipoSeleccionado = $('#tipo_participante').val();
+        
+        // Limpiar ambos campos ocultos primero
+        $('#docentes_data').val('');
+        $('#estudiantes_data').val('');
+        
+        // Procesar solo según el tipo seleccionado
+        if(tipoSeleccionado === 'Docente') {
+            const docentesValidos = docentesData.filter(docente => 
+                docente && docente.nombre && docente.nombre.trim() !== '' && 
+                docente.cedula && docente.cedula.trim() !== ''
+            );
+            $('#docentes_data').val(JSON.stringify(docentesValidos));
+        } 
+        else if(tipoSeleccionado === 'Estudiante') {
+            const estudiantesValidos = estudiantesData.filter(estudiante => 
+                estudiante && estudiante.nombre && estudiante.nombre.trim() !== '' && 
+                estudiante.cedula && estudiante.cedula.trim() !== ''
+            );
+
+            console.log('Datos de estudiantes antes de enviar:', estudiantesValidos);
+            console.log('Array estudiantesData:', estudiantesData);
+
+
+            $('#estudiantes_data').val(JSON.stringify(estudiantesValidos));
+
+            console.log('Valor del campo oculto estudiantes_data:', $('#estudiantes_data').val());
+
+
+        }
+    });
+
+
+
+
+
+
+
+
+
+    // Handler para cuando se cierran los modales
+    $('#modalParticipantes').on('hidden.bs.modal', function() {
+        // Si necesitas limpiar algo cuando se cierra el modal de docentes
+    });
+
+    $('#modalEstudiantes').on('hidden.bs.modal', function() {
+        // Si necesitas limpiar algo cuando se cierra el modal de estudiantes
+    });
+});
+
+
+
+
+
+
+
+
 
 
 </script>

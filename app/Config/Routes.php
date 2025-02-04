@@ -77,14 +77,24 @@ $routes->group('', ['filter' => 'auth'], function($routes) {
     $routes->get('pis/get-campos-especificos/(:num)', 'PISController::getCamposEspecificos/$1');
     $routes->get('pis/get-campos-detallados/(:num)', 'PISController::getCamposDetallados/$1');
 
-    //Rutas para las lineas de investigacion
-    $routes->get('pis/lineas-investigacion/list', 'PISController::lineasInvestigacionList');
-    $routes->get('pis/lineas-investigacion/get/(:num)', 'PISController::lineasInvestigacionGet/$1');
-    $routes->post('pis/lineas-investigacion/create', 'PISController::lineasInvestigacionCreate');
-    $routes->put('pis/lineas-investigacion/update/(:num)', 'PISController::lineasInvestigacionUpdate/$1');
-    $routes->delete('pis/lineas-investigacion/delete/(:num)', 'PISController::lineasInvestigacionDelete/$1');
-    $routes->get('pis/careers', 'PISController::getCareers');
+        //Rutas para las lineas de investigacion
+        $routes->get('pis/lineas-investigacion/list', 'PISController::lineasInvestigacionList');
+        $routes->get('pis/lineas-investigacion/get/(:num)', 'PISController::lineasInvestigacionGet/$1');
+        $routes->post('pis/lineas-investigacion/create', 'PISController::lineasInvestigacionCreate');
+        $routes->put('pis/lineas-investigacion/update/(:num)', 'PISController::lineasInvestigacionUpdate/$1');
+        $routes->delete('pis/lineas-investigacion/delete/(:num)', 'PISController::lineasInvestigacionDelete/$1');
+        $routes->get('pis/careers', 'PISController::getCareers');
 
+
+
+
+        //Rutas para los participantes
+        $routes->post('pis/participantes/docente/create', 'ParticipanteController::createDocente');
+        $routes->get('pis/participantes/docente/get/(:num)', 'ParticipanteController::getDocentesByPIS/$1');
+        $routes->get('pis/participantes/docente/check-limit/(:num)', 'ParticipanteController::checkDocenteLimit/$1');
+        $routes->post('pis/participantes/estudiante/create', 'ParticipanteController::createEstudiante');
+        $routes->get('pis/participantes/estudiante/get/(:num)', 'ParticipanteController::getEstudiantesByPIS/$1');
+        $routes->get('pis/participantes/estudiante/check-limit/(:num)', 'ParticipanteController::checkEstudianteLimit/$1');
 
 
     

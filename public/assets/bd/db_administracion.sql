@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 03, 2025 at 12:20 AM
+-- Generation Time: Feb 05, 2025 at 12:27 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -291,6 +291,20 @@ INSERT INTO `categories` (`id`, `name`, `description`, `created_at`, `updated_at
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `docentes`
+--
+
+CREATE TABLE `docentes` (
+  `id` int(11) NOT NULL,
+  `nombre` varchar(255) NOT NULL,
+  `cedula` varchar(10) NOT NULL,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
+  `updated_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `documents`
 --
 
@@ -315,6 +329,28 @@ CREATE TABLE `documents` (
 INSERT INTO `documents` (`id`, `category_id`, `career_id`, `academic_period_id`, `title`, `authors`, `publication_year`, `summary`, `pdf_path`, `created_at`, `updated_at`) VALUES
 (2, 2, 1, 1, 'Desarrollo de una aplicación móvil con implementación de un método de pago electrónico para automatizar el servicio de pago de transporte terrestre urbano en la Cooperativa San Miguel de Ibarra', 'Durán Rosero Lucía Monserat, Collaguazo Toala Steven Anibal', 2024, 'El objetivo general fue desarrollar una aplicación móvil innovadora para la cooperativa de transporte urbano San Miguel, centrada en la implementación de un método de pago electrónico con la finalidad de ofrecer eficiencia y comodidad en los servicios ofrecidos mediante códigos QR.', 'uploads/documents/2024/11/1730963165_1010a44ba0d14da81939.pdf', '2024-11-07 12:06:05', '2024-11-07 12:06:05'),
 (3, 2, 2, 1, 'Análisis de la imagen corporativa y desarrollo de estrategias para el posicionamiento de la marca “Inter Farma” en la industria farmacéutica.', 'Cevallos Torres Karla Valeria, Sarzosa Recalde Diego Sebastián', 2024, 'Este proyecto se enfoca en implementar estrategias de branding y marketing en la farmacia Inter Farma para su posiciónamiento en el mercado farmacéutico. Se busca diseñar un plan integral que refleje la identidad y valores únicos de Inter Farma,', 'uploads/documents/2024/11/1731045912_2dcac8d834ea4ae77ac4.pdf', '2024-11-08 11:05:12', '2024-11-08 11:05:12');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `estudiantes`
+--
+
+CREATE TABLE `estudiantes` (
+  `id` int(11) NOT NULL,
+  `nombre` varchar(255) NOT NULL,
+  `cedula` varchar(10) NOT NULL,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
+  `updated_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `estudiantes`
+--
+
+INSERT INTO `estudiantes` (`id`, `nombre`, `cedula`, `created_at`, `updated_at`) VALUES
+(6, 'Stalin Chavez', '1003816533', '2025-02-04 14:12:57', '2025-02-04 14:12:57'),
+(7, 'Juan Montalvo', '4444444444', '2025-02-04 14:12:57', '2025-02-04 14:12:57');
 
 -- --------------------------------------------------------
 
@@ -449,6 +485,40 @@ INSERT INTO `migrations` (`id`, `version`, `class`, `group`, `namespace`, `time`
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `pis_docentes`
+--
+
+CREATE TABLE `pis_docentes` (
+  `id` int(11) NOT NULL,
+  `proyecto_id` int(11) NOT NULL,
+  `docente_id` int(11) NOT NULL,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `pis_estudiantes`
+--
+
+CREATE TABLE `pis_estudiantes` (
+  `id` int(11) NOT NULL,
+  `proyecto_id` int(11) NOT NULL,
+  `estudiante_id` int(11) NOT NULL,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `pis_estudiantes`
+--
+
+INSERT INTO `pis_estudiantes` (`id`, `proyecto_id`, `estudiante_id`, `created_at`) VALUES
+(6, 28, 6, '2025-02-04 14:12:57'),
+(7, 28, 7, '2025-02-04 14:12:57');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `produccion_cientifica_tecnica`
 --
 
@@ -543,10 +613,7 @@ CREATE TABLE `proyectos_integradores_saberes` (
 --
 
 INSERT INTO `proyectos_integradores_saberes` (`id`, `nombre`, `codigo`, `tipo`, `objetivo`, `programa_id`, `estado`, `linea_investigacion_carrera_id`, `facultad_entidad_area`, `fecha_inicio`, `coordinador_director`, `fecha_fin_planificado`, `correo_coordinador`, `fecha_fin_real`, `telefono_coordinador`, `campo_amplio_id`, `campo_especifico_id`, `campo_detallado_id`, `alcance_territorial`, `investigadores_acreditados`, `impacto_social`, `impacto_cientifico`, `impacto_economico`, `impacto_politico`, `impacto_ambiental`, `otro_impacto`, `fuente_financiamiento`, `descripcion_actividad`, `parametro_cumplimiento`, `cooperacion`, `red`, `resultados_verificables`, `anio`, `presupuesto_planificado`, `presupuesto_ejecutado`, `tipo_participante`, `horas`, `publicaciones_id`, `proyecto_path`, `poster_path`, `created_at`, `updated_at`) VALUES
-(7, 'sfsdf', '100117', 'Investigación', 'sdfsdf', 1, 'En Cierre', 60, 'sdf', '2025-02-20', 'sdf', '2025-02-11', 'bismuto7@gmail.com', '2025-02-04', 983104196, NULL, NULL, NULL, 'Institucional', 'Si', NULL, NULL, NULL, NULL, NULL, NULL, 'Fondos Concursables Nacionales', 'sdfsf', 'Gasto Externo', 'Nacional', 'Nacional', 'Parciales', 2025, 55555.00, 55555.00, 'Docente', 655, NULL, NULL, NULL, '2025-02-02 16:18:07', '2025-02-02 16:18:07'),
-(8, 'Tienda Zapatos Mania', '100117', 'Investigación', 'asdf', 2, 'En Cierre', 57, 'asdf', '2025-02-21', 'sfs', '2025-02-24', 'bismuto7@gmail.com', '2025-02-22', 983104196, NULL, NULL, NULL, 'Cantonal', 'Si', NULL, NULL, NULL, NULL, NULL, NULL, 'Fondos Concursables Nacionales', 'asdf', 'Gasto de Capital', 'No Aplica', 'Internacional y Nacional', 'Parciales', 2025, 555.00, 555.00, 'Estudiante', 55, NULL, NULL, NULL, '2025-02-02 16:23:29', '2025-02-02 20:17:57'),
-(9, 'aaaaazzzzzz', '100117', 'Investigación', 'sadf', 2, 'En Ejecución', 61, 'adf', '2025-02-19', 'adf', '2025-02-13', 'bismuto7@gmail.com', '2025-02-18', 983104196, 10, NULL, NULL, 'Internacional', 'No', NULL, NULL, NULL, NULL, NULL, NULL, 'Fondos Concursables Interno IES', 'adsfadf', 'Gasto Nacional Bruto en I + D + I', 'Nacional', 'Internacional y Nacional', 'Parciales', 2025, 55.00, 66.00, 'Estudiante', 44, NULL, NULL, NULL, '2025-02-02 20:20:47', '2025-02-02 20:20:47'),
-(10, 'Tienda Zapatos', '100117', 'Investigación', 'Desarrollar un sistema web de gestión integral, mediante la utilización de herramientas tecnológicas modernas, para optimizar los procesos clave y mejorar su eficiencia operativa y toma de decisiones, para la zapatería “Calzado Americano” de la ciudad de Pimampiro.', 2, 'Finalizado', 58, 'Área de Tecnologías', '2024-05-05', 'Morales', '2024-08-20', 'bismuto7@gmail.com', '2024-09-12', 983104196, 13, 30, 99, 'Provincial', 'No', 'Este proyecto ayuda al propietario a tomar mejores desiciones.', 'Se pone en práctica lo aprendido.', 'El propietario administra mejor su negocio, mejorando sus ventas.', 'Mejora la reputación del ITSI.', 'Reducción del uso del papel.', 'El estudiante aprende mientras investiga.', 'Asignación Regular IES', 'Se divide el 4to de desarrollo de software en grupos de 2 o 3 personas. Y a cada grupo se le asigna un pis.', 'Gasto Interno', 'No Aplica', 'No Aplica', 'Sin Resultados', 2024, 300.00, 300.00, 'Estudiante', 70, 4, 'uploads/proyectos_integradores_saberes/proyectos/1738533565_288f2a3f2aa09ef9a296.docx', 'uploads/proyectos_integradores_saberes/posters/1738533565_feb9a5db6a513e71c819.pptx', '2025-02-02 21:59:25', '2025-02-02 21:59:25');
+(28, 'Prueba 1', 'asdfasfd', 'Investigación', 'asdfasfd', 1, 'En Cierre', 60, 'asfasf', '2025-02-10', 'adfasdf', '2025-02-06', 'bismuto7@gmail.com', '2025-02-15', 983104196, NULL, NULL, NULL, 'Cantonal', 'No', NULL, NULL, NULL, NULL, NULL, NULL, 'Fondos Concursables Nacionales', 'asdfasdfasf', 'Gasto de Capital', 'Internacional', 'Internacional y Nacional', 'Totales', 2025, 56667.00, 2211.00, 'Estudiante', 78, NULL, NULL, NULL, '2025-02-04 14:12:57', '2025-02-04 14:12:57');
 
 -- --------------------------------------------------------
 
@@ -670,11 +737,27 @@ ALTER TABLE `categories`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `docentes`
+--
+ALTER TABLE `docentes`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `idx_cedula` (`cedula`),
+  ADD KEY `idx_nombre` (`nombre`);
+
+--
 -- Indexes for table `documents`
 --
 ALTER TABLE `documents`
   ADD PRIMARY KEY (`id`),
   ADD KEY `idx_documents_title` (`title`);
+
+--
+-- Indexes for table `estudiantes`
+--
+ALTER TABLE `estudiantes`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `idx_cedula` (`cedula`),
+  ADD KEY `idx_nombre` (`nombre`);
 
 --
 -- Indexes for table `lineas_investigacion_carreras`
@@ -694,6 +777,22 @@ ALTER TABLE `meses`
 --
 ALTER TABLE `migrations`
   ADD PRIMARY KEY (`id`);
+
+--
+-- Indexes for table `pis_docentes`
+--
+ALTER TABLE `pis_docentes`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `idx_proyecto_docente` (`proyecto_id`,`docente_id`),
+  ADD KEY `fk_pis_docentes_docente` (`docente_id`);
+
+--
+-- Indexes for table `pis_estudiantes`
+--
+ALTER TABLE `pis_estudiantes`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `idx_proyecto_estudiante` (`proyecto_id`,`estudiante_id`),
+  ADD KEY `fk_pis_estudiantes_estudiante` (`estudiante_id`);
 
 --
 -- Indexes for table `produccion_cientifica_tecnica`
@@ -784,10 +883,22 @@ ALTER TABLE `categories`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
+-- AUTO_INCREMENT for table `docentes`
+--
+ALTER TABLE `docentes`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
 -- AUTO_INCREMENT for table `documents`
 --
 ALTER TABLE `documents`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT for table `estudiantes`
+--
+ALTER TABLE `estudiantes`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `lineas_investigacion_carreras`
@@ -808,6 +919,18 @@ ALTER TABLE `migrations`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
+-- AUTO_INCREMENT for table `pis_docentes`
+--
+ALTER TABLE `pis_docentes`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT for table `pis_estudiantes`
+--
+ALTER TABLE `pis_estudiantes`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
+--
 -- AUTO_INCREMENT for table `produccion_cientifica_tecnica`
 --
 ALTER TABLE `produccion_cientifica_tecnica`
@@ -823,7 +946,7 @@ ALTER TABLE `programas`
 -- AUTO_INCREMENT for table `proyectos_integradores_saberes`
 --
 ALTER TABLE `proyectos_integradores_saberes`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
 
 --
 -- AUTO_INCREMENT for table `trabajos_de_titulacion`
@@ -864,6 +987,20 @@ ALTER TABLE `campo_especifico`
 --
 ALTER TABLE `lineas_investigacion_carreras`
   ADD CONSTRAINT `fk_linea_carrera` FOREIGN KEY (`carrera_id`) REFERENCES `careers` (`id`) ON UPDATE CASCADE;
+
+--
+-- Constraints for table `pis_docentes`
+--
+ALTER TABLE `pis_docentes`
+  ADD CONSTRAINT `fk_pis_docentes_docente` FOREIGN KEY (`docente_id`) REFERENCES `docentes` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `fk_pis_docentes_proyecto` FOREIGN KEY (`proyecto_id`) REFERENCES `proyectos_integradores_saberes` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `pis_estudiantes`
+--
+ALTER TABLE `pis_estudiantes`
+  ADD CONSTRAINT `fk_pis_estudiantes_estudiante` FOREIGN KEY (`estudiante_id`) REFERENCES `estudiantes` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `fk_pis_estudiantes_proyecto` FOREIGN KEY (`proyecto_id`) REFERENCES `proyectos_integradores_saberes` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `proyectos_integradores_saberes`
