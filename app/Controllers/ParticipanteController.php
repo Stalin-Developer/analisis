@@ -303,6 +303,40 @@ class ParticipanteController extends BaseController
 
 
 
+    //Metodos para la parte de "Docente/Estudiante".
+    /**
+     * Método para verificar si se han alcanzado los límites de ambos tipos
+     */
+    public function checkBothLimits($pisId)
+    {
+        try {
+            if (!$this->request->isAJAX()) {
+                throw new Exception('Acceso no permitido');
+            }
+
+            $docentesLimit = $this->participanteModel->hasReachedLimit($pisId, 'docente');
+            $estudiantesLimit = $this->participanteModel->hasReachedLimit($pisId, 'estudiante');
+            
+            return $this->response->setJSON([
+                'success' => true,
+                'docentes_limit' => $docentesLimit,
+                'estudiantes_limit' => $estudiantesLimit
+            ]);
+
+        } catch (Exception $e) {
+            return $this->response->setStatusCode(500)->setJSON([
+                'success' => false,
+                'error' => 'Error al verificar los límites'
+            ]);
+        }
+    }
+
+
+
+
+
+
+
 
 
 

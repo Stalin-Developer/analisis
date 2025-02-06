@@ -964,7 +964,14 @@ $(function() {
             $('#tipoParticipanteSeleccionado2').text('Estudiante');
             cargarDatosEstudiantes();
             $('#modalEstudiantes').modal('show');
+        } else if(tipoSeleccionado === 'Docente/Estudiante') {  // Nueva condición para Docente/Estudiante
+            $('#tipoParticipanteSeleccionado3').text('Docente/Estudiante');
+            cargarDatosDocentesMultiple();
+            cargarDatosEstudiantesMultiple();
+            $('#modalDocentesEstudiantes').modal('show');
         }
+
+
     });
 
     // Función para cargar datos previos de docentes
@@ -986,6 +993,49 @@ $(function() {
             });
         }
     }
+
+
+
+
+
+    //función para cargar datos de docentes en el modal "Docente/Estudiante"
+    function cargarDatosDocentesMultiple() {
+        if(docentesData.length > 0) {
+            docentesData.forEach((docente, index) => {
+                $(`#nombre_docente_multiple_${index}`).val(docente.nombre || '');
+                $(`#cedula_docente_multiple_${index}`).val(docente.cedula || '');
+            });
+        }
+    }
+
+    //función para cargar datos de estudiantes en el modal "Docente/Estudiante"
+    function cargarDatosEstudiantesMultiple() {
+        if(estudiantesData.length > 0) {
+            estudiantesData.forEach((estudiante, index) => {
+                $(`#nombre_estudiante_multiple_${index}`).val(estudiante.nombre || '');
+                $(`#cedula_estudiante_multiple_${index}`).val(estudiante.cedula || '');
+            });
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     // Handler para guardar datos cuando se ingresan (docentes)
     $('.nombre-docente, .cedula-docente').on('input', function() {
@@ -1023,6 +1073,50 @@ $(function() {
         $('#estudiantes_data').val(JSON.stringify(estudiantesData));
     });
 
+
+
+    //handler para el modal "Docente/Estudiante" (docentes)
+    $('.nombre-docente-multiple, .cedula-docente-multiple').on('input', function() {
+        const index = $(this).data('index');
+        const isNombre = $(this).hasClass('nombre-docente-multiple');
+        
+        if (!docentesData[index]) {
+            docentesData[index] = { nombre: '', cedula: '' };
+        }
+        
+        if (isNombre) {
+            docentesData[index].nombre = $(this).val();
+        } else {
+            docentesData[index].cedula = $(this).val();
+        }
+        
+        $('#docentes_data').val(JSON.stringify(docentesData));
+    });
+
+    //handler para el modal "Docente/Estudiante" (estudiantes)
+    $('.nombre-estudiante-multiple, .cedula-estudiante-multiple').on('input', function() {
+        const index = $(this).data('index');
+        const isNombre = $(this).hasClass('nombre-estudiante-multiple');
+        
+        if (!estudiantesData[index]) {
+            estudiantesData[index] = { nombre: '', cedula: '' };
+        }
+        
+        if (isNombre) {
+            estudiantesData[index].nombre = $(this).val();
+        } else {
+            estudiantesData[index].cedula = $(this).val();
+        }
+        
+        $('#estudiantes_data').val(JSON.stringify(estudiantesData));
+    });
+
+
+
+
+
+
+
     
 
 
@@ -1057,7 +1151,21 @@ $(function() {
             console.log('Valor del campo oculto estudiantes_data:', $('#estudiantes_data').val());
 
 
+        } else if(tipoSeleccionado === 'Docente/Estudiante') {
+            // Procesar tanto docentes como estudiantes
+            const docentesValidos = docentesData.filter(docente => 
+                docente && docente.nombre && docente.nombre.trim() !== '' && 
+                docente.cedula && docente.cedula.trim() !== ''
+            );
+            const estudiantesValidos = estudiantesData.filter(estudiante => 
+                estudiante && estudiante.nombre && estudiante.nombre.trim() !== '' && 
+                estudiante.cedula && estudiante.cedula.trim() !== ''
+            );
+            
+            $('#docentes_data').val(JSON.stringify(docentesValidos));
+            $('#estudiantes_data').val(JSON.stringify(estudiantesValidos));
         }
+
     });
 
 
@@ -1076,6 +1184,13 @@ $(function() {
     $('#modalEstudiantes').on('hidden.bs.modal', function() {
         // Si necesitas limpiar algo cuando se cierra el modal de estudiantes
     });
+
+    //handler para el modal "Docente/Estudiante"
+    $('#modalDocentesEstudiantes').on('hidden.bs.modal', function() {
+        // Si necesitas limpiar algo cuando se cierra el modal múltiple
+    });
+
+
 });
 
 

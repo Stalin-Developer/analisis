@@ -207,7 +207,6 @@ class PISController extends BaseController
                 $tipoParticipante = $this->request->getPost('tipo_participante');
 
 
-                log_message('debug', '=== Debugueando Tipo Participante ===');
                 
 
 
@@ -271,6 +270,55 @@ class PISController extends BaseController
                         }
                     }
                 }
+                else if ($tipoParticipante === 'Docente/Estudiante') {
+                    $docentesData = $this->request->getPost('docentes_data');
+                    $estudiantesData = $this->request->getPost('estudiantes_data');
+                    $error = false;
+            
+                    // Procesar docentes si hay datos
+                    if (!empty($docentesData)) {
+                        try {
+                            $docentes = json_decode($docentesData, true);
+                            $response = $participanteController->createDocente($pisId, $docentes);
+                            
+                            if (!$response['success']) {
+                                $error = true;
+                                $errorMessage = 'Error al guardar los docentes: ' . ($response['error'] ?? 'Error desconocido');
+                            }
+                        } catch (Exception $e) {
+                            $error = true;
+                            $errorMessage = 'Error al procesar los docentes: ' . $e->getMessage();
+                        }
+                    }
+            
+                    // Si no hubo error con docentes, procesar estudiantes
+                    if (!$error && !empty($estudiantesData)) {
+                        try {
+                            $estudiantes = json_decode($estudiantesData, true);
+
+
+                            $response = $participanteController->createEstudiante($pisId, $estudiantes);
+
+                            
+                            if (!$response['success']) {
+                                $error = true;
+                                $errorMessage = 'Error al guardar los estudiantes del modal Docente/Estudiante: ' . ($response['error'] ?? 'Error desconocido');
+
+                            }
+                        } catch (Exception $e) {
+                            $error = true;
+                            $errorMessage = 'Error al procesar los estudiantes: ' . $e->getMessage();
+                        }
+                    }
+            
+                    // Si hubo algún error, hacer rollback y retornar
+                    if ($error) {
+                        $this->pisModel->delete($pisId);
+                        return redirect()->back()->withInput()
+                            ->with('error', $errorMessage);
+                    }
+                }
+
             
                 return redirect()->to('pis')->with('message', 'Proyecto guardado exitosamente');
             } else {

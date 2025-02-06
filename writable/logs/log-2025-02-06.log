@@ -1,0 +1,807 @@
+INFO - 2025-02-06 12:02:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-06 12:02:58 --> Método login llamado
+INFO - 2025-02-06 12:02:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-06 12:02:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-06 12:03:01 --> Método login llamado
+DEBUG - 2025-02-06 12:03:01 --> Método POST detectado
+DEBUG - 2025-02-06 12:03:01 --> Datos recibidos - Username: admin
+INFO - 2025-02-06 12:03:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-06 12:03:01 --> Login exitoso, redirigiendo...
+INFO - 2025-02-06 12:03:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-06 12:03:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-06 12:03:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-06 12:03:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-06 12:03:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-06 12:03:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-06 12:04:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-06 12:04:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-06 12:06:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-06 12:06:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-06 12:10:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-06 12:10:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-06 12:14:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-06 12:14:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-06 12:14:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-06 12:22:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-02-06 12:22:11 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`db_administracion`.`pis_estudiantes`, CONSTRAINT `fk_pis_estudiantes_estudiante` FOREIGN KEY (`estudiante_id`) REFERENCES `estudiantes` (`id`) ON DELETE CASCADE ON UPDATE CASCADE) in C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `pi...', 0)
+#1 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pi...')
+#2 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pi...')
+#3 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pi...', Array, false)
+#4 C:\xampp\htdocs\analisis\app\Models\ParticipanteModel.php(74): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp\htdocs\analisis\app\Controllers\ParticipanteController.php(207): App\Models\ParticipanteModel->createAndAssociate(Array, 29, 'estudiante')
+#6 C:\xampp\htdocs\analisis\app\Controllers\PISController.php(298): App\Controllers\ParticipanteController->createEstudiante(29, Array)
+#7 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\PISController->create()
+#8 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PISController))
+#9 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\analisis\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+ERROR - 2025-02-06 12:22:11 --> Error en ParticipanteController::createEstudiante: Error al guardar los estudiantes
+INFO - 2025-02-06 12:22:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-06 12:22:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-06 12:25:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-02-06 12:25:08 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`db_administracion`.`pis_estudiantes`, CONSTRAINT `fk_pis_estudiantes_estudiante` FOREIGN KEY (`estudiante_id`) REFERENCES `estudiantes` (`id`) ON DELETE CASCADE ON UPDATE CASCADE) in C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `pi...', 0)
+#1 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pi...')
+#2 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pi...')
+#3 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pi...', Array, false)
+#4 C:\xampp\htdocs\analisis\app\Models\ParticipanteModel.php(74): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp\htdocs\analisis\app\Controllers\ParticipanteController.php(207): App\Models\ParticipanteModel->createAndAssociate(Array, 30, 'estudiante')
+#6 C:\xampp\htdocs\analisis\app\Controllers\PISController.php(298): App\Controllers\ParticipanteController->createEstudiante(30, Array)
+#7 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\PISController->create()
+#8 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PISController))
+#9 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\analisis\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+ERROR - 2025-02-06 12:25:08 --> Error en ParticipanteController::createEstudiante: Error al guardar los estudiantes
+INFO - 2025-02-06 12:25:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-06 12:25:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-06 12:33:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-06 12:33:21 --> === Debugueando Estudiantes en Docente/Estudiante ===
+DEBUG - 2025-02-06 12:33:21 --> Datos estudiantes antes de decodificar: [{"nombre":"estudiantil","cedula":"1234567896"}]
+DEBUG - 2025-02-06 12:33:21 --> Datos estudiantes después de decodificar: Array
+(
+    [0] => Array
+        (
+            [nombre] => estudiantil
+            [cedula] => 1234567896
+        )
+
+)
+
+ERROR - 2025-02-06 12:33:21 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`db_administracion`.`pis_estudiantes`, CONSTRAINT `fk_pis_estudiantes_estudiante` FOREIGN KEY (`estudiante_id`) REFERENCES `estudiantes` (`id`) ON DELETE CASCADE ON UPDATE CASCADE) in C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `pi...', 0)
+#1 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pi...')
+#2 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pi...')
+#3 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pi...', Array, false)
+#4 C:\xampp\htdocs\analisis\app\Models\ParticipanteModel.php(112): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp\htdocs\analisis\app\Controllers\ParticipanteController.php(202): App\Models\ParticipanteModel->associateWithPIS('8', 31, 'estudiante')
+#6 C:\xampp\htdocs\analisis\app\Controllers\PISController.php(304): App\Controllers\ParticipanteController->createEstudiante(31, Array)
+#7 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\PISController->create()
+#8 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PISController))
+#9 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\analisis\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+ERROR - 2025-02-06 12:33:21 --> Error en ParticipanteController::createEstudiante: Error al guardar los estudiantes
+DEBUG - 2025-02-06 12:33:21 --> Respuesta de createEstudiante: Array
+(
+    [success] => 
+    [error] => Error al guardar los estudiantes
+)
+
+ERROR - 2025-02-06 12:33:21 --> Error en respuesta: Error al guardar los estudiantes del modal Docente/Estudiante: Error al guardar los estudiantes
+INFO - 2025-02-06 12:33:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-06 12:33:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-06 12:54:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-06 12:54:25 --> TODOS los datos POST recibidos: Array
+(
+    [csrf_token_name] => 23e3adae144e46f5f141157cdb5a27f8
+    [nombre] => asdfasdf
+    [codigo] => asdfasdf
+    [tipo] => Investigación
+    [objetivo] => adfaf
+    [programa_id] => 1
+    [estado] => Detenido
+    [linea_investigacion_carrera_id] => 60
+    [facultad_entidad_area] => asdfafd
+    [coordinador_director] => asdfasf
+    [fecha_inicio] => 2025-01-30
+    [fecha_fin_planificado] => 2025-02-18
+    [fecha_fin_real] => 2025-02-04
+    [correo_coordinador] => bismuto7@gmail.com
+    [telefono_coordinador] => 0983104196
+    [campo_amplio_id] => 
+    [campo_especifico_id] => 
+    [campo_detallado_id] => 
+    [alcance_territorial] => Nacional
+    [investigadores_acreditados] => No
+    [impacto_social] => 
+    [impacto_cientifico] => 
+    [impacto_economico] => 
+    [impacto_politico] => 
+    [impacto_ambiental] => 
+    [otro_impacto] => 
+    [fuente_financiamiento] => Fondos Concursables Interno IES
+    [descripcion_actividad] => afdafs
+    [parametro_cumplimiento] => Gasto Nacional Bruto en I + D + I
+    [cooperacion] => Nacional
+    [red] => Nacional
+    [resultados_verificables] => Parciales
+    [anio] => 2025
+    [presupuesto_planificado] => 555
+    [presupuesto_ejecutado] => 555
+    [tipo_participante] => Estudiante
+    [horas] => 55
+    [publicaciones_id] => 
+    [docentes_data] => 
+    [estudiantes_data] => [{"nombre":"jbjbjb","cedula":"1234567896"}]
+)
+
+DEBUG - 2025-02-06 12:54:25 --> Datos de estudiantes recibidos: [{"nombre":"jbjbjb","cedula":"1234567896"}]
+INFO - 2025-02-06 12:54:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-06 12:54:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-06 13:06:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-06 13:06:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-06 13:06:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-06 13:06:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-06 13:08:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-06 13:08:27 --> === Inicio setTableAndValidation ===
+DEBUG - 2025-02-06 13:08:27 --> Tipo actual: docente
+DEBUG - 2025-02-06 13:08:27 --> Tabla actual antes del cambio: docentes
+DEBUG - 2025-02-06 13:08:27 --> Tabla establecida a: docentes
+DEBUG - 2025-02-06 13:08:27 --> Reglas de validación: Array
+(
+    [nombre] => required|min_length[3]|max_length[255]
+    [cedula] => required|numeric|exact_length[10]|is_unique[docentes.cedula]
+)
+
+DEBUG - 2025-02-06 13:08:27 --> === Fin setTableAndValidation ===
+DEBUG - 2025-02-06 13:08:27 --> === Inicio setTableAndValidation ===
+DEBUG - 2025-02-06 13:08:27 --> Tipo actual: estudiante
+DEBUG - 2025-02-06 13:08:27 --> Tabla actual antes del cambio: docentes
+DEBUG - 2025-02-06 13:08:27 --> Tabla establecida a: estudiantes
+DEBUG - 2025-02-06 13:08:27 --> Reglas de validación: Array
+(
+    [nombre] => required|min_length[3]|max_length[255]
+    [cedula] => required|numeric|exact_length[10]|is_unique[estudiantes.cedula]
+)
+
+DEBUG - 2025-02-06 13:08:27 --> === Fin setTableAndValidation ===
+INFO - 2025-02-06 13:08:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-06 13:08:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-06 13:10:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-06 13:10:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-06 13:10:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-06 13:10:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-06 13:10:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-06 13:10:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-06 13:12:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-06 13:12:37 --> === Inicio setTableAndValidation ===
+DEBUG - 2025-02-06 13:12:37 --> Tipo actual: docente
+DEBUG - 2025-02-06 13:12:37 --> Tabla actual antes del cambio: docentes
+DEBUG - 2025-02-06 13:12:37 --> Tabla establecida a: docentes
+DEBUG - 2025-02-06 13:12:37 --> Reglas de validación: Array
+(
+    [nombre] => required|min_length[3]|max_length[255]
+    [cedula] => required|numeric|exact_length[10]|is_unique[docentes.cedula]
+)
+
+DEBUG - 2025-02-06 13:12:37 --> === Fin setTableAndValidation ===
+DEBUG - 2025-02-06 13:12:37 --> === Inicio createAndAssociate ===
+DEBUG - 2025-02-06 13:12:37 --> Tipo: docente
+DEBUG - 2025-02-06 13:12:37 --> Datos recibidos: Array
+(
+    [nombre] => docente 1
+    [cedula] => 1111111111
+)
+
+DEBUG - 2025-02-06 13:12:37 --> === Inicio setTableAndValidation ===
+DEBUG - 2025-02-06 13:12:37 --> Tipo actual: docente
+DEBUG - 2025-02-06 13:12:37 --> Tabla actual antes del cambio: docentes
+DEBUG - 2025-02-06 13:12:37 --> Tabla establecida a: docentes
+DEBUG - 2025-02-06 13:12:37 --> Reglas de validación: Array
+(
+    [nombre] => required|min_length[3]|max_length[255]
+    [cedula] => required|numeric|exact_length[10]|is_unique[docentes.cedula]
+)
+
+DEBUG - 2025-02-06 13:12:37 --> === Fin setTableAndValidation ===
+DEBUG - 2025-02-06 13:12:37 --> Tabla actual antes de insertar: docentes
+DEBUG - 2025-02-06 13:12:37 --> === Fin createAndAssociate ===
+DEBUG - 2025-02-06 13:12:37 --> === Inicio setTableAndValidation ===
+DEBUG - 2025-02-06 13:12:37 --> Tipo actual: estudiante
+DEBUG - 2025-02-06 13:12:37 --> Tabla actual antes del cambio: docentes
+DEBUG - 2025-02-06 13:12:37 --> Tabla establecida a: estudiantes
+DEBUG - 2025-02-06 13:12:37 --> Reglas de validación: Array
+(
+    [nombre] => required|min_length[3]|max_length[255]
+    [cedula] => required|numeric|exact_length[10]|is_unique[estudiantes.cedula]
+)
+
+DEBUG - 2025-02-06 13:12:37 --> === Fin setTableAndValidation ===
+DEBUG - 2025-02-06 13:12:37 --> === Inicio createAndAssociate ===
+DEBUG - 2025-02-06 13:12:37 --> Tipo: estudiante
+DEBUG - 2025-02-06 13:12:37 --> Datos recibidos: Array
+(
+    [nombre] => estudiante 2
+    [cedula] => 2222222222
+)
+
+DEBUG - 2025-02-06 13:12:37 --> === Inicio setTableAndValidation ===
+DEBUG - 2025-02-06 13:12:37 --> Tipo actual: estudiante
+DEBUG - 2025-02-06 13:12:37 --> Tabla actual antes del cambio: estudiantes
+DEBUG - 2025-02-06 13:12:37 --> Tabla establecida a: estudiantes
+DEBUG - 2025-02-06 13:12:37 --> Reglas de validación: Array
+(
+    [nombre] => required|min_length[3]|max_length[255]
+    [cedula] => required|numeric|exact_length[10]|is_unique[estudiantes.cedula]
+)
+
+DEBUG - 2025-02-06 13:12:37 --> === Fin setTableAndValidation ===
+DEBUG - 2025-02-06 13:12:37 --> Tabla actual antes de insertar: estudiantes
+ERROR - 2025-02-06 13:12:37 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`db_administracion`.`pis_estudiantes`, CONSTRAINT `fk_pis_estudiantes_estudiante` FOREIGN KEY (`estudiante_id`) REFERENCES `estudiantes` (`id`) ON DELETE CASCADE ON UPDATE CASCADE) in C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `pi...', 0)
+#1 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pi...')
+#2 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pi...')
+#3 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pi...', Array, false)
+#4 C:\xampp\htdocs\analisis\app\Models\ParticipanteModel.php(93): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp\htdocs\analisis\app\Controllers\ParticipanteController.php(207): App\Models\ParticipanteModel->createAndAssociate(Array, 34, 'estudiante')
+#6 C:\xampp\htdocs\analisis\app\Controllers\PISController.php(300): App\Controllers\ParticipanteController->createEstudiante(34, Array)
+#7 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\PISController->create()
+#8 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PISController))
+#9 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\analisis\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+ERROR - 2025-02-06 13:12:37 --> Error en ParticipanteController::createEstudiante: Error al guardar los estudiantes
+INFO - 2025-02-06 13:12:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-06 13:12:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-06 13:42:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-06 13:42:46 --> === Inicio setTableAndValidation ===
+DEBUG - 2025-02-06 13:42:46 --> Tipo actual: estudiante
+DEBUG - 2025-02-06 13:42:46 --> Tabla actual antes del cambio: docentes
+DEBUG - 2025-02-06 13:42:46 --> Tabla establecida a: estudiantes
+DEBUG - 2025-02-06 13:42:46 --> Reglas de validación: Array
+(
+    [nombre] => required|min_length[3]|max_length[255]
+    [cedula] => required|numeric|exact_length[10]|is_unique[estudiantes.cedula]
+)
+
+DEBUG - 2025-02-06 13:42:46 --> === Fin setTableAndValidation ===
+DEBUG - 2025-02-06 13:42:46 --> === Inicio createAndAssociate ===
+DEBUG - 2025-02-06 13:42:46 --> Tipo: estudiante
+DEBUG - 2025-02-06 13:42:46 --> PIS ID: 35
+DEBUG - 2025-02-06 13:42:46 --> Datos recibidos: Array
+(
+    [nombre] => estudiar
+    [cedula] => 2222556699
+)
+
+DEBUG - 2025-02-06 13:42:46 --> === Inicio setTableAndValidation ===
+DEBUG - 2025-02-06 13:42:46 --> Tipo actual: estudiante
+DEBUG - 2025-02-06 13:42:46 --> Tabla actual antes del cambio: estudiantes
+DEBUG - 2025-02-06 13:42:46 --> Tabla establecida a: estudiantes
+DEBUG - 2025-02-06 13:42:46 --> Reglas de validación: Array
+(
+    [nombre] => required|min_length[3]|max_length[255]
+    [cedula] => required|numeric|exact_length[10]|is_unique[estudiantes.cedula]
+)
+
+DEBUG - 2025-02-06 13:42:46 --> === Fin setTableAndValidation ===
+DEBUG - 2025-02-06 13:42:46 --> Intentando insertar en tabla: estudiantes
+DEBUG - 2025-02-06 13:42:46 --> Nuevo participante creado con ID: 9
+DEBUG - 2025-02-06 13:42:46 --> Creando relación en tabla: pis_estudiantes
+DEBUG - 2025-02-06 13:42:46 --> Datos de relación: Array
+(
+    [proyecto_id] => 35
+    [estudiante_id] => 9
+)
+
+DEBUG - 2025-02-06 13:42:46 --> === Fin createAndAssociate exitoso ===
+INFO - 2025-02-06 13:42:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-06 13:42:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-06 17:18:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-06 17:18:48 --> Método login llamado
+INFO - 2025-02-06 17:18:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-06 17:18:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-06 17:18:50 --> Método login llamado
+DEBUG - 2025-02-06 17:18:50 --> Método POST detectado
+DEBUG - 2025-02-06 17:18:50 --> Datos recibidos - Username: admin
+INFO - 2025-02-06 17:18:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-06 17:18:50 --> Login exitoso, redirigiendo...
+INFO - 2025-02-06 17:18:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-06 17:18:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-06 17:18:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-06 17:18:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-06 17:18:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-06 17:18:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-06 17:21:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-06 17:21:51 --> === Inicio setTableAndValidation ===
+DEBUG - 2025-02-06 17:21:51 --> Tipo actual: docente
+DEBUG - 2025-02-06 17:21:51 --> Tabla actual antes del cambio: docentes
+DEBUG - 2025-02-06 17:21:51 --> Tabla establecida a: docentes
+DEBUG - 2025-02-06 17:21:51 --> Reglas de validación: Array
+(
+    [nombre] => required|min_length[3]|max_length[255]
+    [cedula] => required|numeric|exact_length[10]|is_unique[docentes.cedula]
+)
+
+DEBUG - 2025-02-06 17:21:51 --> === Fin setTableAndValidation ===
+DEBUG - 2025-02-06 17:21:51 --> === Inicio createAndAssociate ===
+DEBUG - 2025-02-06 17:21:51 --> Tipo: docente
+DEBUG - 2025-02-06 17:21:51 --> PIS ID: 36
+DEBUG - 2025-02-06 17:21:51 --> Datos recibidos: Array
+(
+    [nombre] => docente 1
+    [cedula] => 1111111111
+)
+
+DEBUG - 2025-02-06 17:21:51 --> === Inicio setTableAndValidation ===
+DEBUG - 2025-02-06 17:21:51 --> Tipo actual: docente
+DEBUG - 2025-02-06 17:21:51 --> Tabla actual antes del cambio: docentes
+DEBUG - 2025-02-06 17:21:51 --> Tabla establecida a: docentes
+DEBUG - 2025-02-06 17:21:51 --> Reglas de validación: Array
+(
+    [nombre] => required|min_length[3]|max_length[255]
+    [cedula] => required|numeric|exact_length[10]|is_unique[docentes.cedula]
+)
+
+DEBUG - 2025-02-06 17:21:51 --> === Fin setTableAndValidation ===
+DEBUG - 2025-02-06 17:21:51 --> Intentando insertar en tabla: docentes
+DEBUG - 2025-02-06 17:21:51 --> Nuevo participante creado con ID: 11
+DEBUG - 2025-02-06 17:21:51 --> Creando relación en tabla: pis_docentes
+DEBUG - 2025-02-06 17:21:51 --> Datos de relación: Array
+(
+    [proyecto_id] => 36
+    [docente_id] => 11
+)
+
+DEBUG - 2025-02-06 17:21:51 --> === Fin createAndAssociate exitoso ===
+DEBUG - 2025-02-06 17:21:51 --> === Inicio setTableAndValidation ===
+DEBUG - 2025-02-06 17:21:51 --> Tipo actual: estudiante
+DEBUG - 2025-02-06 17:21:51 --> Tabla actual antes del cambio: docentes
+DEBUG - 2025-02-06 17:21:51 --> Tabla establecida a: estudiantes
+DEBUG - 2025-02-06 17:21:51 --> Reglas de validación: Array
+(
+    [nombre] => required|min_length[3]|max_length[255]
+    [cedula] => required|numeric|exact_length[10]|is_unique[estudiantes.cedula]
+)
+
+DEBUG - 2025-02-06 17:21:51 --> === Fin setTableAndValidation ===
+ERROR - 2025-02-06 17:21:51 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`db_administracion`.`pis_estudiantes`, CONSTRAINT `fk_pis_estudiantes_estudiante` FOREIGN KEY (`estudiante_id`) REFERENCES `estudiantes` (`id`) ON DELETE CASCADE ON UPDATE CASCADE) in C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `pi...', 0)
+#1 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pi...')
+#2 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pi...')
+#3 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pi...', Array, false)
+#4 C:\xampp\htdocs\analisis\app\Models\ParticipanteModel.php(177): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp\htdocs\analisis\app\Controllers\ParticipanteController.php(202): App\Models\ParticipanteModel->associateWithPIS('11', 36, 'estudiante')
+#6 C:\xampp\htdocs\analisis\app\Controllers\PISController.php(300): App\Controllers\ParticipanteController->createEstudiante(36, Array)
+#7 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\PISController->create()
+#8 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PISController))
+#9 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\analisis\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+DEBUG - 2025-02-06 17:21:51 --> === Inicio setTableAndValidation ===
+DEBUG - 2025-02-06 17:21:51 --> Tipo actual: estudiante
+DEBUG - 2025-02-06 17:21:51 --> Tabla actual antes del cambio: estudiantes
+DEBUG - 2025-02-06 17:21:51 --> Tabla establecida a: estudiantes
+DEBUG - 2025-02-06 17:21:51 --> Reglas de validación: Array
+(
+    [nombre] => required|min_length[3]|max_length[255]
+    [cedula] => required|numeric|exact_length[10]|is_unique[estudiantes.cedula]
+)
+
+DEBUG - 2025-02-06 17:21:51 --> === Fin setTableAndValidation ===
+DEBUG - 2025-02-06 17:21:51 --> === Inicio createAndAssociate ===
+DEBUG - 2025-02-06 17:21:51 --> Tipo: estudiante
+DEBUG - 2025-02-06 17:21:51 --> PIS ID: 36
+DEBUG - 2025-02-06 17:21:51 --> Datos recibidos: Array
+(
+    [nombre] => estudiante 2
+    [cedula] => 2222222222
+)
+
+DEBUG - 2025-02-06 17:21:51 --> === Inicio setTableAndValidation ===
+DEBUG - 2025-02-06 17:21:51 --> Tipo actual: estudiante
+DEBUG - 2025-02-06 17:21:51 --> Tabla actual antes del cambio: estudiantes
+DEBUG - 2025-02-06 17:21:51 --> Tabla establecida a: estudiantes
+DEBUG - 2025-02-06 17:21:51 --> Reglas de validación: Array
+(
+    [nombre] => required|min_length[3]|max_length[255]
+    [cedula] => required|numeric|exact_length[10]|is_unique[estudiantes.cedula]
+)
+
+DEBUG - 2025-02-06 17:21:51 --> === Fin setTableAndValidation ===
+DEBUG - 2025-02-06 17:21:51 --> Intentando insertar en tabla: estudiantes
+DEBUG - 2025-02-06 17:21:51 --> Nuevo participante creado con ID: 12
+DEBUG - 2025-02-06 17:21:51 --> Creando relación en tabla: pis_estudiantes
+DEBUG - 2025-02-06 17:21:51 --> Datos de relación: Array
+(
+    [proyecto_id] => 36
+    [estudiante_id] => 12
+)
+
+ERROR - 2025-02-06 17:21:51 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`db_administracion`.`pis_estudiantes`, CONSTRAINT `fk_pis_estudiantes_estudiante` FOREIGN KEY (`estudiante_id`) REFERENCES `estudiantes` (`id`) ON DELETE CASCADE ON UPDATE CASCADE) in C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `pi...', 0)
+#1 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pi...')
+#2 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pi...')
+#3 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pi...', Array, false)
+#4 C:\xampp\htdocs\analisis\app\Models\ParticipanteModel.php(126): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp\htdocs\analisis\app\Controllers\ParticipanteController.php(207): App\Models\ParticipanteModel->createAndAssociate(Array, 36, 'estudiante')
+#6 C:\xampp\htdocs\analisis\app\Controllers\PISController.php(300): App\Controllers\ParticipanteController->createEstudiante(36, Array)
+#7 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\PISController->create()
+#8 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PISController))
+#9 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\analisis\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+ERROR - 2025-02-06 17:21:51 --> Error al crear relación en pis_estudiantes
+ERROR - 2025-02-06 17:21:51 --> Error en createAndAssociate: Error al crear relación
+ERROR - 2025-02-06 17:21:51 --> Stack trace: #0 C:\xampp\htdocs\analisis\app\Controllers\ParticipanteController.php(207): App\Models\ParticipanteModel->createAndAssociate(Array, 36, 'estudiante')
+#1 C:\xampp\htdocs\analisis\app\Controllers\PISController.php(300): App\Controllers\ParticipanteController->createEstudiante(36, Array)
+#2 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\PISController->create()
+#3 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PISController))
+#4 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#6 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#7 C:\xampp\htdocs\analisis\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#8 {main}
+ERROR - 2025-02-06 17:21:51 --> Error en ParticipanteController::createEstudiante: Error al guardar los estudiantes
+INFO - 2025-02-06 17:21:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-06 17:21:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-06 17:28:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-06 17:28:33 --> === Inicio setTableAndValidation ===
+DEBUG - 2025-02-06 17:28:33 --> Tipo actual: estudiante
+DEBUG - 2025-02-06 17:28:33 --> Tabla actual antes del cambio: docentes
+DEBUG - 2025-02-06 17:28:33 --> Tabla establecida a: estudiantes
+DEBUG - 2025-02-06 17:28:33 --> Reglas de validación: Array
+(
+    [nombre] => required|min_length[3]|max_length[255]
+    [cedula] => required|numeric|exact_length[10]|is_unique[estudiantes.cedula]
+)
+
+DEBUG - 2025-02-06 17:28:33 --> === Fin setTableAndValidation ===
+DEBUG - 2025-02-06 17:28:33 --> === Inicio createAndAssociate ===
+DEBUG - 2025-02-06 17:28:33 --> Tipo: estudiante
+DEBUG - 2025-02-06 17:28:33 --> PIS ID: 37
+DEBUG - 2025-02-06 17:28:33 --> Datos recibidos: Array
+(
+    [nombre] => sdsd
+    [cedula] => 1111111111
+)
+
+DEBUG - 2025-02-06 17:28:33 --> === Inicio setTableAndValidation ===
+DEBUG - 2025-02-06 17:28:33 --> Tipo actual: estudiante
+DEBUG - 2025-02-06 17:28:33 --> Tabla actual antes del cambio: estudiantes
+DEBUG - 2025-02-06 17:28:33 --> Tabla establecida a: estudiantes
+DEBUG - 2025-02-06 17:28:33 --> Reglas de validación: Array
+(
+    [nombre] => required|min_length[3]|max_length[255]
+    [cedula] => required|numeric|exact_length[10]|is_unique[estudiantes.cedula]
+)
+
+DEBUG - 2025-02-06 17:28:33 --> === Fin setTableAndValidation ===
+DEBUG - 2025-02-06 17:28:33 --> Intentando insertar en tabla: estudiantes
+DEBUG - 2025-02-06 17:28:33 --> Nuevo participante creado con ID: 10
+DEBUG - 2025-02-06 17:28:33 --> Creando relación en tabla: pis_estudiantes
+DEBUG - 2025-02-06 17:28:33 --> Datos de relación: Array
+(
+    [proyecto_id] => 37
+    [estudiante_id] => 10
+)
+
+DEBUG - 2025-02-06 17:28:33 --> === Fin createAndAssociate exitoso ===
+INFO - 2025-02-06 17:28:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-06 17:28:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-06 17:29:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-06 17:29:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-06 17:29:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-06 17:29:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-06 17:31:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-06 17:31:04 --> === Inicio setTableAndValidation ===
+DEBUG - 2025-02-06 17:31:04 --> Tipo actual: docente
+DEBUG - 2025-02-06 17:31:04 --> Tabla actual antes del cambio: docentes
+DEBUG - 2025-02-06 17:31:04 --> Tabla establecida a: docentes
+DEBUG - 2025-02-06 17:31:04 --> Reglas de validación: Array
+(
+    [nombre] => required|min_length[3]|max_length[255]
+    [cedula] => required|numeric|exact_length[10]|is_unique[docentes.cedula]
+)
+
+DEBUG - 2025-02-06 17:31:04 --> === Fin setTableAndValidation ===
+DEBUG - 2025-02-06 17:31:04 --> === Inicio createAndAssociate ===
+DEBUG - 2025-02-06 17:31:04 --> Tipo: docente
+DEBUG - 2025-02-06 17:31:04 --> PIS ID: 38
+DEBUG - 2025-02-06 17:31:04 --> Datos recibidos: Array
+(
+    [nombre] => docente 1
+    [cedula] => 1111111111
+)
+
+DEBUG - 2025-02-06 17:31:04 --> === Inicio setTableAndValidation ===
+DEBUG - 2025-02-06 17:31:04 --> Tipo actual: docente
+DEBUG - 2025-02-06 17:31:04 --> Tabla actual antes del cambio: docentes
+DEBUG - 2025-02-06 17:31:04 --> Tabla establecida a: docentes
+DEBUG - 2025-02-06 17:31:04 --> Reglas de validación: Array
+(
+    [nombre] => required|min_length[3]|max_length[255]
+    [cedula] => required|numeric|exact_length[10]|is_unique[docentes.cedula]
+)
+
+DEBUG - 2025-02-06 17:31:04 --> === Fin setTableAndValidation ===
+DEBUG - 2025-02-06 17:31:04 --> Intentando insertar en tabla: docentes
+DEBUG - 2025-02-06 17:31:04 --> Nuevo participante creado con ID: 13
+DEBUG - 2025-02-06 17:31:04 --> Creando relación en tabla: pis_docentes
+DEBUG - 2025-02-06 17:31:04 --> Datos de relación: Array
+(
+    [proyecto_id] => 38
+    [docente_id] => 13
+)
+
+DEBUG - 2025-02-06 17:31:04 --> === Fin createAndAssociate exitoso ===
+DEBUG - 2025-02-06 17:31:04 --> === Inicio setTableAndValidation ===
+DEBUG - 2025-02-06 17:31:04 --> Tipo actual: estudiante
+DEBUG - 2025-02-06 17:31:04 --> Tabla actual antes del cambio: docentes
+DEBUG - 2025-02-06 17:31:04 --> Tabla establecida a: estudiantes
+DEBUG - 2025-02-06 17:31:04 --> Reglas de validación: Array
+(
+    [nombre] => required|min_length[3]|max_length[255]
+    [cedula] => required|numeric|exact_length[10]|is_unique[estudiantes.cedula]
+)
+
+DEBUG - 2025-02-06 17:31:04 --> === Fin setTableAndValidation ===
+DEBUG - 2025-02-06 17:31:04 --> === Inicio createAndAssociate ===
+DEBUG - 2025-02-06 17:31:04 --> Tipo: estudiante
+DEBUG - 2025-02-06 17:31:04 --> PIS ID: 38
+DEBUG - 2025-02-06 17:31:04 --> Datos recibidos: Array
+(
+    [nombre] => estudiante 1
+    [cedula] => 2222222222
+)
+
+DEBUG - 2025-02-06 17:31:04 --> === Inicio setTableAndValidation ===
+DEBUG - 2025-02-06 17:31:04 --> Tipo actual: estudiante
+DEBUG - 2025-02-06 17:31:04 --> Tabla actual antes del cambio: estudiantes
+DEBUG - 2025-02-06 17:31:04 --> Tabla establecida a: estudiantes
+DEBUG - 2025-02-06 17:31:04 --> Reglas de validación: Array
+(
+    [nombre] => required|min_length[3]|max_length[255]
+    [cedula] => required|numeric|exact_length[10]|is_unique[estudiantes.cedula]
+)
+
+DEBUG - 2025-02-06 17:31:04 --> === Fin setTableAndValidation ===
+DEBUG - 2025-02-06 17:31:04 --> Intentando insertar en tabla: estudiantes
+DEBUG - 2025-02-06 17:31:04 --> Nuevo participante creado con ID: 14
+DEBUG - 2025-02-06 17:31:04 --> Creando relación en tabla: pis_estudiantes
+DEBUG - 2025-02-06 17:31:04 --> Datos de relación: Array
+(
+    [proyecto_id] => 38
+    [estudiante_id] => 14
+)
+
+ERROR - 2025-02-06 17:31:04 --> mysqli_sql_exception: Cannot add or update a child row: a foreign key constraint fails (`db_administracion`.`pis_estudiantes`, CONSTRAINT `fk_pis_estudiantes_estudiante` FOREIGN KEY (`estudiante_id`) REFERENCES `estudiantes` (`id`) ON DELETE CASCADE ON UPDATE CASCADE) in C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `pi...', 0)
+#1 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `pi...')
+#2 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `pi...')
+#3 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `pi...', Array, false)
+#4 C:\xampp\htdocs\analisis\app\Models\ParticipanteModel.php(126): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp\htdocs\analisis\app\Controllers\ParticipanteController.php(207): App\Models\ParticipanteModel->createAndAssociate(Array, 38, 'estudiante')
+#6 C:\xampp\htdocs\analisis\app\Controllers\PISController.php(300): App\Controllers\ParticipanteController->createEstudiante(38, Array)
+#7 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\PISController->create()
+#8 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PISController))
+#9 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\analisis\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+ERROR - 2025-02-06 17:31:04 --> Error al crear relación en pis_estudiantes
+ERROR - 2025-02-06 17:31:04 --> Error en createAndAssociate: Error al crear relación
+ERROR - 2025-02-06 17:31:04 --> Stack trace: #0 C:\xampp\htdocs\analisis\app\Controllers\ParticipanteController.php(207): App\Models\ParticipanteModel->createAndAssociate(Array, 38, 'estudiante')
+#1 C:\xampp\htdocs\analisis\app\Controllers\PISController.php(300): App\Controllers\ParticipanteController->createEstudiante(38, Array)
+#2 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\PISController->create()
+#3 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PISController))
+#4 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#5 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#6 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#7 C:\xampp\htdocs\analisis\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#8 {main}
+ERROR - 2025-02-06 17:31:04 --> Error en ParticipanteController::createEstudiante: Error al guardar los estudiantes
+INFO - 2025-02-06 17:31:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-06 17:31:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-06 17:46:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-06 17:46:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-06 17:47:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-06 17:47:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-06 17:47:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-06 17:47:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-06 17:48:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-06 17:48:37 --> === Inicio setTableAndValidation ===
+DEBUG - 2025-02-06 17:48:37 --> Tipo actual: docente
+DEBUG - 2025-02-06 17:48:37 --> Tabla actual antes del cambio: docentes
+DEBUG - 2025-02-06 17:48:37 --> Tabla establecida a: docentes
+DEBUG - 2025-02-06 17:48:37 --> Reglas de validación: Array
+(
+    [nombre] => required|min_length[3]|max_length[255]
+    [cedula] => required|numeric|exact_length[10]|is_unique[docentes.cedula]
+)
+
+DEBUG - 2025-02-06 17:48:37 --> === Fin setTableAndValidation ===
+DEBUG - 2025-02-06 17:48:38 --> === Inicio createAndAssociate ===
+DEBUG - 2025-02-06 17:48:38 --> Tipo: docente
+DEBUG - 2025-02-06 17:48:38 --> PIS ID: 39
+DEBUG - 2025-02-06 17:48:38 --> Datos recibidos: Array
+(
+    [nombre] => docente 1
+    [cedula] => 1111111111
+)
+
+DEBUG - 2025-02-06 17:48:38 --> === Inicio setTableAndValidation ===
+DEBUG - 2025-02-06 17:48:38 --> Tipo actual: docente
+DEBUG - 2025-02-06 17:48:38 --> Tabla actual antes del cambio: docentes
+DEBUG - 2025-02-06 17:48:38 --> Tabla establecida a: docentes
+DEBUG - 2025-02-06 17:48:38 --> Reglas de validación: Array
+(
+    [nombre] => required|min_length[3]|max_length[255]
+    [cedula] => required|numeric|exact_length[10]|is_unique[docentes.cedula]
+)
+
+DEBUG - 2025-02-06 17:48:38 --> === Fin setTableAndValidation ===
+DEBUG - 2025-02-06 17:48:38 --> Intentando insertar en tabla: docentes
+DEBUG - 2025-02-06 17:48:38 --> ID insertado en docentes: 15
+DEBUG - 2025-02-06 17:48:38 --> Creando relación en tabla: pis_docentes
+DEBUG - 2025-02-06 17:48:38 --> Datos de relación: Array
+(
+    [proyecto_id] => 39
+    [docente_id] => 15
+)
+
+DEBUG - 2025-02-06 17:48:38 --> === Fin createAndAssociate exitoso ===
+DEBUG - 2025-02-06 17:48:38 --> === Inicio setTableAndValidation ===
+DEBUG - 2025-02-06 17:48:38 --> Tipo actual: estudiante
+DEBUG - 2025-02-06 17:48:38 --> Tabla actual antes del cambio: docentes
+DEBUG - 2025-02-06 17:48:38 --> Tabla establecida a: estudiantes
+DEBUG - 2025-02-06 17:48:38 --> Reglas de validación: Array
+(
+    [nombre] => required|min_length[3]|max_length[255]
+    [cedula] => required|numeric|exact_length[10]|is_unique[estudiantes.cedula]
+)
+
+DEBUG - 2025-02-06 17:48:38 --> === Fin setTableAndValidation ===
+DEBUG - 2025-02-06 17:48:38 --> === Inicio createAndAssociate ===
+DEBUG - 2025-02-06 17:48:38 --> Tipo: estudiante
+DEBUG - 2025-02-06 17:48:38 --> PIS ID: 39
+DEBUG - 2025-02-06 17:48:38 --> Datos recibidos: Array
+(
+    [nombre] => estudiante 1
+    [cedula] => 3333333333
+)
+
+DEBUG - 2025-02-06 17:48:38 --> === Inicio setTableAndValidation ===
+DEBUG - 2025-02-06 17:48:38 --> Tipo actual: estudiante
+DEBUG - 2025-02-06 17:48:38 --> Tabla actual antes del cambio: estudiantes
+DEBUG - 2025-02-06 17:48:38 --> Tabla establecida a: estudiantes
+DEBUG - 2025-02-06 17:48:38 --> Reglas de validación: Array
+(
+    [nombre] => required|min_length[3]|max_length[255]
+    [cedula] => required|numeric|exact_length[10]|is_unique[estudiantes.cedula]
+)
+
+DEBUG - 2025-02-06 17:48:38 --> === Fin setTableAndValidation ===
+DEBUG - 2025-02-06 17:48:38 --> Intentando insertar en tabla: estudiantes
+DEBUG - 2025-02-06 17:48:38 --> ID insertado en estudiantes: 12
+DEBUG - 2025-02-06 17:48:38 --> Creando relación en tabla: pis_estudiantes
+DEBUG - 2025-02-06 17:48:38 --> Datos de relación: Array
+(
+    [proyecto_id] => 39
+    [estudiante_id] => 12
+)
+
+DEBUG - 2025-02-06 17:48:38 --> === Fin createAndAssociate exitoso ===
+INFO - 2025-02-06 17:48:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-06 17:48:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-06 17:53:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-06 17:53:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-06 17:53:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-06 17:53:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-06 17:55:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-06 17:55:04 --> === Inicio setTableAndValidation ===
+DEBUG - 2025-02-06 17:55:04 --> Tipo actual: docente
+DEBUG - 2025-02-06 17:55:04 --> Tabla actual antes del cambio: docentes
+DEBUG - 2025-02-06 17:55:04 --> Tabla establecida a: docentes
+DEBUG - 2025-02-06 17:55:04 --> Reglas de validación: Array
+(
+    [nombre] => required|min_length[3]|max_length[255]
+    [cedula] => required|numeric|exact_length[10]|is_unique[docentes.cedula]
+)
+
+DEBUG - 2025-02-06 17:55:04 --> === Fin setTableAndValidation ===
+DEBUG - 2025-02-06 17:55:04 --> === Inicio createAndAssociate ===
+DEBUG - 2025-02-06 17:55:04 --> Tipo: docente
+DEBUG - 2025-02-06 17:55:04 --> PIS ID: 40
+DEBUG - 2025-02-06 17:55:04 --> Datos recibidos: Array
+(
+    [nombre] => docente 1
+    [cedula] => 1111111111
+)
+
+DEBUG - 2025-02-06 17:55:04 --> === Inicio setTableAndValidation ===
+DEBUG - 2025-02-06 17:55:04 --> Tipo actual: docente
+DEBUG - 2025-02-06 17:55:04 --> Tabla actual antes del cambio: docentes
+DEBUG - 2025-02-06 17:55:04 --> Tabla establecida a: docentes
+DEBUG - 2025-02-06 17:55:04 --> Reglas de validación: Array
+(
+    [nombre] => required|min_length[3]|max_length[255]
+    [cedula] => required|numeric|exact_length[10]|is_unique[docentes.cedula]
+)
+
+DEBUG - 2025-02-06 17:55:04 --> === Fin setTableAndValidation ===
+DEBUG - 2025-02-06 17:55:04 --> Intentando insertar en tabla: docentes
+DEBUG - 2025-02-06 17:55:04 --> ID insertado en docentes: 16
+DEBUG - 2025-02-06 17:55:04 --> Creando relación en tabla: pis_docentes
+DEBUG - 2025-02-06 17:55:04 --> Datos de relación: Array
+(
+    [proyecto_id] => 40
+    [docente_id] => 16
+)
+
+DEBUG - 2025-02-06 17:55:04 --> === Fin createAndAssociate exitoso ===
+DEBUG - 2025-02-06 17:55:04 --> === Inicio setTableAndValidation ===
+DEBUG - 2025-02-06 17:55:04 --> Tipo actual: estudiante
+DEBUG - 2025-02-06 17:55:04 --> Tabla actual antes del cambio: docentes
+DEBUG - 2025-02-06 17:55:04 --> Tabla establecida a: estudiantes
+DEBUG - 2025-02-06 17:55:04 --> Reglas de validación: Array
+(
+    [nombre] => required|min_length[3]|max_length[255]
+    [cedula] => required|numeric|exact_length[10]|is_unique[estudiantes.cedula]
+)
+
+DEBUG - 2025-02-06 17:55:04 --> === Fin setTableAndValidation ===
+DEBUG - 2025-02-06 17:55:04 --> === Inicio createAndAssociate ===
+DEBUG - 2025-02-06 17:55:04 --> Tipo: estudiante
+DEBUG - 2025-02-06 17:55:04 --> PIS ID: 40
+DEBUG - 2025-02-06 17:55:04 --> Datos recibidos: Array
+(
+    [nombre] => estudiante 1
+    [cedula] => 4444444444
+)
+
+DEBUG - 2025-02-06 17:55:04 --> === Inicio setTableAndValidation ===
+DEBUG - 2025-02-06 17:55:04 --> Tipo actual: estudiante
+DEBUG - 2025-02-06 17:55:04 --> Tabla actual antes del cambio: estudiantes
+DEBUG - 2025-02-06 17:55:04 --> Tabla establecida a: estudiantes
+DEBUG - 2025-02-06 17:55:04 --> Reglas de validación: Array
+(
+    [nombre] => required|min_length[3]|max_length[255]
+    [cedula] => required|numeric|exact_length[10]|is_unique[estudiantes.cedula]
+)
+
+DEBUG - 2025-02-06 17:55:04 --> === Fin setTableAndValidation ===
+DEBUG - 2025-02-06 17:55:04 --> Intentando insertar en tabla: estudiantes
+DEBUG - 2025-02-06 17:55:04 --> ID insertado en estudiantes: 13
+DEBUG - 2025-02-06 17:55:04 --> Creando relación en tabla: pis_estudiantes
+DEBUG - 2025-02-06 17:55:04 --> Datos de relación: Array
+(
+    [proyecto_id] => 40
+    [estudiante_id] => 13
+)
+
+DEBUG - 2025-02-06 17:55:04 --> === Fin createAndAssociate exitoso ===
+INFO - 2025-02-06 17:55:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-06 17:55:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

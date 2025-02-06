@@ -75,7 +75,7 @@ class PISModelo extends Model
         'anio' => 'required|numeric|exact_length[4]|greater_than[1999]|less_than[2101]',
         'presupuesto_planificado' => 'required|numeric|greater_than[0]|decimal',
         'presupuesto_ejecutado' => 'required|numeric|greater_than_equal_to[0]|decimal',
-        'tipo_participante' => 'required|in_list[Docente,Estudiante,Ambos]',
+        'tipo_participante' => 'required|in_list[Docente,Estudiante,Docente/Estudiante]',
         'horas' => 'required|integer|greater_than[0]',
         'publicaciones_id' => 'permit_empty|integer',
         'proyecto_path' => 'permit_empty',
