@@ -139,7 +139,6 @@ class PISController extends BaseController
 
             return view('pis/create', $data);
         } catch (Exception $e) {
-            log_message('error', 'Error en PISController::new: ' . $e->getMessage());
             return view('pis/create', [
                 'error' => 'Error al cargar los datos del formulario'
             ]);
@@ -242,9 +241,7 @@ class PISController extends BaseController
                     $estudiantesData = $this->request->getPost('estudiantes_data');
 
                     // Verificar si hay datos de estudiantes
-                    log_message('debug', 'TODOS los datos POST recibidos: ' . print_r($this->request->getPost(), true));
                     $estudiantesData = $this->request->getPost('estudiantes_data');
-                    log_message('debug', 'Datos de estudiantes recibidos: ' . print_r($estudiantesData, true));
 
 
                     if (!empty($estudiantesData)) {
@@ -551,10 +548,8 @@ class PISController extends BaseController
             $lineas = $this->pisModel->getLineasConCarrera();
         
             // Agregar logs para depuración
-            log_message('debug', 'Datos recibidos de getLineasConCarrera(): ' . print_r($lineas, true));
             
             if (empty($lineas)) {
-                log_message('debug', 'No se encontraron líneas de investigación');
             }
 
             $response = [
@@ -562,13 +557,11 @@ class PISController extends BaseController
                 'data' => $lineas
             ];
 
-            log_message('debug', 'Respuesta que se enviará al frontend: ' . print_r($response, true));
             
             return $this->response->setJSON($response);
 
 
         } catch (Exception $e) {
-            log_message('error', 'Error en PISController::lineasInvestigacionList: ' . $e->getMessage());
             return $this->response->setJSON([
                 'success' => false,
                 'error' => 'Error al cargar las líneas de investigación'
@@ -654,7 +647,6 @@ class PISController extends BaseController
             return $this->response->setStatusCode(500)
                 ->setJSON(['error' => 'Error al actualizar la línea de investigación']);
         } catch (Exception $e) {
-            log_message('error', 'Error en lineasInvestigacionUpdate: ' . $e->getMessage());
             return $this->response->setStatusCode(500)
                 ->setJSON(['error' => 'Error al actualizar la línea de investigación']);
         }

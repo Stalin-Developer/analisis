@@ -28,9 +28,6 @@ class ParticipanteModel extends Model
     // Método para cambiar la tabla y sus validaciones
     protected function setTableAndValidation($type = 'docente')
     {
-        log_message('debug', '=== Inicio setTableAndValidation ===');
-        log_message('debug', 'Tipo actual: ' . $type);
-        log_message('debug', 'Tabla actual antes del cambio: ' . $this->table);
 
 
 
@@ -48,9 +45,6 @@ class ParticipanteModel extends Model
             ];
         }
 
-        log_message('debug', 'Tabla establecida a: ' . $this->table);
-        log_message('debug', 'Reglas de validación: ' . print_r($this->validationRules, true));
-        log_message('debug', '=== Fin setTableAndValidation ===');
 
 
         $this->validationMessages = [
@@ -73,17 +67,12 @@ class ParticipanteModel extends Model
 
     public function createAndAssociate($data, $pisId, $type = 'docente')
     {
-        log_message('debug', '=== Inicio createAndAssociate ===');
-        log_message('debug', 'Tipo: ' . $type);
-        log_message('debug', 'PIS ID: ' . $pisId);
-        log_message('debug', 'Datos recibidos: ' . print_r($data, true));
 
         $this->db->transBegin();
 
         try {
             // Primero insertar el participante
             $this->setTableAndValidation($type);
-            log_message('debug', 'Intentando insertar en tabla: ' . $this->table);
 
             // Verificamos que la inserción fue exitosa
             if (!$this->db->table($this->table)->insert($data)) {
@@ -92,7 +81,6 @@ class ParticipanteModel extends Model
 
             // Obtenemos el ID del participante recién insertado
             $participanteId = $this->db->insertID();
-            log_message('debug', 'ID insertado en ' . $this->table . ': ' . $participanteId);
 
             // Verificamos que se obtuvo un ID válido
             if (!$participanteId) {
@@ -109,12 +97,10 @@ class ParticipanteModel extends Model
             $pivotTable = $type === 'estudiante' ? 'pis_estudiantes' : 'pis_docentes';
             $participanteColumn = $type === 'estudiante' ? 'estudiante_id' : 'docente_id';
 
-            log_message('debug', 'Creando relación en tabla: ' . $pivotTable);
             $dataRelacion = [
                 'proyecto_id' => $pisId,
                 $participanteColumn => $participanteId
             ];
-            log_message('debug', 'Datos de relación: ' . print_r($dataRelacion, true));
 
             if (!$this->db->table($pivotTable)->insert($dataRelacion)) {
                 throw new Exception('Error al crear relación en ' . $pivotTable);
@@ -126,12 +112,9 @@ class ParticipanteModel extends Model
             }
 
             $this->db->transCommit();
-            log_message('debug', '=== Fin createAndAssociate exitoso ===');
             return $participanteId;
 
         } catch (Exception $e) {
-            log_message('error', 'Error en createAndAssociate: ' . $e->getMessage());
-            log_message('error', 'Stack trace: ' . $e->getTraceAsString());
             $this->db->transRollback();
             return false;
         }

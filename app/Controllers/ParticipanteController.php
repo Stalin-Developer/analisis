@@ -86,7 +86,6 @@ class ParticipanteController extends BaseController
             }
 
         } catch (Exception $e) {
-            log_message('error', 'Error en ParticipanteController::createDocente: ' . $e->getMessage());
             return [
                 'success' => false,
                 'error' => $e->getMessage()
@@ -234,7 +233,6 @@ class ParticipanteController extends BaseController
             }
 
         } catch (Exception $e) {
-            log_message('error', 'Error en ParticipanteController::createEstudiante: ' . $e->getMessage());
             return [
                 'success' => false,
                 'error' => $e->getMessage()
