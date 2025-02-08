@@ -1,0 +1,660 @@
+INFO - 2025-02-07 15:37:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-07 15:37:35 --> Método login llamado
+INFO - 2025-02-07 15:37:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-07 15:37:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-07 15:37:37 --> Método login llamado
+DEBUG - 2025-02-07 15:37:37 --> Método POST detectado
+DEBUG - 2025-02-07 15:37:37 --> Datos recibidos - Username: admin
+INFO - 2025-02-07 15:37:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-07 15:37:37 --> Login exitoso, redirigiendo...
+INFO - 2025-02-07 15:37:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-07 15:37:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-07 15:37:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-07 15:37:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-07 15:38:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-07 15:38:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-07 15:38:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-02-07 15:38:56 --> mysqli_sql_exception: Duplicate entry '1122334455' for key 'idx_cedula' in C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `es...', 0)
+#1 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `es...')
+#2 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `es...')
+#3 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `es...', Array, false)
+#4 C:\xampp\htdocs\analisis\app\Models\ParticipanteModel.php(78): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp\htdocs\analisis\app\Controllers\ParticipanteController.php(206): App\Models\ParticipanteModel->createAndAssociate(Array, '43', 'estudiante')
+#6 C:\xampp\htdocs\analisis\app\Controllers\PISController.php(512): App\Controllers\ParticipanteController->createEstudiante('43', Array)
+#7 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\PISController->update('43')
+#8 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PISController))
+#9 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\analisis\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+INFO - 2025-02-07 15:38:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-07 15:38:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-07 15:52:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-02-07 15:52:23 --> mysqli_sql_exception: Duplicate entry '1122334455' for key 'idx_cedula' in C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `es...', 0)
+#1 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `es...')
+#2 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `es...')
+#3 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `es...', Array, false)
+#4 C:\xampp\htdocs\analisis\app\Models\ParticipanteModel.php(83): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp\htdocs\analisis\app\Controllers\ParticipanteController.php(206): App\Models\ParticipanteModel->createAndAssociate(Array, '43', 'estudiante')
+#6 C:\xampp\htdocs\analisis\app\Controllers\PISController.php(512): App\Controllers\ParticipanteController->createEstudiante('43', Array)
+#7 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\PISController->update('43')
+#8 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PISController))
+#9 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\analisis\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+INFO - 2025-02-07 15:52:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-07 15:52:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-07 15:52:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-07 15:52:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-07 15:52:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-07 15:52:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-07 16:01:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-07 16:01:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-07 16:01:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-02-07 16:01:27 --> mysqli_sql_exception: Duplicate entry '1122334455' for key 'idx_cedula' in C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `es...', 0)
+#1 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `es...')
+#2 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `es...')
+#3 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `es...', Array, false)
+#4 C:\xampp\htdocs\analisis\app\Models\ParticipanteModel.php(83): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp\htdocs\analisis\app\Controllers\ParticipanteController.php(206): App\Models\ParticipanteModel->createAndAssociate(Array, '43', 'estudiante')
+#6 C:\xampp\htdocs\analisis\app\Controllers\PISController.php(512): App\Controllers\ParticipanteController->createEstudiante('43', Array)
+#7 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\PISController->update('43')
+#8 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PISController))
+#9 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\analisis\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+INFO - 2025-02-07 16:01:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-07 16:01:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-07 16:04:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-07 16:04:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-07 16:04:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-07 16:04:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-07 16:04:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-07 16:04:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-07 16:04:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-07 16:05:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-07 16:05:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-07 16:05:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-07 16:05:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-07 16:05:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-07 16:05:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-07 16:05:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-07 16:05:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-07 16:05:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-07 16:05:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-02-07 16:05:51 --> mysqli_sql_exception: Duplicate entry '9988774455' for key 'idx_cedula' in C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `es...', 0)
+#1 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `es...')
+#2 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `es...')
+#3 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `es...', Array, false)
+#4 C:\xampp\htdocs\analisis\app\Models\ParticipanteModel.php(83): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp\htdocs\analisis\app\Controllers\ParticipanteController.php(206): App\Models\ParticipanteModel->createAndAssociate(Array, '44', 'estudiante')
+#6 C:\xampp\htdocs\analisis\app\Controllers\PISController.php(512): App\Controllers\ParticipanteController->createEstudiante('44', Array)
+#7 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\PISController->update('44')
+#8 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PISController))
+#9 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\analisis\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+INFO - 2025-02-07 16:05:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-07 16:05:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-07 16:12:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-07 16:12:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-07 16:12:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-07 16:12:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-07 16:12:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-07 16:12:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-07 16:12:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-07 16:12:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-07 16:12:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-07 16:14:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-07 16:14:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-07 16:14:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-07 16:14:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-07 16:14:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-07 16:14:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-07 16:14:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-07 16:14:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-07 16:14:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-07 16:14:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-07 16:14:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-07 16:14:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-07 16:15:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-07 16:15:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-07 16:15:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-07 16:15:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-07 16:15:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-07 16:15:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-07 16:15:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-07 16:15:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-07 16:15:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-07 16:15:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-07 16:15:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-07 16:15:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-07 16:15:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-07 16:15:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-07 16:15:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-07 16:15:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-07 16:40:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-07 16:40:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-07 16:40:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-07 16:40:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-07 16:42:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-02-07 16:42:15 --> mysqli_sql_exception: Duplicate entry '1122334455' for key 'idx_cedula' in C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `es...', 0)
+#1 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `es...')
+#2 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `es...')
+#3 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `es...', Array, false)
+#4 C:\xampp\htdocs\analisis\app\Models\ParticipanteModel.php(78): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp\htdocs\analisis\app\Controllers\ParticipanteController.php(206): App\Models\ParticipanteModel->createAndAssociate(Array, '44', 'estudiante')
+#6 C:\xampp\htdocs\analisis\app\Controllers\PISController.php(512): App\Controllers\ParticipanteController->createEstudiante('44', Array)
+#7 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\PISController->update('44')
+#8 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PISController))
+#9 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\analisis\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+INFO - 2025-02-07 16:42:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-07 16:42:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-07 16:42:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-07 16:42:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-07 16:42:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-07 16:42:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-07 16:42:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-07 16:43:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-07 16:43:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-07 16:43:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-07 16:43:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-07 16:43:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-07 16:43:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-07 16:43:28 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-07 16:43:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-07 16:43:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-07 16:43:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-07 16:43:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-07 16:43:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-07 16:44:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-07 16:44:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-07 16:44:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-07 16:44:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-07 16:45:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-07 16:45:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-07 16:45:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-07 16:46:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-07 16:46:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-07 16:46:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-02-07 16:46:53 --> mysqli_sql_exception: Duplicate entry '456' for key 'idx_cedula' in C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `es...', 0)
+#1 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `es...')
+#2 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `es...')
+#3 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `es...', Array, false)
+#4 C:\xampp\htdocs\analisis\app\Models\ParticipanteModel.php(78): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp\htdocs\analisis\app\Controllers\ParticipanteController.php(206): App\Models\ParticipanteModel->createAndAssociate(Array, '45', 'estudiante')
+#6 C:\xampp\htdocs\analisis\app\Controllers\PISController.php(512): App\Controllers\ParticipanteController->createEstudiante('45', Array)
+#7 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\PISController->update('45')
+#8 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PISController))
+#9 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\analisis\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+INFO - 2025-02-07 16:46:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-07 16:46:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-07 16:47:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-02-07 16:47:08 --> mysqli_sql_exception: Duplicate entry '456' for key 'idx_cedula' in C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `es...', 0)
+#1 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `es...')
+#2 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `es...')
+#3 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `es...', Array, false)
+#4 C:\xampp\htdocs\analisis\app\Models\ParticipanteModel.php(78): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp\htdocs\analisis\app\Controllers\ParticipanteController.php(206): App\Models\ParticipanteModel->createAndAssociate(Array, '45', 'estudiante')
+#6 C:\xampp\htdocs\analisis\app\Controllers\PISController.php(512): App\Controllers\ParticipanteController->createEstudiante('45', Array)
+#7 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\PISController->update('45')
+#8 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PISController))
+#9 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\analisis\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+INFO - 2025-02-07 16:47:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-07 16:47:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-07 17:15:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-07 17:15:38 --> ----------------------
+DEBUG - 2025-02-07 17:15:38 --> Iniciando deleteParticipantes
+DEBUG - 2025-02-07 17:15:38 --> PIS ID recibido: 45
+DEBUG - 2025-02-07 17:15:38 --> Llamando a deleteParticipantesByPIS
+DEBUG - 2025-02-07 17:15:38 --> ----------------------
+DEBUG - 2025-02-07 17:15:38 --> Iniciando deleteParticipantesByPIS
+DEBUG - 2025-02-07 17:15:38 --> PIS ID a procesar: 45
+DEBUG - 2025-02-07 17:15:38 --> Registros encontrados antes de eliminar:
+DEBUG - 2025-02-07 17:15:38 --> pis_docentes: 1
+DEBUG - 2025-02-07 17:15:38 --> pis_estudiantes: 1
+DEBUG - 2025-02-07 17:15:38 --> Resultado eliminación pis_docentes: true
+DEBUG - 2025-02-07 17:15:38 --> Resultado eliminación pis_estudiantes: true
+DEBUG - 2025-02-07 17:15:38 --> Registros restantes después de eliminar:
+DEBUG - 2025-02-07 17:15:38 --> pis_docentes: 0
+DEBUG - 2025-02-07 17:15:38 --> pis_estudiantes: 0
+DEBUG - 2025-02-07 17:15:38 --> Resultado de deleteParticipantesByPIS: {"success":true,"message":"Participantes eliminados exitosamente"}
+DEBUG - 2025-02-07 17:15:38 --> deleteParticipantes completado exitosamente
+DEBUG - 2025-02-07 17:15:38 --> Resultado de deleteParticipantes: {"success":true,"message":"Participantes eliminados exitosamente"}
+ERROR - 2025-02-07 17:15:38 --> mysqli_sql_exception: Duplicate entry '456' for key 'idx_cedula' in C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `es...', 0)
+#1 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `es...')
+#2 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `es...')
+#3 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `es...', Array, false)
+#4 C:\xampp\htdocs\analisis\app\Models\ParticipanteModel.php(78): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp\htdocs\analisis\app\Controllers\ParticipanteController.php(206): App\Models\ParticipanteModel->createAndAssociate(Array, '45', 'estudiante')
+#6 C:\xampp\htdocs\analisis\app\Controllers\PISController.php(515): App\Controllers\ParticipanteController->createEstudiante('45', Array)
+#7 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\PISController->update('45')
+#8 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PISController))
+#9 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\analisis\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+INFO - 2025-02-07 17:15:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-07 17:15:38 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-07 17:16:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-07 17:16:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-07 17:40:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-07 17:40:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-07 17:40:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-07 17:40:10 --> Resultado de deleteParticipantes: {"success":true,"message":"Participantes eliminados exitosamente"}
+DEBUG - 2025-02-07 17:40:10 --> Buscando estudiante con cédula: 456
+DEBUG - 2025-02-07 17:40:10 --> Resultado búsqueda estudiante: null
+DEBUG - 2025-02-07 17:40:10 --> Estudiante no encontrado, intentando crear nuevo
+ERROR - 2025-02-07 17:40:10 --> mysqli_sql_exception: Duplicate entry '456' for key 'idx_cedula' in C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `es...', 0)
+#1 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `es...')
+#2 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `es...')
+#3 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `es...', Array, false)
+#4 C:\xampp\htdocs\analisis\app\Models\ParticipanteModel.php(78): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp\htdocs\analisis\app\Controllers\ParticipanteController.php(217): App\Models\ParticipanteModel->createAndAssociate(Array, '45', 'estudiante')
+#6 C:\xampp\htdocs\analisis\app\Controllers\PISController.php(515): App\Controllers\ParticipanteController->createEstudiante('45', Array)
+#7 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\PISController->update('45')
+#8 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PISController))
+#9 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\analisis\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+INFO - 2025-02-07 17:40:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-07 17:40:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-07 17:45:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-07 17:45:40 --> Resultado de deleteParticipantes: {"success":true,"message":"Participantes eliminados exitosamente"}
+DEBUG - 2025-02-07 17:45:40 --> ----------------------
+DEBUG - 2025-02-07 17:45:40 --> Iniciando findByCedula
+DEBUG - 2025-02-07 17:45:40 --> Tipo: docente
+DEBUG - 2025-02-07 17:45:40 --> Cédula a buscar: 123
+DEBUG - 2025-02-07 17:45:40 --> Tabla actual: docentes
+DEBUG - 2025-02-07 17:45:40 --> Query ejecutado: SELECT *
+FROM `docentes`
+WHERE `cedula` = '123'
+ LIMIT 1
+DEBUG - 2025-02-07 17:45:40 --> Resultado: {"id":"22","nombre":"docente","cedula":"123","created_at":"2025-02-07 16:45:53","updated_at":"2025-02-07 16:45:53"}
+DEBUG - 2025-02-07 17:45:40 --> Buscando estudiante con cédula: 456
+DEBUG - 2025-02-07 17:45:40 --> ----------------------
+DEBUG - 2025-02-07 17:45:40 --> Iniciando findByCedula
+DEBUG - 2025-02-07 17:45:40 --> Tipo: estudiante
+DEBUG - 2025-02-07 17:45:40 --> Cédula a buscar: 456
+DEBUG - 2025-02-07 17:45:40 --> Tabla actual: estudiantes
+DEBUG - 2025-02-07 17:45:40 --> Query ejecutado: SELECT *
+FROM `docentes`
+WHERE `cedula` = '456'
+ LIMIT 1
+DEBUG - 2025-02-07 17:45:40 --> Resultado: null
+DEBUG - 2025-02-07 17:45:40 --> Resultado búsqueda estudiante: null
+DEBUG - 2025-02-07 17:45:40 --> Estudiante no encontrado, intentando crear nuevo
+ERROR - 2025-02-07 17:45:40 --> mysqli_sql_exception: Duplicate entry '456' for key 'idx_cedula' in C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `es...', 0)
+#1 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `es...')
+#2 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `es...')
+#3 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `es...', Array, false)
+#4 C:\xampp\htdocs\analisis\app\Models\ParticipanteModel.php(78): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp\htdocs\analisis\app\Controllers\ParticipanteController.php(217): App\Models\ParticipanteModel->createAndAssociate(Array, '45', 'estudiante')
+#6 C:\xampp\htdocs\analisis\app\Controllers\PISController.php(515): App\Controllers\ParticipanteController->createEstudiante('45', Array)
+#7 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\PISController->update('45')
+#8 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PISController))
+#9 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\analisis\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+INFO - 2025-02-07 17:45:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-07 17:45:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-07 17:52:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-07 17:52:09 --> Resultado de deleteParticipantes: {"success":true,"message":"Participantes eliminados exitosamente"}
+DEBUG - 2025-02-07 17:52:09 --> ----------------------
+DEBUG - 2025-02-07 17:52:09 --> Iniciando findByCedula
+DEBUG - 2025-02-07 17:52:09 --> Tipo: docente
+DEBUG - 2025-02-07 17:52:09 --> Cédula a buscar: 123
+DEBUG - 2025-02-07 17:52:09 --> ----------------------
+DEBUG - 2025-02-07 17:52:09 --> Iniciando setTableAndValidation
+DEBUG - 2025-02-07 17:52:09 --> Tipo recibido: docente
+DEBUG - 2025-02-07 17:52:09 --> Tabla antes de cambiar: docentes
+DEBUG - 2025-02-07 17:52:09 --> Cambiando a tabla docentes
+DEBUG - 2025-02-07 17:52:09 --> Tabla después de cambiar: docentes
+DEBUG - 2025-02-07 17:52:09 --> Tabla actual: docentes
+DEBUG - 2025-02-07 17:52:09 --> Query ejecutado: SELECT *
+FROM `docentes`
+WHERE `cedula` = '123'
+ LIMIT 1
+DEBUG - 2025-02-07 17:52:09 --> Resultado: {"id":"22","nombre":"docente","cedula":"123","created_at":"2025-02-07 16:45:53","updated_at":"2025-02-07 16:45:53"}
+DEBUG - 2025-02-07 17:52:09 --> Buscando estudiante con cédula: 456
+DEBUG - 2025-02-07 17:52:09 --> ----------------------
+DEBUG - 2025-02-07 17:52:09 --> Iniciando findByCedula
+DEBUG - 2025-02-07 17:52:09 --> Tipo: estudiante
+DEBUG - 2025-02-07 17:52:09 --> Cédula a buscar: 456
+DEBUG - 2025-02-07 17:52:09 --> ----------------------
+DEBUG - 2025-02-07 17:52:09 --> Iniciando setTableAndValidation
+DEBUG - 2025-02-07 17:52:09 --> Tipo recibido: estudiante
+DEBUG - 2025-02-07 17:52:09 --> Tabla antes de cambiar: docentes
+DEBUG - 2025-02-07 17:52:09 --> Cambiando a tabla estudiantes
+DEBUG - 2025-02-07 17:52:09 --> Tabla después de cambiar: estudiantes
+DEBUG - 2025-02-07 17:52:09 --> Tabla actual: estudiantes
+DEBUG - 2025-02-07 17:52:09 --> Query ejecutado: SELECT *
+FROM `docentes`
+WHERE `cedula` = '456'
+ LIMIT 1
+DEBUG - 2025-02-07 17:52:09 --> Resultado: null
+DEBUG - 2025-02-07 17:52:09 --> Resultado búsqueda estudiante: null
+DEBUG - 2025-02-07 17:52:09 --> Estudiante no encontrado, intentando crear nuevo
+DEBUG - 2025-02-07 17:52:09 --> ----------------------
+DEBUG - 2025-02-07 17:52:09 --> Iniciando setTableAndValidation
+DEBUG - 2025-02-07 17:52:09 --> Tipo recibido: estudiante
+DEBUG - 2025-02-07 17:52:09 --> Tabla antes de cambiar: estudiantes
+DEBUG - 2025-02-07 17:52:09 --> Cambiando a tabla estudiantes
+DEBUG - 2025-02-07 17:52:09 --> Tabla después de cambiar: estudiantes
+ERROR - 2025-02-07 17:52:09 --> mysqli_sql_exception: Duplicate entry '456' for key 'idx_cedula' in C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `es...', 0)
+#1 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `es...')
+#2 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `es...')
+#3 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `es...', Array, false)
+#4 C:\xampp\htdocs\analisis\app\Models\ParticipanteModel.php(62): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp\htdocs\analisis\app\Controllers\ParticipanteController.php(217): App\Models\ParticipanteModel->createAndAssociate(Array, '45', 'estudiante')
+#6 C:\xampp\htdocs\analisis\app\Controllers\PISController.php(515): App\Controllers\ParticipanteController->createEstudiante('45', Array)
+#7 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\PISController->update('45')
+#8 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PISController))
+#9 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\analisis\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+INFO - 2025-02-07 17:52:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-07 17:52:10 --> ----------------------
+DEBUG - 2025-02-07 17:52:10 --> Iniciando setTableAndValidation
+DEBUG - 2025-02-07 17:52:10 --> Tipo recibido: docente
+DEBUG - 2025-02-07 17:52:10 --> Tabla antes de cambiar: docentes
+DEBUG - 2025-02-07 17:52:10 --> Cambiando a tabla docentes
+DEBUG - 2025-02-07 17:52:10 --> Tabla después de cambiar: docentes
+DEBUG - 2025-02-07 17:52:10 --> ----------------------
+DEBUG - 2025-02-07 17:52:10 --> Iniciando setTableAndValidation
+DEBUG - 2025-02-07 17:52:10 --> Tipo recibido: estudiante
+DEBUG - 2025-02-07 17:52:10 --> Tabla antes de cambiar: docentes
+DEBUG - 2025-02-07 17:52:10 --> Cambiando a tabla estudiantes
+DEBUG - 2025-02-07 17:52:10 --> Tabla después de cambiar: estudiantes
+INFO - 2025-02-07 17:52:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-07 17:57:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-07 17:57:35 --> Resultado de deleteParticipantes: {"success":true,"message":"Participantes eliminados exitosamente"}
+INFO - 2025-02-07 17:57:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-07 17:57:35 --> ----------------------
+DEBUG - 2025-02-07 17:57:35 --> Iniciando setTableAndValidation
+DEBUG - 2025-02-07 17:57:35 --> Tipo recibido: docente
+DEBUG - 2025-02-07 17:57:35 --> Tabla antes de cambiar: docentes
+DEBUG - 2025-02-07 17:57:35 --> Cambiando a tabla docentes
+DEBUG - 2025-02-07 17:57:35 --> Tabla después de cambiar: docentes
+DEBUG - 2025-02-07 17:57:35 --> ----------------------
+DEBUG - 2025-02-07 17:57:35 --> Iniciando setTableAndValidation
+DEBUG - 2025-02-07 17:57:35 --> Tipo recibido: estudiante
+DEBUG - 2025-02-07 17:57:35 --> Tabla antes de cambiar: docentes
+DEBUG - 2025-02-07 17:57:35 --> Cambiando a tabla estudiantes
+DEBUG - 2025-02-07 17:57:35 --> Tabla después de cambiar: estudiantes
+INFO - 2025-02-07 17:57:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-07 17:59:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-07 17:59:46 --> Resultado de deleteParticipantes: {"success":true,"message":"Participantes eliminados exitosamente"}
+DEBUG - 2025-02-07 17:59:46 --> DEBUG EN FIND BY CEDULA: ----------------------
+DEBUG - 2025-02-07 17:59:46 --> DEBUG EN FIND BY CEDULA: Iniciando findByCedula
+DEBUG - 2025-02-07 17:59:46 --> DEBUG EN FIND BY CEDULA: Tipo: docente
+DEBUG - 2025-02-07 17:59:46 --> DEBUG EN FIND BY CEDULA: Cédula a buscar: 123
+DEBUG - 2025-02-07 17:59:46 --> ----------------------
+DEBUG - 2025-02-07 17:59:46 --> Iniciando setTableAndValidation
+DEBUG - 2025-02-07 17:59:46 --> Tipo recibido: docente
+DEBUG - 2025-02-07 17:59:46 --> Tabla antes de cambiar: docentes
+DEBUG - 2025-02-07 17:59:46 --> Cambiando a tabla docentes
+DEBUG - 2025-02-07 17:59:46 --> Tabla después de cambiar: docentes
+DEBUG - 2025-02-07 17:59:46 --> DEBUG EN FIND BY CEDULA: Tabla actual: docentes
+DEBUG - 2025-02-07 17:59:46 --> DEBUG EN FIND BY CEDULA: Query ejecutado: SELECT *
+FROM `docentes`
+WHERE `cedula` = '123'
+ LIMIT 1
+DEBUG - 2025-02-07 17:59:46 --> DEBUG EN FIND BY CEDULA: Resultado: {"id":"22","nombre":"docente","cedula":"123","created_at":"2025-02-07 16:45:53","updated_at":"2025-02-07 16:45:53"}
+DEBUG - 2025-02-07 17:59:46 --> Buscando estudiante con cédula: 456
+DEBUG - 2025-02-07 17:59:46 --> DEBUG EN FIND BY CEDULA: ----------------------
+DEBUG - 2025-02-07 17:59:46 --> DEBUG EN FIND BY CEDULA: Iniciando findByCedula
+DEBUG - 2025-02-07 17:59:46 --> DEBUG EN FIND BY CEDULA: Tipo: estudiante
+DEBUG - 2025-02-07 17:59:46 --> DEBUG EN FIND BY CEDULA: Cédula a buscar: 456
+DEBUG - 2025-02-07 17:59:46 --> ----------------------
+DEBUG - 2025-02-07 17:59:46 --> Iniciando setTableAndValidation
+DEBUG - 2025-02-07 17:59:46 --> Tipo recibido: estudiante
+DEBUG - 2025-02-07 17:59:46 --> Tabla antes de cambiar: docentes
+DEBUG - 2025-02-07 17:59:46 --> Cambiando a tabla estudiantes
+DEBUG - 2025-02-07 17:59:46 --> Tabla después de cambiar: estudiantes
+DEBUG - 2025-02-07 17:59:46 --> DEBUG EN FIND BY CEDULA: Tabla actual: estudiantes
+DEBUG - 2025-02-07 17:59:46 --> DEBUG EN FIND BY CEDULA: Query ejecutado: SELECT *
+FROM `docentes`
+WHERE `cedula` = '456'
+ LIMIT 1
+DEBUG - 2025-02-07 17:59:46 --> DEBUG EN FIND BY CEDULA: Resultado: null
+DEBUG - 2025-02-07 17:59:46 --> Resultado búsqueda estudiante: null
+DEBUG - 2025-02-07 17:59:46 --> Estudiante no encontrado, intentando crear nuevo
+DEBUG - 2025-02-07 17:59:46 --> ----------------------
+DEBUG - 2025-02-07 17:59:46 --> Iniciando setTableAndValidation
+DEBUG - 2025-02-07 17:59:46 --> Tipo recibido: estudiante
+DEBUG - 2025-02-07 17:59:46 --> Tabla antes de cambiar: estudiantes
+DEBUG - 2025-02-07 17:59:46 --> Cambiando a tabla estudiantes
+DEBUG - 2025-02-07 17:59:46 --> Tabla después de cambiar: estudiantes
+ERROR - 2025-02-07 17:59:46 --> mysqli_sql_exception: Duplicate entry '456' for key 'idx_cedula' in C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(312): mysqli->query('INSERT INTO `es...', 0)
+#1 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `es...')
+#2 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `es...')
+#3 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(2340): CodeIgniter\Database\BaseConnection->query('INSERT INTO `es...', Array, false)
+#4 C:\xampp\htdocs\analisis\app\Models\ParticipanteModel.php(62): CodeIgniter\Database\BaseBuilder->insert(Array)
+#5 C:\xampp\htdocs\analisis\app\Controllers\ParticipanteController.php(217): App\Models\ParticipanteModel->createAndAssociate(Array, '45', 'estudiante')
+#6 C:\xampp\htdocs\analisis\app\Controllers\PISController.php(515): App\Controllers\ParticipanteController->createEstudiante('45', Array)
+#7 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\CodeIgniter.php(933): App\Controllers\PISController->update('45')
+#8 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\PISController))
+#9 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\Boot.php(325): CodeIgniter\CodeIgniter->run()
+#11 C:\xampp\htdocs\analisis\vendor\codeigniter4\framework\system\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#12 C:\xampp\htdocs\analisis\public\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#13 {main}
+INFO - 2025-02-07 17:59:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-07 17:59:46 --> ----------------------
+DEBUG - 2025-02-07 17:59:46 --> Iniciando setTableAndValidation
+DEBUG - 2025-02-07 17:59:46 --> Tipo recibido: docente
+DEBUG - 2025-02-07 17:59:46 --> Tabla antes de cambiar: docentes
+DEBUG - 2025-02-07 17:59:46 --> Cambiando a tabla docentes
+DEBUG - 2025-02-07 17:59:46 --> Tabla después de cambiar: docentes
+DEBUG - 2025-02-07 17:59:46 --> ----------------------
+DEBUG - 2025-02-07 17:59:46 --> Iniciando setTableAndValidation
+DEBUG - 2025-02-07 17:59:46 --> Tipo recibido: estudiante
+DEBUG - 2025-02-07 17:59:46 --> Tabla antes de cambiar: docentes
+DEBUG - 2025-02-07 17:59:46 --> Cambiando a tabla estudiantes
+DEBUG - 2025-02-07 17:59:46 --> Tabla después de cambiar: estudiantes
+INFO - 2025-02-07 17:59:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-07 18:09:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-07 18:09:02 --> Resultado de deleteParticipantes: {"success":true,"message":"Participantes eliminados exitosamente"}
+DEBUG - 2025-02-07 18:09:02 --> DEBUG EN FIND BY CEDULA: ----------------------
+DEBUG - 2025-02-07 18:09:02 --> DEBUG EN FIND BY CEDULA: Iniciando findByCedula
+DEBUG - 2025-02-07 18:09:02 --> DEBUG EN FIND BY CEDULA: Tipo: docente
+DEBUG - 2025-02-07 18:09:02 --> DEBUG EN FIND BY CEDULA: Cédula a buscar: 123
+DEBUG - 2025-02-07 18:09:02 --> ----------------------
+DEBUG - 2025-02-07 18:09:02 --> Iniciando setTableAndValidation
+DEBUG - 2025-02-07 18:09:02 --> Tipo recibido: docente
+DEBUG - 2025-02-07 18:09:02 --> Tabla antes de cambiar: docentes
+DEBUG - 2025-02-07 18:09:02 --> Cambiando a tabla docentes
+DEBUG - 2025-02-07 18:09:02 --> Tabla después de cambiar: docentes
+DEBUG - 2025-02-07 18:09:02 --> DEBUG EN FIND BY CEDULA: Tabla actual: docentes
+DEBUG - 2025-02-07 18:09:02 --> DEBUG EN FIND BY CEDULA: Query ejecutado: SELECT *
+FROM `docentes`
+WHERE `cedula` = '123'
+ LIMIT 1
+DEBUG - 2025-02-07 18:09:02 --> DEBUG EN FIND BY CEDULA: Resultado: {"id":"22","nombre":"docente","cedula":"123","created_at":"2025-02-07 16:45:53","updated_at":"2025-02-07 16:45:53"}
+DEBUG - 2025-02-07 18:09:02 --> Buscando estudiante con cédula: 456
+DEBUG - 2025-02-07 18:09:02 --> DEBUG EN FIND BY CEDULA: ----------------------
+DEBUG - 2025-02-07 18:09:02 --> DEBUG EN FIND BY CEDULA: Iniciando findByCedula
+DEBUG - 2025-02-07 18:09:02 --> DEBUG EN FIND BY CEDULA: Tipo: estudiante
+DEBUG - 2025-02-07 18:09:02 --> DEBUG EN FIND BY CEDULA: Cédula a buscar: 456
+DEBUG - 2025-02-07 18:09:02 --> ----------------------
+DEBUG - 2025-02-07 18:09:02 --> Iniciando setTableAndValidation
+DEBUG - 2025-02-07 18:09:02 --> Tipo recibido: estudiante
+DEBUG - 2025-02-07 18:09:02 --> Tabla antes de cambiar: docentes
+DEBUG - 2025-02-07 18:09:02 --> Cambiando a tabla estudiantes
+DEBUG - 2025-02-07 18:09:02 --> Tabla después de cambiar: estudiantes
+DEBUG - 2025-02-07 18:09:02 --> DEBUG EN FIND BY CEDULA: Tabla actual: estudiantes
+DEBUG - 2025-02-07 18:09:02 --> DEBUG EN FIND BY CEDULA: Query ejecutado: SELECT *
+FROM `estudiantes`
+WHERE `cedula` = '456'
+ LIMIT 1
+DEBUG - 2025-02-07 18:09:02 --> DEBUG EN FIND BY CEDULA: Resultado: {"id":"24","nombre":"estudiante","cedula":"456","created_at":"2025-02-07 16:45:53","updated_at":"2025-02-07 16:45:53"}
+DEBUG - 2025-02-07 18:09:02 --> Resultado búsqueda estudiante: {"id":"24","nombre":"estudiante","cedula":"456","created_at":"2025-02-07 16:45:53","updated_at":"2025-02-07 16:45:53"}
+DEBUG - 2025-02-07 18:09:02 --> Estudiante encontrado, verificando si está en el PIS
+DEBUG - 2025-02-07 18:09:02 --> Estudiante no está en el PIS, creando asociación
+INFO - 2025-02-07 18:09:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-07 18:09:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-07 18:09:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-07 18:09:24 --> ----------------------
+DEBUG - 2025-02-07 18:09:24 --> Iniciando setTableAndValidation
+DEBUG - 2025-02-07 18:09:24 --> Tipo recibido: docente
+DEBUG - 2025-02-07 18:09:24 --> Tabla antes de cambiar: docentes
+DEBUG - 2025-02-07 18:09:24 --> Cambiando a tabla docentes
+DEBUG - 2025-02-07 18:09:24 --> Tabla después de cambiar: docentes
+DEBUG - 2025-02-07 18:09:24 --> ----------------------
+DEBUG - 2025-02-07 18:09:24 --> Iniciando setTableAndValidation
+DEBUG - 2025-02-07 18:09:24 --> Tipo recibido: estudiante
+DEBUG - 2025-02-07 18:09:24 --> Tabla antes de cambiar: docentes
+DEBUG - 2025-02-07 18:09:24 --> Cambiando a tabla estudiantes
+DEBUG - 2025-02-07 18:09:24 --> Tabla después de cambiar: estudiantes
+INFO - 2025-02-07 18:09:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-07 18:09:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-07 18:09:30 --> Resultado de deleteParticipantes: {"success":true,"message":"Participantes eliminados exitosamente"}
+DEBUG - 2025-02-07 18:09:30 --> DEBUG EN FIND BY CEDULA: ----------------------
+DEBUG - 2025-02-07 18:09:30 --> DEBUG EN FIND BY CEDULA: Iniciando findByCedula
+DEBUG - 2025-02-07 18:09:30 --> DEBUG EN FIND BY CEDULA: Tipo: docente
+DEBUG - 2025-02-07 18:09:30 --> DEBUG EN FIND BY CEDULA: Cédula a buscar: 123
+DEBUG - 2025-02-07 18:09:30 --> ----------------------
+DEBUG - 2025-02-07 18:09:30 --> Iniciando setTableAndValidation
+DEBUG - 2025-02-07 18:09:30 --> Tipo recibido: docente
+DEBUG - 2025-02-07 18:09:30 --> Tabla antes de cambiar: docentes
+DEBUG - 2025-02-07 18:09:30 --> Cambiando a tabla docentes
+DEBUG - 2025-02-07 18:09:30 --> Tabla después de cambiar: docentes
+DEBUG - 2025-02-07 18:09:30 --> DEBUG EN FIND BY CEDULA: Tabla actual: docentes
+DEBUG - 2025-02-07 18:09:30 --> DEBUG EN FIND BY CEDULA: Query ejecutado: SELECT *
+FROM `docentes`
+WHERE `cedula` = '123'
+ LIMIT 1
+DEBUG - 2025-02-07 18:09:30 --> DEBUG EN FIND BY CEDULA: Resultado: {"id":"22","nombre":"docente","cedula":"123","created_at":"2025-02-07 16:45:53","updated_at":"2025-02-07 16:45:53"}
+DEBUG - 2025-02-07 18:09:30 --> Buscando estudiante con cédula: 456
+DEBUG - 2025-02-07 18:09:30 --> DEBUG EN FIND BY CEDULA: ----------------------
+DEBUG - 2025-02-07 18:09:30 --> DEBUG EN FIND BY CEDULA: Iniciando findByCedula
+DEBUG - 2025-02-07 18:09:30 --> DEBUG EN FIND BY CEDULA: Tipo: estudiante
+DEBUG - 2025-02-07 18:09:30 --> DEBUG EN FIND BY CEDULA: Cédula a buscar: 456
+DEBUG - 2025-02-07 18:09:30 --> ----------------------
+DEBUG - 2025-02-07 18:09:30 --> Iniciando setTableAndValidation
+DEBUG - 2025-02-07 18:09:30 --> Tipo recibido: estudiante
+DEBUG - 2025-02-07 18:09:30 --> Tabla antes de cambiar: docentes
+DEBUG - 2025-02-07 18:09:30 --> Cambiando a tabla estudiantes
+DEBUG - 2025-02-07 18:09:30 --> Tabla después de cambiar: estudiantes
+DEBUG - 2025-02-07 18:09:30 --> DEBUG EN FIND BY CEDULA: Tabla actual: estudiantes
+DEBUG - 2025-02-07 18:09:30 --> DEBUG EN FIND BY CEDULA: Query ejecutado: SELECT *
+FROM `estudiantes`
+WHERE `cedula` = '456'
+ LIMIT 1
+DEBUG - 2025-02-07 18:09:30 --> DEBUG EN FIND BY CEDULA: Resultado: {"id":"24","nombre":"estudiante","cedula":"456","created_at":"2025-02-07 16:45:53","updated_at":"2025-02-07 16:45:53"}
+DEBUG - 2025-02-07 18:09:30 --> Resultado búsqueda estudiante: {"id":"24","nombre":"estudiante","cedula":"456","created_at":"2025-02-07 16:45:53","updated_at":"2025-02-07 16:45:53"}
+DEBUG - 2025-02-07 18:09:30 --> Estudiante encontrado, verificando si está en el PIS
+DEBUG - 2025-02-07 18:09:30 --> Estudiante no está en el PIS, creando asociación
+INFO - 2025-02-07 18:09:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-07 18:09:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-07 22:04:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-07 22:04:46 --> Método login llamado
+INFO - 2025-02-07 22:04:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-07 22:04:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-07 22:04:49 --> Método login llamado
+DEBUG - 2025-02-07 22:04:49 --> Método POST detectado
+DEBUG - 2025-02-07 22:04:49 --> Datos recibidos - Username: admin
+INFO - 2025-02-07 22:04:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-07 22:04:49 --> Login exitoso, redirigiendo...
+INFO - 2025-02-07 22:04:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-07 22:04:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-07 22:04:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-07 22:04:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-07 22:04:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-07 22:04:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-07 22:05:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-07 22:05:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-07 22:05:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-07 22:05:52 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-07 22:05:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-07 22:06:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-07 22:06:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-07 22:06:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-07 22:07:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-07 22:07:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-07 22:08:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-07 22:08:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-07 22:08:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-07 22:10:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-07 22:10:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-07 22:10:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-07 22:10:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-07 22:10:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-07 22:16:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-07 22:16:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-07 22:16:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-07 22:16:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-07 22:16:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-07 22:17:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-07 22:17:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-07 22:17:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-07 22:17:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-07 22:17:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-07 22:18:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-07 22:18:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-07 22:18:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-07 22:18:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-07 22:18:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-07 22:21:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-07 22:21:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-07 22:21:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-07 22:21:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-07 22:23:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-07 22:23:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-07 22:23:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-07 22:24:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-07 22:24:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-07 22:25:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-07 22:25:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-07 22:25:18 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

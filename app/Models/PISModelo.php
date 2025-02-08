@@ -547,6 +547,44 @@ class PISModelo extends Model
 
 
 
+    //Obtener datos de un proyecto junto con sus participantes.
+    //Esta funcion servira para cargar los datos en el formulario edit.
+    public function getProyectoWithParticipantes($id)
+    {
+        try {
+            $proyecto = $this->getProyectoConRelaciones($id);
+            
+            if ($proyecto) {
+                // Crear instancia del modelo de participantes
+                $participanteModel = new \App\Models\ParticipanteModel();
+                
+                // Obtener participantes según el tipo
+                if ($proyecto['tipo_participante'] === 'Docente') {
+                    $proyecto['participantes'] = $participanteModel->getByPIS($id, 'docente');
+                } 
+                else if ($proyecto['tipo_participante'] === 'Estudiante') {
+                    $proyecto['participantes'] = $participanteModel->getByPIS($id, 'estudiante');
+                }
+                else if ($proyecto['tipo_participante'] === 'Docente/Estudiante') {
+                    $proyecto['participantes'] = $participanteModel->getAllParticipantesByPIS($id);
+                }
+            }
+
+            return $proyecto;
+        } catch (Exception $e) {
+            return null;
+        }
+    }
+
+
+
+
+
+
+
+
+
+
 
 
 

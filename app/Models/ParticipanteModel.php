@@ -131,11 +131,17 @@ class ParticipanteModel extends Model
     {
         $this->setTableAndValidation($type);
         try {
+            // Resetear el Query Builder para que use la nueva tabla
+            $this->builder = $this->db->table($this->table);
+
             return $this->where('cedula', $cedula)->first();
         } catch (Exception $e) {
             return null;
         }
     }
+
+
+    
 
     // Método genérico para asociar con PIS
     public function associateWithPIS($participanteId, $pisId, $type = 'docente')
@@ -314,6 +320,33 @@ class ParticipanteModel extends Model
 
 
 
+    /**
+     * Elimina todos los participantes asociados a un PIS
+    */
+    public function deleteParticipantesByPIS($pisId)
+    {
+        try {
+            // Eliminar docentes asociados
+            $result1 = $this->db->table('pis_docentes')
+                            ->where('proyecto_id', $pisId)
+                            ->delete();
+            
+            // Eliminar estudiantes asociados
+            $result2 = $this->db->table('pis_estudiantes')
+                            ->where('proyecto_id', $pisId)
+                            ->delete();
+
+            return [
+                'success' => true,
+                'message' => 'Participantes eliminados exitosamente'
+            ];
+        } catch (Exception $e) {
+            return [
+                'success' => false,
+                'error' => 'Error al eliminar los participantes'
+            ];
+        }
+    }
 
 
 

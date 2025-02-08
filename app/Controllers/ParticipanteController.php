@@ -193,9 +193,10 @@ class ParticipanteController extends BaseController
                 foreach ($estudiantesData as $estudiante) {
                     if (!empty($estudiante['nombre']) && !empty($estudiante['cedula'])) {
                         // Verificar si el estudiante ya existe
-                        $estudianteExistente = $this->participanteModel->findByCedula($estudiante['cedula'], 'estudiante');
-                        
+                        $estudianteExistente = $this->participanteModel->findByCedula($estudiante['cedula'], 'estudiante');                        
+
                         if ($estudianteExistente) {
+
                             // Si existe, verificar que no esté ya asociado al proyecto
                             if (!$this->participanteModel->isInPIS($pisId, $estudianteExistente['id'], 'estudiante')) {
                                 $this->participanteModel->associateWithPIS($estudianteExistente['id'], $pisId, 'estudiante');
@@ -328,6 +329,60 @@ class ParticipanteController extends BaseController
             ]);
         }
     }
+
+
+
+
+
+
+
+
+
+
+
+
+    /**
+     * Método para eliminar todos los participantes de un PIS
+    */
+    public function deleteParticipantes($pisId = null)
+    {
+        try {
+            // Si no recibimos el ID como parámetro, intentamos obtenerlo de la petición
+            if ($pisId === null) {
+                if (!$this->request->isAJAX()) {
+                    throw new Exception('Acceso no permitido');
+                }
+                $pisId = $this->request->getJSON(true)['pis_id'] ?? null;
+            }
+
+            if (!$pisId) {
+                throw new Exception('ID del proyecto no proporcionado');
+            }
+
+            $result = $this->participanteModel->deleteParticipantesByPIS($pisId);
+            
+            if (!$result['success']) {
+                throw new Exception($result['error']);
+            }
+
+            return [
+                'success' => true,
+                'message' => 'Participantes eliminados exitosamente'
+            ];
+
+        } catch (Exception $e) {
+            return [
+                'success' => false,
+                'error' => $e->getMessage()
+            ];
+        }
+    }
+
+
+
+
+
+
 
 
 

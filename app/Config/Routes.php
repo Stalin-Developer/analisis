@@ -96,7 +96,7 @@ $routes->group('', ['filter' => 'auth'], function($routes) {
         $routes->get('pis/participantes/estudiante/get/(:num)', 'ParticipanteController::getEstudiantesByPIS/$1');
         $routes->get('pis/participantes/estudiante/check-limit/(:num)', 'ParticipanteController::checkEstudianteLimit/$1');
         $routes->get('pis/participantes/both/check-limits/(:num)', 'ParticipanteController::checkBothLimits/$1');
-
+        $routes->delete('pis/participantes/delete/(:num)', 'ParticipanteController::deleteParticipantes/$1');
 
 
     

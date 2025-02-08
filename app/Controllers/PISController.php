@@ -379,8 +379,12 @@ class PISController extends BaseController
     public function edit($id)
     {
         try {
-            $proyecto = $this->pisModel->find($id);
             
+            // Obtener proyecto con sus participantes usando el método del modelo
+            $proyecto = $this->pisModel->getProyectoWithParticipantes($id);
+
+
+
             if (!$proyecto) {
                 throw new Exception('Proyecto no encontrado');
             }
@@ -448,15 +452,93 @@ class PISController extends BaseController
                 }
             }
 
+
+
             // Actualizar en la base de datos
-            $this->pisModel->update($id, $data);
-            return redirect()->to('pis')->with('message', 'Proyecto actualizado exitosamente');
+            // Iniciar transacción
+            $this->pisModel->db->transBegin();
+
+            try {
+                // Actualizar datos básicos del proyecto
+                $this->pisModel->update($id, $data);
+
+                // Procesar participantes según el tipo
+                $participanteController = new ParticipanteController();
+                $tipoParticipante = $this->request->getPost('tipo_participante');
+
+
+                // Eliminar las relaciones de los participantes existentes
+                $resultDelete = $participanteController->deleteParticipantes($id);
+
+                if (!$resultDelete['success']) {
+                    throw new Exception($resultDelete['error']);
+                }
+
+
+                // Procesar según el tipo de participante
+                if ($tipoParticipante === 'Docente') {
+                    $docentesData = $this->request->getPost('docentes_data');
+                    if (!empty($docentesData)) {
+                        $docentes = json_decode($docentesData, true);
+                        $response = $participanteController->createDocente($id, $docentes);
+                        if (!$response['success']) {
+                            throw new Exception('Error al actualizar docentes: ' . ($response['error'] ?? ''));
+                        }
+                    }
+                } 
+                else if ($tipoParticipante === 'Estudiante') {
+                    $estudiantesData = $this->request->getPost('estudiantes_data');
+                    if (!empty($estudiantesData)) {
+                        $estudiantes = json_decode($estudiantesData, true);
+                        $response = $participanteController->createEstudiante($id, $estudiantes);
+                        if (!$response['success']) {
+                            throw new Exception('Error al actualizar estudiantes: ' . ($response['error'] ?? ''));
+                        }
+                    }
+                }
+                else if ($tipoParticipante === 'Docente/Estudiante') {
+                    $docentesData = $this->request->getPost('docentes_data');
+                    $estudiantesData = $this->request->getPost('estudiantes_data');
+
+                    if (!empty($docentesData)) {
+                        $docentes = json_decode($docentesData, true);
+                        $response = $participanteController->createDocente($id, $docentes);
+                        if (!$response['success']) {
+                            throw new Exception('Error al actualizar docentes: ' . ($response['error'] ?? ''));
+                        }
+                    }
+
+                    if (!empty($estudiantesData)) {
+                        $estudiantes = json_decode($estudiantesData, true);
+                        $response = $participanteController->createEstudiante($id, $estudiantes);
+                        if (!$response['success']) {
+                            throw new Exception('Error al actualizar estudiantes: ' . ($response['error'] ?? ''));
+                        }
+                    }
+                }
+
+                $this->pisModel->db->transCommit();
+                return redirect()->to('pis')->with('message', 'Proyecto actualizado exitosamente');
+
+            } catch (Exception $e) {
+                $this->pisModel->db->transRollback();
+                throw $e;
+            }
+
+
+
+
 
         } catch (Exception $e) {
             return redirect()->back()->withInput()
                 ->with('error', 'Error al actualizar el proyecto: ' . $e->getMessage());
         }
     }
+
+
+
+
+
 
 
 
@@ -547,10 +629,7 @@ class PISController extends BaseController
         try {
             $lineas = $this->pisModel->getLineasConCarrera();
         
-            // Agregar logs para depuración
             
-            if (empty($lineas)) {
-            }
 
             $response = [
                 'success' => true,

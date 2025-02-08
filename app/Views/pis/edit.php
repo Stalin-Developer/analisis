@@ -445,14 +445,17 @@ Editar Proyecto Integrador de Saberes
                         <div class="col-md-4">
                             <div class="form-group">
                                 <label for="tipo_participante">Tipo de Participante *</label>
-                                <select class="form-control" id="tipo_participante" name="tipo_participante" required>
-                                    <option value="">Seleccione un tipo</option>
-                                    <?php foreach ($enumData['tipo_participante'] as $tipo): ?>
-                                        <option value="<?= $tipo ?>" <?= ($proyecto['tipo_participante'] ?? old('tipo_participante')) == $tipo ? 'selected' : '' ?>>
-                                            <?= $tipo ?>
-                                        </option>
-                                    <?php endforeach; ?>
-                                </select>
+                                <div class="d-flex">
+                                    <select class="form-control col-6" id="tipo_participante" name="tipo_participante" required>
+                                        <option value="">Seleccione un tipo</option>
+                                        <?php foreach ($enumData['tipo_participante'] as $tipo): ?>
+                                            <option value="<?= $tipo ?>" <?= ($proyecto['tipo_participante'] ?? old('tipo_participante')) == $tipo ? 'selected' : '' ?>>
+                                                <?= $tipo ?>
+                                            </option>
+                                        <?php endforeach; ?>
+                                    </select>
+                                    <button type="button" id="btnAgregarParticipante" class="btn btn-primary ml-2 text-sm col-5">Agregar Participantes</button>
+                                </div>
                             </div>
                         </div>
                         <div class="col-md-4">
@@ -512,6 +515,14 @@ Editar Proyecto Integrador de Saberes
                 <button type="submit" class="btn btn-primary" form="formPISEdit">Actualizar</button>
                 <a href="<?= base_url('pis') ?>" class="btn btn-secondary">Cancelar</a>
             </div>
+
+
+            <!-- Dentro del form con id="formPISEdit" -->
+            <input type="hidden" id="docentes_data" name="docentes_data" value="">
+            <input type="hidden" id="estudiantes_data" name="estudiantes_data" value="">
+
+
+
         </form>
 
         <!-- Mensaje de carga mientras se suben los archivos -->
@@ -524,6 +535,10 @@ Editar Proyecto Integrador de Saberes
 
         <!-- La logica del modal esta en este archivo: Views/pis/lineas_investigacion.php -->
         <?= $this->include('pis/lineas_investigacion') ?>
+
+
+        <!-- Al final del archivo edit.php, antes de cerrar el card -->
+        <?= $this->include('pis/participante') ?>
 
 
     </div>
@@ -897,6 +912,244 @@ $(function() {
     });
 
 
+
+});
+
+
+
+
+
+
+
+// ===============================================
+// Código para Participantes en Edit
+// ===============================================
+$(function() {
+    let docentesData = <?= json_encode($proyecto['participantes']['docentes'] ?? []) ?>;
+    let estudiantesData = <?= json_encode($proyecto['participantes']['estudiantes'] ?? []) ?>;
+
+    // Handler para el botón de agregar participantes
+    $('#btnAgregarParticipante').click(function() {
+        const tipoSeleccionado = $('#tipo_participante').val();
+        
+        if(tipoSeleccionado === 'Docente') {
+            $('#tipoParticipanteSeleccionado').text('Docente');
+            cargarDatosDocentes();
+            $('#modalParticipantes').modal('show');
+        } else if(tipoSeleccionado === 'Estudiante') {
+            $('#tipoParticipanteSeleccionado2').text('Estudiante');
+            cargarDatosEstudiantes();
+            $('#modalEstudiantes').modal('show');
+        } else if(tipoSeleccionado === 'Docente/Estudiante') {
+            $('#tipoParticipanteSeleccionado3').text('Docente/Estudiante');
+            cargarDatosDocentesMultiple();
+            cargarDatosEstudiantesMultiple();
+            $('#modalDocentesEstudiantes').modal('show');
+        }
+    });
+
+    // Función para cargar datos previos de docentes
+    function cargarDatosDocentes() {
+        docentesData.forEach((docente, index) => {
+            if(docente && docente.nombre && docente.cedula) {
+                $(`#nombre_docente_${index}`).val(docente.nombre);
+                $(`#cedula_docente_${index}`).val(docente.cedula);
+            }
+        });
+        $('#docentes_data').val(JSON.stringify(docentesData));
+    }
+
+    // Función para cargar datos previos de estudiantes
+    function cargarDatosEstudiantes() {
+        estudiantesData.forEach((estudiante, index) => {
+            if(estudiante && estudiante.nombre && estudiante.cedula) {
+                $(`#nombre_estudiante_${index}`).val(estudiante.nombre);
+                $(`#cedula_estudiante_${index}`).val(estudiante.cedula);
+            }
+        });
+        $('#estudiantes_data').val(JSON.stringify(estudiantesData));
+    }
+
+    // Funciones para el modal múltiple
+    function cargarDatosDocentesMultiple() {
+        docentesData.forEach((docente, index) => {
+            if(docente && docente.nombre && docente.cedula) {
+                $(`#nombre_docente_multiple_${index}`).val(docente.nombre);
+                $(`#cedula_docente_multiple_${index}`).val(docente.cedula);
+            }
+        });
+        $('#docentes_data').val(JSON.stringify(docentesData));
+    }
+
+    function cargarDatosEstudiantesMultiple() {
+        estudiantesData.forEach((estudiante, index) => {
+            if(estudiante && estudiante.nombre && estudiante.cedula) {
+                $(`#nombre_estudiante_multiple_${index}`).val(estudiante.nombre);
+                $(`#cedula_estudiante_multiple_${index}`).val(estudiante.cedula);
+            }
+        });
+        $('#estudiantes_data').val(JSON.stringify(estudiantesData));
+    }
+
+
+
+
+
+
+
+    // Agregar los demás handlers existentes para los inputs...
+    // Handler para guardar datos cuando se ingresan (docentes)
+    $('.nombre-docente, .cedula-docente').on('input', function() {
+        const index = $(this).data('index');
+        const isNombre = $(this).hasClass('nombre-docente');
+        
+        if (!docentesData[index]) {
+            docentesData[index] = { nombre: '', cedula: '' };
+        }
+        
+        if (isNombre) {
+            docentesData[index].nombre = $(this).val();
+        } else {
+            docentesData[index].cedula = $(this).val();
+        }
+        
+        $('#docentes_data').val(JSON.stringify(docentesData));
+    });
+
+    // Handler para guardar datos cuando se ingresan (estudiantes)
+    $('.nombre-estudiante, .cedula-estudiante').on('input', function() {
+        const index = $(this).data('index');
+        const isNombre = $(this).hasClass('nombre-estudiante');
+        
+        if (!estudiantesData[index]) {
+            estudiantesData[index] = { nombre: '', cedula: '' };
+        }
+        
+        if (isNombre) {
+            estudiantesData[index].nombre = $(this).val();
+        } else {
+            estudiantesData[index].cedula = $(this).val();
+        }
+        
+        $('#estudiantes_data').val(JSON.stringify(estudiantesData));
+    });
+
+
+
+    //handler para el modal "Docente/Estudiante" (docentes)
+    $('.nombre-docente-multiple, .cedula-docente-multiple').on('input', function() {
+        const index = $(this).data('index');
+        const isNombre = $(this).hasClass('nombre-docente-multiple');
+        
+        if (!docentesData[index]) {
+            docentesData[index] = { nombre: '', cedula: '' };
+        }
+        
+        if (isNombre) {
+            docentesData[index].nombre = $(this).val();
+        } else {
+            docentesData[index].cedula = $(this).val();
+        }
+        
+        $('#docentes_data').val(JSON.stringify(docentesData));
+    });
+
+    //handler para el modal "Docente/Estudiante" (estudiantes)
+    $('.nombre-estudiante-multiple, .cedula-estudiante-multiple').on('input', function() {
+        const index = $(this).data('index');
+        const isNombre = $(this).hasClass('nombre-estudiante-multiple');
+        
+        if (!estudiantesData[index]) {
+            estudiantesData[index] = { nombre: '', cedula: '' };
+        }
+        
+        if (isNombre) {
+            estudiantesData[index].nombre = $(this).val();
+        } else {
+            estudiantesData[index].cedula = $(this).val();
+        }
+        
+        $('#estudiantes_data').val(JSON.stringify(estudiantesData));
+    });
+
+
+
+
+
+
+
+    
+
+
+    // Handler para el formulario principal antes de enviar
+    $('#formPISEdit').on('submit', function(e) {
+        const tipoSeleccionado = $('#tipo_participante').val();
+        
+        // Limpiar ambos campos ocultos primero
+        $('#docentes_data').val('');
+        $('#estudiantes_data').val('');
+        
+        // Procesar solo según el tipo seleccionado
+        if(tipoSeleccionado === 'Docente') {
+            const docentesValidos = docentesData.filter(docente => 
+                docente && docente.nombre && docente.nombre.trim() !== '' && 
+                docente.cedula && docente.cedula.trim() !== ''
+            );
+            $('#docentes_data').val(JSON.stringify(docentesValidos));
+        } 
+        else if(tipoSeleccionado === 'Estudiante') {
+            const estudiantesValidos = estudiantesData.filter(estudiante => 
+                estudiante && estudiante.nombre && estudiante.nombre.trim() !== '' && 
+                estudiante.cedula && estudiante.cedula.trim() !== ''
+            );
+
+            console.log('Datos de estudiantes antes de enviar:', estudiantesValidos);
+            console.log('Array estudiantesData:', estudiantesData);
+
+
+            $('#estudiantes_data').val(JSON.stringify(estudiantesValidos));
+
+            console.log('Valor del campo oculto estudiantes_data:', $('#estudiantes_data').val());
+
+
+        } else if(tipoSeleccionado === 'Docente/Estudiante') {
+            // Procesar tanto docentes como estudiantes
+            const docentesValidos = docentesData.filter(docente => 
+                docente && docente.nombre && docente.nombre.trim() !== '' && 
+                docente.cedula && docente.cedula.trim() !== ''
+            );
+            const estudiantesValidos = estudiantesData.filter(estudiante => 
+                estudiante && estudiante.nombre && estudiante.nombre.trim() !== '' && 
+                estudiante.cedula && estudiante.cedula.trim() !== ''
+            );
+            
+            $('#docentes_data').val(JSON.stringify(docentesValidos));
+            $('#estudiantes_data').val(JSON.stringify(estudiantesValidos));
+        }
+
+    });
+
+
+
+
+
+
+
+
+
+    // Handler para cuando se cierran los modales
+    $('#modalParticipantes').on('hidden.bs.modal', function() {
+        // Si necesitas limpiar algo cuando se cierra el modal de docentes
+    });
+
+    $('#modalEstudiantes').on('hidden.bs.modal', function() {
+        // Si necesitas limpiar algo cuando se cierra el modal de estudiantes
+    });
+
+    //handler para el modal "Docente/Estudiante"
+    $('#modalDocentesEstudiantes').on('hidden.bs.modal', function() {
+        // Si necesitas limpiar algo cuando se cierra el modal múltiple
+    });
 
 
 

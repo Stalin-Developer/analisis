@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 07, 2025 at 12:42 AM
+-- Generation Time: Feb 08, 2025 at 04:26 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -307,7 +307,9 @@ CREATE TABLE `docentes` (
 --
 
 INSERT INTO `docentes` (`id`, `nombre`, `cedula`, `created_at`, `updated_at`) VALUES
-(19, 'docente 1', '55555', '2025-02-06 23:37:50', '2025-02-06 23:37:50');
+(23, 'Triple hhh', '123', '2025-02-08 03:23:24', '2025-02-08 03:23:24'),
+(24, 'La roca', '456', '2025-02-08 03:25:17', '2025-02-08 03:25:17'),
+(25, 'undertaket', '789', '2025-02-08 03:25:17', '2025-02-08 03:25:17');
 
 -- --------------------------------------------------------
 
@@ -356,8 +358,8 @@ CREATE TABLE `estudiantes` (
 --
 
 INSERT INTO `estudiantes` (`id`, `nombre`, `cedula`, `created_at`, `updated_at`) VALUES
-(16, 'estudiante 1', '1122334455', '2025-02-06 23:37:50', '2025-02-06 23:37:50'),
-(17, 'estudiante 11', '9988774455', '2025-02-06 23:40:48', '2025-02-06 23:40:48');
+(35, 'Speed', '456', '2025-02-08 03:23:24', '2025-02-08 03:23:24'),
+(36, 'Logan paul', '321', '2025-02-08 03:25:17', '2025-02-08 03:25:17');
 
 -- --------------------------------------------------------
 
@@ -507,8 +509,8 @@ CREATE TABLE `pis_docentes` (
 --
 
 INSERT INTO `pis_docentes` (`id`, `proyecto_id`, `docente_id`, `created_at`) VALUES
-(17, 43, 19, '2025-02-06 23:37:50'),
-(18, 44, 19, '2025-02-06 23:40:48');
+(42, 46, 24, '2025-02-08 03:25:17'),
+(43, 46, 25, '2025-02-08 03:25:17');
 
 -- --------------------------------------------------------
 
@@ -528,8 +530,7 @@ CREATE TABLE `pis_estudiantes` (
 --
 
 INSERT INTO `pis_estudiantes` (`id`, `proyecto_id`, `estudiante_id`, `created_at`) VALUES
-(23, 43, 16, '2025-02-06 23:37:50'),
-(24, 44, 17, '2025-02-06 23:40:48');
+(38, 46, 36, '2025-02-08 03:25:17');
 
 -- --------------------------------------------------------
 
@@ -628,8 +629,7 @@ CREATE TABLE `proyectos_integradores_saberes` (
 --
 
 INSERT INTO `proyectos_integradores_saberes` (`id`, `nombre`, `codigo`, `tipo`, `objetivo`, `programa_id`, `estado`, `linea_investigacion_carrera_id`, `facultad_entidad_area`, `fecha_inicio`, `coordinador_director`, `fecha_fin_planificado`, `correo_coordinador`, `fecha_fin_real`, `telefono_coordinador`, `campo_amplio_id`, `campo_especifico_id`, `campo_detallado_id`, `alcance_territorial`, `investigadores_acreditados`, `impacto_social`, `impacto_cientifico`, `impacto_economico`, `impacto_politico`, `impacto_ambiental`, `otro_impacto`, `fuente_financiamiento`, `descripcion_actividad`, `parametro_cumplimiento`, `cooperacion`, `red`, `resultados_verificables`, `anio`, `presupuesto_planificado`, `presupuesto_ejecutado`, `tipo_participante`, `horas`, `publicaciones_id`, `proyecto_path`, `poster_path`, `created_at`, `updated_at`) VALUES
-(43, 'Tienda Zapatos', '100117', 'Vinculación', 'asdfasdf', 3, 'Finalizado', 60, 'Software', '2025-02-12', 'adsf', '2025-02-20', 'bismuto7@gmail.com', '2025-02-20', 1234567898, NULL, NULL, NULL, 'Parroquial', 'Si', NULL, NULL, NULL, NULL, NULL, NULL, 'Asignación Regular IES', 'asdfaf', 'Gasto Interno Bruto en I + D + I', 'Nacional', 'Nacional', 'Totales', 2025, 55.00, 54.00, 'Docente/Estudiante', 55, NULL, NULL, NULL, '2025-02-06 23:37:49', '2025-02-06 23:37:49'),
-(44, 'Tienda Zapatos 2', '100117', 'Investigación', 'sadfa', 4, 'En Cierre', 58, 'asdfasdf', '2025-02-12', 'asdf', '2025-02-26', 'bismuto7@gmail.com', '2025-02-19', 1234567895, NULL, NULL, NULL, 'Institucional', 'Si', NULL, NULL, NULL, NULL, NULL, NULL, 'Fondos Concursables Internacionales', 'asdf', 'Gasto Nacional Bruto en I + D + I', 'Internacional', 'Internacional y Nacional', 'Totales', 2025, 55.00, 88.00, 'Docente/Estudiante', 44, NULL, NULL, NULL, '2025-02-06 23:40:48', '2025-02-06 23:40:48');
+(46, 'Tienda Zapatos', '100117', 'Investigación', 'dsfadsfasf', 3, 'En Cierre', 60, 'Desarrollo de Software', '2025-03-04', 'Aprender y desarrollar nuevas habilidades puede ser un desafío emocionante. La clave está en establecer metas claras, organizar el tiempo, ser constante y buscar recursos adecuados. La práctica diaria asegura el éxito en cualquier actividad que deseas', '2025-02-20', 'bismuto7@gmail.com', '2025-02-19', 1234567896, NULL, NULL, NULL, 'Internacional', 'Si', NULL, NULL, NULL, NULL, NULL, NULL, 'Fondos Concursables Nacionales', 'adfadf', 'Créditos Presupuestarios Públicos en I + D + I', 'Internacional', 'Internacional', 'Totales', 2025, 55.00, 655.00, 'Docente/Estudiante', 55, NULL, NULL, NULL, '2025-02-08 03:23:24', '2025-02-08 03:25:17');
 
 -- --------------------------------------------------------
 
@@ -902,7 +902,7 @@ ALTER TABLE `categories`
 -- AUTO_INCREMENT for table `docentes`
 --
 ALTER TABLE `docentes`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 
 --
 -- AUTO_INCREMENT for table `documents`
@@ -914,7 +914,7 @@ ALTER TABLE `documents`
 -- AUTO_INCREMENT for table `estudiantes`
 --
 ALTER TABLE `estudiantes`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
 
 --
 -- AUTO_INCREMENT for table `lineas_investigacion_carreras`
@@ -938,13 +938,13 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT for table `pis_docentes`
 --
 ALTER TABLE `pis_docentes`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=44;
 
 --
 -- AUTO_INCREMENT for table `pis_estudiantes`
 --
 ALTER TABLE `pis_estudiantes`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
 
 --
 -- AUTO_INCREMENT for table `produccion_cientifica_tecnica`
@@ -962,7 +962,7 @@ ALTER TABLE `programas`
 -- AUTO_INCREMENT for table `proyectos_integradores_saberes`
 --
 ALTER TABLE `proyectos_integradores_saberes`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=45;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=47;
 
 --
 -- AUTO_INCREMENT for table `trabajos_de_titulacion`
