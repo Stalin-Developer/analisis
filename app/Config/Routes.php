@@ -97,7 +97,7 @@ $routes->group('', ['filter' => 'auth'], function($routes) {
         $routes->get('pis/participantes/estudiante/check-limit/(:num)', 'ParticipanteController::checkEstudianteLimit/$1');
         $routes->get('pis/participantes/both/check-limits/(:num)', 'ParticipanteController::checkBothLimits/$1');
         $routes->delete('pis/participantes/delete/(:num)', 'ParticipanteController::deleteParticipantes/$1');
-
+        $routes->get('pis/participantes/get/(:num)', 'ParticipanteController::getParticipantesByPIS/$1');  //Para ver los participantes en la vista index.
 
     
 

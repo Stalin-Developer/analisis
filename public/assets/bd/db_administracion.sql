@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 08, 2025 at 04:26 AM
+-- Generation Time: Feb 12, 2025 at 10:24 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -307,9 +307,10 @@ CREATE TABLE `docentes` (
 --
 
 INSERT INTO `docentes` (`id`, `nombre`, `cedula`, `created_at`, `updated_at`) VALUES
-(23, 'Triple hhh', '123', '2025-02-08 03:23:24', '2025-02-08 03:23:24'),
-(24, 'La roca', '456', '2025-02-08 03:25:17', '2025-02-08 03:25:17'),
-(25, 'undertaket', '789', '2025-02-08 03:25:17', '2025-02-08 03:25:17');
+(30, 'docente 1', '1111', '2025-02-12 20:56:51', '2025-02-12 20:56:51'),
+(31, 'docente 2', '2222', '2025-02-12 21:01:02', '2025-02-12 21:01:02'),
+(32, 'docente 3', '3333', '2025-02-12 21:14:37', '2025-02-12 21:14:37'),
+(33, 'docente 4', '4444', '2025-02-12 21:18:25', '2025-02-12 21:18:25');
 
 -- --------------------------------------------------------
 
@@ -358,8 +359,9 @@ CREATE TABLE `estudiantes` (
 --
 
 INSERT INTO `estudiantes` (`id`, `nombre`, `cedula`, `created_at`, `updated_at`) VALUES
-(35, 'Speed', '456', '2025-02-08 03:23:24', '2025-02-08 03:23:24'),
-(36, 'Logan paul', '321', '2025-02-08 03:25:17', '2025-02-08 03:25:17');
+(41, 'estudiante 1', '111', '2025-02-12 20:58:24', '2025-02-12 20:58:24'),
+(42, 'estudiante 2', '222', '2025-02-12 21:01:02', '2025-02-12 21:01:02'),
+(43, 'estudiante 4', '444', '2025-02-12 21:18:25', '2025-02-12 21:18:25');
 
 -- --------------------------------------------------------
 
@@ -509,8 +511,10 @@ CREATE TABLE `pis_docentes` (
 --
 
 INSERT INTO `pis_docentes` (`id`, `proyecto_id`, `docente_id`, `created_at`) VALUES
-(42, 46, 24, '2025-02-08 03:25:17'),
-(43, 46, 25, '2025-02-08 03:25:17');
+(56, 54, 30, '2025-02-12 21:14:37'),
+(57, 54, 32, '2025-02-12 21:14:37'),
+(60, 56, 31, '2025-02-12 21:24:11'),
+(61, 56, 33, '2025-02-12 21:24:11');
 
 -- --------------------------------------------------------
 
@@ -530,7 +534,8 @@ CREATE TABLE `pis_estudiantes` (
 --
 
 INSERT INTO `pis_estudiantes` (`id`, `proyecto_id`, `estudiante_id`, `created_at`) VALUES
-(38, 46, 36, '2025-02-08 03:25:17');
+(53, 56, 42, '2025-02-12 21:24:11'),
+(54, 56, 43, '2025-02-12 21:24:11');
 
 -- --------------------------------------------------------
 
@@ -629,7 +634,9 @@ CREATE TABLE `proyectos_integradores_saberes` (
 --
 
 INSERT INTO `proyectos_integradores_saberes` (`id`, `nombre`, `codigo`, `tipo`, `objetivo`, `programa_id`, `estado`, `linea_investigacion_carrera_id`, `facultad_entidad_area`, `fecha_inicio`, `coordinador_director`, `fecha_fin_planificado`, `correo_coordinador`, `fecha_fin_real`, `telefono_coordinador`, `campo_amplio_id`, `campo_especifico_id`, `campo_detallado_id`, `alcance_territorial`, `investigadores_acreditados`, `impacto_social`, `impacto_cientifico`, `impacto_economico`, `impacto_politico`, `impacto_ambiental`, `otro_impacto`, `fuente_financiamiento`, `descripcion_actividad`, `parametro_cumplimiento`, `cooperacion`, `red`, `resultados_verificables`, `anio`, `presupuesto_planificado`, `presupuesto_ejecutado`, `tipo_participante`, `horas`, `publicaciones_id`, `proyecto_path`, `poster_path`, `created_at`, `updated_at`) VALUES
-(46, 'Tienda Zapatos', '100117', 'Investigación', 'dsfadsfasf', 3, 'En Cierre', 60, 'Desarrollo de Software', '2025-03-04', 'Aprender y desarrollar nuevas habilidades puede ser un desafío emocionante. La clave está en establecer metas claras, organizar el tiempo, ser constante y buscar recursos adecuados. La práctica diaria asegura el éxito en cualquier actividad que deseas', '2025-02-20', 'bismuto7@gmail.com', '2025-02-19', 1234567896, NULL, NULL, NULL, 'Internacional', 'Si', NULL, NULL, NULL, NULL, NULL, NULL, 'Fondos Concursables Nacionales', 'adfadf', 'Créditos Presupuestarios Públicos en I + D + I', 'Internacional', 'Internacional', 'Totales', 2025, 55.00, 655.00, 'Docente/Estudiante', 55, NULL, NULL, NULL, '2025-02-08 03:23:24', '2025-02-08 03:25:17');
+(54, 'Prueba 1', '100117', 'Vinculación', 'afsadf', 2, 'En Cierre', 60, 'Software', '2025-02-14', 'Aprender y desarrollar nuevas habilidades puede ser un desafío emocionante. La clave está en establecer metas claras, organizar el tiempo, ser constante y buscar recursos adecuados. La práctica diaria asegura el éxito en cualquier actividad que deseas', '2025-02-21', 'bismuto7@gmail.com', '2025-01-31', 1234566789, NULL, NULL, NULL, 'Nacional', 'Si', NULL, NULL, NULL, NULL, NULL, NULL, 'Asignación Regular IES', 'kkjkj', 'Gasto Nacional Bruto en I + D + I', 'Nacional', 'Nacional', 'Totales', 2025, 55.00, 55.00, 'Docente', 55, NULL, NULL, NULL, '2025-02-12 20:56:51', '2025-02-12 21:14:37'),
+(55, 'Prueba 2', '100117', 'Vinculación', 'adsfa', 1, 'En Cierre', 62, 'adsf', '2025-02-12', 'adsf', '2025-02-12', 'bismuto7@gmail.com', '2025-02-12', 1234567896, NULL, NULL, NULL, 'Internacional', 'Si', NULL, NULL, NULL, NULL, NULL, NULL, 'Fondos Concursables Nacionales', 'asdf', 'Gasto Interno', 'Nacional', 'Internacional y Nacional', 'Parciales', 2025, 55.00, 55.00, 'Estudiante', 55, NULL, NULL, NULL, '2025-02-12 20:58:24', '2025-02-12 21:17:07'),
+(56, 'Prueba 3', '100117', 'Investigación y Vinculación', 'asdfff', 1, 'En Cierre', 61, 'Software', '2025-02-12', 'Morales', '2025-02-12', 'bismuto7@gmail.com', '2025-02-12', 1234567896, NULL, NULL, NULL, 'Nacional', 'Si', NULL, NULL, NULL, NULL, NULL, NULL, 'Fondos Concursables Interno IES', 'asdff', 'Gasto de Capital', 'Internacional', 'Nacional', 'Parciales', 2025, 55.00, 55.00, 'Docente/Estudiante', 55, NULL, NULL, NULL, '2025-02-12 21:01:02', '2025-02-12 21:24:11');
 
 -- --------------------------------------------------------
 
@@ -902,7 +909,7 @@ ALTER TABLE `categories`
 -- AUTO_INCREMENT for table `docentes`
 --
 ALTER TABLE `docentes`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
 
 --
 -- AUTO_INCREMENT for table `documents`
@@ -914,7 +921,7 @@ ALTER TABLE `documents`
 -- AUTO_INCREMENT for table `estudiantes`
 --
 ALTER TABLE `estudiantes`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=44;
 
 --
 -- AUTO_INCREMENT for table `lineas_investigacion_carreras`
@@ -938,13 +945,13 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT for table `pis_docentes`
 --
 ALTER TABLE `pis_docentes`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=44;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=62;
 
 --
 -- AUTO_INCREMENT for table `pis_estudiantes`
 --
 ALTER TABLE `pis_estudiantes`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=55;
 
 --
 -- AUTO_INCREMENT for table `produccion_cientifica_tecnica`
@@ -962,7 +969,7 @@ ALTER TABLE `programas`
 -- AUTO_INCREMENT for table `proyectos_integradores_saberes`
 --
 ALTER TABLE `proyectos_integradores_saberes`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=47;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=57;
 
 --
 -- AUTO_INCREMENT for table `trabajos_de_titulacion`

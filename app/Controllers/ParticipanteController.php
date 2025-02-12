@@ -386,6 +386,43 @@ class ParticipanteController extends BaseController
 
 
 
+    /**
+     * Método para obtener los participantes relacionados con un PIS.
+    */
+    public function getParticipantesByPIS($pisId)
+    {
+        try {
+            // Obtener el proyecto con sus participantes
+            $data = $this->pisModel->getProyectoWithParticipantes($pisId);
+            
+            if (!$data) {
+                throw new Exception('Proyecto no encontrado');
+            }
+
+            return $this->response->setJSON([
+                'success' => true,
+                'data' => [
+                    'tipo_participante' => $data['tipo_participante'],
+                    'participantes' => $data['participantes']
+                ]
+            ]);
+
+        } catch (Exception $e) {
+            return $this->response->setJSON([
+                'success' => false,
+                'error' => $e->getMessage()
+            ]);
+        }
+    }
+
+
+
+
+
+
+
+
+
 
 
 

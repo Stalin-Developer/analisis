@@ -69,6 +69,13 @@ class PISController extends BaseController
             }
 
 
+            // Ordenar por fecha de creación descendente (más reciente primero)
+            $builder->orderBy('proyectos_integradores_saberes.created_at', 'DESC');
+            
+            // Limitar a 100 registros
+            $builder->limit(100);
+
+
 
             // Ejecutar la consulta
             $proyectos = $builder->get()->getResultArray();

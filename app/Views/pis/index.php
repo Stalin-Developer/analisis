@@ -262,7 +262,14 @@ Gestión de Proyectos Integradores de Saberes
                         <td><?= $proyecto['anio'] ?></td>
                         <td>$<?= number_format($proyecto['presupuesto_planificado'], 2) ?></td>
                         <td>$<?= number_format($proyecto['presupuesto_ejecutado'], 2) ?></td>
-                        <td><?= $proyecto['tipo_participante'] ?></td>
+
+                        <td>
+                            <button type="button" class="btn btn-info btn-sm view-participants" 
+                                    data-pid="<?= $proyecto['id'] ?>">
+                                Ver Detalles
+                            </button>
+                        </td>
+
                         <td><?= $proyecto['horas'] ?></td>
                         <td><?= $proyecto['nombre_publicacion'] ?? 'No asignado' ?></td>
                         <td class="actions-column">
@@ -301,6 +308,12 @@ Gestión de Proyectos Integradores de Saberes
 
             </table>
         </div>
+
+
+        <!-- Al final del card, antes de cerrarlo.
+        Llamamos al archivo participante.php para mostrar los participantes. -->
+        <?= $this->include('pis/participante') ?>
+
     </div>
 </div>
 <?= $this->endSection() ?>
@@ -422,6 +435,102 @@ $(function () {
         }, 100);
     });
 });
+
+
+
+
+
+
+
+
+//CODIGO PARA MANEJAR EL BOTON "Ver Detalles"
+$(function () {
+    console.log('Iniciando script de participantes');
+
+    // Handler para el botón "Ver Detalles"
+    $('.view-participants').on('click', function() {
+        
+        const pisId = $(this).data('pid');
+        
+        // Obtener datos del PIS y sus participantes
+        $.get(`<?= base_url('pis/participantes/get/') ?>/${pisId}`, function(response) {
+            
+            if (response.success) {
+                const { tipo_participante, participantes } = response.data;
+                
+                // Actualizar campos hidden
+                $('#docentes_data').val(JSON.stringify(participantes.docentes || []));
+                $('#estudiantes_data').val(JSON.stringify(participantes.estudiantes || []));
+                
+                // Establecer readonly en todos los inputs
+                setTimeout(() => {
+                    $('#modalParticipantes input, #modalEstudiantes input, #modalDocentesEstudiantes input').prop('readonly', true);
+                }, 100);
+
+                // Mostrar el modal correspondiente
+                if (tipo_participante === 'Docente') {
+                    $('#tipoParticipanteSeleccionado').text('Docente');
+                    cargarDatosDocentes();
+                    $('#modalParticipantes').modal('show');
+                } 
+                else if (tipo_participante === 'Estudiante') {
+                    $('#tipoParticipanteSeleccionado2').text('Estudiante');
+                    cargarDatosEstudiantes();
+                    $('#modalEstudiantes').modal('show');
+                }
+                else if (tipo_participante === 'Docente/Estudiante') {
+                    $('#tipoParticipanteSeleccionado3').text('Docente/Estudiante');
+                    cargarDatosDocentesMultiple();
+                    cargarDatosEstudiantesMultiple();
+                    $('#modalDocentesEstudiantes').modal('show');
+                }
+            }
+        });
+    });
+
+    // Funciones para cargar datos en los modales
+    function cargarDatosDocentes() {
+        const docentesData = JSON.parse($('#docentes_data').val() || '[]');
+        docentesData.forEach((docente, index) => {
+            if(docente && docente.nombre && docente.cedula) {
+                $(`#nombre_docente_${index}`).val(docente.nombre);
+                $(`#cedula_docente_${index}`).val(docente.cedula);
+            }
+        });
+    }
+
+    function cargarDatosEstudiantes() {
+        const estudiantesData = JSON.parse($('#estudiantes_data').val() || '[]');
+        estudiantesData.forEach((estudiante, index) => {
+            if(estudiante && estudiante.nombre && estudiante.cedula) {
+                $(`#nombre_estudiante_${index}`).val(estudiante.nombre);
+                $(`#cedula_estudiante_${index}`).val(estudiante.cedula);
+            }
+        });
+    }
+
+    function cargarDatosDocentesMultiple() {
+        const docentesData = JSON.parse($('#docentes_data').val() || '[]');
+        docentesData.forEach((docente, index) => {
+            if(docente && docente.nombre && docente.cedula) {
+                $(`#nombre_docente_multiple_${index}`).val(docente.nombre);
+                $(`#cedula_docente_multiple_${index}`).val(docente.cedula);
+            }
+        });
+    }
+
+    function cargarDatosEstudiantesMultiple() {
+        const estudiantesData = JSON.parse($('#estudiantes_data').val() || '[]');
+        estudiantesData.forEach((estudiante, index) => {
+            if(estudiante && estudiante.nombre && estudiante.cedula) {
+                $(`#nombre_estudiante_multiple_${index}`).val(estudiante.nombre);
+                $(`#cedula_estudiante_multiple_${index}`).val(estudiante.cedula);
+            }
+        });
+    }
+});
+
+
 
 
 </script>

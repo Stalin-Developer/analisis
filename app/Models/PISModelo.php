@@ -560,10 +560,14 @@ class PISModelo extends Model
                 
                 // Obtener participantes según el tipo
                 if ($proyecto['tipo_participante'] === 'Docente') {
-                    $proyecto['participantes'] = $participanteModel->getByPIS($id, 'docente');
+                    $proyecto['participantes'] = [
+                        'docentes' => $participanteModel->getByPIS($id, 'docente')
+                    ];
                 } 
                 else if ($proyecto['tipo_participante'] === 'Estudiante') {
-                    $proyecto['participantes'] = $participanteModel->getByPIS($id, 'estudiante');
+                    $proyecto['participantes'] = [
+                        'estudiantes' => $participanteModel->getByPIS($id, 'estudiante')
+                    ];
                 }
                 else if ($proyecto['tipo_participante'] === 'Docente/Estudiante') {
                     $proyecto['participantes'] = $participanteModel->getAllParticipantesByPIS($id);
