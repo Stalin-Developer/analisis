@@ -157,20 +157,130 @@ Generación de Reportes - Proyectos Integradores de Saberes
 <script src="<?= base_url('assets/plugins/datatables/jquery.dataTables.min.js') ?>"></script>
 <script src="<?= base_url('assets/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js') ?>"></script>
 
+
+
 <script>
 $(function () {
+    // Función para calcular el ancho basado en la longitud del texto
+    function calcularAncho(length, isObjetivo = false) {
+        // Ancho especial para la columna objetivo
+        if (isObjetivo) {
+            return 400; // Ancho fijo más grande para la columna objetivo
+        }
+        // Anchos para otras columnas
+        if (length <= 10) return 100;
+        if (length <= 30) return 150;
+        if (length <= 60) return 200;
+        return 250;
+    }
+
+    // Función para obtener el contenido más largo de una columna
+    function obtenerLongitudMaxima(table, columnIndex) {
+        let maxLength = 0;
+        
+        // Revisar encabezado
+        const headerText = table.column(columnIndex).header().textContent.trim();
+        maxLength = headerText.length;
+
+        // Revisar celdas visibles
+        table.column(columnIndex).nodes().each(function(node) {
+            const cellText = $(node).text().trim();
+            if (cellText.length > maxLength) {
+                maxLength = cellText.length;
+            }
+        });
+
+        return maxLength;
+    }
+
+    // Función para aplicar los anchos a una columna
+    function aplicarAnchoColumna(table, columnIndex) {
+        if (columnIndex === 0) return; // Ignorar columna de checkbox
+        
+        const maxLength = obtenerLongitudMaxima(table, columnIndex);
+        const isObjetivo = table.column(columnIndex).header().textContent.trim() === 'Objetivo';
+        const width = calcularAncho(maxLength, isObjetivo);
+
+        // Aplicar el ancho usando columnDefs
+        table.column(columnIndex).nodes().each(function(node) {
+            $(node).css({
+                'min-width': width + 'px',
+                'max-width': width + 'px',
+                'width': width + 'px',
+                'white-space': 'normal',
+                'word-wrap': 'break-word'
+            });
+        });
+
+        // Aplicar también al encabezado
+        $(table.column(columnIndex).header()).css({
+            'min-width': width + 'px',
+            'max-width': width + 'px',
+            'width': width + 'px',
+            'white-space': 'normal',
+            'word-wrap': 'break-word'
+        });
+    }
+
     var table = $('.table').DataTable({
-        "responsive": true,
+        "responsive": false,
+        "scrollX": true,
         "autoWidth": false,
         "language": {
             "url": "//cdn.datatables.net/plug-ins/1.10.24/i18n/Spanish.json"
         },
+        "pageLength": 10,
+
+        // Agregamos esta configuración para las clases de las celdas
+        "columnDefs": [{
+            "targets": '_all',
+            "createdCell": function(td, cellData, rowData, row, col) {
+                $(td).addClass('align-middle');
+            }
+        }],
+
         "initComplete": function(settings, json) {
+            const table = this.api();
+            
+            // Aplicar anchos iniciales
+            for(let i = 0; i < table.columns().nodes().length; i++) {
+                aplicarAnchoColumna(table, i);
+            }
+
+            // Forzar recálculo de anchos
+            setTimeout(function() {
+                table.columns.adjust();
+            }, 100);
+
+            // Inicializar checkboxes
             $('#selectAll').prop('checked', true);
             $('.doc-checkbox').prop('checked', true);
+        },
+        "drawCallback": function(settings) {
+            const table = this.api();
+            
+            // Reaplicar anchos después de cualquier redibujado
+            for(let i = 0; i < table.columns().nodes().length; i++) {
+                aplicarAnchoColumna(table, i);
+            }
+
+            setTimeout(function() {
+                table.columns.adjust();
+            }, 100);
         }
     });
 
+    // Ajustar cuando se cambie de página o se filtre
+    table.on('page.dt search.dt', function() {
+        setTimeout(function() {
+            for(let i = 0; i < table.columns().nodes().length; i++) {
+                aplicarAnchoColumna(table, i);
+            }
+            table.columns.adjust();
+        }, 100);
+    });
+
+    // Mantener la funcionalidad de selección
     $('#selectAll').change(function() {
         $('.doc-checkbox').prop('checked', $(this).prop('checked'));
     });
@@ -193,4 +303,8 @@ $(function () {
     });
 });
 </script>
+
+
+
+
 <?= $this->endSection() ?>

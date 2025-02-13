@@ -126,7 +126,6 @@
                     <th>Fuente Financiamiento</th>
                     <th>Año</th>
                     <th>Participante</th>
-                    <th>Objetivo</th>
                 </tr>
             </thead>
             <tbody>
@@ -153,8 +152,17 @@
                     <td><?= $proyecto['fuente_financiamiento'] ?></td>
                     <td><?= $proyecto['anio'] ?></td>
                     <td><?= $proyecto['participante'] ?></td>
-                    <td><?= $proyecto['objetivo'] ?></td>
                 </tr>
+
+                <?php if (!empty($proyecto['objetivo'])): ?>
+                <tr>
+                    <td colspan="9">
+                        <strong>Objetivo:</strong><br>
+                        <?= $proyecto['objetivo'] ?>
+                    </td>
+                </tr>
+                <?php endif; ?>
+
                 <?php endforeach; ?>
             </tbody>
         </table>
