@@ -42,7 +42,7 @@ Seleccionar el tipo de documento:
 
 
             <div class="col-lg-3 col-md-4 col-sm-6">
-                <a href="#" class="small-box dashboard-box">
+                <a href="<?= base_url('reports_pis') ?>" class="small-box dashboard-box">
                     <div class="inner">
                         <h3>PIS</h3>
                     </div>

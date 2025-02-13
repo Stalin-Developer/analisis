@@ -110,5 +110,8 @@ $routes->group('', ['filter' => 'auth'], function($routes) {
     $routes->get('reports', 'Reports::index');
     $routes->post('reports/generate', 'Reports::generate');
 
+    //PIS
+    $routes->get('reports_pis', 'ReportesPIS::index');
+    $routes->post('reports_pis/generate', 'ReportesPIS::generate');
 
 });

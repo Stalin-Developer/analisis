@@ -10,7 +10,7 @@ Generación de Reportes - Trabajos de Titulación
 
 <?= $this->section('breadcrumb') ?>
 <li class="breadcrumb-item"><a href="<?= base_url('dashboard') ?>">Home</a></li>
-<li class="breadcrumb-item"><a href="<?= base_url('reportes') ?>">Reportes</a></li>
+<li class="breadcrumb-item"><a href="<?= base_url('show_reports') ?>">Reportes</a></li>
 <li class="breadcrumb-item active">Trabajos de Titulación</li>
 <?= $this->endSection() ?>
 

@@ -354,4 +354,105 @@ class ParticipanteModel extends Model
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    //METODO NECESARIO PARA LOS REPORTES PIS.
+    /**
+     * Obtiene el primer participante o participantes ingresados para un proyecto específico
+     * 
+     * @param int $pisId ID del proyecto
+     * @param string $tipo Tipo de participante ('Docente', 'Estudiante', 'Docente/Estudiante')
+     * @return array|null Datos del(los) participante(s) o null si no se encuentra
+    */
+    public function getFirstParticipante($pisId, $tipo)
+    {
+        try {
+            // Para cuando el tipo es 'Docente/Estudiante'
+            if ($tipo === 'Docente/Estudiante') {
+                $primerDocente = $this->db->table('pis_docentes')
+                    ->select('docentes.*')
+                    ->join('docentes', 'docentes.id = pis_docentes.docente_id')
+                    ->where('pis_docentes.proyecto_id', $pisId)
+                    ->orderBy('pis_docentes.created_at', 'ASC')
+                    ->limit(1)
+                    ->get()
+                    ->getRowArray();
+
+                $primerEstudiante = $this->db->table('pis_estudiantes')
+                    ->select('estudiantes.*')
+                    ->join('estudiantes', 'estudiantes.id = pis_estudiantes.estudiante_id')
+                    ->where('pis_estudiantes.proyecto_id', $pisId)
+                    ->orderBy('pis_estudiantes.created_at', 'ASC')
+                    ->limit(1)
+                    ->get()
+                    ->getRowArray();
+
+                return [
+                    'docente' => $primerDocente,
+                    'estudiante' => $primerEstudiante
+                ];
+            }
+
+            // Para cuando el tipo es solo 'Docente'
+            if ($tipo === 'Docente') {
+                return $this->db->table('pis_docentes')
+                    ->select('docentes.*')
+                    ->join('docentes', 'docentes.id = pis_docentes.docente_id')
+                    ->where('pis_docentes.proyecto_id', $pisId)
+                    ->orderBy('pis_docentes.created_at', 'ASC')
+                    ->limit(1)
+                    ->get()
+                    ->getRowArray();
+            }
+
+            // Para cuando el tipo es solo 'Estudiante'
+            if ($tipo === 'Estudiante') {
+                return $this->db->table('pis_estudiantes')
+                    ->select('estudiantes.*')
+                    ->join('estudiantes', 'estudiantes.id = pis_estudiantes.estudiante_id')
+                    ->where('pis_estudiantes.proyecto_id', $pisId)
+                    ->orderBy('pis_estudiantes.created_at', 'ASC')
+                    ->limit(1)
+                    ->get()
+                    ->getRowArray();
+            }
+            
+            return null;
+        } catch (Exception $e) {
+            log_message('error', 'Error al obtener el primer participante ingresado: ' . $e->getMessage());
+            return null;
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
