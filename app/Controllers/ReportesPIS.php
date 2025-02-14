@@ -85,21 +85,27 @@ class ReportesPIS extends BaseController
             switch ($tipoParticipante) {
                 case 'Docente':
                     if ($participante) {
-                        $info = $participante['nombre'];
+                        $info = "D: {$participante['nombre']} C.I: {$participante['cedula']}";
                     }
                     break;
                     
                 case 'Estudiante':
                     if ($participante) {
-                        $info = $participante['nombre'];
+                        $info = "E: {$participante['nombre']} C.I: {$participante['cedula']}";
                     }
                     break;
                     
                 case 'Docente/Estudiante':
                     if ($participante) {
-                        $docente = $participante['docente'] ? $participante['docente']['nombre'] : 'No asignado';
-                        $estudiante = $participante['estudiante'] ? $participante['estudiante']['nombre'] : 'No asignado';
-                        $info = "D: {$docente} / E: {$estudiante}";
+                        $docente = $participante['docente'] ? 
+                            "D: {$participante['docente']['nombre']} C.I: {$participante['docente']['cedula']}" : 
+                            'D: No asignado';
+                        
+                        $estudiante = $participante['estudiante'] ? 
+                            "E: {$participante['estudiante']['nombre']} C.I: {$participante['estudiante']['cedula']}" : 
+                            'E: No asignado';
+                        
+                        $info = "{$docente} / {$estudiante}";
                     }
                     break;
             }

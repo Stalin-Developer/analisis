@@ -34,7 +34,7 @@ class PISController extends BaseController
                 campo_amplio.nombre_amplio as nombre_amplio,
                 campo_especifico.nombre_especifico as nombre_especifico,
                 campo_detallado.nombre_detallado as nombre_detallado,
-                produccion_cientifica_tecnica.nombre as nombre_publicacion');
+                produccion_cientifica_tecnica.titulo as titulo_publicacion');
 
 
 

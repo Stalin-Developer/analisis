@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 13, 2025 at 04:50 PM
+-- Generation Time: Feb 14, 2025 at 05:34 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -42,6 +42,80 @@ CREATE TABLE `academic_periods` (
 INSERT INTO `academic_periods` (`id`, `name`, `start_date`, `end_date`, `created_at`) VALUES
 (1, 'Primer Periodo Académico: Abril - Agosto', 'Abril', 'Agosto', '2024-11-07 06:07:46'),
 (2, 'Segundo Periodo Académico: Octubre - Febrero', 'Octubre', 'Febrero', '2024-11-07 06:07:46');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `base_datos_indexada`
+--
+
+CREATE TABLE `base_datos_indexada` (
+  `id` int(11) NOT NULL,
+  `nombre` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `base_datos_indexada`
+--
+
+INSERT INTO `base_datos_indexada` (`id`, `nombre`) VALUES
+(1, 'LATIN INDEX (CATÁLOGO)'),
+(2, 'LILACS'),
+(3, 'SciELO'),
+(4, 'LIBRO'),
+(5, 'REDALYC'),
+(6, 'EBSCO'),
+(7, 'OAJI'),
+(8, 'DOAJ'),
+(9, 'CINAHL'),
+(10, 'SCOPUS'),
+(11, 'ISI JOURNAL'),
+(12, 'HEIN ON LINE LIBRARY'),
+(13, 'CHEMICAL ABSTRACTS INDIAN CITATION INDEX'),
+(14, 'ERIHPLUS'),
+(15, 'WEB OF SCIENCE'),
+(16, 'CLASE'),
+(17, 'PERIODICA'),
+(18, 'AGRICOLA'),
+(19, 'CAB ABSTRACTS'),
+(20, 'ANTHROPOLOGICAL INDEX'),
+(21, 'ARTS AND HUMANITIES CITATION INDEX (AHCI)'),
+(22, 'HISPANIC AMERICAN PERIODICAL INDEX (HAPI)'),
+(23, 'HEINONLINE'),
+(24, 'BIOLOGICAL ABSTRACTS'),
+(25, 'GLOBAL HEALTH'),
+(26, 'INTERNATIONAL POLITICAL SCIENCE ABSTRACTS'),
+(27, 'WORLDWIDE POLITICAL SCIENCE ABSTRACTS'),
+(28, 'APPLIED SOCIAL SCIENCE ABSTRACTS & INDEXES (ASSIA)'),
+(29, 'INTERNATIONAL BIBLIOGRAPHY OF THE SOCIAL SCIENCES (IBSS)'),
+(30, 'CLASIFICACIÓN INTEGRADA DE REVISTAS CIENTÍFICAS (CIRC)'),
+(31, 'ÍNDICE DE REVISTAS DE EDUCACIÓN SUPERIOR E INVESTIGACIÓN EDUCATIVA (IRESIE)'),
+(32, 'EDUCATIONAL RESEARCH ABSTRACTS (ERA)'),
+(33, 'ECONOMIC LITERATURE INDEX'),
+(34, 'PHILOSOPHER\'S INDEX'),
+(35, 'INTERNATIONAL PHARMACEUTICAL ABSTRACTS'),
+(36, 'GEOBASE'),
+(37, 'GEOREF'),
+(38, 'HISTORICAL ABSTRACTS'),
+(39, 'INSPEC'),
+(40, 'METADEX'),
+(41, 'MATHEMATICS EDUCATION DATABASE'),
+(42, 'HISTORIA MATHEMATICA'),
+(43, 'PSYCINFO'),
+(44, 'PSICODOC'),
+(45, 'CHEMICAL ABSTRACTS PLUS'),
+(46, 'CUIDEN'),
+(47, 'EMBASE'),
+(48, 'INDEX MEDICUS'),
+(49, 'SOCINDEX'),
+(50, 'SOCIOLOGICAL ABSTRACTS'),
+(51, 'ADVANCED SCIENCE INDEX (ASI)'),
+(52, 'CROSSREF'),
+(53, 'PROQUEST NURSING ALLIED HEALTH SOURCE'),
+(54, 'INDEX COPERNICUS (ICI JOURNALS MASTER LIST)'),
+(55, 'ACTUALIDAD IBEROAMERICANA'),
+(56, 'REVENCYT'),
+(57, 'NO APLICA');
 
 -- --------------------------------------------------------
 
@@ -551,16 +625,22 @@ INSERT INTO `pis_estudiantes` (`id`, `proyecto_id`, `estudiante_id`, `created_at
 
 CREATE TABLE `produccion_cientifica_tecnica` (
   `id` int(11) NOT NULL,
-  `nombre` text NOT NULL
+  `codigo` varchar(50) NOT NULL,
+  `titulo` text NOT NULL,
+  `fecha_publicacion` date NOT NULL,
+  `campo_amplio_id` int(11) NOT NULL,
+  `campo_especifico_id` int(11) NOT NULL,
+  `campo_detallado_id` int(11) NOT NULL,
+  `filiacion` enum('Sí','No') NOT NULL,
+  `tipo_articulo` enum('Revista','Memoria de evento científico') DEFAULT NULL,
+  `base_datos_id` int(11) DEFAULT NULL,
+  `codigo_issn` varchar(50) DEFAULT NULL,
+  `nombre_revista` text DEFAULT NULL,
+  `estado` enum('Publicado','Aceptado para publicación') DEFAULT NULL,
+  `link_publicacion` text DEFAULT NULL,
+  `link_revista` text DEFAULT NULL,
+  `intercultural` enum('Sí','No','No Registra') DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
---
--- Dumping data for table `produccion_cientifica_tecnica`
---
-
-INSERT INTO `produccion_cientifica_tecnica` (`id`, `nombre`) VALUES
-(4, 'Libro'),
-(5, 'Capitulo de libro');
 
 -- --------------------------------------------------------
 
@@ -735,6 +815,12 @@ ALTER TABLE `academic_periods`
   ADD KEY `idx_academic_periods_dates` (`start_date`,`end_date`);
 
 --
+-- Indexes for table `base_datos_indexada`
+--
+ALTER TABLE `base_datos_indexada`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `campo_amplio`
 --
 ALTER TABLE `campo_amplio`
@@ -828,7 +914,11 @@ ALTER TABLE `pis_estudiantes`
 -- Indexes for table `produccion_cientifica_tecnica`
 --
 ALTER TABLE `produccion_cientifica_tecnica`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `campo_amplio_id` (`campo_amplio_id`),
+  ADD KEY `campo_especifico_id` (`campo_especifico_id`),
+  ADD KEY `campo_detallado_id` (`campo_detallado_id`),
+  ADD KEY `base_datos_id` (`base_datos_id`);
 
 --
 -- Indexes for table `programas`
@@ -881,6 +971,12 @@ ALTER TABLE `year`
 --
 ALTER TABLE `academic_periods`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT for table `base_datos_indexada`
+--
+ALTER TABLE `base_datos_indexada`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=58;
 
 --
 -- AUTO_INCREMENT for table `campo_amplio`
@@ -1031,6 +1127,15 @@ ALTER TABLE `pis_docentes`
 ALTER TABLE `pis_estudiantes`
   ADD CONSTRAINT `fk_pis_estudiantes_estudiante` FOREIGN KEY (`estudiante_id`) REFERENCES `estudiantes` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
   ADD CONSTRAINT `fk_pis_estudiantes_proyecto` FOREIGN KEY (`proyecto_id`) REFERENCES `proyectos_integradores_saberes` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `produccion_cientifica_tecnica`
+--
+ALTER TABLE `produccion_cientifica_tecnica`
+  ADD CONSTRAINT `produccion_cientifica_tecnica_ibfk_1` FOREIGN KEY (`campo_amplio_id`) REFERENCES `campo_amplio` (`id`) ON UPDATE CASCADE,
+  ADD CONSTRAINT `produccion_cientifica_tecnica_ibfk_2` FOREIGN KEY (`campo_especifico_id`) REFERENCES `campo_especifico` (`id`) ON UPDATE CASCADE,
+  ADD CONSTRAINT `produccion_cientifica_tecnica_ibfk_3` FOREIGN KEY (`campo_detallado_id`) REFERENCES `campo_detallado` (`id`) ON UPDATE CASCADE,
+  ADD CONSTRAINT `produccion_cientifica_tecnica_ibfk_4` FOREIGN KEY (`base_datos_id`) REFERENCES `base_datos_indexada` (`id`) ON UPDATE CASCADE;
 
 --
 -- Constraints for table `proyectos_integradores_saberes`

@@ -271,7 +271,7 @@ Gestión de Proyectos Integradores de Saberes
                         </td>
 
                         <td><?= $proyecto['horas'] ?></td>
-                        <td><?= $proyecto['nombre_publicacion'] ?? 'No asignado' ?></td>
+                        <td><?= $proyecto['titulo_publicacion'] ?? 'No asignado' ?></td>
                         <td class="actions-column">
                             <div class="btn-group">
                                 <?php if ($proyecto['proyecto_path']): ?>

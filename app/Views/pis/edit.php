@@ -472,7 +472,7 @@ Editar Proyecto Integrador de Saberes
                                     <option value="">Seleccione una publicación</option>
                                     <?php foreach ($publicaciones as $publicacion): ?>
                                         <option value="<?= $publicacion['id'] ?>" <?= ($proyecto['publicaciones_id'] ?? old('publicaciones_id')) == $publicacion['id'] ? 'selected' : '' ?>>
-                                            <?= $publicacion['nombre'] ?>
+                                            <?= $publicacion['titulo'] ?>
                                         </option>
                                     <?php endforeach; ?>
                                 </select>

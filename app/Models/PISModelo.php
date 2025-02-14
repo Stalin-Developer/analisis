@@ -289,7 +289,7 @@ class PISModelo extends Model
     {
         try {
             $builder = $this->db->table('produccion_cientifica_tecnica');
-            return $builder->select('id, nombre')
+            return $builder->select('id, titulo')
                           ->get()
                           ->getResultArray();
         } catch (Exception $e) {
@@ -350,7 +350,7 @@ class PISModelo extends Model
                         ->where('id', $proyecto['publicaciones_id'])
                         ->get()
                         ->getRowArray();
-                    $proyecto['publicacion'] = $publicacion ? $publicacion['nombre'] : null;
+                    $proyecto['publicacion'] = $publicacion ? $publicacion['titulo'] : null;
                 }
             }
 
