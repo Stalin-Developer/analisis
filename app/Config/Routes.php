@@ -99,6 +99,32 @@ $routes->group('', ['filter' => 'auth'], function($routes) {
         $routes->delete('pis/participantes/delete/(:num)', 'ParticipanteController::deleteParticipantes/$1');
         $routes->get('pis/participantes/get/(:num)', 'ParticipanteController::getParticipantesByPIS/$1');  //Para ver los participantes en la vista index.
 
+
+    
+
+
+
+
+
+    //Rutas para Produccion Cientifica y Tecnica.
+    $routes->get('produccion', 'ProduccionController::index');
+    $routes->get('produccion/new', 'ProduccionController::new');
+    $routes->post('produccion/create', 'ProduccionController::create');
+    $routes->get('produccion/edit/(:num)', 'ProduccionController::edit/$1');
+    $routes->post('produccion/update/(:num)', 'ProduccionController::update/$1');
+    $routes->get('produccion/delete/(:num)', 'ProduccionController::delete/$1');
+    $routes->get('produccion/download/(:num)', 'ProduccionController::download/$1');
+    $routes->get('produccion/get-campos-especificos/(:num)', 'ProduccionController::getCamposEspecificos/$1');
+    $routes->get('produccion/get-campos-detallados/(:num)', 'ProduccionController::getCamposDetallados/$1');
+    $routes->get('produccion/participantes/get/(:num)', 'ProduccionController::getParticipantes/$1');
+
+
+
+
+
+
+
+
     
 
     // Rutas de reportes

@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 14, 2025 at 05:34 AM
+-- Generation Time: Feb 15, 2025 at 03:42 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -573,6 +573,18 @@ INSERT INTO `migrations` (`id`, `version`, `class`, `group`, `namespace`, `time`
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `participantes`
+--
+
+CREATE TABLE `participantes` (
+  `id` int(11) NOT NULL,
+  `nombre` varchar(255) NOT NULL,
+  `cedula` varchar(10) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `pis_docentes`
 --
 
@@ -625,6 +637,7 @@ INSERT INTO `pis_estudiantes` (`id`, `proyecto_id`, `estudiante_id`, `created_at
 
 CREATE TABLE `produccion_cientifica_tecnica` (
   `id` int(11) NOT NULL,
+  `tipo` enum('Artículo','Capítulo de Libro','Libro','Otro') NOT NULL,
   `codigo` varchar(50) NOT NULL,
   `titulo` text NOT NULL,
   `fecha_publicacion` date NOT NULL,
@@ -639,7 +652,30 @@ CREATE TABLE `produccion_cientifica_tecnica` (
   `estado` enum('Publicado','Aceptado para publicación') DEFAULT NULL,
   `link_publicacion` text DEFAULT NULL,
   `link_revista` text DEFAULT NULL,
-  `intercultural` enum('Sí','No','No Registra') DEFAULT NULL
+  `intercultural` enum('Sí','No','No Registra') DEFAULT NULL,
+  `titulo_libro` text DEFAULT NULL,
+  `total_capitulos_libro` int(11) DEFAULT NULL,
+  `codigo_capitulo_isbn` varchar(50) DEFAULT NULL,
+  `editor_copilador` varchar(255) DEFAULT NULL,
+  `paginas` varchar(50) DEFAULT NULL,
+  `codigo_libro_isbn` varchar(50) DEFAULT NULL,
+  `revisado_pares` enum('Sí','No') DEFAULT NULL,
+  `tipo_apoyo_ies` text DEFAULT NULL,
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
+  `updated_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `produccion_participantes`
+--
+
+CREATE TABLE `produccion_participantes` (
+  `id` int(11) NOT NULL,
+  `produccion_id` int(11) NOT NULL,
+  `participante_id` int(11) NOT NULL,
+  `tipo` enum('Autor','Coautor') NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
@@ -895,6 +931,12 @@ ALTER TABLE `migrations`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `participantes`
+--
+ALTER TABLE `participantes`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `pis_docentes`
 --
 ALTER TABLE `pis_docentes`
@@ -919,6 +961,14 @@ ALTER TABLE `produccion_cientifica_tecnica`
   ADD KEY `campo_especifico_id` (`campo_especifico_id`),
   ADD KEY `campo_detallado_id` (`campo_detallado_id`),
   ADD KEY `base_datos_id` (`base_datos_id`);
+
+--
+-- Indexes for table `produccion_participantes`
+--
+ALTER TABLE `produccion_participantes`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `idx_produccion_participante` (`produccion_id`,`participante_id`),
+  ADD KEY `participante_id` (`participante_id`);
 
 --
 -- Indexes for table `programas`
@@ -1045,6 +1095,12 @@ ALTER TABLE `migrations`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
+-- AUTO_INCREMENT for table `participantes`
+--
+ALTER TABLE `participantes`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT for table `pis_docentes`
 --
 ALTER TABLE `pis_docentes`
@@ -1061,6 +1117,12 @@ ALTER TABLE `pis_estudiantes`
 --
 ALTER TABLE `produccion_cientifica_tecnica`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT for table `produccion_participantes`
+--
+ALTER TABLE `produccion_participantes`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `programas`
@@ -1136,6 +1198,13 @@ ALTER TABLE `produccion_cientifica_tecnica`
   ADD CONSTRAINT `produccion_cientifica_tecnica_ibfk_2` FOREIGN KEY (`campo_especifico_id`) REFERENCES `campo_especifico` (`id`) ON UPDATE CASCADE,
   ADD CONSTRAINT `produccion_cientifica_tecnica_ibfk_3` FOREIGN KEY (`campo_detallado_id`) REFERENCES `campo_detallado` (`id`) ON UPDATE CASCADE,
   ADD CONSTRAINT `produccion_cientifica_tecnica_ibfk_4` FOREIGN KEY (`base_datos_id`) REFERENCES `base_datos_indexada` (`id`) ON UPDATE CASCADE;
+
+--
+-- Constraints for table `produccion_participantes`
+--
+ALTER TABLE `produccion_participantes`
+  ADD CONSTRAINT `produccion_participantes_ibfk_1` FOREIGN KEY (`produccion_id`) REFERENCES `produccion_cientifica_tecnica` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  ADD CONSTRAINT `produccion_participantes_ibfk_2` FOREIGN KEY (`participante_id`) REFERENCES `participantes` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `proyectos_integradores_saberes`

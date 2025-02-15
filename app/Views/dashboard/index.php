@@ -73,7 +73,7 @@ Dashboard
         <div class="row justify-content-center">
             <!-- Segunda fila de cuadros -->
             <div class="col-lg-3 col-md-4 col-sm-6">
-                <a href="#" class="small-box dashboard-box">
+                <a href="<?= base_url('produccion') ?>" class="small-box dashboard-box">
                     <div class="inner">
                         <h3>Producción Científica y Técnica</h3>
                     </div>
