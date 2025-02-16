@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 15, 2025 at 03:42 AM
+-- Generation Time: Feb 16, 2025 at 03:25 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -661,6 +661,7 @@ CREATE TABLE `produccion_cientifica_tecnica` (
   `codigo_libro_isbn` varchar(50) DEFAULT NULL,
   `revisado_pares` enum('Sí','No') DEFAULT NULL,
   `tipo_apoyo_ies` text DEFAULT NULL,
+  `documento_path` varchar(255) DEFAULT NULL,
   `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
   `updated_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;

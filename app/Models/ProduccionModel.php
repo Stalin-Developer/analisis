@@ -21,7 +21,7 @@ class ProduccionModel extends Model
         'nombre_revista', 'estado', 'link_publicacion', 'link_revista',
         'intercultural', 'titulo_libro', 'total_capitulos_libro',
         'codigo_capitulo_isbn', 'editor_copilador', 'paginas',
-        'codigo_libro_isbn', 'revisado_pares', 'tipo_apoyo_ies'
+        'codigo_libro_isbn', 'revisado_pares', 'tipo_apoyo_ies', 'documento_path'
     ];
 
     protected $validationRules = [
