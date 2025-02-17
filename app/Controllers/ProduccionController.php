@@ -101,34 +101,24 @@ class ProduccionController extends BaseController
     public function create()
     {
         try {
-            // Log inicial para verificar que la función se está ejecutando
-            log_message('info', '[PRODUCCION] Iniciando función create');
             
-            // Log para ver los datos que llegan del formulario
-            log_message('info', '[PRODUCCION] Datos POST recibidos: ' . json_encode($this->request->getPost()));
 
             // Validar datos del formulario
             if (!$this->validate($this->produccionModel->validationRules, $this->produccionModel->validationMessages)) {
-                log_message('error', '[PRODUCCION] Error de validación: ' . json_encode($this->validator->getErrors()));
                 return redirect()->back()->withInput()->with('errors', $this->validator->getErrors());
             }
 
-            log_message('info', '[PRODUCCION] Validación exitosa');
 
             // Procesar el archivo si existe
             $documento = $this->request->getFile('documento');
-            log_message('info', '[PRODUCCION] Archivo recibido: ' . ($documento ? 'Sí' : 'No'));
 
             $documentoPath = null;
 
             if ($documento && $documento->isValid() && !$documento->hasMoved()) {
-                log_message('info', '[PRODUCCION] Procesando archivo válido');
                 $newName = $documento->getRandomName();
                 if ($documento->move(ROOTPATH . 'public/uploads/produccion', $newName)) {
                     $documentoPath = 'uploads/produccion/' . $newName;
-                    log_message('info', '[PRODUCCION] Archivo guardado en: ' . $documentoPath);
                 } else {
-                    log_message('error', '[PRODUCCION] Error al mover el archivo');
                     return redirect()->back()->withInput()->with('error', 'Error al guardar el documento');
                 }
             }
@@ -138,51 +128,82 @@ class ProduccionController extends BaseController
             if ($documentoPath) {
                 $data['documento_path'] = $documentoPath;
             }
-            log_message('info', '[PRODUCCION] Datos preparados para inserción: ' . json_encode($data));
+
+
+
+            // Convertir campos vacíos a null
+            if (empty($data['campo_amplio_id'])) {
+                $data['campo_amplio_id'] = null;
+            }
+            if (empty($data['campo_especifico_id'])) {
+                $data['campo_especifico_id'] = null;
+            }
+            if (empty($data['campo_detallado_id'])) {
+                $data['campo_detallado_id'] = null;
+            }
+
+
+
 
             // Intentar guardar en la base de datos
             $this->produccionModel->db->transBegin();
-            log_message('info', '[PRODUCCION] Iniciando transacción');
 
             try {
                 // Insertar producción
                 $inserted = $this->produccionModel->insert($data);
-                log_message('info', '[PRODUCCION] Resultado de inserción: ' . ($inserted ? 'Exitoso' : 'Fallido'));
                 
                 if ($inserted) {
                     $produccionId = $this->produccionModel->getInsertID();
-                    log_message('info', '[PRODUCCION] ID generado: ' . $produccionId);
                     
                     // Procesar participantes
                     $participantesData = $this->request->getPost('participantes_data');
-                    log_message('info', '[PRODUCCION] Datos de participantes: ' . ($participantesData ?? 'No hay datos'));
 
                     if (!empty($participantesData)) {
                         $participantes = json_decode($participantesData, true);
                         $tipo = $this->request->getPost('tipo_participante');
-                        log_message('info', '[PRODUCCION] Procesando participantes tipo: ' . $tipo);
+                        
                         
                         foreach ($participantes as $participante) {
-                            // ... resto del código ...
+                            // Insertar o recuperar el participante
+                            $participanteExistente = $this->produccionModel->db->table('participantes')
+                                ->where('cedula', $participante['cedula'])
+                                ->get()
+                                ->getRowArray();
+                
+                            if ($participanteExistente) {
+                                $participanteId = $participanteExistente['id'];
+                            } else {
+                                // Insertar nuevo participante
+                                $this->produccionModel->db->table('participantes')->insert([
+                                    'nombre' => $participante['nombre'],
+                                    'cedula' => $participante['cedula']
+                                ]);
+                                $participanteId = $this->produccionModel->db->insertID();
+                            }
+                
+                            // Crear relación producción-participante
+                            $this->produccionModel->db->table('produccion_participantes')->insert([
+                                'produccion_id' => $produccionId,
+                                'participante_id' => $participanteId,
+                                'tipo' => $tipo
+                            ]);
                         }
+
+
                     }
 
                     $this->produccionModel->db->transCommit();
-                    log_message('info', '[PRODUCCION] Transacción completada exitosamente');
                     return redirect()->to('produccion')->with('message', 'Producción guardada exitosamente');
                 }
 
             } catch (Exception $e) {
-                log_message('error', '[PRODUCCION] Error en transacción: ' . $e->getMessage());
                 $this->produccionModel->db->transRollback();
                 throw $e;
             }
 
-            log_message('error', '[PRODUCCION] Error general en la inserción');
             return redirect()->back()->withInput()->with('error', 'Error al guardar en la base de datos');
 
         } catch (Exception $e) {
-            log_message('error', '[PRODUCCION] Excepción general: ' . $e->getMessage());
             if (isset($documentoPath)) {
                 @unlink(ROOTPATH . 'public/' . $documentoPath);
             }

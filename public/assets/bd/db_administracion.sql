@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 16, 2025 at 03:25 AM
+-- Generation Time: Feb 17, 2025 at 06:15 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -641,9 +641,9 @@ CREATE TABLE `produccion_cientifica_tecnica` (
   `codigo` varchar(50) NOT NULL,
   `titulo` text NOT NULL,
   `fecha_publicacion` date NOT NULL,
-  `campo_amplio_id` int(11) NOT NULL,
-  `campo_especifico_id` int(11) NOT NULL,
-  `campo_detallado_id` int(11) NOT NULL,
+  `campo_amplio_id` int(11) DEFAULT NULL,
+  `campo_especifico_id` int(11) DEFAULT NULL,
+  `campo_detallado_id` int(11) DEFAULT NULL,
   `filiacion` enum('Sí','No') NOT NULL,
   `tipo_articulo` enum('Revista','Memoria de evento científico') DEFAULT NULL,
   `base_datos_id` int(11) DEFAULT NULL,
@@ -1099,7 +1099,7 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT for table `participantes`
 --
 ALTER TABLE `participantes`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `pis_docentes`
@@ -1117,13 +1117,13 @@ ALTER TABLE `pis_estudiantes`
 -- AUTO_INCREMENT for table `produccion_cientifica_tecnica`
 --
 ALTER TABLE `produccion_cientifica_tecnica`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
 -- AUTO_INCREMENT for table `produccion_participantes`
 --
 ALTER TABLE `produccion_participantes`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `programas`
