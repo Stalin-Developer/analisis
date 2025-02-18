@@ -292,76 +292,99 @@ class ProduccionController extends BaseController
         }
     }
 
+    
+
+
     public function update($id)
     {
         try {
             if (!$this->validate($this->produccionModel->validationRules, $this->produccionModel->validationMessages)) {
-                return redirect()->back()->withInput()->with('errors', $this->validator->getErrors());
+                return $this->response->setJSON([
+                    'success' => false,
+                    'errors' => $this->validator->getErrors()
+                ])->setStatusCode(400);
             }
 
             $produccion = $this->produccionModel->find($id);
             if (!$produccion) {
-                throw new Exception('Producción no encontrada');
+                return $this->response->setJSON([
+                    'success' => false,
+                    'error' => 'Producción no encontrada'
+                ])->setStatusCode(404);
             }
 
             $data = $this->request->getPost();
-
-            // Procesar nuevo documento si se subió uno
+            
+            // Procesar documento
             $documento = $this->request->getFile('documento');
             if ($documento && $documento->isValid() && !$documento->hasMoved()) {
-                // Eliminar documento anterior
                 if (!empty($produccion['documento_path'])) {
                     @unlink(ROOTPATH . 'public/' . $produccion['documento_path']);
                 }
                 
-                // Guardar nuevo documento
                 $newName = $documento->getRandomName();
                 if ($documento->move(ROOTPATH . 'public/uploads/produccion', $newName)) {
                     $data['documento_path'] = 'uploads/produccion/' . $newName;
                 }
             }
 
-            // Iniciar transacción
             $this->produccionModel->db->transBegin();
 
             try {
-                // Actualizar datos básicos
+                // Actualizar producción
                 $this->produccionModel->update($id, $data);
 
-                // Eliminar relaciones existentes de participantes
+                // Actualizar participantes
                 $this->produccionModel->db->table('produccion_participantes')
                     ->where('produccion_id', $id)
                     ->delete();
 
-                // Procesar participantes
                 $participantesData = $this->request->getPost('participantes_data');
+
                 if (!empty($participantesData)) {
                     $participantes = json_decode($participantesData, true);
+
                     $tipo = $this->request->getPost('tipo_participante');
-                    
+
                     foreach ($participantes as $participante) {
+
                         $participanteId = $this->insertOrGetParticipante([
                             'nombre' => $participante['nombre'],
                             'cedula' => $participante['cedula']
                         ]);
-                        
+
                         $this->insertProduccionParticipante($id, $participanteId, $tipo);
                     }
                 }
 
                 $this->produccionModel->db->transCommit();
-                return redirect()->to('produccion')->with('message', 'Producción actualizada exitosamente');
+                
+                return $this->response->setJSON([
+                    'success' => true,
+                    'message' => 'Producción actualizada exitosamente'
+                ]);
 
             } catch (Exception $e) {
                 $this->produccionModel->db->transRollback();
-                throw $e;
+                
+                return $this->response->setJSON([
+                    'success' => false,
+                    'error' => 'Error al actualizar la producción: ' . $e->getMessage()
+                ])->setStatusCode(500);
             }
 
         } catch (Exception $e) {
-            return redirect()->back()->withInput()
-                ->with('error', 'Error al actualizar la producción: ' . $e->getMessage());
+            
+            return $this->response->setJSON([
+                'success' => false,
+                'error' => 'Error al procesar la solicitud: ' . $e->getMessage()
+            ])->setStatusCode(500);
         }
     }
+
+
+
+
 
     public function delete($id)
     {

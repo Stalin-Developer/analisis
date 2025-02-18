@@ -1,0 +1,66 @@
+INFO - 2025-02-18 00:02:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-18 00:02:51 --> Datos de participantes recibidos: undefined
+DEBUG - 2025-02-18 00:02:51 --> Participantes decodificados: 
+DEBUG - 2025-02-18 00:02:51 --> Tipo de participante: Autor
+ERROR - 2025-02-18 00:02:51 --> foreach() argument must be of type array|object, null given
+INFO - 2025-02-18 00:03:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-18 00:03:19 --> Datos de participantes recibidos: undefined
+DEBUG - 2025-02-18 00:03:19 --> Participantes decodificados: 
+DEBUG - 2025-02-18 00:03:19 --> Tipo de participante: Autor
+ERROR - 2025-02-18 00:03:19 --> foreach() argument must be of type array|object, null given
+INFO - 2025-02-18 00:03:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-18 00:03:49 --> Datos de participantes recibidos: undefined
+DEBUG - 2025-02-18 00:03:49 --> Participantes decodificados: 
+DEBUG - 2025-02-18 00:03:49 --> Tipo de participante: Autor
+ERROR - 2025-02-18 00:03:49 --> foreach() argument must be of type array|object, null given
+INFO - 2025-02-18 00:04:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-18 00:04:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-18 00:04:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-18 00:27:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-18 00:27:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-18 00:27:57 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-18 00:29:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-18 00:29:54 --> Datos de participantes recibidos: 
+INFO - 2025-02-18 00:29:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-18 00:31:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-18 00:31:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-18 00:31:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-18 00:33:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-18 00:33:00 --> Datos de participantes recibidos: 
+INFO - 2025-02-18 00:33:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-18 00:33:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-18 00:33:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-18 00:33:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-18 00:33:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-18 00:39:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-18 00:39:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-18 00:39:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-18 00:39:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-18 00:39:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-18 00:40:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-18 00:40:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-18 00:40:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-18 00:40:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-18 00:40:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-02-18 00:40:39 --> Datos de participantes recibidos: [{"nombre":"neymar","cedula":"1011"}]
+DEBUG - 2025-02-18 00:40:39 --> Participantes decodificados: Array
+(
+    [0] => Array
+        (
+            [nombre] => neymar
+            [cedula] => 1011
+        )
+
+)
+
+DEBUG - 2025-02-18 00:40:39 --> Tipo de participante: Autor
+DEBUG - 2025-02-18 00:40:39 --> Procesando participante: Array
+(
+    [nombre] => neymar
+    [cedula] => 1011
+)
+
+DEBUG - 2025-02-18 00:40:39 --> ID del participante: 11
+INFO - 2025-02-18 00:40:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-18 00:40:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2025-02-18 00:57:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

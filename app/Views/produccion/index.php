@@ -223,8 +223,8 @@ Gestión de Producción Científica y Técnica
 <script src="<?= base_url('assets/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js') ?>"></script>
 <script>
 
-//EL ANCHO DE LAS COLUMNAS DE ESTA TABLA SON DINAMICOS. SE BASA EN LA CELDA QUE TENGA MAS TEXTO EN DICHA COLUMNA.
 $(function () {
+    //EL ANCHO DE LAS COLUMNAS DE ESTA TABLA SON DINAMICOS. SE BASA EN LA CELDA QUE TENGA MAS TEXTO EN DICHA COLUMNA.
     // Función para calcular el ancho basado en la longitud del texto
     function calcularAncho(length) {
         if (length <= 10) return 75;
@@ -331,6 +331,68 @@ $(function () {
             table.columns.adjust();
         }, 100);
     });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    //CODIGO PARA MANEJAR EL BOTON "Ver Detalles"
+    $(function () {
+        // Handler para el botón "Ver Detalles"
+        $('.view-participants').on('click', function() {
+            const produccionId = $(this).data('pid');
+            
+            // Obtener datos de la producción y sus participantes
+            $.get(`<?= base_url('produccion/participantes/get/') ?>/${produccionId}`, function(response) {
+                if (response.success) {
+                    const { tipo, participantes } = response.data;
+                    
+                    // Actualizar campo hidden con los participantes
+                    $('#participantes_data').val(JSON.stringify(participantes || []));
+                    
+                    // Establecer readonly en todos los inputs
+                    setTimeout(() => {
+                        $('.nombre-participante, .cedula-participante').prop('readonly', true);
+                    }, 100);
+
+                    // Mostrar el modal
+                    $('#tipoParticipanteSeleccionado').text(tipo);
+                    $('.tipo-texto').text(tipo);
+                    $('#modalParticipantes').modal('show');
+
+                    // Cargar datos de participantes en el modal
+                    cargarDatosParticipantes();
+                }
+            });
+        });
+
+        // Función para cargar datos en el modal
+        function cargarDatosParticipantes() {
+            const participantesData = JSON.parse($('#participantes_data').val() || '[]');
+            participantesData.forEach((participante, index) => {
+                if(participante && participante.nombre && participante.cedula) {
+                    $(`#nombre_participante_${index}`).val(participante.nombre);
+                    $(`#cedula_participante_${index}`).val(participante.cedula);
+                }
+            });
+        }
+    });    
+
+
+
+
+
+
 });
 
 
