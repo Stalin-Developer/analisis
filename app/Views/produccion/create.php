@@ -94,145 +94,141 @@ Nueva Producción Científica y Técnica
 <script src="<?= base_url('assets/plugins/bs-custom-file-input/bs-custom-file-input.min.js') ?>"></script>
 
 <script>
-    $(function() {
-        // =========================================
-        // INICIALIZACIÓN DE PLUGINS Y COMPONENTES
-        // =========================================
-        bsCustomFileInput.init();
+$(function() {
+    // =========================================
+    // INICIALIZACIÓN DE PLUGINS Y COMPONENTES
+    // =========================================
+    bsCustomFileInput.init();
 
-        // =========================================
-        // MANEJO DE CAMPOS DEPENDIENTES
-        // =========================================
-        function setupCamposSelect(prefijo = '') {
-            $(`#campo_amplio_id${prefijo}`).change(function() {
-                const amplioId = $(this).val();
-                $(`#campo_especifico_id${prefijo}`).html('<option value="">Seleccione un campo específico</option>');
-                $(`#campo_detallado_id${prefijo}`).html('<option value="">Seleccione un campo detallado</option>');
+    // =========================================
+    // MANEJO DE CAMPOS DEPENDIENTES
+    // =========================================
+    function setupCamposSelect(prefijo = '_articulo') { // Cambiado el valor por defecto
+        $(`#campo_amplio_id${prefijo}`).change(function() {
+            const amplioId = $(this).val();
+            $(`#campo_especifico_id${prefijo}`).html('<option value="">Seleccione un campo específico</option>');
+            $(`#campo_detallado_id${prefijo}`).html('<option value="">Seleccione un campo detallado</option>');
 
-                if (amplioId) {
-                    $.get(`<?= base_url('produccion/get-campos-especificos') ?>/${amplioId}`, function(data) {
-                        let options = '<option value="">Seleccione un campo específico</option>';
-                        data.forEach(function(campo) {
-                            options += `<option value="${campo.id}">${campo.nombre_especifico}</option>`;
-                        });
-                        $(`#campo_especifico_id${prefijo}`).html(options);
+            if (amplioId) {
+                $.get(`<?= base_url('produccion/get-campos-especificos') ?>/${amplioId}`, function(data) {
+                    let options = '<option value="">Seleccione un campo específico</option>';
+                    data.forEach(function(campo) {
+                        options += `<option value="${campo.id}">${campo.nombre_especifico}</option>`;
                     });
-                }
-            });
+                    $(`#campo_especifico_id${prefijo}`).html(options);
+                });
+            }
+        });
 
-            $(`#campo_especifico_id${prefijo}`).change(function() {
-                const especificoId = $(this).val();
-                $(`#campo_detallado_id${prefijo}`).html('<option value="">Seleccione un campo detallado</option>');
+        $(`#campo_especifico_id${prefijo}`).change(function() {
+            const especificoId = $(this).val();
+            $(`#campo_detallado_id${prefijo}`).html('<option value="">Seleccione un campo detallado</option>');
 
-                if (especificoId) {
-                    $.get(`<?= base_url('produccion/get-campos-detallados') ?>/${especificoId}`, function(data) {
-                        let options = '<option value="">Seleccione un campo detallado</option>';
-                        data.forEach(function(campo) {
-                            options += `<option value="${campo.id}">${campo.nombre_detallado}</option>`;
-                        });
-                        $(`#campo_detallado_id${prefijo}`).html(options);
+            if (especificoId) {
+                $.get(`<?= base_url('produccion/get-campos-detallados') ?>/${especificoId}`, function(data) {
+                    let options = '<option value="">Seleccione un campo detallado</option>';
+                    data.forEach(function(campo) {
+                        options += `<option value="${campo.id}">${campo.nombre_detallado}</option>`;
                     });
-                }
-            });
+                    $(`#campo_detallado_id${prefijo}`).html(options);
+                });
+            }
+        });
+    }
+
+    // Inicializar selects para cada pestaña
+    setupCamposSelect('_articulo');
+    setupCamposSelect('_capitulo');
+    setupCamposSelect('_libro');
+    setupCamposSelect('_otro');
+
+    // Restaurar valores antiguos si existen
+    const oldAmplioId = $('#campo_amplio_id_articulo').val(); // Actualizado el ID
+    if (oldAmplioId) {
+        $('#campo_amplio_id_articulo').trigger('change');
+    }
+
+    // =========================================
+    // MANEJO DE PARTICIPANTES
+    // =========================================
+    let participantesData = [];
+    let currentTab = 'articulo';
+
+    // Manejar cambio de pestañas
+    $('a[data-toggle="tab"]').on('shown.bs.tab', function(e) {
+        const tabId = $(e.target).attr('id');
+        switch (tabId) {
+            case 'articulo-tab':
+                currentTab = 'articulo';
+                break;
+            case 'capitulo-tab':
+                currentTab = 'capitulo';
+                break;
+            case 'libro-tab':
+                currentTab = 'libro';
+                break;
+            case 'otro-tab':
+                currentTab = 'otro';
+                break;
         }
-
-        // Inicializar selects para cada pestaña
-        setupCamposSelect(); // Artículo
-        setupCamposSelect('_capitulo'); // Capítulo de libro
-        setupCamposSelect('_libro'); // Libro
-        setupCamposSelect('_otro'); // Otro tipo de producción
-
-        // Restaurar valores antiguos si existen
-        const oldAmplioId = $('#campo_amplio_id').val();
-        if (oldAmplioId) {
-            $('#campo_amplio_id').trigger('change');
-        }
-
-        // =========================================
-        // MANEJO DE PARTICIPANTES
-        // =========================================
-        // Variables para almacenar participantes
-        let participantesData = [];
-        let currentTab = 'articulo'; // Por defecto, estamos en la pestaña artículo
-
-        // Manejar cambio de pestañas
-        $('a[data-toggle="tab"]').on('shown.bs.tab', function(e) {
-            const tabId = $(e.target).attr('id');
-            switch (tabId) {
-                case 'articulo-tab':
-                    currentTab = 'articulo';
-                    break;
-                case 'capitulo-tab':
-                    currentTab = 'capitulo';
-                    break;
-                case 'libro-tab':
-                    currentTab = 'libro';
-                    break;
-                case 'otro-tab':
-                    currentTab = 'otro';
-                    break;
-            }
-            participantesData = []; // Limpiar array al cambiar de pestaña
-            $('.nombre-participante, .cedula-participante').val(''); // Limpiar campos del modal
-        });
-
-        // Handler para guardar datos de participantes
-        $('.nombre-participante, .cedula-participante').on('input', function() {
-            const index = $(this).data('index');
-            const isNombre = $(this).hasClass('nombre-participante');
-
-            if (!participantesData[index]) {
-                participantesData[index] = {
-                    nombre: '',
-                    cedula: ''
-                };
-            }
-
-            if (isNombre) {
-                participantesData[index].nombre = $(this).val();
-            } else {
-                participantesData[index].cedula = $(this).val();
-            }
-
-            // Filtrar participantes válidos y actualizar el input correspondiente
-            const participantesValidos = participantesData.filter(p => p && p.nombre && p.cedula);
-            $(`#participantes_data_${currentTab}`).val(JSON.stringify(participantesValidos));
-        });
-
-        // Función auxiliar para abrir el modal de participantes
-        function abrirModalParticipantes(selectorTipo) {
-            const tipo = $(selectorTipo).val();
-            if (tipo) {
-                $('#tipoParticipanteSeleccionado').text(tipo);
-                $('.tipo-texto').text(tipo);
-                $('#modalParticipantes').modal('show');
-            } else {
-                alert('Por favor seleccione un tipo de participante');
-            }
-        }
-
-        // Manejadores de botones para agregar participantes
-        $('#btnAgregarParticipante').click(function() {
-            currentTab = 'articulo';
-            abrirModalParticipantes('#tipo_participante');
-        });
-
-        $('#btnAgregarParticipanteCapitulo').click(function() {
-            currentTab = 'capitulo';
-            abrirModalParticipantes('#tipo_participante_capitulo');
-        });
-
-        $('#btnAgregarParticipanteLibro').click(function() {
-            currentTab = 'libro';
-            abrirModalParticipantes('#tipo_participante_libro');
-        });
-
-        $('#btnAgregarParticipanteOtro').click(function() {
-            currentTab = 'otro';
-            abrirModalParticipantes('#tipo_participante_otro');
-        });
-
-
+        participantesData = [];
+        $('.nombre-participante, .cedula-participante').val('');
     });
+
+    // Handler para guardar datos de participantes
+    $('.nombre-participante, .cedula-participante').on('input', function() {
+        const index = $(this).data('index');
+        const isNombre = $(this).hasClass('nombre-participante');
+
+        if (!participantesData[index]) {
+            participantesData[index] = {
+                nombre: '',
+                cedula: ''
+            };
+        }
+
+        if (isNombre) {
+            participantesData[index].nombre = $(this).val();
+        } else {
+            participantesData[index].cedula = $(this).val();
+        }
+
+        const participantesValidos = participantesData.filter(p => p && p.nombre && p.cedula);
+        $(`#participantes_data_${currentTab}`).val(JSON.stringify(participantesValidos));
+    });
+
+    // Función auxiliar para abrir el modal de participantes
+    function abrirModalParticipantes(selectorTipo) {
+        const tipo = $(selectorTipo).val();
+        if (tipo) {
+            $('#tipoParticipanteSeleccionado').text(tipo);
+            $('.tipo-texto').text(tipo);
+            $('#modalParticipantes').modal('show');
+        } else {
+            alert('Por favor seleccione un tipo de participante');
+        }
+    }
+
+    // Manejadores de botones para agregar participantes
+    $('#btnAgregarParticipante_articulo').click(function() {
+        currentTab = 'articulo';
+        abrirModalParticipantes('#tipo_participante_articulo');
+    });
+
+    $('#btnAgregarParticipante_capitulo').click(function() {
+        currentTab = 'capitulo';
+        abrirModalParticipantes('#tipo_participante_capitulo');
+    });
+
+    $('#btnAgregarParticipante_libro').click(function() {
+        currentTab = 'libro';
+        abrirModalParticipantes('#tipo_participante_libro');
+    });
+
+    $('#btnAgregarParticipante_otro').click(function() {
+        currentTab = 'otro';
+        abrirModalParticipantes('#tipo_participante_otro');
+    });
+});
 </script>
 <?= $this->endSection() ?>

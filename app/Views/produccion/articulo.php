@@ -5,8 +5,8 @@
     <div class="row">
         <div class="col-md-6">
             <div class="form-group">
-                <label for="tipo_articulo">Tipo de Artículo *</label>
-                <select class="form-control" id="tipo_articulo" name="tipo_articulo" required>
+                <label for="tipo_articulo_articulo">Tipo de Artículo *</label>
+                <select class="form-control" id="tipo_articulo_articulo" name="tipo_articulo" required>
                     <option value="">Seleccione un tipo</option>
                     <?php foreach ($enumData['tipo_articulo'] as $tipo): ?>
                         <option value="<?= $tipo ?>" <?= old('tipo_articulo') == $tipo ? 'selected' : '' ?>>
@@ -18,8 +18,8 @@
         </div>
         <div class="col-md-6">
             <div class="form-group">
-                <label for="base_datos_id">Base de Datos Indexada</label>
-                <select class="form-control" id="base_datos_id" name="base_datos_id">
+                <label for="base_datos_id_articulo">Base de Datos Indexada</label>
+                <select class="form-control" id="base_datos_id_articulo" name="base_datos_id">
                     <option value="">Seleccione una base de datos</option>
                     <?php foreach ($bases_datos as $base): ?>
                         <option value="<?= $base['id'] ?>" <?= old('base_datos_id') == $base['id'] ? 'selected' : '' ?>>
@@ -34,15 +34,15 @@
     <div class="row">
         <div class="col-md-6">
             <div class="form-group">
-                <label for="codigo">Código DOI *</label>
-                <input type="text" class="form-control" id="codigo" name="codigo"
+                <label for="codigo_articulo">Código DOI *</label>
+                <input type="text" class="form-control" id="codigo_articulo" name="codigo"
                     value="<?= old('codigo') ?>" required>
             </div>
         </div>
         <div class="col-md-6">
             <div class="form-group">
-                <label for="titulo">Título Artículo *</label>
-                <input type="text" class="form-control" id="titulo" name="titulo"
+                <label for="titulo_articulo">Título Artículo *</label>
+                <input type="text" class="form-control" id="titulo_articulo" name="titulo"
                     value="<?= old('titulo') ?>" required>
             </div>
         </div>
@@ -51,15 +51,15 @@
     <div class="row">
         <div class="col-md-6">
             <div class="form-group">
-                <label for="codigo_issn">Código ISSN</label>
-                <input type="text" class="form-control" id="codigo_issn" name="codigo_issn"
+                <label for="codigo_issn_articulo">Código ISSN</label>
+                <input type="text" class="form-control" id="codigo_issn_articulo" name="codigo_issn"
                     value="<?= old('codigo_issn') ?>">
             </div>
         </div>
         <div class="col-md-6">
             <div class="form-group">
-                <label for="nombre_revista">Nombre Revista</label>
-                <input type="text" class="form-control" id="nombre_revista" name="nombre_revista"
+                <label for="nombre_revista_articulo">Nombre Revista</label>
+                <input type="text" class="form-control" id="nombre_revista_articulo" name="nombre_revista"
                     value="<?= old('nombre_revista') ?>">
             </div>
         </div>
@@ -68,15 +68,15 @@
     <div class="row">
         <div class="col-md-4">
             <div class="form-group">
-                <label for="fecha_publicacion">Fecha de Publicación *</label>
-                <input type="date" class="form-control" id="fecha_publicacion" name="fecha_publicacion"
+                <label for="fecha_publicacion_articulo">Fecha de Publicación *</label>
+                <input type="date" class="form-control" id="fecha_publicacion_articulo" name="fecha_publicacion"
                     value="<?= old('fecha_publicacion') ?>" required>
             </div>
         </div>
         <div class="col-md-4">
             <div class="form-group">
-                <label for="estado">Estado *</label>
-                <select class="form-control" id="estado" name="estado" required>
+                <label for="estado_articulo">Estado *</label>
+                <select class="form-control" id="estado_articulo" name="estado" required>
                     <option value="">Seleccione un estado</option>
                     <?php foreach ($enumData['estado'] as $estado): ?>
                         <option value="<?= $estado ?>" <?= old('estado') == $estado ? 'selected' : '' ?>>
@@ -88,8 +88,8 @@
         </div>
         <div class="col-md-4">
             <div class="form-group">
-                <label for="filiacion">Filiación *</label>
-                <select class="form-control" id="filiacion" name="filiacion" required>
+                <label for="filiacion_articulo">Filiación *</label>
+                <select class="form-control" id="filiacion_articulo" name="filiacion" required>
                     <option value="">Seleccione una opción</option>
                     <?php foreach ($enumData['filiacion'] as $filiacion): ?>
                         <option value="<?= $filiacion ?>" <?= old('filiacion') == $filiacion ? 'selected' : '' ?>>
@@ -104,8 +104,8 @@
     <div class="row">
         <div class="col-md-4">
             <div class="form-group">
-                <label for="campo_amplio_id">Campo Amplio</label>
-                <select class="form-control" id="campo_amplio_id" name="campo_amplio_id">
+                <label for="campo_amplio_id_articulo">Campo Amplio</label>
+                <select class="form-control" id="campo_amplio_id_articulo" name="campo_amplio_id">
                     <option value="">Seleccione un campo amplio</option>
                     <?php foreach ($campos_amplios as $campo): ?>
                         <option value="<?= $campo['id'] ?>" <?= old('campo_amplio_id') == $campo['id'] ? 'selected' : '' ?>>
@@ -117,16 +117,16 @@
         </div>
         <div class="col-md-4">
             <div class="form-group">
-                <label for="campo_especifico_id">Campo Específico</label>
-                <select class="form-control" id="campo_especifico_id" name="campo_especifico_id">
+                <label for="campo_especifico_id_articulo">Campo Específico</label>
+                <select class="form-control" id="campo_especifico_id_articulo" name="campo_especifico_id">
                     <option value="">Seleccione primero un campo amplio</option>
                 </select>
             </div>
         </div>
         <div class="col-md-4">
             <div class="form-group">
-                <label for="campo_detallado_id">Campo Detallado</label>
-                <select class="form-control" id="campo_detallado_id" name="campo_detallado_id">
+                <label for="campo_detallado_id_articulo">Campo Detallado</label>
+                <select class="form-control" id="campo_detallado_id_articulo" name="campo_detallado_id">
                     <option value="">Seleccione primero un campo específico</option>
                 </select>
             </div>
@@ -136,15 +136,15 @@
     <div class="row">
         <div class="col-md-6">
             <div class="form-group">
-                <label for="link_publicacion">Link de la Publicación</label>
-                <input type="text" class="form-control" id="link_publicacion" name="link_publicacion"
+                <label for="link_publicacion_articulo">Link de la Publicación</label>
+                <input type="text" class="form-control" id="link_publicacion_articulo" name="link_publicacion"
                     value="<?= old('link_publicacion') ?>">
             </div>
         </div>
         <div class="col-md-6">
             <div class="form-group">
-                <label for="link_revista">Link de la Revista</label>
-                <input type="text" class="form-control" id="link_revista" name="link_revista"
+                <label for="link_revista_articulo">Link de la Revista</label>
+                <input type="text" class="form-control" id="link_revista_articulo" name="link_revista"
                     value="<?= old('link_revista') ?>">
             </div>
         </div>
@@ -153,8 +153,8 @@
     <div class="row">
         <div class="col-md-6">
             <div class="form-group">
-                <label for="intercultural">Intercultural</label>
-                <select class="form-control" id="intercultural" name="intercultural">
+                <label for="intercultural_articulo">Intercultural</label>
+                <select class="form-control" id="intercultural_articulo" name="intercultural">
                     <option value="">Seleccione una opción</option>
                     <?php foreach ($enumData['intercultural'] as $intercultural): ?>
                         <option value="<?= $intercultural ?>" <?= old('intercultural') == $intercultural ? 'selected' : '' ?>>
@@ -166,11 +166,11 @@
         </div>
         <div class="col-md-6">
             <div class="form-group">
-                <label for="documento">Documento (Word/PDF)</label>
+                <label for="documento_articulo">Documento (Word/PDF)</label>
                 <div class="custom-file">
-                    <input type="file" class="custom-file-input" id="documento" name="documento"
+                    <input type="file" class="custom-file-input" id="documento_articulo" name="documento"
                         accept=".doc,.docx,.pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document,application/pdf">
-                    <label class="custom-file-label" for="documento">Seleccionar archivo</label>
+                    <label class="custom-file-label" for="documento_articulo">Seleccionar archivo</label>
                 </div>
             </div>
         </div>
@@ -187,12 +187,12 @@
                     <div class="form-group">
                         <label>Tipo de Participante *</label>
                         <div class="d-flex">
-                            <select class="form-control" id="tipo_participante" name="tipo_participante" required>
+                            <select class="form-control" id="tipo_participante_articulo" name="tipo_participante" required>
                                 <option value="">Seleccione un tipo</option>
                                 <option value="Autor">Autor</option>
                                 <option value="Coautor">Coautor</option>
                             </select>
-                            <button type="button" id="btnAgregarParticipante" class="btn btn-primary ml-2">
+                            <button type="button" id="btnAgregarParticipante_articulo" class="btn btn-primary ml-2">
                                 Agregar
                             </button>
                         </div>

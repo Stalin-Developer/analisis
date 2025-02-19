@@ -5,15 +5,15 @@
     <div class="row">
         <div class="col-md-6">
             <div class="form-group">
-                <label for="codigo">Código *</label>
-                <input type="text" class="form-control" id="codigo" name="codigo"
+                <label for="codigo_capitulo">Código *</label>
+                <input type="text" class="form-control" id="codigo_capitulo" name="codigo"
                     value="<?= old('codigo') ?>" required>
             </div>
         </div>
         <div class="col-md-6">
             <div class="form-group">
-                <label for="titulo">Título Capítulo *</label>
-                <input type="text" class="form-control" id="titulo" name="titulo"
+                <label for="titulo_capitulo">Título Capítulo *</label>
+                <input type="text" class="form-control" id="titulo_capitulo" name="titulo"
                     value="<?= old('titulo') ?>" required>
             </div>
         </div>
@@ -22,15 +22,15 @@
     <div class="row">
         <div class="col-md-6">
             <div class="form-group">
-                <label for="titulo_libro">Título Libro *</label>
-                <input type="text" class="form-control" id="titulo_libro" name="titulo_libro"
+                <label for="titulo_libro_capitulo">Título Libro *</label>
+                <input type="text" class="form-control" id="titulo_libro_capitulo" name="titulo_libro"
                     value="<?= old('titulo_libro') ?>" required>
             </div>
         </div>
         <div class="col-md-6">
             <div class="form-group">
-                <label for="total_capitulos_libro">Total Capítulos del Libro *</label>
-                <input type="number" class="form-control" id="total_capitulos_libro"
+                <label for="total_capitulos_libro_capitulo">Total Capítulos del Libro *</label>
+                <input type="number" class="form-control" id="total_capitulos_libro_capitulo"
                     name="total_capitulos_libro" min="1"
                     value="<?= old('total_capitulos_libro') ?>" required>
             </div>
@@ -40,16 +40,16 @@
     <div class="row">
         <div class="col-md-6">
             <div class="form-group">
-                <label for="codigo_capitulo_isbn">Código ISBN *</label>
-                <input type="text" class="form-control" id="codigo_capitulo_isbn"
+                <label for="codigo_isbn_capitulo">Código ISBN *</label>
+                <input type="text" class="form-control" id="codigo_isbn_capitulo"
                     name="codigo_capitulo_isbn"
                     value="<?= old('codigo_capitulo_isbn') ?>" required>
             </div>
         </div>
         <div class="col-md-6">
             <div class="form-group">
-                <label for="editor_copilador">Editor o Compilador *</label>
-                <input type="text" class="form-control" id="editor_copilador"
+                <label for="editor_copilador_capitulo">Editor o Compilador *</label>
+                <input type="text" class="form-control" id="editor_copilador_capitulo"
                     name="editor_copilador"
                     value="<?= old('editor_copilador') ?>" required>
             </div>
@@ -59,16 +59,16 @@
     <div class="row">
         <div class="col-md-6">
             <div class="form-group">
-                <label for="fecha_publicacion">Fecha de Publicación *</label>
-                <input type="date" class="form-control" id="fecha_publicacion"
+                <label for="fecha_publicacion_capitulo">Fecha de Publicación *</label>
+                <input type="date" class="form-control" id="fecha_publicacion_capitulo"
                     name="fecha_publicacion"
                     value="<?= old('fecha_publicacion') ?>" required>
             </div>
         </div>
         <div class="col-md-6">
             <div class="form-group">
-                <label for="paginas">Páginas *</label>
-                <input type="text" class="form-control" id="paginas" name="paginas"
+                <label for="paginas_capitulo">Páginas *</label>
+                <input type="text" class="form-control" id="paginas_capitulo" name="paginas"
                     value="<?= old('paginas') ?>" required
                     placeholder="Ejemplo: 45-60">
             </div>
@@ -149,7 +149,7 @@
                                 <option value="Autor">Autor</option>
                                 <option value="Coautor">Coautor</option>
                             </select>
-                            <button type="button" id="btnAgregarParticipanteCapitulo" class="btn btn-primary ml-2">
+                            <button type="button" id="btnAgregarParticipante_capitulo" class="btn btn-primary ml-2">
                                 Agregar
                             </button>
                         </div>

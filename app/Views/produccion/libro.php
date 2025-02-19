@@ -5,15 +5,15 @@
     <div class="row">
         <div class="col-md-6">
             <div class="form-group">
-                <label for="codigo">Código *</label>
-                <input type="text" class="form-control" id="codigo" name="codigo"
+                <label for="codigo_libro">Código *</label>
+                <input type="text" class="form-control" id="codigo_libro" name="codigo"
                     value="<?= old('codigo') ?>" required>
             </div>
         </div>
         <div class="col-md-6">
             <div class="form-group">
-                <label for="titulo">Título Libro *</label>
-                <input type="text" class="form-control" id="titulo" name="titulo"
+                <label for="titulo_libro">Título Libro *</label>
+                <input type="text" class="form-control" id="titulo_libro" name="titulo"
                     value="<?= old('titulo') ?>" required>
             </div>
         </div>
@@ -22,16 +22,16 @@
     <div class="row">
         <div class="col-md-6">
             <div class="form-group">
-                <label for="codigo_libro_isbn">Código ISBN *</label>
-                <input type="text" class="form-control" id="codigo_libro_isbn"
+                <label for="codigo_isbn_libro">Código ISBN *</label>
+                <input type="text" class="form-control" id="codigo_isbn_libro"
                     name="codigo_libro_isbn"
                     value="<?= old('codigo_libro_isbn') ?>" required>
             </div>
         </div>
         <div class="col-md-6">
             <div class="form-group">
-                <label for="fecha_publicacion">Fecha de Publicación *</label>
-                <input type="date" class="form-control" id="fecha_publicacion"
+                <label for="fecha_publicacion_libro">Fecha de Publicación *</label>
+                <input type="date" class="form-control" id="fecha_publicacion_libro"
                     name="fecha_publicacion"
                     value="<?= old('fecha_publicacion') ?>" required>
             </div>
@@ -41,8 +41,8 @@
     <div class="row">
         <div class="col-md-4">
             <div class="form-group">
-                <label for="revisado_pares">Revisado por Pares *</label>
-                <select class="form-control" id="revisado_pares" name="revisado_pares" required>
+                <label for="revisado_pares_libro">Revisado por Pares *</label>
+                <select class="form-control" id="revisado_pares_libro" name="revisado_pares" required>
                     <option value="">Seleccione una opción</option>
                     <?php foreach ($enumData['revisado_pares'] as $opcion): ?>
                         <option value="<?= $opcion ?>" <?= old('revisado_pares') == $opcion ? 'selected' : '' ?>>
@@ -54,8 +54,8 @@
         </div>
         <div class="col-md-4">
             <div class="form-group">
-                <label for="filiacion">Filiación *</label>
-                <select class="form-control" id="filiacion" name="filiacion" required>
+                <label for="filiacion_libro">Filiación *</label>
+                <select class="form-control" id="filiacion_libro" name="filiacion" required>
                     <option value="">Seleccione una opción</option>
                     <?php foreach ($enumData['filiacion'] as $filiacion): ?>
                         <option value="<?= $filiacion ?>" <?= old('filiacion') == $filiacion ? 'selected' : '' ?>>
@@ -67,11 +67,11 @@
         </div>
         <div class="col-md-4">
             <div class="form-group">
-                <label for="documento">Documento (Word/PDF)</label>
+                <label for="documento_libro">Documento (Word/PDF)</label>
                 <div class="custom-file">
-                    <input type="file" class="custom-file-input" id="documento" name="documento"
+                    <input type="file" class="custom-file-input" id="documento_libro" name="documento"
                         accept=".doc,.docx,.pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document,application/pdf">
-                    <label class="custom-file-label" for="documento">Seleccionar archivo</label>
+                    <label class="custom-file-label" for="documento_libro">Seleccionar archivo</label>
                 </div>
             </div>
         </div>
@@ -125,7 +125,7 @@
                                 <option value="Autor">Autor</option>
                                 <option value="Coautor">Coautor</option>
                             </select>
-                            <button type="button" id="btnAgregarParticipanteLibro" class="btn btn-primary ml-2">
+                            <button type="button" id="btnAgregarParticipante_libro" class="btn btn-primary ml-2">
                                 Agregar
                             </button>
                         </div>

@@ -114,38 +114,23 @@ Editar Producción Científica y Técnica
 
         // Función para llenar campos de Artículo
         function llenarCamposArticulo(produccion) {
-            $('#tipo_articulo').val(produccion.tipo_articulo);
-            $('#base_datos_id').val(produccion.base_datos_id);
-            $('#codigo').val(produccion.codigo);
-            $('#titulo').val(produccion.titulo);
-            $('#codigo_issn').val(produccion.codigo_issn);
-            $('#nombre_revista').val(produccion.nombre_revista);
-            $('#fecha_publicacion').val(produccion.fecha_publicacion);
-            $('#estado').val(produccion.estado);
-            $('#filiacion').val(produccion.filiacion);
-            $('#campo_amplio_id').val(produccion.campo_amplio_id);
-            $('#link_publicacion').val(produccion.link_publicacion);
-            $('#link_revista').val(produccion.link_revista);
-            $('#intercultural').val(produccion.intercultural);
-
-
-            if (produccion.campo_amplio_id) {
-                $('#campo_amplio_id').trigger('change');
-                // Esperar a que se carguen los campos específicos y luego establecer el valor
-                setTimeout(() => {
-                    $('#campo_especifico_id').val(produccion.campo_especifico_id);
-                    $('#campo_especifico_id').trigger('change');
-                    // Esperar a que se carguen los campos detallados y luego establecer el valor
-                    setTimeout(() => {
-                        $('#campo_detallado_id').val(produccion.campo_detallado_id);
-                    }, 500);
-                }, 500);
-            }
-
+            $('#tipo_articulo_articulo').val(produccion.tipo_articulo);
+            $('#base_datos_id_articulo').val(produccion.base_datos_id);
+            $('#codigo_articulo').val(produccion.codigo);
+            $('#titulo_articulo').val(produccion.titulo);
+            $('#codigo_issn_articulo').val(produccion.codigo_issn);
+            $('#nombre_revista_articulo').val(produccion.nombre_revista);
+            $('#fecha_publicacion_articulo').val(produccion.fecha_publicacion);
+            $('#estado_articulo').val(produccion.estado);
+            $('#filiacion_articulo').val(produccion.filiacion);
+            $('#campo_amplio_id_articulo').val(produccion.campo_amplio_id);
+            $('#link_publicacion_articulo').val(produccion.link_publicacion);
+            $('#link_revista_articulo').val(produccion.link_revista);
+            $('#intercultural_articulo').val(produccion.intercultural);
 
             if (produccion.documento_path) {
                 const fileName = produccion.documento_path.split('/').pop();
-                $('.custom-file-label').text(fileName);
+                $('#documento_articulo').next('.custom-file-label').text(fileName);
             }
         }
 
@@ -153,12 +138,12 @@ Editar Producción Científica y Técnica
         function llenarCamposCapitulo(produccion) {
             $('#codigo_capitulo').val(produccion.codigo);
             $('#titulo_capitulo').val(produccion.titulo);
-            $('#titulo_libro').val(produccion.titulo_libro);
-            $('#total_capitulos_libro').val(produccion.total_capitulos_libro);
-            $('#codigo_capitulo_isbn').val(produccion.codigo_capitulo_isbn);
-            $('#editor_copilador').val(produccion.editor_copilador);
+            $('#titulo_libro_capitulo').val(produccion.titulo_libro);
+            $('#total_capitulos_libro_capitulo').val(produccion.total_capitulos_libro);
+            $('#codigo_isbn_capitulo').val(produccion.codigo_capitulo_isbn);
+            $('#editor_copilador_capitulo').val(produccion.editor_copilador);
             $('#fecha_publicacion_capitulo').val(produccion.fecha_publicacion);
-            $('#paginas').val(produccion.paginas);
+            $('#paginas_capitulo').val(produccion.paginas);
             $('#campo_amplio_id_capitulo').val(produccion.campo_amplio_id);
             $('#filiacion_capitulo').val(produccion.filiacion);
 
@@ -172,9 +157,9 @@ Editar Producción Científica y Técnica
         function llenarCamposLibro(produccion) {
             $('#codigo_libro').val(produccion.codigo);
             $('#titulo_libro').val(produccion.titulo);
-            $('#codigo_libro_isbn').val(produccion.codigo_libro_isbn);
+            $('#codigo_isbn_libro').val(produccion.codigo_libro_isbn);
             $('#fecha_publicacion_libro').val(produccion.fecha_publicacion);
-            $('#revisado_pares').val(produccion.revisado_pares);
+            $('#revisado_pares_libro').val(produccion.revisado_pares);
             $('#filiacion_libro').val(produccion.filiacion);
             $('#campo_amplio_id_libro').val(produccion.campo_amplio_id);
 
@@ -189,7 +174,7 @@ Editar Producción Científica y Técnica
             $('#codigo_otro').val(produccion.codigo);
             $('#titulo_otro').val(produccion.titulo);
             $('#fecha_publicacion_otro').val(produccion.fecha_publicacion);
-            $('#tipo_apoyo_ies').val(produccion.tipo_apoyo_ies);
+            $('#tipo_apoyo_ies_otro').val(produccion.tipo_apoyo_ies);
             $('#campo_amplio_id_otro').val(produccion.campo_amplio_id);
             $('#filiacion_otro').val(produccion.filiacion);
 
@@ -199,55 +184,55 @@ Editar Producción Científica y Técnica
             }
         }
 
-        // Función para llenar campos de participantes
-        function llenarCamposParticipantes(produccion) {
-            if (produccion.participantes && produccion.participantes.tipo) {
-                // Establecer el tipo de participante en el select correspondiente
-                const selectId = currentTab === 'artículo' ? 'tipo_participante' :
-                    `tipo_participante_${currentTab.replace(' ', '_')}`;
-                $(`#${selectId}`).val(produccion.participantes.tipo);
-
-                // Llenar el campo oculto con los datos de los participantes
-                $(`#participantes_data_${currentTab.replace(' ', '_')}`).val(
-                    JSON.stringify(produccion.participantes.lista || [])
-                );
-
-                // Llenar los campos en el modal
-                if (produccion.participantes.lista && produccion.participantes.lista.length > 0) {
-                    produccion.participantes.lista.forEach((participante, index) => {
-                        $(`#nombre_participante_${index}`).val(participante.nombre);
-                        $(`#cedula_participante_${index}`).val(participante.cedula);
-                    });
-                }
-            }
-        }
+        
 
         //=============================================
         // SECCIÓN DE CAMPOS DEPENDIENTES
         //=============================================
         // Si hay campos dependientes, disparar sus eventos
+        function llenarCamposDependientes(currentTab) {
+            // Obtener el prefijo según la pestaña actual
+            const prefijo = `_${currentTab.replace(' ', '_')}`;
 
+            // Obtener los valores guardados
+            const amplioId = produccion.campo_amplio_id;
+            const especificoId = produccion.campo_especifico_id;
+            const detalladoId = produccion.campo_detallado_id;
 
-        function setupCamposSelect(prefijo = '') {
-            const amplioId = $(`#campo_amplio_id${prefijo}`).val();
-            const especificoId = $(`#campo_especifico_id${prefijo}`).val();
-
+            // Si hay un campo amplio seleccionado
             if (amplioId) {
+                // Cargar campos específicos
                 $.get(`<?= base_url('produccion/get-campos-especificos') ?>/${amplioId}`, function(data) {
                     let options = '<option value="">Seleccione un campo específico</option>';
                     data.forEach(function(campo) {
                         const selected = campo.id == especificoId ? 'selected' : '';
                         options += `<option value="${campo.id}" ${selected}>${campo.nombre_especifico}</option>`;
                     });
+                    $(`#campo_amplio_id${prefijo}`).val(amplioId);
                     $(`#campo_especifico_id${prefijo}`).html(options);
 
+                    // Si hay un campo específico seleccionado
                     if (especificoId) {
-                        $(`#campo_especifico_id${prefijo}`).trigger('change');
+                        // Cargar campos detallados
+                        $.get(`<?= base_url('produccion/get-campos-detallados') ?>/${especificoId}`, function(data) {
+                            let options = '<option value="">Seleccione un campo detallado</option>';
+                            data.forEach(function(campo) {
+                                const selected = campo.id == detalladoId ? 'selected' : '';
+                                options += `<option value="${campo.id}" ${selected}>${campo.nombre_detallado}</option>`;
+                            });
+                            $(`#campo_detallado_id${prefijo}`).html(options);
+                        });
                     }
                 });
             }
 
-            // Event handler para campo amplio
+            // Activar los listeners para cambios futuros
+            setupCamposSelect(prefijo);
+        }
+
+        // Función para configurar los listeners de los campos dependientes
+        function setupCamposSelect(prefijo) {
+            // Listener para campo amplio
             $(`#campo_amplio_id${prefijo}`).change(function() {
                 const amplioId = $(this).val();
                 $(`#campo_especifico_id${prefijo}`).html('<option value="">Seleccione un campo específico</option>');
@@ -264,7 +249,7 @@ Editar Producción Científica y Técnica
                 }
             });
 
-            // Event handler para campo específico
+            // Listener para campo específico
             $(`#campo_especifico_id${prefijo}`).change(function() {
                 const especificoId = $(this).val();
                 $(`#campo_detallado_id${prefijo}`).html('<option value="">Seleccione un campo detallado</option>');
@@ -273,8 +258,7 @@ Editar Producción Científica y Técnica
                     $.get(`<?= base_url('produccion/get-campos-detallados') ?>/${especificoId}`, function(data) {
                         let options = '<option value="">Seleccione un campo detallado</option>';
                         data.forEach(function(campo) {
-                            const selected = campo.id == <?= json_encode($produccion['campo_detallado_id']) ?> ? 'selected' : '';
-                            options += `<option value="${campo.id}" ${selected}>${campo.nombre_detallado}</option>`;
+                            options += `<option value="${campo.id}">${campo.nombre_detallado}</option>`;
                         });
                         $(`#campo_detallado_id${prefijo}`).html(options);
                     });
@@ -282,49 +266,77 @@ Editar Producción Científica y Técnica
             });
         }
 
-        // Inicializar selects para cada pestaña
-        setupCamposSelect();
-        setupCamposSelect('_capitulo');
-        setupCamposSelect('_libro');
-        setupCamposSelect('_otro');
 
-        // Cargar campos específicos y detallados iniciales
-        ['', '_capitulo', '_libro', '_otro'].forEach(prefijo => {
-            if ($(`#campo_amplio_id${prefijo}`).val()) {
-                $(`#campo_amplio_id${prefijo}`).trigger('change');
-            }
-        });
 
         //=============================================
         // SECCIÓN DE CARGA INICIAL DE DATOS
         //=============================================
-
         // Cargar datos según el tipo de producción
         switch (currentTab) {
             case 'artículo':
                 llenarCamposArticulo(produccion);
+                llenarCamposDependientes('articulo');
                 break;
             case 'capítulo de libro':
                 llenarCamposCapitulo(produccion);
+                llenarCamposDependientes('capitulo');
                 break;
             case 'libro':
                 llenarCamposLibro(produccion);
+                llenarCamposDependientes('libro');
                 break;
             case 'otro':
                 llenarCamposOtro(produccion);
+                llenarCamposDependientes('otro');
                 break;
         }
 
-        // Cargar participantes
-        llenarCamposParticipantes(produccion);
+
+        
 
         //=============================================
         // SECCIÓN DE MANEJO DE PARTICIPANTES
         //=============================================
+        llenarCamposParticipantes(produccion);
+
+        // Función para llenar campos de participantes
+        function llenarCamposParticipantes(produccion) {
+            if (produccion.participantes && produccion.participantes.tipo) {
+                // Limpiar y normalizar el currentTab para el ID del selector
+                const tabId = currentTab.replace('capítulo de libro', 'capitulo')
+                                    .replace('artículo', 'articulo')
+                                    .replace(' ', '_');
+                
+                // Establecer el tipo de participante en el select correspondiente
+                const selectId = `tipo_participante_${tabId}`;
+                
+                
+                $(`#${selectId}`).val(produccion.participantes.tipo);
+
+                // Guardar datos en el campo oculto
+                $(`#participantes_data_${tabId}`).val(
+                    JSON.stringify(produccion.participantes.lista || [])
+                );
+
+                // Llenar campos del modal
+                if (produccion.participantes.lista && produccion.participantes.lista.length > 0) {
+                    participantesData = produccion.participantes.lista; // Actualizar variable global
+                    
+                    produccion.participantes.lista.forEach((participante, index) => {
+                        $(`#nombre_participante_${index}`).val(participante.nombre);
+                        $(`#cedula_participante_${index}`).val(participante.cedula);
+                    });
+                }
+            }
+        }
 
         // Manejadores para el modal de participantes
-        $('#btnAgregarParticipante').click(function() {
-            const tipo = $('#tipo_participante').val();
+        $('[id^=btnAgregarParticipante_]').click(function() {
+            const tabId = currentTab.replace('capítulo de libro', 'capitulo')
+                                .replace('artículo', 'articulo')
+                                .replace(' ', '_');
+            const tipo = $(`#tipo_participante_${tabId}`).val();
+            
             if (tipo) {
                 $('#tipoParticipanteSeleccionado').text(tipo);
                 $('.tipo-texto').text(tipo);
@@ -332,11 +344,7 @@ Editar Producción Científica y Técnica
             } else {
                 alert('Por favor seleccione un tipo de participante');
             }
-
         });
-
-        
-
 
         // Handler para actualizar datos de participantes
         $('.nombre-participante, .cedula-participante').on('input', function() {
@@ -356,24 +364,25 @@ Editar Producción Científica y Técnica
                 participantesData[index].cedula = $(this).val();
             }
 
-            // Filtrar participantes válidos
-            const participantesValidos = participantesData.filter(p => p && p.nombre && p.cedula);
-            
-            
-            // Actualizar el campo oculto con el formato correcto
-            const participantesJson = JSON.stringify(participantesValidos);
-            
-            // Guardar en el campo oculto
-            $(`#participantes_data_${currentTab}`).val(participantesJson);
-            $('input[name="participantes_data"]').val(participantesJson);
+            actualizarCamposOcultos();
         });
 
-        // También actualizar cuando se cierra el modal
-        $('#modalParticipantes').on('hidden.bs.modal', function () {
+        // Función para actualizar campos ocultos
+        function actualizarCamposOcultos() {
             const participantesValidos = participantesData.filter(p => p && p.nombre && p.cedula);
             const participantesJson = JSON.stringify(participantesValidos);
-            $(`#participantes_data_${currentTab}`).val(participantesJson);
+            
+            const tabId = currentTab.replace('capítulo de libro', 'capitulo')
+                                .replace('artículo', 'articulo')
+                                .replace(' ', '_');
+            
+            $(`#participantes_data_${tabId}`).val(participantesJson);
             $('input[name="participantes_data"]').val(participantesJson);
+        }
+
+        // Actualizar cuando se cierra el modal
+        $('#modalParticipantes').on('hidden.bs.modal', function() {
+            actualizarCamposOcultos();
         });
 
 
@@ -393,7 +402,7 @@ Editar Producción Científica y Técnica
             const formData = new FormData(this);
 
 
-        
+
             $.ajax({
                 url: `<?= base_url('produccion/update/') ?>/${<?= $produccion['id'] ?>}`,
                 type: 'POST',
@@ -430,7 +439,7 @@ Editar Producción Científica y Técnica
                 }
             });
 
-        
+
 
         });
 

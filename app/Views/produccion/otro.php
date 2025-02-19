@@ -5,15 +5,15 @@
     <div class="row">
         <div class="col-md-6">
             <div class="form-group">
-                <label for="codigo">Código *</label>
-                <input type="text" class="form-control" id="codigo" name="codigo"
+                <label for="codigo_otro">Código *</label>
+                <input type="text" class="form-control" id="codigo_otro" name="codigo"
                     value="<?= old('codigo') ?>" required>
             </div>
         </div>
         <div class="col-md-6">
             <div class="form-group">
-                <label for="titulo">Nombre Publicación *</label>
-                <input type="text" class="form-control" id="titulo" name="titulo"
+                <label for="titulo_otro">Nombre Publicación *</label>
+                <input type="text" class="form-control" id="titulo_otro" name="titulo"
                     value="<?= old('titulo') ?>" required>
             </div>
         </div>
@@ -22,16 +22,16 @@
     <div class="row">
         <div class="col-md-6">
             <div class="form-group">
-                <label for="fecha_publicacion">Fecha de Publicación *</label>
-                <input type="date" class="form-control" id="fecha_publicacion"
+                <label for="fecha_publicacion_otro">Fecha de Publicación *</label>
+                <input type="date" class="form-control" id="fecha_publicacion_otro"
                     name="fecha_publicacion"
                     value="<?= old('fecha_publicacion') ?>" required>
             </div>
         </div>
         <div class="col-md-6">
             <div class="form-group">
-                <label for="tipo_apoyo_ies">Tipo de Apoyo Recibido por la IES</label>
-                <input type="text" class="form-control" id="tipo_apoyo_ies"
+                <label for="tipo_apoyo_ies_otro">Tipo de Apoyo Recibido por la IES</label>
+                <input type="text" class="form-control" id="tipo_apoyo_ies_otro"
                     name="tipo_apoyo_ies"
                     value="<?= old('tipo_apoyo_ies') ?>"
                     placeholder="Ejemplo: Financiamiento, Capacitación, etc.">
@@ -74,8 +74,8 @@
     <div class="row">
         <div class="col-md-6">
             <div class="form-group">
-                <label for="filiacion">Filiación *</label>
-                <select class="form-control" id="filiacion" name="filiacion" required>
+                <label for="filiacion_otro">Filiación *</label>
+                <select class="form-control" id="filiacion_otro" name="filiacion" required>
                     <option value="">Seleccione una opción</option>
                     <?php foreach ($enumData['filiacion'] as $filiacion): ?>
                         <option value="<?= $filiacion ?>" <?= old('filiacion') == $filiacion ? 'selected' : '' ?>>
@@ -87,11 +87,11 @@
         </div>
         <div class="col-md-6">
             <div class="form-group">
-                <label for="documento">Documento (Word/PDF)</label>
+                <label for="documento_otro">Documento (Word/PDF)</label>
                 <div class="custom-file">
-                    <input type="file" class="custom-file-input" id="documento" name="documento"
+                    <input type="file" class="custom-file-input" id="documento_otro" name="documento"
                         accept=".doc,.docx,.pdf,application/msword,application/vnd.openxmlformats-officedocument.wordprocessingml.document,application/pdf">
-                    <label class="custom-file-label" for="documento">Seleccionar archivo</label>
+                    <label class="custom-file-label" for="documento_otro">Seleccionar archivo</label>
                 </div>
             </div>
         </div>
@@ -113,7 +113,7 @@
                                 <option value="Autor">Autor</option>
                                 <option value="Coautor">Coautor</option>
                             </select>
-                            <button type="button" id="btnAgregarParticipanteOtro" class="btn btn-primary ml-2">
+                            <button type="button" id="btnAgregarParticipante_otro" class="btn btn-primary ml-2">
                                 Agregar
                             </button>
                         </div>

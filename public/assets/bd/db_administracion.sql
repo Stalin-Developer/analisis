@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 18, 2025 at 07:01 AM
+-- Generation Time: Feb 19, 2025 at 05:42 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -587,8 +587,11 @@ CREATE TABLE `participantes` (
 --
 
 INSERT INTO `participantes` (`id`, `nombre`, `cedula`) VALUES
-(10, 'messi', '10'),
-(11, 'neymar', '1011');
+(21, 'federico', '101'),
+(22, 'patricio ', '102'),
+(23, 'Messi', '10'),
+(24, 'Neymar', '11'),
+(25, 'Ronaldo', '7');
 
 -- --------------------------------------------------------
 
@@ -679,7 +682,7 @@ CREATE TABLE `produccion_cientifica_tecnica` (
 --
 
 INSERT INTO `produccion_cientifica_tecnica` (`id`, `tipo`, `codigo`, `titulo`, `fecha_publicacion`, `campo_amplio_id`, `campo_especifico_id`, `campo_detallado_id`, `filiacion`, `tipo_articulo`, `base_datos_id`, `codigo_issn`, `nombre_revista`, `estado`, `link_publicacion`, `link_revista`, `intercultural`, `titulo_libro`, `total_capitulos_libro`, `codigo_capitulo_isbn`, `editor_copilador`, `paginas`, `codigo_libro_isbn`, `revisado_pares`, `tipo_apoyo_ies`, `documento_path`, `created_at`, `updated_at`) VALUES
-(24, 'Artículo', 'articulo', 'articulo', '2025-02-17', 13, 30, 97, 'Sí', 'Revista', 1, 'articulo', 'articulo', 'Publicado', 'https://www.google.com.ec/', 'https://www.google.com.ec/', 'Sí', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'uploads/produccion/1739852909_d2a2643143eebabd1816.pdf', '2025-02-18 04:28:29', '2025-02-18 05:40:39');
+(31, 'Otro', 'Otro', 'Otro', '2025-02-18', 6, NULL, NULL, 'Sí', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, 'Otro', 'uploads/produccion/1739939598_5e940477636af363bfad.pdf', '2025-02-19 04:33:18', '2025-02-19 04:33:18');
 
 -- --------------------------------------------------------
 
@@ -699,7 +702,8 @@ CREATE TABLE `produccion_participantes` (
 --
 
 INSERT INTO `produccion_participantes` (`id`, `produccion_id`, `participante_id`, `tipo`) VALUES
-(12, 24, 11, 'Autor');
+(36, 31, 23, 'Autor'),
+(37, 31, 25, 'Autor');
 
 -- --------------------------------------------------------
 
@@ -1121,7 +1125,7 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT for table `participantes`
 --
 ALTER TABLE `participantes`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 
 --
 -- AUTO_INCREMENT for table `pis_docentes`
@@ -1139,13 +1143,13 @@ ALTER TABLE `pis_estudiantes`
 -- AUTO_INCREMENT for table `produccion_cientifica_tecnica`
 --
 ALTER TABLE `produccion_cientifica_tecnica`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
 
 --
 -- AUTO_INCREMENT for table `produccion_participantes`
 --
 ALTER TABLE `produccion_participantes`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
 
 --
 -- AUTO_INCREMENT for table `programas`
